@@ -1,0 +1,4 @@
+# Defense in Depth: Deny all direct HTTP access to this directory
+# Derinlemesine Savunma: Bu dizine tüm doğrudan HTTP erişimini engelle
+# Prevents exposure of application source code (controllers, models, middleware).
+Require all denied

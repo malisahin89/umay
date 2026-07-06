@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Mail;
+
+use Core\Mail\Mailable;
+
+class {{ClassName}} extends Mailable
+{
+    public function __construct()
+    {
+        //
+    }
+
+    public function build(): static
+    {
+        return $this
+            ->subject('Konu')
+            ->text('Mail içeriği buraya.');
+    }
+}

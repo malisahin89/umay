@@ -1,0 +1,46 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Controllers;
+
+use Core\Facades\View;
+use Core\Request;
+
+class {{ClassName}} extends Controller
+{
+    public function index(): void
+    {
+        View::render('{{viewPrefix}}/index');
+    }
+
+    public function create(): void
+    {
+        View::render('{{viewPrefix}}/create');
+    }
+
+    public function store(Request $request): void
+    {
+        //
+    }
+
+    public function show(Request $request, string $id): void
+    {
+        //
+    }
+
+    public function edit(Request $request, string $id): void
+    {
+        View::render('{{viewPrefix}}/edit');
+    }
+
+    public function update(Request $request, string $id): void
+    {
+        //
+    }
+
+    public function destroy(Request $request, string $id): void
+    {
+        //
+    }
+}

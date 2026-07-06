@@ -1,0 +1,3043 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 2
+			path: app/Middleware/ThrottleMiddleware.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/routes/api\.php'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/routes/web\.php'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: '#^Cannot call method handle\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Application.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: core/Auth.php
+
+		-
+			message: '#^Parameter \#1 \$id of method Core\\Contracts\\UserProvider\:\:retrieveById\(\) expects int\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Auth.php
+
+		-
+			message: '#^Parameter \#1 \$name of function setcookie expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Auth.php
+
+		-
+			message: '#^Call to an undefined method Core\\Contracts\\Authenticatable\:\:save\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: core/Auth/EloquentUserProvider.php
+
+		-
+			message: '#^Cannot call method first\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Auth/EloquentUserProvider.php
+
+		-
+			message: '#^Method Core\\Auth\\EloquentUserProvider\:\:retrieveByCredentials\(\) should return Core\\Contracts\\Authenticatable\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Auth/EloquentUserProvider.php
+
+		-
+			message: '#^Method Core\\Auth\\EloquentUserProvider\:\:retrieveById\(\) should return Core\\Contracts\\Authenticatable\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Auth/EloquentUserProvider.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/storage/cache'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Cache.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''umay\-cache\-key'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Cache.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: core/Cache.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 2
+			path: core/Cache.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: core/Cache.php
+
+		-
+			message: '#^Trait Core\\Concerns\\SoftDeletes is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: core/Concerns/SoftDeletes.php
+
+		-
+			message: '#^Access to an undefined property object\:\:\$migration\.$#'
+			identifier: property.notFound
+			count: 3
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 3
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Binary operation "\." between ''Migration file not…'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Cannot access offset ''action'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Cannot access offset ''middleware'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:dbSeed\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:handle\(\) has parameter \$argv with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:keyGenerate\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeController\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeEvent\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeFactory\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeListener\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeMail\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeMiddleware\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeMigration\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeModel\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeRequest\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:makeTest\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:migrate\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:renderStub\(\) has parameter \$replacements with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Method Core\\Console\\Kernel\:\:runTests\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#1 \$command of method Core\\Console\\Kernel\:\:unknownCommand\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#1 \$migrationName of method Core\\Console\\Kernel\:\:guessTableName\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#1 \$string of function str_pad expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Core\\Console\\Kernel\:\:snakeCase\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Core\\Console\\Kernel\:\:studlyCase\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 10
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#2 \$array of function implode expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#2 \$replace of function str_replace expects array\<string\>\|string, list given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#2 \$subject of function preg_match expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function str_replace expects array\<string\>\|string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Part \$f \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 2
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Part \$results\[''count''\] \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 2
+			path: core/Console/Kernel.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot access offset ''concrete'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot access offset ''singleton'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method getConstructor\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method getDefaultValue\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 3
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method getName\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method getParameters\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method getType\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method isDefaultValueAvailable\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 3
+			path: core/Container.php
+
+		-
+			message: '#^Cannot call method newInstanceArgs\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Method Core\\Container\:\:getInstance\(\) should return static\(Core\\Container\) but returns Core\\Container\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Parameter \#1 \$concrete of method Core\\Container\:\:build\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Parameter \#1 \$objectOrClass of class ReflectionClass constructor expects class\-string\<T of object\>\|T of object, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Part \$param\-\>getName\(\) \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Property Core\\Container\:\:\$bindings type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Property Core\\Container\:\:\$instances type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Property Core\\Container\:\:\$reflectionCache type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Property Core\\Container\:\:\$resolving type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Container.php
+
+		-
+			message: '#^Cannot access property \$bindings on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Cannot access property \$sql on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Cannot access property \$time on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:delete\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:init\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:insert\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:select\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:select\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:selectOne\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:selectOne\(\) should return object\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:statement\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\Database\:\:update\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Connection\:\:transaction\(\) expects Closure, callable\(\)\: mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Part \$config\[''charset''\] \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Part \$config\[''collation''\] \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: core/Database.php
+
+		-
+			message: '#^Method Core\\DebugBar\:\:addLog\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/DebugBar.php
+
+		-
+			message: '#^Method Core\\DebugBar\:\:addMail\(\) has parameter \$mail with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/DebugBar.php
+
+		-
+			message: '#^Method Core\\DebugBar\:\:addQuery\(\) has parameter \$q with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/DebugBar.php
+
+		-
+			message: '#^Method Core\\DebugBar\:\:addView\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/DebugBar.php
+
+		-
+			message: '#^Method Core\\DebugBar\:\:findCaller\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/DebugBar.php
+
+		-
+			message: '#^Method Core\\DebugBar\:\:setRoute\(\) has parameter \$info with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/DebugBar.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 2
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Cannot access an offset on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Cannot call method handle\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Method Core\\Events\\Dispatcher\:\:subscribe\(\) has parameter \$map with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_filter expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Parameter \#1 \$listener of method Core\\Events\\Dispatcher\:\:callListener\(\) expects Closure\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Parameter \#2 \$listener of static method Core\\Events\\Dispatcher\:\:listen\(\) expects Closure\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Property Core\\Events\\Dispatcher\:\:\$listeners type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Events/Dispatcher.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/ExceptionHandler.php
+
+		-
+			message: '#^Method Core\\ExceptionHandler\:\:jsonResponse\(\) has parameter \$debug with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ExceptionHandler.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_contains expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/ExceptionHandler.php
+
+		-
+			message: '#^Parameter \#1 \$url of function parse_url expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/ExceptionHandler.php
+
+		-
+			message: '#^Class Core\\Facades\\Auth has PHPDoc tag @method for method attempt\(\) parameter \#1 \$credentials with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Auth.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method delete\(\) parameter \#2 \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method insert\(\) parameter \#2 \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method select\(\) parameter \#2 \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method select\(\) return type with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method selectOne\(\) parameter \#2 \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method statement\(\) parameter \#2 \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\DB has PHPDoc tag @method for method update\(\) parameter \#2 \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/DB.php
+
+		-
+			message: '#^Class Core\\Facades\\Event has PHPDoc tag @method for method subscribe\(\) parameter \#1 \$map with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Event.php
+
+		-
+			message: '#^Class Core\\Facades\\Log has PHPDoc tag @method for method error\(\) parameter \#2 \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Log.php
+
+		-
+			message: '#^Class Core\\Facades\\Log has PHPDoc tag @method for method info\(\) parameter \#2 \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Log.php
+
+		-
+			message: '#^Class Core\\Facades\\Log has PHPDoc tag @method for method warning\(\) parameter \#2 \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Log.php
+
+		-
+			message: '#^Class Core\\Facades\\RateLimiter has PHPDoc tag @method for method limiter\(\) return type with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/RateLimiter.php
+
+		-
+			message: '#^Class Core\\Facades\\Route has PHPDoc tag @method for method apiResource\(\) parameter \#3 \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Route.php
+
+		-
+			message: '#^Class Core\\Facades\\Route has PHPDoc tag @method for method getRoutes\(\) return type with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Route.php
+
+		-
+			message: '#^Class Core\\Facades\\Route has PHPDoc tag @method for method match\(\) parameter \#1 \$methods with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Route.php
+
+		-
+			message: '#^Class Core\\Facades\\Route has PHPDoc tag @method for method resource\(\) parameter \#3 \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Route.php
+
+		-
+			message: '#^Class Core\\Facades\\Route has PHPDoc tag @method for method url\(\) parameter \#2 \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Route.php
+
+		-
+			message: '#^Class Core\\Facades\\Route has PHPDoc tag @method for method view\(\) parameter \#3 \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Route.php
+
+		-
+			message: '#^Class Core\\Facades\\Validator has PHPDoc tag @method for method make\(\) parameter \#1 \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Validator.php
+
+		-
+			message: '#^Class Core\\Facades\\Validator has PHPDoc tag @method for method make\(\) parameter \#2 \$rules with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Validator.php
+
+		-
+			message: '#^Class Core\\Facades\\Validator has PHPDoc tag @method for method make\(\) parameter \#3 \$messages with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/Validator.php
+
+		-
+			message: '#^Class Core\\Facades\\View has PHPDoc tag @method for method render\(\) parameter \#2 \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Facades/View.php
+
+		-
+			message: '#^Call to an undefined method object\:\:count\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: core/Factory.php
+
+		-
+			message: '#^Call to an undefined method object\:\:save\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:create\(\) has parameter \$override with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:definition\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:forModel\(\) should return static\(Core\\Factory\) but returns mixed\.$#'
+			identifier: return.type
+			count: 2
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:make\(\) has parameter \$override with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:newModel\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:raw\(\) has parameter \$override with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:raw\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:resolveAttributes\(\) has parameter \$override with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:resolveAttributes\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\Factory\:\:state\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Method Core\\FakerProxy\:\:randomElement\(\) has parameter \$array with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$arrays of function array_merge expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Property Core\\Factory\:\:\$registry type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Property Core\\Factory\:\:\$states type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Factory.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/public'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/public/'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 4
+			path: core/FileUpload.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 5
+			path: core/FileUpload.php
+
+		-
+			message: '#^Method Core\\FileUpload\:\:upload\(\) has parameter \$file with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Parameter \#2 \$haystack of function in_array expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Parameter \#3 \$quality of function imagewebp expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Property Core\\FileUpload\:\:\$allowedTypes has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Property Core\\FileUpload\:\:\$maxSize has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Property Core\\FileUpload\:\:\$quality has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: core/FileUpload.php
+
+		-
+			message: '#^Method Core\\FormRequest\:\:messages\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/FormRequest.php
+
+		-
+			message: '#^Method Core\\FormRequest\:\:rules\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/FormRequest.php
+
+		-
+			message: '#^Method Core\\FormRequest\:\:validated\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/FormRequest.php
+
+		-
+			message: '#^Property Core\\FormRequest\:\:\$validatedData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/FormRequest.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/storage/logs'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Logger.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 2
+			path: core/Logger.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: core/Logger.php
+
+		-
+			message: '#^Method Core\\Logger\:\:error\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Logger.php
+
+		-
+			message: '#^Method Core\\Logger\:\:info\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Logger.php
+
+		-
+			message: '#^Method Core\\Logger\:\:log\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Logger.php
+
+		-
+			message: '#^Method Core\\Logger\:\:warning\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Logger.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/views/'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:getAttachments\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:getExtraHeaders\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:getFrom\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:getFromName\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:renderView\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:renderView\(\) should return string but returns string\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailable\:\:view\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Property Core\\Mail\\Mailable\:\:\$attachments type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Property Core\\Mail\\Mailable\:\:\$headers type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Property Core\\Mail\\Mailable\:\:\$viewData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailable.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailer\:\:bcc\(\) has parameter \$address with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailer.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailer\:\:cc\(\) has parameter \$address with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailer.php
+
+		-
+			message: '#^Method Core\\Mail\\Mailer\:\:to\(\) has parameter \$address with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Mail/Mailer.php
+
+		-
+			message: '#^Property Core\\Mail\\Mailer\:\:\$bcc \(array\<int, string\>\) does not accept array\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/Mail/Mailer.php
+
+		-
+			message: '#^Property Core\\Mail\\Mailer\:\:\$cc \(array\<int, string\>\) does not accept array\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/Mail/Mailer.php
+
+		-
+			message: '#^Property Core\\Mail\\Mailer\:\:\$to \(array\<int, array\{string, string\}\|string\>\) does not accept array\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/Mail/Mailer.php
+
+		-
+			message: '#^Cannot call method check\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Middleware/RememberMe.php
+
+		-
+			message: '#^Cannot call method login\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Middleware/RememberMe.php
+
+		-
+			message: '#^Cannot call method provider\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Middleware/RememberMe.php
+
+		-
+			message: '#^Cannot call method retrieveByToken\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Middleware/RememberMe.php
+
+		-
+			message: '#^Parameter \#2 \$string of function explode expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Middleware/RememberMe.php
+
+		-
+			message: '#^Method Core\\Migration\:\:query\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Migration.php
+
+		-
+			message: '#^Method Core\\Migration\:\:query\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Migration.php
+
+		-
+			message: '#^Argument of an invalid type list\<string\>\|false supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 3
+			path: core/Migrator.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/database/migrations'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/database/seeders'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Call to an undefined method object\:\:run\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 2
+			path: core/Migrator.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: core/Migrator.php
+
+		-
+			message: '#^Method Core\\Migrator\:\:runFresh\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Method Core\\Migrator\:\:runMigrationsOnly\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Method Core\\Migrator\:\:runPendingMigrations\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Parameter \#1 \$array of function sort expects list\<string\>, list\<string\>\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Migrator.php
+
+		-
+			message: '#^Part \$results\[''count''\] \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 2
+			path: core/Migrator.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Paginator.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: core/Paginator.php
+
+		-
+			message: '#^Method Core\\Paginator\:\:getPageRange\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Paginator.php
+
+		-
+			message: '#^Parameter \#1 \$page of method Core\\Paginator\:\:pageUrl\(\) expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Paginator.php
+
+		-
+			message: '#^Parameter \#1 \$string of function parse_str expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Paginator.php
+
+		-
+			message: '#^Parameter \#1 \$url of function parse_url expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Paginator.php
+
+		-
+			message: '#^Property Core\\Paginator\:\:\$queryParams type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Paginator.php
+
+		-
+			message: '#^Method Core\\Profiler\\Contracts\\DataCollectorInterface\:\:collect\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Contracts/DataCollectorInterface.php
+
+		-
+			message: '#^Binary operation "\-" between float and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Binary operation "\-" between mixed and float results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Binary operation "\." between ''User \#'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/config/profiler\.php'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''\://'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access offset ''hit'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access offset ''level'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access offset ''model'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access offset ''sql'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access property \$email on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access property \$id on mixed\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access property \$name on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot access property \$role on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot call method cleanup\(\) on Core\\Profiler\\ProfilerStorage\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot call method collect\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot call method getName\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot call method save\(\) on Core\\Profiler\\ProfilerStorage\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:addLog\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:addMail\(\) has parameter \$mail with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:addQuery\(\) has parameter \$q with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:addView\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:collectAll\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:collectPhpInfo\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:detectNPlusOne\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:findCaller\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:getAuthUser\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:getConfig\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:getConfig\(\) should return array but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:getSafeSession\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:guessRoute\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:highlightSql\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:interpolateSql\(\) has parameter \$bindings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:renderToolbar\(\) should return string but returns string\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:setRoute\(\) has parameter \$info with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Method Core\\Profiler\\Profiler\:\:summarize\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_slice expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_contains expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#1 \$storagePath of class Core\\Profiler\\ProfilerStorage constructor expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#1 \$string of function mb_substr expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#1 \$url of function parse_url expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#2 \$callback of function array_filter expects \(callable\(mixed\)\: bool\)\|null, Closure\(mixed\)\: mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#2 \$ttl of class Core\\Profiler\\ProfilerStorage constructor expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$arrays of function array_merge expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#3 \$maxEntries of class Core\\Profiler\\ProfilerStorage constructor expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function str_replace expects array\<string\>\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 4
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$cacheData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$collectors type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$eventData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$exceptions type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$logData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$mailData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$measures type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$middlewareTiming type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$openMeasures type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$queryData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$requestData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$routeInfo type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Property Core\\Profiler\\Profiler\:\:\$viewData type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Static property Core\\Profiler\\Profiler\:\:\$startTime \(float\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/Profiler/Profiler.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/config/profiler\.php'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/ProfilerController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: core/Profiler/ProfilerController.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerController\:\:getConfig\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/ProfilerController.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerController\:\:getConfig\(\) should return array but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Profiler/ProfilerController.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerController\:\:jsonResponse\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/ProfilerController.php
+
+		-
+			message: '#^Parameter \#2 \$haystack of function in_array expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/ProfilerController.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/storage/profiler'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Cannot access offset ''__meta'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Cannot access offset ''token'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerStorage\:\:getLatestToken\(\) should return string\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerStorage\:\:listTokens\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerStorage\:\:load\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Method Core\\Profiler\\ProfilerStorage\:\:save\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Profiler/ProfilerStorage.php
+
+		-
+			message: '#^Binary operation "\." between ''Cache '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' \<span class\="fdb…'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' event'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' exception\!'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' log kayıt'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' mail gönderildi'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' sorgu · '' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' şablon'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''/'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''@'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''ms'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''action'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''controller'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''hit'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''method'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''name'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot access offset ''uri'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 6
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_filter expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Parameter \#1 \$num of function round expects float\|int, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Parameter \#1 \$text of function str_limit expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Parameter \#1 \$value of function count expects array\|Countable, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Parameter \#1 \(mixed\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$authUser might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$cHits might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$caches might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$eCount might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$evCount might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$hasErr might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$lColor might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$lCount might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$mCount might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$memColor might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$memory might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$profilerUrl might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$qColor might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$qCount might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$qTime might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$session might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$stColor might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$timeColor might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$token might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$totalMs might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Variable \$vCount might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: core/Profiler/Views/toolbar.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Method class@anonymous/core/Providers/FacadeServiceProvider\.php\:90\:\:make\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Method class@anonymous/core/Providers/FacadeServiceProvider\.php\:90\:\:make\(\) has parameter \$messages with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Method class@anonymous/core/Providers/FacadeServiceProvider\.php\:90\:\:make\(\) has parameter \$rules with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Parameter \#1 \$class of function class_alias expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Parameter \#1 \$class of function class_exists expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Parameter \#2 \$alias of function class_alias expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Providers/FacadeServiceProvider.php
+
+		-
+			message: '#^Binary operation "\-" between int\<1, max\> and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: core/RateLimiter.php
+
+		-
+			message: '#^Method Core\\RateLimiter\:\:availableIn\(\) should return int but returns float\|int\<0, max\>\.$#'
+			identifier: return.type
+			count: 1
+			path: core/RateLimiter.php
+
+		-
+			message: '#^Method Core\\RateLimiter\:\:limiter\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/RateLimiter.php
+
+		-
+			message: '#^Method Core\\RateLimiter\:\:limiter\(\) should return array\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/RateLimiter.php
+
+		-
+			message: '#^Property Core\\RateLimiter\:\:\$cache \(Core\\Cache\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/RateLimiter.php
+
+		-
+			message: '#^Property Core\\RateLimiter\:\:\$limiters type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/RateLimiter.php
+
+		-
+			message: '#^Parameter \#1 \$url of function parse_url expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Redirect.php
+
+		-
+			message: '#^Binary operation "\." between ''http\://''\|''https\://'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Cannot access offset ''error'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:__construct\(\) has parameter \$cookies with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:__construct\(\) has parameter \$files with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:__construct\(\) has parameter \$get with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:__construct\(\) has parameter \$post with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:__construct\(\) has parameter \$server with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:all\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:except\(\) has parameter \$keys with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:except\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:file\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:file\(\) should return array\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:getCookies\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:getFiles\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:getPost\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:getQuery\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:getRouteParams\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:getServer\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:only\(\) has parameter \$keys with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:only\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:setRouteParams\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:validate\(\) has parameter \$rules with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Method Core\\Request\:\:validate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_flip expects array\<int\|string\>, array given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Request.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_contains expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_contains expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Parameter \#1 \$string of function strtoupper expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Parameter \#1 \$url of function parse_url expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Property Core\\Request\:\:\$cookies type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Property Core\\Request\:\:\$files type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Property Core\\Request\:\:\$get type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Property Core\\Request\:\:\$post type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Property Core\\Request\:\:\$routeParams type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Property Core\\Request\:\:\$server type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Request.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Cannot use array destructuring on mixed\.$#'
+			identifier: offsetAccess.nonArray
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Method Core\\ResourceRegistrar\:\:__construct\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Method Core\\ResourceRegistrar\:\:except\(\) has parameter \$actions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Method Core\\ResourceRegistrar\:\:middleware\(\) has parameter \$middleware with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Method Core\\ResourceRegistrar\:\:only\(\) has parameter \$actions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Parameter \#1 \$middlewareName of method Core\\Route\:\:middleware\(\) expects array\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Property Core\\ResourceRegistrar\:\:\$api \(bool\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Property Core\\ResourceRegistrar\:\:\$apiExclude type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Property Core\\ResourceRegistrar\:\:\$except type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Property Core\\ResourceRegistrar\:\:\$middlewares type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Property Core\\ResourceRegistrar\:\:\$only type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Property Core\\ResourceRegistrar\:\:\$verbs type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResourceRegistrar.php
+
+		-
+			message: '#^Cannot call method render\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/ResponseBuilder.php
+
+		-
+			message: '#^Method Core\\ResponseBuilder\:\:view\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResponseBuilder.php
+
+		-
+			message: '#^Part \$value \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: core/ResponseBuilder.php
+
+		-
+			message: '#^Property Core\\ResponseBuilder\:\:\$headers type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/ResponseBuilder.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Binary operation "\." between ''Location\: '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Call to an undefined method object\:\:handle\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access an offset on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''_compiled'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''_redirect'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''_redirect_status'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''_view'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''_view_data'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''action'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''allowsNull'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''default'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''global'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''group'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''hasDefault'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''isFormRequest'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''isRequest'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''middleware'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''name'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''params'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''regex'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset mixed on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset non\-empty\-string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset non\-falsy\-string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot access offset string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 5
+			path: core/Route.php
+
+		-
+			message: '#^Cannot call method render\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot call static method createFrom\(\) on mixed\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 3
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:apiResource\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:extractParamNames\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:getRoutes\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:match\(\) has parameter \$methods with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:middleware\(\) has parameter \$middlewareName with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:resource\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:runMiddleware\(\) has parameter \$next with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:runMiddleware\(\) has parameter \$request with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:url\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Method Core\\Route\:\:view\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$function of class ReflectionFunction constructor expects Closure\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$key of function array_key_exists expects int\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$keys of function array_combine expects array\<int\|string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$middlewareName of static method Core\\Route\:\:runMiddleware\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$pattern of function preg_match expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$response_code of function http_response_code expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$string of function strtoupper expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$url of function parse_url expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \$value of function count expects array\|Countable, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#1 \.\.\.\$arrays of function array_merge expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#2 \$array of function implode expects array\<string\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$arrays of function array_merge expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/Route.php
+
+		-
+			message: '#^Part \$meta\[''name''\] \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Property Core\\Route\:\:\$middlewareClassMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Property Core\\Route\:\:\$middlewareStack type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Property Core\\Route\:\:\$prefixStack type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Property Core\\Route\:\:\$reflectionCache type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Property Core\\Route\:\:\$routes type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Trying to invoke mixed but it''s not a callable\.$#'
+			identifier: callable.nonCallable
+			count: 1
+			path: core/Route.php
+
+		-
+			message: '#^Call to an undefined method object\:\:run\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: core/Seeder.php
+
+		-
+			message: '#^Method Core\\Seeder\:\:call\(\) has parameter \$seederClass with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Seeder.php
+
+		-
+			message: '#^Method Core\\Seeder\:\:insert\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Seeder.php
+
+		-
+			message: '#^Method Core\\Seeder\:\:truncateAndInsert\(\) has parameter \$rows with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Seeder.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Illuminate\\Database\\Query\\Builder\:\:insert\(\) expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Seeder.php
+
+		-
+			message: '#^Method Core\\Support\\Facade\:\:__callStatic\(\) has parameter \$args with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Support/Facade.php
+
+		-
+			message: '#^Method Core\\Support\\Facade\:\:getFacadeRoot\(\) should return object but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Support/Facade.php
+
+		-
+			message: '#^Static property Core\\Support\\Facade\:\:\$resolvedInstances \(array\<string, object\>\) does not accept array\<string, mixed\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: core/Support/Facade.php
+
+		-
+			message: '#^Cannot access an offset on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 3
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:__construct\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:__construct\(\) has parameter \$messages with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:__construct\(\) has parameter \$rules with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:errors\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:make\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:make\(\) has parameter \$messages with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:make\(\) has parameter \$rules with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Method Core\\Validator\:\:make\(\) should return static\(Core\\Validator\) but returns Core\\Validator\.$#'
+			identifier: return.type
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Parameter \#2 \$string of function explode expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Parameter \#3 \$rule of method Core\\Validator\:\:applyRule\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Property Core\\Validator\:\:\$errors type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/Validator.php
+
+		-
+			message: '#^Cannot access offset string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: core/View.php
+
+		-
+			message: '#^Method Core\\View\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/View.php
+
+		-
+			message: '#^Parameter \#1 \$key of function old expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/View.php
+
+		-
+			message: '#^Parameter \#1 \$name of function route expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/View.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: core/View.php
+
+		-
+			message: '#^Parameter \#2 \$array of function implode expects array\<string\>, list given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/View.php
+
+		-
+			message: '#^Parameter \#2 \$default of function old expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/View.php
+
+		-
+			message: '#^Binary operation "\." between mixed and non\-falsy\-string results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Cannot access offset string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 7
+			path: core/helpers.php
+
+		-
+			message: '#^Cannot call method get\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Cannot call method set\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Cannot call method user\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 3
+			path: core/helpers.php
+
+		-
+			message: '#^Function auth\(\) should return Core\\Contracts\\Authenticatable\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Function collect\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Function getRealIP\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 2
+			path: core/helpers.php
+
+		-
+			message: '#^Function route\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Function validate\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Function validate\(\) has parameter \$messages with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Function validate\(\) has parameter \$rules with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Function validate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#1 \$ip of function isCloudflareIP expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#1 \$items of class Illuminate\\Support\\Collection constructor expects Illuminate\\Contracts\\Support\\Arrayable\<TKey of \(int\|string\), TValue\>\|iterable\<TKey of \(int\|string\), TValue\>\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#1 \$string of function trim expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#1 \$url of static method Core\\Redirect\:\:to\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#2 \$array of function array_key_exists expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#2 \$string of function explode expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/helpers.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: core/helpers.php
