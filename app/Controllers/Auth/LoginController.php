@@ -13,10 +13,23 @@ use Core\Request;
 
 class LoginController
 {
+    /**
+     * Landing route after login — admins go to the admin panel, everyone else to
+     * the user dashboard.
+     * Login sonrası açılış route'u — adminler admin paneline, diğerleri kullanıcı
+     * dashboard'una.
+     */
+    private function homeRoute(): string
+    {
+        $user = Auth::user();
+
+        return ($user instanceof User && $user->isAdmin()) ? 'admin.dashboard' : 'dashboard';
+    }
+
     public function show(): void
     {
         if (Auth::check()) {
-            redirect('dashboard');
+            redirect($this->homeRoute());
 
             return;
         }
@@ -27,7 +40,7 @@ class LoginController
     public function authenticate(Request $request): void
     {
         if (Auth::check()) {
-            redirect('dashboard');
+            redirect($this->homeRoute());
 
             return;
         }
@@ -66,7 +79,7 @@ class LoginController
             ]);
 
             flash('success', 'Giriş başarılı, hoş geldin '.htmlspecialchars($user->name).'!');
-            redirect('dashboard');
+            redirect($this->homeRoute());
 
             return;
         }

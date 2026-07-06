@@ -11,6 +11,9 @@ use App\Models\Post;
 use App\Models\Product;
 use App\Models\Slide;
 use App\Models\Tag;
+use App\Support\Lang;
+use App\Support\Locale;
+use App\Support\RouteSlugs;
 use Core\Facades\View;
 use Core\Request;
 use Illuminate\Database\Eloquent\Builder;
@@ -28,8 +31,10 @@ class FrontController
 {
     private const PER_PAGE = 9;
 
-    public function home(Request $request, string $locale, string $page = '1'): void
+    public function home(Request $request, string $page = '1'): void
     {
+        $locale = Locale::get();
+
         // Newest featured post is highlighted on page 1 and excluded from the grid.
         // Its card shows no category overlay, so skip the categories eager-load here.
         // En yeni öne çıkan yazı 1. sayfada vurgulanır ve grid'den çıkarılır. Kartı kategori
@@ -47,8 +52,8 @@ class FrontController
         $slides = Slide::query()->where('status', 1)->with('translations')->orderBy('order')->get();
 
         View::render('front/home', [
-            'title' => 'Ana Sayfa',
-            'description' => 'Çok dilli blog — en güncel yazılar, hikâyeler ve içerik.',
+            'title' => Lang::t('nav.home'),
+            'description' => Lang::t('meta.home_desc'),
             'locale' => $locale,
             'slides' => $slides,
             'featured' => $featured,
@@ -64,19 +69,20 @@ class FrontController
      * Dedicated blog/posts listing (paginated) — a real page, not the home #anchor.
      * Ayrı blog/yazılar listesi (sayfalı) — anasayfa #çapası değil, gerçek sayfa.
      */
-    public function blog(Request $request, string $locale, string $page = '1'): void
+    public function blog(Request $request, string $page = '1'): void
     {
+        $locale = Locale::get();
         $paged = $this->paginate($this->basePostQuery(), $this->pageNum($page));
 
         View::render('front/blog', [
-            'title' => 'Yazılar',
-            'description' => 'Tüm yazıları keşfedin.',
+            'title' => Lang::t('nav.posts'),
+            'description' => Lang::t('meta.blog_desc'),
             'locale' => $locale,
             'posts' => $paged['items'],
             'page' => $paged['page'],
             'lastPage' => $paged['lastPage'],
             'total' => $paged['total'],
-            'baseUrl' => '/'.$locale.'/blog',
+            'baseUrl' => RouteSlugs::to($locale, 'blog'),
             'categories' => $this->activeCategories(),        ]);
     }
 
@@ -84,26 +90,28 @@ class FrontController
      * Product listing (archive) with pagination.
      * Ürün listesi (arşiv), sayfalamalı.
      */
-    public function products(Request $request, string $locale, string $page = '1'): void
+    public function products(Request $request, string $page = '1'): void
     {
+        $locale = Locale::get();
         $query = Product::query()->where('status', 1)->with(['translations', 'categories.translations']);
         $query->orderByDesc('id');
         $paged = $this->paginate($query, $this->pageNum($page));
 
         View::render('front/products/index', [
-            'title' => 'Ürünler',
-            'description' => 'Tüm ürünlerimizi keşfedin.',
+            'title' => Lang::t('nav.products'),
+            'description' => Lang::t('meta.products_desc'),
             'locale' => $locale,
             'products' => $paged['items'],
             'page' => $paged['page'],
             'lastPage' => $paged['lastPage'],
             'total' => $paged['total'],
-            'baseUrl' => '/'.$locale.'/products',
+            'baseUrl' => RouteSlugs::to($locale, 'products'),
         ]);
     }
 
-    public function product(Request $request, string $locale, string $slug): void
+    public function product(Request $request, string $slug): void
     {
+        $locale = Locale::get();
         /** @var Product|null $product */
         $product = Product::whereTranslation('slug', $slug)
             ->where('status', 1)
@@ -118,7 +126,7 @@ class FrontController
         $desc = is_string($sd) && $sd !== '' ? $sd : (is_string($product->title) ? $product->title : '');
 
         View::render('front/products/show', [
-            'title' => is_string($product->title) ? $product->title : 'Ürün',
+            'title' => is_string($product->title) ? $product->title : Lang::t('common.product'),
             'description' => $desc,
             'locale' => $locale,
             'product' => $product,
@@ -126,8 +134,9 @@ class FrontController
         ]);
     }
 
-    public function post(Request $request, string $locale, string $slug): void
+    public function post(Request $request, string $slug): void
     {
+        $locale = Locale::get();
         /** @var Post|null $post */
         $post = Post::whereTranslation('slug', $slug)
             ->where('status', 1)
@@ -168,7 +177,7 @@ class FrontController
         $desc = is_string($sd) && $sd !== '' ? $sd : (is_string($post->title) ? $post->title : '');
 
         View::render('front/post', [
-            'title' => is_string($post->title) ? $post->title : 'Yazı',
+            'title' => is_string($post->title) ? $post->title : Lang::t('common.post'),
             'description' => $desc,
             'locale' => $locale,
             'post' => $post,
@@ -180,8 +189,9 @@ class FrontController
     /**
      * Posts in a category (archive). / Bir kategorideki yazılar (arşiv).
      */
-    public function category(Request $request, string $locale, string $slug, string $page = '1'): void
+    public function category(Request $request, string $slug, string $page = '1'): void
     {
+        $locale = Locale::get();
         /** @var Category|null $category */
         $category = Category::whereTranslation('slug', $slug)->with('translations')->first();
         if ($category === null) {
@@ -190,14 +200,16 @@ class FrontController
 
         $query = $this->basePostQuery()->whereHas('categories', fn (Builder $q) => $q->where('categories.id', $category->getKey()));
         $langUrls = $this->localeUrls($category->getRelationValue('translations'), 'category');
-        $this->renderArchive($locale, 'Kategori', (string) $category->name, '/'.$locale.'/category/'.$slug, $query, $this->pageNum($page), $langUrls);
+        $baseUrl = '/'.$locale.'/'.RouteSlugs::seg('category', $locale).'/'.$slug;
+        $this->renderArchive($locale, Lang::t('nav.category_one'), (string) $category->name, $baseUrl, $query, $this->pageNum($page), $langUrls);
     }
 
     /**
      * Posts with a tag (archive). / Bir etiketli yazılar (arşiv).
      */
-    public function tag(Request $request, string $locale, string $slug, string $page = '1'): void
+    public function tag(Request $request, string $slug, string $page = '1'): void
     {
+        $locale = Locale::get();
         /** @var Tag|null $tag */
         $tag = Tag::whereTranslation('slug', $slug)->with('translations')->first();
         if ($tag === null) {
@@ -206,15 +218,17 @@ class FrontController
 
         $query = $this->basePostQuery()->whereHas('tags', fn (Builder $q) => $q->where('tags.id', $tag->getKey()));
         $langUrls = $this->localeUrls($tag->getRelationValue('translations'), 'tag');
-        $this->renderArchive($locale, 'Etiket', (string) $tag->name, '/'.$locale.'/tag/'.$slug, $query, $this->pageNum($page), $langUrls);
+        $baseUrl = '/'.$locale.'/'.RouteSlugs::seg('tag', $locale).'/'.$slug;
+        $this->renderArchive($locale, Lang::t('nav.tag_one'), (string) $tag->name, $baseUrl, $query, $this->pageNum($page), $langUrls);
     }
 
     /**
      * All categories with their published-post counts (taxonomy index).
      * Yayınlanmış gönderi sayılarıyla tüm kategoriler (taksonomi listesi).
      */
-    public function categoriesIndex(Request $request, string $locale): void
+    public function categoriesIndex(Request $request): void
     {
+        $locale = Locale::get();
         $categories = Category::query()
             ->where('status', 1)
             ->withCount(['posts' => fn (Builder $q) => $q->where('status', 1)])
@@ -223,8 +237,8 @@ class FrontController
             ->get();
 
         View::render('front/categories', [
-            'title' => 'Kategoriler',
-            'description' => 'Tüm kategorileri keşfedin.',
+            'title' => Lang::t('nav.categories'),
+            'description' => Lang::t('meta.categories_desc'),
             'locale' => $locale,
             'categories' => $categories,        ]);
     }
@@ -233,8 +247,9 @@ class FrontController
      * All tags with their published-post counts (taxonomy index).
      * Yayınlanmış gönderi sayılarıyla tüm etiketler (taksonomi listesi).
      */
-    public function tagsIndex(Request $request, string $locale): void
+    public function tagsIndex(Request $request): void
     {
+        $locale = Locale::get();
         $tags = Tag::query()
             ->where('status', 1)
             ->withCount(['posts' => fn (Builder $q) => $q->where('status', 1)])
@@ -242,8 +257,8 @@ class FrontController
             ->get();
 
         View::render('front/tags', [
-            'title' => 'Etiketler',
-            'description' => 'Tüm etiketleri keşfedin.',
+            'title' => Lang::t('nav.tags'),
+            'description' => Lang::t('meta.tags_desc'),
             'locale' => $locale,
             'tags' => $tags,        ]);
     }
@@ -253,8 +268,9 @@ class FrontController
      * active locale, paginated. Empty query renders the bare search page.
      * Aktif dildeki yazı çevirilerinde (başlık + kısa açıklama) sayfalı arama.
      */
-    public function search(Request $request, string $locale, string $query = ''): void
+    public function search(Request $request, string $query = ''): void
     {
+        $locale = Locale::get();
         // Prefer the clean path segment (/search/{query}); fall back to ?q= (no-JS form).
         // Temiz path segmentini tercih et (/search/{query}); ?q='e düş (JS'siz form).
         $raw = $query !== '' ? rawurldecode($query) : (is_string($qq = $request->get('q', '')) ? $qq : '');
@@ -281,8 +297,8 @@ class FrontController
         }
 
         View::render('front/search', [
-            'title' => $q !== '' ? 'Arama: '.$q : 'Arama',
-            'description' => $q !== '' ? '“'.$q.'” için arama sonuçları' : 'Yazılarda ve ürünlerde arama.',
+            'title' => $q !== '' ? Lang::t('search.title_q', ['q' => $q]) : Lang::t('search.title'),
+            'description' => $q !== '' ? Lang::t('meta.search_desc_q', ['q' => $q]) : Lang::t('meta.search_desc'),
             'locale' => $locale,
             'q' => $q,
             'posts' => $posts,
@@ -290,8 +306,9 @@ class FrontController
             'categories' => $this->activeCategories(),        ]);
     }
 
-    public function page(Request $request, string $locale, string $slug): void
+    public function page(Request $request, string $slug): void
     {
+        $locale = Locale::get();
         /** @var Page|null $page */
         $page = Page::whereTranslation('slug', $slug)->with('translations')->first();
         if ($page === null) {
@@ -299,7 +316,7 @@ class FrontController
         }
 
         View::render('front/page', [
-            'title' => is_string($page->title) ? $page->title : 'Sayfa',
+            'title' => is_string($page->title) ? $page->title : Lang::t('common.page'),
             'locale' => $locale,
             'page' => $page,
             'langUrls' => $this->localeUrls($page->getRelationValue('translations'), 'pages'),
@@ -366,7 +383,7 @@ class FrontController
         foreach ($this->activeLocales() as $loc) {
             $slug = $bySlug[$loc] ?? null;
             $urls[$loc] = (is_string($slug) && $slug !== '')
-                ? '/'.$loc.'/'.$segment.'/'.rawurlencode($slug)
+                ? '/'.$loc.'/'.RouteSlugs::seg($segment, $loc).'/'.rawurlencode($slug)
                 : '/'.$loc;
         }
 

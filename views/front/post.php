@@ -29,7 +29,7 @@ $views = is_numeric($vc = $post->view_count ?? 0) ? (int) $vc : 0;
         <?php if (count($categories) > 0) { ?>
             <div class="mb-5 flex flex-wrap justify-center gap-2">
                 <?php $ci = 0; foreach ($categories as $cat) { if ($ci++ >= 3) { break; } ?>
-                    <a href="/<?= $this->e($locale) ?>/category/<?= $this->e((string) $cat->slug) ?>"
+                    <a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('category', $locale)) ?>/<?= $this->e((string) $cat->slug) ?>"
                        class="rounded-full bg-violet-100/70 px-3 py-1 text-xs font-semibold text-violet-700 ring-1 ring-inset ring-violet-200 transition hover:bg-violet-200/70">
                         <?= $this->e((string) $cat->name) ?>
                     </a>
@@ -50,9 +50,9 @@ $views = is_numeric($vc = $post->view_count ?? 0) ? (int) $vc : 0;
                 <span><?= $this->e($post->published_at->format('d.m.Y')) ?></span>
                 <span class="text-zinc-300">·</span>
             <?php } ?>
-            <span><?= (int) $readMin ?> dk okuma</span>
+            <span><?= $this->e(\App\Support\Lang::t('post.reading_time', ['count' => (int) $readMin])) ?></span>
             <span class="text-zinc-300">·</span>
-            <span><?= number_format($views) ?> görüntülenme</span>
+            <span><?= $this->e(\App\Support\Lang::t('post.views', ['count' => number_format($views)])) ?></span>
         </div>
     </header>
 
@@ -78,7 +78,7 @@ $views = is_numeric($vc = $post->view_count ?? 0) ? (int) $vc : 0;
     <?php if (count($tags) > 0) { ?>
         <div class="mx-auto mt-12 flex max-w-2xl flex-wrap gap-2 px-6">
             <?php foreach ($tags as $tag) { ?>
-                <a href="/<?= $this->e($locale) ?>/tag/<?= $this->e((string) $tag->slug) ?>"
+                <a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('tag', $locale)) ?>/<?= $this->e((string) $tag->slug) ?>"
                    class="rounded-full bg-zinc-900/[0.04] px-3 py-1 text-sm font-medium text-zinc-600 transition hover:bg-zinc-900/10 hover:text-zinc-900">
                     #<?= $this->e((string) $tag->name) ?>
                 </a>
@@ -89,7 +89,7 @@ $views = is_numeric($vc = $post->view_count ?? 0) ? (int) $vc : 0;
     <!-- Share + back -->
     <div class="mx-auto mt-10 flex max-w-2xl flex-wrap items-center justify-between gap-4 border-t border-zinc-900/5 px-6 pt-8">
         <a href="/<?= $this->e($locale) ?>" class="inline-flex items-center gap-2 text-sm font-medium text-zinc-500 transition hover:text-violet-700">
-            <i class="fa-solid fa-arrow-left text-xs"></i> Tüm yazılar
+            <i class="fa-solid fa-arrow-left text-xs"></i> <?= $this->e(\App\Support\Lang::t('post.all_posts')) ?>
         </a>
         <div class="flex items-center gap-1.5" id="shareBar">
             <?php
@@ -99,7 +99,7 @@ $views = is_numeric($vc = $post->view_count ?? 0) ? (int) $vc : 0;
             <a data-share="facebook" href="#" target="_blank" rel="noopener" class="<?= $btn ?> hover:bg-[#1877f2] hover:ring-[#1877f2]" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
             <a data-share="linkedin" href="#" target="_blank" rel="noopener" class="<?= $btn ?> hover:bg-[#0a66c2] hover:ring-[#0a66c2]" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
             <a data-share="whatsapp" href="#" target="_blank" rel="noopener" class="<?= $btn ?> hover:bg-[#25d366] hover:ring-[#25d366]" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-sm"></i></a>
-            <button type="button" id="copyLinkBtn" class="<?= $btn ?> hover:bg-violet-600 hover:ring-violet-600" aria-label="Kopyala"><i class="fa-regular fa-copy text-sm"></i></button>
+            <button type="button" id="copyLinkBtn" class="<?= $btn ?> hover:bg-violet-600 hover:ring-violet-600" aria-label="<?= $this->e(\App\Support\Lang::t('common.copy')) ?>"><i class="fa-regular fa-copy text-sm"></i></button>
         </div>
     </div>
 </article>
@@ -109,10 +109,10 @@ $views = is_numeric($vc = $post->view_count ?? 0) ? (int) $vc : 0;
     <section class="mx-auto mt-20 max-w-6xl px-6">
         <div class="mb-8 flex items-end justify-between">
             <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">Devamı</p>
-                <h2 class="font-display mt-1 text-3xl font-semibold tracking-tight text-zinc-900">İlgili Yazılar</h2>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600"><?= $this->e(\App\Support\Lang::t('post.related_eyebrow')) ?></p>
+                <h2 class="font-display mt-1 text-3xl font-semibold tracking-tight text-zinc-900"><?= $this->e(\App\Support\Lang::t('post.related_heading')) ?></h2>
             </div>
-            <a href="/<?= $this->e($locale) ?>" class="hidden items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-violet-700 sm:flex">Tümü <i class="fa-solid fa-arrow-right text-xs"></i></a>
+            <a href="/<?= $this->e($locale) ?>" class="hidden items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-violet-700 sm:flex"><?= $this->e(\App\Support\Lang::t('common.all')) ?> <i class="fa-solid fa-arrow-right text-xs"></i></a>
         </div>
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <?php foreach ($related as $rp) { ?>

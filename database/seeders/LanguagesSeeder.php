@@ -33,5 +33,29 @@ class LanguagesSeeder extends Seeder
             'status' => 1,
             'is_default' => 0,
         ]);
+
+        $this->insert('languages', [
+            'name' => 'Deutsch',
+            'slug' => 'de',
+            'flag' => '🇩🇪',
+            'status' => 1,
+            'is_default' => 0,
+        ]);
+
+        $this->insert('languages', [
+            'name' => 'Français',
+            'slug' => 'fr',
+            'flag' => '🇫🇷',
+            'status' => 1,
+            'is_default' => 0,
+        ]);
+
+        $this->insert('languages', [
+            'name' => 'Español',
+            'slug' => 'es',
+            'flag' => '🇪🇸',
+            'status' => 1,
+            'is_default' => 0,
+        ]);
     }
 }

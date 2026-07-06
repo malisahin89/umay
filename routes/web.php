@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Support\RouteSlugs;
 use Core\Route;
 
 $defaultLocale = is_string($d = config('locale.default')) ? $d : 'tr';
@@ -54,10 +55,48 @@ Route::prefix('/admin')->middleware(['auth', 'admin'])->group(function () {
 });
 
 // ===== Public localized front end / Herkese açık dilli ön yüz =====
-// Registered LAST — the wildcard {locale} acts as a fallback so it never shadows
-// the specific routes above.
-// EN SONA kaydedilir — joker {locale} bir fallback'tir; yukarıdaki spesifik
-// route'ları asla gölgelemez.
+// One route group per locale with that locale's LOCALIZED path segments, so
+// /es/productos, /de/kategorie/{slug}, /tr/ara/… all resolve to the same
+// FrontController actions. Content slugs and page numbers stay as raw {params}.
+// Her dil için o dilin LOCALIZED yol segmentleriyle bir route grubu; böylece
+// /es/productos, /de/kategorie/{slug}, /tr/ara/… hepsi aynı FrontController
+// action'larına gider. İçerik slug'ları ve sayfa numaraları ham {param} kalır.
+$registerFront = static function (string $loc): void {
+    // canonical route word → this locale's localized segment
+    $s = static fn (string $canonical): string => RouteSlugs::seg($canonical, $loc);
+    // locale:{loc} — literal-prefix groups carry no {locale} param, so hand the
+    // active locale to LocaleMiddleware explicitly.
+    Route::prefix('/'.$loc)->middleware('locale:'.$loc)->group(function () use ($s) {
+        Route::get('/', 'FrontController@home');
+        Route::get('/'.$s('page').'/{page}', 'FrontController@home');
+        Route::get('/'.$s('blog'), 'FrontController@blog');
+        Route::get('/'.$s('blog').'/'.$s('page').'/{page}', 'FrontController@blog');
+        Route::get('/'.$s('search'), 'FrontController@search');
+        Route::get('/'.$s('search').'/{query}', 'FrontController@search');
+        Route::get('/'.$s('categories'), 'FrontController@categoriesIndex');
+        Route::get('/'.$s('tags'), 'FrontController@tagsIndex');
+        Route::get('/'.$s('category').'/{slug}/'.$s('page').'/{page}', 'FrontController@category');
+        Route::get('/'.$s('category').'/{slug}', 'FrontController@category');
+        Route::get('/'.$s('tag').'/{slug}/'.$s('page').'/{page}', 'FrontController@tag');
+        Route::get('/'.$s('tag').'/{slug}', 'FrontController@tag');
+        Route::get('/'.$s('products').'/'.$s('page').'/{page}', 'FrontController@products');
+        Route::get('/'.$s('products'), 'FrontController@products');
+        Route::get('/'.$s('products').'/{slug}', 'FrontController@product');
+        Route::get('/'.$s('posts').'/{slug}', 'FrontController@post');
+        Route::get('/'.$s('pages').'/{slug}', 'FrontController@page');
+    });
+};
+
+foreach (RouteSlugs::locales() as $loc) {
+    $registerFront($loc);
+}
+
+// Canonical fallback — registered LAST. Serves unknown locales (LocaleMiddleware
+// redirects them to the default) and keeps the canonical English segments working.
+// Named here (front.*) since these are the single source for Route::url().
+// Kanonik fallback — EN SONA kaydedilir. Bilinmeyen dilleri karşılar
+// (LocaleMiddleware onları varsayılana yönlendirir) ve kanonik İngilizce
+// segmentleri çalışır tutar. İsimler burada (front.*) — Route::url() tek kaynağı.
 Route::prefix('/{locale}')->middleware('locale')->group(function () {
     Route::get('/', 'FrontController@home')->name('front.home');
     Route::get('/page/{page}', 'FrontController@home')->name('front.home.page');

@@ -42,7 +42,7 @@ if ($items === []) {
              data-frequency="<?= $this->e((string) $popup->display_frequency) ?>">
             <div class="umay-popup__overlay"></div>
             <div class="umay-popup__card" role="dialog" aria-modal="true" aria-label="<?= $this->e((string) ($popup->title ?? 'Popup')) ?>">
-                <button type="button" class="umay-popup__close" aria-label="Kapat" data-popup-close>
+                <button type="button" class="umay-popup__close" aria-label="<?= $this->e(\App\Support\Lang::t('common.close')) ?>" data-popup-close>
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <?php if ($img !== null) { ?>

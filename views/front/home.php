@@ -48,11 +48,11 @@ $onPageOne = ($page ?? 1) <= 1;
             <?php } ?>
 
             <?php if (count($slides) > 1) { ?>
-                <button type="button" id="sliderPrev" aria-label="Önceki" class="absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white opacity-0 backdrop-blur transition hover:bg-white hover:text-black group-hover:opacity-100"><i class="fa-solid fa-angle-left"></i></button>
-                <button type="button" id="sliderNext" aria-label="Sonraki" class="absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white opacity-0 backdrop-blur transition hover:bg-white hover:text-black group-hover:opacity-100"><i class="fa-solid fa-angle-right"></i></button>
+                <button type="button" id="sliderPrev" aria-label="<?= $this->e(\App\Support\Lang::t('common.prev')) ?>" class="absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white opacity-0 backdrop-blur transition hover:bg-white hover:text-black group-hover:opacity-100"><i class="fa-solid fa-angle-left"></i></button>
+                <button type="button" id="sliderNext" aria-label="<?= $this->e(\App\Support\Lang::t('common.next')) ?>" class="absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white opacity-0 backdrop-blur transition hover:bg-white hover:text-black group-hover:opacity-100"><i class="fa-solid fa-angle-right"></i></button>
                 <div id="sliderDots" class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
                     <?php foreach ($slides as $i => $slide) { ?>
-                        <button type="button" data-dot="<?= (int) $i ?>" class="slider-dot h-1.5 rounded-full bg-white/50 transition-all <?= $i === 0 ? 'w-6 bg-white' : 'w-3' ?>" aria-label="Slayt <?= (int) $i + 1 ?>"></button>
+                        <button type="button" data-dot="<?= (int) $i ?>" class="slider-dot h-1.5 rounded-full bg-white/50 transition-all <?= $i === 0 ? 'w-6 bg-white' : 'w-3' ?>" aria-label="<?= $this->e(\App\Support\Lang::t('aria.slide', ['n' => (int) $i + 1])) ?>"></button>
                     <?php } ?>
                 </div>
             <?php } ?>
@@ -66,16 +66,16 @@ $onPageOne = ($page ?? 1) <= 1;
         </div>
         <div class="mx-auto max-w-4xl px-6 pb-6 pt-20 text-center sm:pt-28">
             <span class="inline-flex items-center gap-2 rounded-full border border-zinc-900/10 bg-white/70 px-3.5 py-1.5 text-xs font-medium text-zinc-600 shadow-sm backdrop-blur">
-                <span class="h-1.5 w-1.5 rounded-full bg-gradient-to-tr from-indigo-500 to-fuchsia-500"></span><?= $this->e(strtoupper($locale)) ?> · Blog
+                <span class="h-1.5 w-1.5 rounded-full bg-gradient-to-tr from-indigo-500 to-fuchsia-500"></span><?= $this->e(strtoupper($locale)) ?> · <?= $this->e(\App\Support\Lang::t('blog.eyebrow')) ?>
             </span>
             <h1 class="font-display mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-zinc-900 sm:text-6xl md:text-7xl" style="text-wrap:balance">
-                Fikirler, hikâyeler<br>ve <span class="text-gradient italic">içerik</span>.
+                <?= \App\Support\Lang::t('home.hero_title') /* trusted translator HTML */ ?>
             </h1>
-            <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-zinc-500" style="text-wrap:balance">Çok dilli içeriklerimizi keşfedin — sade, hızlı ve okunması keyifli.</p>
-            <form action="/<?= $this->e($locale) ?>/search" method="get" class="js-search mx-auto mt-8 flex max-w-md items-center gap-2 rounded-full border border-zinc-900/10 bg-white p-1.5 pl-4 shadow-lg shadow-zinc-900/5 focus-within:border-violet-300">
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-zinc-500" style="text-wrap:balance"><?= $this->e(\App\Support\Lang::t('home.hero_subtitle')) ?></p>
+            <form action="<?= $this->e(\App\Support\RouteSlugs::to($locale, 'search')) ?>" method="get" class="js-search mx-auto mt-8 flex max-w-md items-center gap-2 rounded-full border border-zinc-900/10 bg-white p-1.5 pl-4 shadow-lg shadow-zinc-900/5 focus-within:border-violet-300">
                 <i class="fa-solid fa-magnifying-glass text-zinc-400"></i>
-                <input type="text" name="q" placeholder="Yazılarda ara…" class="w-full bg-transparent text-sm text-zinc-800 placeholder-zinc-400 outline-none">
-                <button class="rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110">Ara</button>
+                <input type="text" name="q" placeholder="<?= $this->e(\App\Support\Lang::t('search.placeholder_posts')) ?>" class="w-full bg-transparent text-sm text-zinc-800 placeholder-zinc-400 outline-none">
+                <button class="rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-110"><?= $this->e(\App\Support\Lang::t('search.button')) ?></button>
             </form>
         </div>
     </section>
@@ -86,7 +86,7 @@ $onPageOne = ($page ?? 1) <= 1;
     <div class="mx-auto mt-12 max-w-6xl px-6">
         <div class="flex flex-wrap justify-center gap-2">
             <?php foreach ($categories as $cat) { ?>
-                <a href="/<?= $this->e($locale) ?>/category/<?= $this->e((string) $cat->slug) ?>"
+                <a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('category', $locale)) ?>/<?= $this->e((string) $cat->slug) ?>"
                    class="rounded-full border border-zinc-900/10 bg-white px-4 py-1.5 text-sm font-medium text-zinc-600 shadow-sm transition hover:border-violet-300 hover:text-violet-700">
                     <?= $this->e((string) $cat->name) ?>
                 </a>
@@ -99,7 +99,7 @@ $onPageOne = ($page ?? 1) <= 1;
 <?php if ($onPageOne && ($featured ?? null) !== null) { ?>
     <?php $fc = $coverOf($featured); ?>
     <section class="mx-auto mt-14 max-w-6xl px-6">
-        <a href="/<?= $this->e($locale) ?>/posts/<?= $this->e((string) $featured->slug) ?>"
+        <a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('posts', $locale)) ?>/<?= $this->e((string) $featured->slug) ?>"
            class="group grid overflow-hidden rounded-3xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_24px_60px_-28px_rgba(0,0,0,0.3)] ring-1 ring-zinc-900/5 transition hover:-translate-y-1 hover:ring-violet-300/60 md:grid-cols-2">
             <div class="relative aspect-[16/10] overflow-hidden md:aspect-auto">
                 <?php if ($fc !== null) { ?>
@@ -107,7 +107,7 @@ $onPageOne = ($page ?? 1) <= 1;
                 <?php } else { ?>
                     <div class="flex h-full min-h-[240px] w-full items-center justify-center bg-gradient-to-br from-indigo-100 via-violet-100 to-fuchsia-100"><i class="fa-regular fa-newspaper text-5xl text-violet-200"></i></div>
                 <?php } ?>
-                <span class="absolute left-4 top-4 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 px-3 py-1 text-xs font-semibold text-white shadow">★ Öne Çıkan</span>
+                <span class="absolute left-4 top-4 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 px-3 py-1 text-xs font-semibold text-white shadow">★ <?= $this->e(\App\Support\Lang::t('home.featured_badge')) ?></span>
             </div>
             <div class="flex flex-col justify-center p-8 sm:p-10">
                 <?php if ($featured->published_at instanceof \DateTimeInterface) { ?>
@@ -117,7 +117,7 @@ $onPageOne = ($page ?? 1) <= 1;
                 <?php if ($featured->short_description) { ?>
                     <p class="mt-3 text-zinc-500 line-clamp-3"><?= $this->e((string) $featured->short_description) ?></p>
                 <?php } ?>
-                <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-violet-600">Yazıyı oku <i class="fa-solid fa-arrow-right text-xs transition group-hover:translate-x-1"></i></span>
+                <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-violet-600"><?= $this->e(\App\Support\Lang::t('home.featured_read')) ?> <i class="fa-solid fa-arrow-right text-xs transition group-hover:translate-x-1"></i></span>
             </div>
         </a>
     </section>
@@ -127,18 +127,18 @@ $onPageOne = ($page ?? 1) <= 1;
 <section id="yazilar" class="mx-auto max-w-6xl px-6 py-16">
     <div class="mb-8 flex items-end justify-between">
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">En güncel</p>
-            <h2 class="font-display mt-1 text-3xl font-semibold tracking-tight text-zinc-900">Yazılar</h2>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600"><?= $this->e(\App\Support\Lang::t('home.latest_eyebrow')) ?></p>
+            <h2 class="font-display mt-1 text-3xl font-semibold tracking-tight text-zinc-900"><?= $this->e(\App\Support\Lang::t('home.posts_heading')) ?></h2>
         </div>
-        <a href="/<?= $this->e($locale) ?>/blog" class="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-600 transition hover:gap-2">
-            Tümünü gör <i class="fa-solid fa-arrow-right text-xs"></i>
+        <a href="<?= $this->e(\App\Support\RouteSlugs::to($locale, 'blog')) ?>" class="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-600 transition hover:gap-2">
+            <?= $this->e(\App\Support\Lang::t('home.see_all')) ?> <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
     </div>
 
     <?php if (count($posts) === 0) { ?>
         <div class="rounded-3xl border border-dashed border-zinc-300 bg-white/50 py-24 text-center text-zinc-400">
             <i class="fa-regular fa-newspaper mb-3 text-4xl text-zinc-300"></i>
-            <p class="text-sm font-medium">Henüz yayınlanmış yazı yok.</p>
+            <p class="text-sm font-medium"><?= $this->e(\App\Support\Lang::t('home.empty_posts')) ?></p>
         </div>
     <?php } else { ?>
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

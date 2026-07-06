@@ -15,7 +15,7 @@ if (is_string($ci = $post->cover_image ?? null) && $ci !== '') {
 $cats = $post->categories ?? [];
 $firstCat = count($cats) > 0 ? $cats[0] : null;
 ?>
-<a href="/<?= $this->e($locale) ?>/posts/<?= $this->e((string) $post->slug) ?>"
+<a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('posts', $locale)) ?>/<?= $this->e((string) $post->slug) ?>"
    class="group flex flex-col overflow-hidden rounded-3xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_16px_40px_-24px_rgba(0,0,0,0.25)] ring-1 ring-zinc-900/5 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_1px_3px_rgba(0,0,0,0.04),0_28px_50px_-24px_rgba(99,102,241,0.4)] hover:ring-violet-300/60">
     <div class="relative aspect-[16/10] overflow-hidden">
         <?php if ($cover !== null) { ?>
@@ -44,7 +44,7 @@ $firstCat = count($cats) > 0 ? $cats[0] : null;
                 <span><?= $this->e($post->published_at->format('d.m.Y')) ?></span>
                 <span class="text-zinc-300">·</span>
             <?php } ?>
-            <span class="inline-flex items-center gap-1 text-violet-600 transition group-hover:gap-2">Oku <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+            <span class="inline-flex items-center gap-1 text-violet-600 transition group-hover:gap-2"><?= $this->e(\App\Support\Lang::t('read')) ?> <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
         </div>
     </div>
 </a>

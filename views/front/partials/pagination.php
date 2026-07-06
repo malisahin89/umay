@@ -7,10 +7,14 @@
 if (($lastPage ?? 1) <= 1) {
     return;
 }
-// Clean path pagination: page 1 → base, page N → base/page/N.
-// Temiz path sayfalama: 1. sayfa → base, N. sayfa → base/page/N.
+// Clean path pagination: page 1 → base, page N → base/{page}/N. The "page" segment
+// is localized per the locale in the base URL's first segment (/es/… → seite/sayfa/…).
+// Temiz path sayfalama: 1. sayfa → base, N. sayfa → base/{page}/N. "page" segmenti,
+// base URL'in ilk parçasındaki dile göre localize edilir.
 $base = rtrim($baseUrl, '/');
-$url = static fn (int $n): string => $n <= 1 ? ($base === '' ? '/' : $base) : $base.'/page/'.$n;
+$baseLocale = explode('/', trim($baseUrl, '/'))[0] ?? '';
+$pageSeg = \App\Support\RouteSlugs::seg('page', $baseLocale);
+$url = static fn (int $n): string => $n <= 1 ? ($base === '' ? '/' : $base) : $base.'/'.$pageSeg.'/'.$n;
 
 // Windowed page range around the current page.
 $from = max(1, $page - 2);
@@ -23,7 +27,7 @@ $disabled = 'text-zinc-300 ring-1 ring-inset ring-zinc-100';
 ?>
 <nav class="mt-14 flex flex-wrap items-center justify-center gap-1.5">
     <?php if ($page > 1) { ?>
-        <a href="<?= $this->e($url($page - 1)) ?>" class="<?= $base ?> <?= $idle ?>" aria-label="Önceki"><i class="fa-solid fa-angle-left text-xs"></i></a>
+        <a href="<?= $this->e($url($page - 1)) ?>" class="<?= $base ?> <?= $idle ?>" aria-label="<?= $this->e(\App\Support\Lang::t('common.prev')) ?>"><i class="fa-solid fa-angle-left text-xs"></i></a>
     <?php } else { ?>
         <span class="<?= $base ?> <?= $disabled ?>"><i class="fa-solid fa-angle-left text-xs"></i></span>
     <?php } ?>
@@ -47,7 +51,7 @@ $disabled = 'text-zinc-300 ring-1 ring-inset ring-zinc-100';
     <?php } ?>
 
     <?php if ($page < $lastPage) { ?>
-        <a href="<?= $this->e($url($page + 1)) ?>" class="<?= $base ?> <?= $idle ?>" aria-label="Sonraki"><i class="fa-solid fa-angle-right text-xs"></i></a>
+        <a href="<?= $this->e($url($page + 1)) ?>" class="<?= $base ?> <?= $idle ?>" aria-label="<?= $this->e(\App\Support\Lang::t('common.next')) ?>"><i class="fa-solid fa-angle-right text-xs"></i></a>
     <?php } else { ?>
         <span class="<?= $base ?> <?= $disabled ?>"><i class="fa-solid fa-angle-right text-xs"></i></span>
     <?php } ?>

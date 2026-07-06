@@ -21,10 +21,10 @@ $tags = $product->tags ?? [];
 
 // Spec rows from language-neutral columns.
 $specs = [];
-foreach (['model' => 'Model', 'type' => 'Tip', 'fuel_type' => 'Yakıt Tipi', 'heating_type' => 'Isıtma Tipi'] as $col => $label) {
+foreach (['model', 'type', 'fuel_type', 'heating_type'] as $col) {
     $v = $product->getAttribute($col);
     if (is_string($v) && $v !== '') {
-        $specs[$label] = $v;
+        $specs[\App\Support\Lang::t('products.spec.'.$col)] = $v;
     }
 }
 $productUrl = is_string($pu = $product->product_url ?? null) && $pu !== '' ? $pu : null;
@@ -32,9 +32,9 @@ $productUrl = is_string($pu = $product->product_url ?? null) && $pu !== '' ? $pu
 
 <section class="mx-auto max-w-6xl px-6 pt-10">
     <nav class="flex items-center gap-1.5 text-xs font-medium text-zinc-400">
-        <a href="/<?= $this->e($locale) ?>" class="transition hover:text-violet-600">Ana Sayfa</a>
+        <a href="/<?= $this->e($locale) ?>" class="transition hover:text-violet-600"><?= $this->e(\App\Support\Lang::t('nav.home')) ?></a>
         <i class="fa-solid fa-angle-right text-[9px]"></i>
-        <a href="/<?= $this->e($locale) ?>/products" class="transition hover:text-violet-600">Ürünler</a>
+        <a href="<?= $this->e(\App\Support\RouteSlugs::to($locale, 'products')) ?>" class="transition hover:text-violet-600"><?= $this->e(\App\Support\Lang::t('nav.products')) ?></a>
         <i class="fa-solid fa-angle-right text-[9px]"></i>
         <span class="truncate text-zinc-500"><?= $this->e((string) $product->title) ?></span>
     </nav>
@@ -101,17 +101,17 @@ $productUrl = is_string($pu = $product->product_url ?? null) && $pu !== '' ? $pu
             <?php if (count($categories) > 0 || count($tags) > 0) { ?>
                 <div class="mt-6 flex flex-wrap gap-2">
                     <?php foreach ($categories as $cat) { ?>
-                        <a href="/<?= $this->e($locale) ?>/category/<?= $this->e((string) $cat->slug) ?>" class="rounded-full bg-violet-100/70 px-3 py-1 text-xs font-semibold text-violet-700 ring-1 ring-inset ring-violet-200 transition hover:bg-violet-200/70"><?= $this->e((string) $cat->name) ?></a>
+                        <a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('category', $locale)) ?>/<?= $this->e((string) $cat->slug) ?>" class="rounded-full bg-violet-100/70 px-3 py-1 text-xs font-semibold text-violet-700 ring-1 ring-inset ring-violet-200 transition hover:bg-violet-200/70"><?= $this->e((string) $cat->name) ?></a>
                     <?php } ?>
                     <?php foreach ($tags as $tag) { ?>
-                        <a href="/<?= $this->e($locale) ?>/tag/<?= $this->e((string) $tag->slug) ?>" class="rounded-full bg-zinc-900/[0.04] px-3 py-1 text-xs font-medium text-zinc-600 transition hover:bg-zinc-900/10">#<?= $this->e((string) $tag->name) ?></a>
+                        <a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('tag', $locale)) ?>/<?= $this->e((string) $tag->slug) ?>" class="rounded-full bg-zinc-900/[0.04] px-3 py-1 text-xs font-medium text-zinc-600 transition hover:bg-zinc-900/10">#<?= $this->e((string) $tag->name) ?></a>
                     <?php } ?>
                 </div>
             <?php } ?>
 
             <?php if ($productUrl !== null) { ?>
                 <a href="<?= $this->e($productUrl) ?>" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/20 transition hover:brightness-110">
-                    Ürüne Git <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    <?= $this->e(\App\Support\Lang::t('products.go')) ?> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                 </a>
             <?php } ?>
         </div>

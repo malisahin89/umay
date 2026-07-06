@@ -12,7 +12,7 @@ if (is_string($ci = $product->cover_image ?? null) && $ci !== '') {
 $brand = $product->brand ?? null;
 $price = $product->price ?? null;
 ?>
-<a href="/<?= $this->e($locale) ?>/products/<?= $this->e((string) $product->slug) ?>"
+<a href="/<?= $this->e($locale) ?>/<?= $this->e(\App\Support\RouteSlugs::seg('products', $locale)) ?>/<?= $this->e((string) $product->slug) ?>"
    class="group flex flex-col overflow-hidden rounded-3xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_16px_40px_-24px_rgba(0,0,0,0.25)] ring-1 ring-zinc-900/5 transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_1px_3px_rgba(0,0,0,0.04),0_28px_50px_-24px_rgba(99,102,241,0.4)] hover:ring-violet-300/60">
     <div class="relative aspect-square overflow-hidden bg-zinc-50">
         <?php if ($cover !== null) { ?>
@@ -35,7 +35,7 @@ $price = $product->price ?? null;
             <?php } else { ?>
                 <span></span>
             <?php } ?>
-            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-600 transition group-hover:gap-2">İncele <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-600 transition group-hover:gap-2"><?= $this->e(\App\Support\Lang::t('products.view')) ?> <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
         </div>
     </div>
 </a>

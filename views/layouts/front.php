@@ -44,11 +44,11 @@ $activePopups = \App\Models\Popup::activeNow()->filter(function ($p) use ($curre
     <!-- Floating glassy nav -->
     <?php
     $navItems = [
-        ['/'.$frontLocale, 'Ana Sayfa'],
-        ['/'.$frontLocale.'/blog', 'Yazılar'],
-        ['/'.$frontLocale.'/products', 'Ürünler'],
-        ['/'.$frontLocale.'/categories', 'Kategoriler'],
-        ['/'.$frontLocale.'/tags', 'Etiketler'],
+        [\App\Support\RouteSlugs::to($frontLocale, ''), \App\Support\Lang::t('nav.home')],
+        [\App\Support\RouteSlugs::to($frontLocale, 'blog'), \App\Support\Lang::t('nav.posts')],
+        [\App\Support\RouteSlugs::to($frontLocale, 'products'), \App\Support\Lang::t('nav.products')],
+        [\App\Support\RouteSlugs::to($frontLocale, 'categories'), \App\Support\Lang::t('nav.categories')],
+        [\App\Support\RouteSlugs::to($frontLocale, 'tags'), \App\Support\Lang::t('nav.tags')],
     ];
     ?>
     <header class="sticky top-0 z-50 px-4 pt-4">
@@ -68,10 +68,10 @@ $activePopups = \App\Models\Popup::activeNow()->filter(function ($p) use ($curre
 
                 <!-- Right cluster -->
                 <div class="flex items-center gap-1.5">
-                    <form action="/<?= $this->e($frontLocale) ?>/search" method="get"
+                    <form action="<?= $this->e(\App\Support\RouteSlugs::to($frontLocale, 'search')) ?>" method="get"
                           class="js-search hidden items-center gap-2 rounded-full bg-zinc-900/[0.04] px-3 py-1.5 ring-1 ring-inset ring-zinc-900/5 transition focus-within:bg-white focus-within:ring-violet-300 lg:flex">
                         <i class="fa-solid fa-magnifying-glass text-xs text-zinc-400"></i>
-                        <input type="text" name="q" placeholder="Ara…" class="w-24 bg-transparent text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-all focus:w-32">
+                        <input type="text" name="q" placeholder="<?= $this->e(\App\Support\Lang::t('search.placeholder_short')) ?>" class="w-24 bg-transparent text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-all focus:w-32">
                     </form>
 
                     <?php if (count($frontLangs) > 1) { ?>
@@ -98,7 +98,7 @@ $activePopups = \App\Models\Popup::activeNow()->filter(function ($p) use ($curre
                     <?php } ?>
 
                     <!-- Hamburger (mobile/tablet) -->
-                    <button type="button" id="menuToggle" class="flex h-9 w-9 items-center justify-center rounded-full text-zinc-600 transition hover:bg-zinc-900/5 lg:hidden" aria-label="Menü">
+                    <button type="button" id="menuToggle" class="flex h-9 w-9 items-center justify-center rounded-full text-zinc-600 transition hover:bg-zinc-900/5 lg:hidden" aria-label="<?= $this->e(\App\Support\Lang::t('nav.menu')) ?>">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -106,9 +106,9 @@ $activePopups = \App\Models\Popup::activeNow()->filter(function ($p) use ($curre
 
             <!-- Mobile menu -->
             <div id="mobileMenu" class="mt-2 hidden rounded-2xl border border-white/60 bg-white/90 p-3 shadow-xl backdrop-blur-xl lg:hidden">
-                <form action="/<?= $this->e($frontLocale) ?>/search" method="get" class="js-search mb-2 flex items-center gap-2 rounded-xl bg-zinc-900/[0.04] px-3 py-2 ring-1 ring-inset ring-zinc-900/5 focus-within:bg-white focus-within:ring-violet-300">
+                <form action="<?= $this->e(\App\Support\RouteSlugs::to($frontLocale, 'search')) ?>" method="get" class="js-search mb-2 flex items-center gap-2 rounded-xl bg-zinc-900/[0.04] px-3 py-2 ring-1 ring-inset ring-zinc-900/5 focus-within:bg-white focus-within:ring-violet-300">
                     <i class="fa-solid fa-magnifying-glass text-xs text-zinc-400"></i>
-                    <input type="text" name="q" placeholder="Ara…" class="w-full bg-transparent text-sm text-zinc-800 placeholder-zinc-400 outline-none">
+                    <input type="text" name="q" placeholder="<?= $this->e(\App\Support\Lang::t('search.placeholder_short')) ?>" class="w-full bg-transparent text-sm text-zinc-800 placeholder-zinc-400 outline-none">
                 </form>
                 <nav class="flex flex-col">
                     <?php foreach ($navItems as $it) { ?>
@@ -131,16 +131,16 @@ $activePopups = \App\Models\Popup::activeNow()->filter(function ($p) use ($curre
                         <span class="h-7 w-7 rounded-lg bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500"></span>
                         <span class="text-xl font-bold tracking-tight"><?= $this->e($brand) ?></span>
                     </div>
-                    <p class="mt-3 max-w-xs text-sm text-zinc-500">Çok dilli içerik için sade, hızlı ve modern bir arayüz.</p>
+                    <p class="mt-3 max-w-xs text-sm text-zinc-500"><?= $this->e(\App\Support\Lang::t('layout.footer_tagline')) ?></p>
                 </div>
                 <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                    <a href="/<?= $this->e($frontLocale) ?>" class="text-zinc-500 transition hover:text-zinc-900">Ana Sayfa</a>
-                    <a href="/<?= $this->e($frontLocale) ?>/products" class="text-zinc-500 transition hover:text-zinc-900">Ürünler</a>
-                    <a href="/<?= $this->e($frontLocale) ?>/categories" class="text-zinc-500 transition hover:text-zinc-900">Kategoriler</a>
-                    <a href="/<?= $this->e($frontLocale) ?>/tags" class="text-zinc-500 transition hover:text-zinc-900">Etiketler</a>
+                    <a href="<?= $this->e(\App\Support\RouteSlugs::to($frontLocale, '')) ?>" class="text-zinc-500 transition hover:text-zinc-900"><?= $this->e(\App\Support\Lang::t('nav.home')) ?></a>
+                    <a href="<?= $this->e(\App\Support\RouteSlugs::to($frontLocale, 'products')) ?>" class="text-zinc-500 transition hover:text-zinc-900"><?= $this->e(\App\Support\Lang::t('nav.products')) ?></a>
+                    <a href="<?= $this->e(\App\Support\RouteSlugs::to($frontLocale, 'categories')) ?>" class="text-zinc-500 transition hover:text-zinc-900"><?= $this->e(\App\Support\Lang::t('nav.categories')) ?></a>
+                    <a href="<?= $this->e(\App\Support\RouteSlugs::to($frontLocale, 'tags')) ?>" class="text-zinc-500 transition hover:text-zinc-900"><?= $this->e(\App\Support\Lang::t('nav.tags')) ?></a>
                 </nav>
             </div>
-            <div class="mt-12 border-t border-zinc-900/5 pt-6 text-xs text-zinc-400">© <?= (int) date('Y') ?> <?= $this->e($brand) ?> — Tüm hakları saklıdır.</div>
+            <div class="mt-12 border-t border-zinc-900/5 pt-6 text-xs text-zinc-400">© <?= (int) date('Y') ?> <?= $this->e($brand) ?> — <?= $this->e(\App\Support\Lang::t('layout.rights')) ?></div>
         </div>
     </footer>
 

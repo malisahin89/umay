@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: localhost:3306
--- Üretim Zamanı: 06 Tem 2026, 01:02:47
+-- Üretim Zamanı: 06 Tem 2026, 16:42:40
 -- Sunucu sürümü: 8.0.30
 -- PHP Sürümü: 8.3.25
 
@@ -47,11 +47,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `parent_id`, `level`, `path`, `color`, `icon`, `status`, `show_in_nav`, `nav_order`, `sort_order`, `created_at`, `updated_at`) VALUES
-(9, NULL, 0, NULL, NULL, NULL, 1, 0, 0, 1, '2026-07-04 12:13:20', '2026-07-04 12:13:20'),
-(10, NULL, 0, NULL, NULL, NULL, 1, 0, 0, 2, '2026-07-04 12:13:21', '2026-07-04 12:13:21'),
-(11, NULL, 0, NULL, NULL, NULL, 1, 0, 0, 3, '2026-07-04 12:13:21', '2026-07-04 12:13:21'),
-(12, NULL, 0, NULL, NULL, NULL, 1, 0, 0, 4, '2026-07-04 12:13:22', '2026-07-04 12:13:22'),
-(13, NULL, 0, NULL, NULL, NULL, 1, 0, 0, 5, '2026-07-04 12:13:22', '2026-07-04 12:13:22');
+(1, NULL, 0, NULL, NULL, NULL, 1, 1, 1, 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, NULL, 0, NULL, NULL, NULL, 1, 1, 2, 2, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, NULL, 0, NULL, NULL, NULL, 1, 1, 3, 3, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, NULL, 0, NULL, NULL, NULL, 1, 1, 4, 4, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, NULL, 0, NULL, NULL, NULL, 1, 1, 5, 5, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -77,31 +77,31 @@ CREATE TABLE `category_translations` (
 --
 
 INSERT INTO `category_translations` (`id`, `category_id`, `language_slug`, `name`, `slug`, `seo_title`, `seo_description`, `seo_keywords`, `created_at`, `updated_at`) VALUES
-(11, 9, 'tr', 'Teknoloji', 'teknoloji', NULL, NULL, NULL, '2026-07-04 12:13:20', '2026-07-04 12:13:20'),
-(12, 9, 'en', 'Teknoloji EN', 'teknoloji-en', NULL, NULL, NULL, '2026-07-04 12:13:20', '2026-07-04 12:13:20'),
-(13, 10, 'tr', 'Tasarim', 'tasarim', NULL, NULL, NULL, '2026-07-04 12:13:21', '2026-07-04 12:13:21'),
-(14, 10, 'en', 'Tasarim EN', 'tasarim-en', NULL, NULL, NULL, '2026-07-04 12:13:21', '2026-07-04 12:13:21'),
-(15, 11, 'tr', 'Yazilim', 'yazilim', NULL, NULL, NULL, '2026-07-04 12:13:21', '2026-07-04 12:13:21'),
-(16, 11, 'en', 'Yazilim EN', 'yazilim-en', NULL, NULL, NULL, '2026-07-04 12:13:21', '2026-07-04 12:13:21'),
-(17, 12, 'tr', 'Donanim', 'donanim', NULL, NULL, NULL, '2026-07-04 12:13:22', '2026-07-04 12:13:22'),
-(18, 12, 'en', 'Donanim EN', 'donanim-en', NULL, NULL, NULL, '2026-07-04 12:13:22', '2026-07-04 12:13:22'),
-(19, 13, 'tr', 'Haberler', 'haberler', NULL, NULL, NULL, '2026-07-04 12:13:22', '2026-07-04 12:13:22'),
-(20, 13, 'en', 'Haberler EN', 'haberler-en', NULL, NULL, NULL, '2026-07-04 12:13:22', '2026-07-04 12:13:22'),
-(21, 11, 'de', 'Yazilim (DE)', 'yazilim-de', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(22, 9, 'de', 'Teknoloji (DE)', 'teknoloji-de', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(23, 10, 'de', 'Tasarim (DE)', 'tasarim-de', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(24, 13, 'de', 'Haberler (DE)', 'haberler-de', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(25, 12, 'de', 'Donanim (DE)', 'donanim-de', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(26, 11, 'fr', 'Yazilim (FR)', 'yazilim-fr', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(27, 9, 'fr', 'Teknoloji (FR)', 'teknoloji-fr', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(28, 10, 'fr', 'Tasarim (FR)', 'tasarim-fr', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(29, 13, 'fr', 'Haberler (FR)', 'haberler-fr', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(30, 12, 'fr', 'Donanim (FR)', 'donanim-fr', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(31, 11, 'es', 'Yazilim (ES)', 'yazilim-es', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(32, 9, 'es', 'Teknoloji (ES)', 'teknoloji-es', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(33, 10, 'es', 'Tasarim (ES)', 'tasarim-es', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(34, 13, 'es', 'Haberler (ES)', 'haberler-es', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(35, 12, 'es', 'Donanim (ES)', 'donanim-es', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59');
+(1, 1, 'tr', 'Teknoloji', 'teknoloji', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 'en', 'Technology', 'technology', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 'de', 'Technologie', 'technologie', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 'fr', 'Technologie', 'technologie', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 'es', 'Tecnología', 'tecnologia', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(6, 2, 'tr', 'Yazılım', 'yazilim', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(7, 2, 'en', 'Software', 'software', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(8, 2, 'de', 'Software', 'software', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(9, 2, 'fr', 'Logiciel', 'logiciel', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(10, 2, 'es', 'Software', 'software', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(11, 3, 'tr', 'Donanım', 'donanim', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(12, 3, 'en', 'Hardware', 'hardware', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(13, 3, 'de', 'Hardware', 'hardware', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(14, 3, 'fr', 'Matériel', 'materiel', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(15, 3, 'es', 'Hardware', 'hardware', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(16, 4, 'tr', 'Tasarım', 'tasarim', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(17, 4, 'en', 'Design', 'design', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(18, 4, 'de', 'Design', 'design', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(19, 4, 'fr', 'Design', 'design', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(20, 4, 'es', 'Diseño', 'diseno', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(21, 5, 'tr', 'Haberler', 'haberler', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(22, 5, 'en', 'News', 'news', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(23, 5, 'de', 'Nachrichten', 'nachrichten', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(24, 5, 'fr', 'Actualités', 'actualites', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(25, 5, 'es', 'Noticias', 'noticias', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -128,9 +128,9 @@ CREATE TABLE `languages` (
 INSERT INTO `languages` (`id`, `name`, `slug`, `flag`, `status`, `is_default`, `created_at`, `updated_at`) VALUES
 (1, 'Türkçe', 'tr', '🇹🇷', 1, 1, NULL, NULL),
 (2, 'English', 'en', '🇬🇧', 1, 0, NULL, NULL),
-(3, 'Almanca', 'de', 'de', 1, 0, '2026-07-04 12:13:02', '2026-07-04 12:16:35'),
-(4, 'Fransizca', 'fr', 'fr', 1, 0, '2026-07-04 12:13:02', '2026-07-04 12:16:35'),
-(5, 'Ispanyolca', 'es', 'es', 1, 0, '2026-07-04 12:13:02', '2026-07-04 12:16:36');
+(3, 'Deutsch', 'de', 'de', 1, 0, '2026-07-04 12:13:02', '2026-07-04 12:16:35'),
+(4, 'Français', 'fr', 'fr', 1, 0, '2026-07-04 12:13:02', '2026-07-04 12:16:35'),
+(5, 'Español', 'es', 'es', 1, 0, '2026-07-04 12:13:02', '2026-07-04 12:16:36');
 
 -- --------------------------------------------------------
 
@@ -423,11 +423,11 @@ CREATE TABLE `popups` (
 --
 
 INSERT INTO `popups` (`id`, `start_date`, `end_date`, `is_annual`, `display_frequency`, `target_routes`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, NULL, NULL, 0, 'always', '[]', 0, '2026-07-04 12:14:49', '2026-07-06 00:07:25'),
-(2, NULL, NULL, 0, 'always', '[]', 0, '2026-07-04 12:14:50', '2026-07-06 00:07:29'),
-(3, NULL, NULL, 0, 'always', '[]', 0, '2026-07-04 12:14:50', '2026-07-06 00:07:32'),
-(4, NULL, NULL, 0, 'always', '[]', 0, '2026-07-04 12:14:50', '2026-07-06 00:07:36'),
-(5, NULL, NULL, 0, 'always', '[]', 0, '2026-07-04 12:14:51', '2026-07-06 00:07:39');
+(1, NULL, NULL, 0, 'session', '[]', 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, NULL, NULL, 0, 'session', '[]', 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, NULL, NULL, 0, 'session', '[]', 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, NULL, NULL, 0, 'session', '[]', 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, NULL, NULL, 0, 'session', '[]', 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -453,31 +453,31 @@ CREATE TABLE `popup_translations` (
 --
 
 INSERT INTO `popup_translations` (`id`, `popup_id`, `language_slug`, `title`, `content`, `image`, `button_text`, `button_url`, `created_at`, `updated_at`) VALUES
-(1, 1, 'tr', 'Popup 1', 'Popup 1 metni', '', 'Tamam', '/tr', '2026-07-04 12:14:49', '2026-07-06 00:07:25'),
-(2, 2, 'tr', 'Popup 2', 'Popup 2 metni', '', 'Tamam', '/tr', '2026-07-04 12:14:50', '2026-07-06 00:07:29'),
-(3, 3, 'tr', 'Popup 3', 'Popup 3 metni', '', 'Tamam', '/tr', '2026-07-04 12:14:50', '2026-07-06 00:07:32'),
-(4, 4, 'tr', 'Popup 4', 'Popup 4 metni', '', 'Tamam', '/tr', '2026-07-04 12:14:50', '2026-07-06 00:07:36'),
-(5, 5, 'tr', 'Popup 5', 'Popup 5 metni', '', 'Tamam', '/tr', '2026-07-04 12:14:51', '2026-07-06 00:07:39'),
-(6, 5, 'en', 'Popup 5 (EN)', 'Popup 5 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:39'),
-(7, 4, 'en', 'Popup 4 (EN)', 'Popup 4 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:36'),
-(8, 3, 'en', 'Popup 3 (EN)', 'Popup 3 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:32'),
-(9, 2, 'en', 'Popup 2 (EN)', 'Popup 2 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:29'),
-(10, 1, 'en', 'Popup 1 (EN)', 'Popup 1 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:25'),
-(11, 5, 'de', 'Popup 5 (DE)', 'Popup 5 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:39'),
-(12, 4, 'de', 'Popup 4 (DE)', 'Popup 4 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:36'),
-(13, 3, 'de', 'Popup 3 (DE)', 'Popup 3 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:32'),
-(14, 2, 'de', 'Popup 2 (DE)', 'Popup 2 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:29'),
-(15, 1, 'de', 'Popup 1 (DE)', 'Popup 1 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:25'),
-(16, 5, 'fr', 'Popup 5 (FR)', 'Popup 5 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:39'),
-(17, 4, 'fr', 'Popup 4 (FR)', 'Popup 4 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:36'),
-(18, 3, 'fr', 'Popup 3 (FR)', 'Popup 3 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:32'),
-(19, 2, 'fr', 'Popup 2 (FR)', 'Popup 2 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:29'),
-(20, 1, 'fr', 'Popup 1 (FR)', 'Popup 1 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:25'),
-(21, 5, 'es', 'Popup 5 (ES)', 'Popup 5 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:39'),
-(22, 4, 'es', 'Popup 4 (ES)', 'Popup 4 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:36'),
-(23, 3, 'es', 'Popup 3 (ES)', 'Popup 3 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:32'),
-(24, 2, 'es', 'Popup 2 (ES)', 'Popup 2 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:29'),
-(25, 1, 'es', 'Popup 1 (ES)', 'Popup 1 metni', '', 'Tamam', '/tr', '2026-07-04 12:39:59', '2026-07-06 00:07:25');
+(1, 1, 'tr', 'PHP 8.3 ile Gelen Yenilikler', '<p>PHP 8.3 sürümüyle gelen yeni özellikleri, performans iyileştirmelerini ve dikkat edilmesi gerekenleri inceliyoruz.</p>', NULL, 'Yazıyı Oku', '/tr/yazi/php-8-3-ile-gelen-yenilikler', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 'en', 'What\'s New in PHP 8.3', '<p>We look at the new features, performance improvements and gotchas that arrived with PHP 8.3.</p>', NULL, 'Read Article', '/en/posts/whats-new-in-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 'de', 'Was ist neu in PHP 8.3', '<p>Wir werfen einen Blick auf die neuen Funktionen, Performance-Verbesserungen und Fallstricke von PHP 8.3.</p>', NULL, 'Beitrag lesen', '/de/beitrag/was-ist-neu-in-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 'fr', 'Les nouveautés de PHP 8.3', '<p>Nous passons en revue les nouveautés, les améliorations de performances et les pièges de PHP 8.3.</p>', NULL, 'Lire l\'article', '/fr/article/les-nouveautes-de-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 'es', 'Novedades de PHP 8.3', '<p>Repasamos las nuevas funciones, las mejoras de rendimiento y los detalles a tener en cuenta de PHP 8.3.</p>', NULL, 'Leer artículo', '/es/entrada/novedades-de-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(6, 2, 'tr', 'Modern CSS ile Responsive Tasarım', '<p>Grid, Flexbox ve container query gibi modern CSS araçlarıyla her ekrana uyum sağlayan arayüzler kurmayı anlatıyoruz.</p>', NULL, 'Yazıyı Oku', '/tr/yazi/modern-css-ile-responsive-tasarim', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(7, 2, 'en', 'Responsive Design with Modern CSS', '<p>We show how to build interfaces that adapt to any screen using modern CSS tools like Grid, Flexbox and container queries.</p>', NULL, 'Read Article', '/en/posts/responsive-design-with-modern-css', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(8, 2, 'de', 'Responsives Design mit modernem CSS', '<p>Wir zeigen, wie man mit modernen CSS-Werkzeugen wie Grid, Flexbox und Container Queries Oberflächen für jeden Bildschirm baut.</p>', NULL, 'Beitrag lesen', '/de/beitrag/responsives-design-mit-modernem-css', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(9, 2, 'fr', 'Design responsive avec le CSS moderne', '<p>Nous montrons comment créer des interfaces qui s\'adaptent à tous les écrans avec les outils CSS modernes : Grid, Flexbox et container queries.</p>', NULL, 'Lire l\'article', '/fr/article/design-responsive-avec-le-css-moderne', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(10, 2, 'es', 'Diseño responsive con CSS moderno', '<p>Mostramos cómo crear interfaces que se adaptan a cualquier pantalla con herramientas de CSS moderno como Grid, Flexbox y container queries.</p>', NULL, 'Leer artículo', '/es/entrada/diseno-responsive-con-css-moderno', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(11, 3, 'tr', 'JavaScript\'te Asenkron Programlama', '<p>Callback, Promise ve async/await ile JavaScript\'te asenkron akışları nasıl temiz biçimde yöneteceğinizi anlatıyoruz.</p>', NULL, 'Yazıyı Oku', '/tr/yazi/javascriptte-asenkron-programlama', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(12, 3, 'en', 'Asynchronous Programming in JavaScript', '<p>We explain how to cleanly manage asynchronous flows in JavaScript with callbacks, Promises and async/await.</p>', NULL, 'Read Article', '/en/posts/asynchronous-programming-in-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(13, 3, 'de', 'Asynchrone Programmierung in JavaScript', '<p>Wir erklären, wie man asynchrone Abläufe in JavaScript mit Callbacks, Promises und async/await sauber steuert.</p>', NULL, 'Beitrag lesen', '/de/beitrag/asynchrone-programmierung-in-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(14, 3, 'fr', 'La programmation asynchrone en JavaScript', '<p>Nous expliquons comment gérer proprement les flux asynchrones en JavaScript avec les callbacks, les Promises et async/await.</p>', NULL, 'Lire l\'article', '/fr/article/la-programmation-asynchrone-en-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(15, 3, 'es', 'Programación asíncrona en JavaScript', '<p>Explicamos cómo gestionar de forma limpia los flujos asíncronos en JavaScript con callbacks, Promises y async/await.</p>', NULL, 'Leer artículo', '/es/entrada/programacion-asincrona-en-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(16, 4, 'tr', 'Veritabanı Optimizasyonu için SQL İpuçları', '<p>Doğru indeksler, seçici sorgular ve EXPLAIN ile SQL performansını nasıl artıracağınıza dair pratik ipuçları.</p>', NULL, 'Yazıyı Oku', '/tr/yazi/veritabani-optimizasyonu-icin-sql-ipuclari', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(17, 4, 'en', 'SQL Tips for Database Optimization', '<p>Practical tips on boosting SQL performance with the right indexes, selective queries and EXPLAIN.</p>', NULL, 'Read Article', '/en/posts/sql-tips-for-database-optimization', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(18, 4, 'de', 'SQL-Tipps zur Datenbankoptimierung', '<p>Praktische Tipps, um die SQL-Performance mit den richtigen Indizes, selektiven Abfragen und EXPLAIN zu steigern.</p>', NULL, 'Beitrag lesen', '/de/beitrag/sql-tipps-zur-datenbankoptimierung', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(19, 4, 'fr', 'Astuces SQL pour optimiser votre base de données', '<p>Des astuces concrètes pour améliorer les performances SQL avec les bons index, des requêtes sélectives et EXPLAIN.</p>', NULL, 'Lire l\'article', '/fr/article/astuces-sql-pour-optimiser-votre-base-de-donnees', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(20, 4, 'es', 'Consejos SQL para optimizar bases de datos', '<p>Consejos prácticos para mejorar el rendimiento de SQL con los índices adecuados, consultas selectivas y EXPLAIN.</p>', NULL, 'Leer artículo', '/es/entrada/consejos-sql-para-optimizar-bases-de-datos', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(21, 5, 'tr', 'Temiz Kod Yazmanın 10 Kuralı', '<p>Anlamlı isimlendirme, küçük fonksiyonlar ve iyi testlerle sürdürülebilir kod yazmanın 10 temel kuralı.</p>', NULL, 'Yazıyı Oku', '/tr/yazi/temiz-kod-yazmanin-10-kurali', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(22, 5, 'en', '10 Rules for Writing Clean Code', '<p>Ten core rules for writing maintainable code with meaningful names, small functions and good tests.</p>', NULL, 'Read Article', '/en/posts/10-rules-for-writing-clean-code', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(23, 5, 'de', '10 Regeln für sauberen Code', '<p>Zehn Kernregeln für wartbaren Code mit aussagekräftigen Namen, kleinen Funktionen und guten Tests.</p>', NULL, 'Beitrag lesen', '/de/beitrag/10-regeln-fur-sauberen-code', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(24, 5, 'fr', '10 règles pour écrire du code propre', '<p>Dix règles essentielles pour écrire du code maintenable avec des noms parlants, de petites fonctions et de bons tests.</p>', NULL, 'Lire l\'article', '/fr/article/10-regles-pour-ecrire-du-code-propre', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(25, 5, 'es', '10 reglas para escribir código limpio', '<p>Diez reglas esenciales para escribir código mantenible con nombres significativos, funciones pequeñas y buenas pruebas.</p>', NULL, 'Leer artículo', '/es/entrada/10-reglas-para-escribir-codigo-limpio', '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -505,11 +505,11 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `order`, `cover_image`, `gallery_images`, `is_featured`, `comment_enabled`, `status`, `view_count`, `published_at`, `created_at`, `updated_at`) VALUES
-(27, 1, 0, NULL, '[]', 1, 0, 1, 4, NULL, '2026-07-04 12:13:45', '2026-07-04 12:40:17'),
-(28, 1, 0, NULL, '[]', 0, 0, 1, 4, NULL, '2026-07-04 12:13:46', '2026-07-05 23:53:32'),
-(29, 1, 0, NULL, '[]', 0, 0, 1, 3, NULL, '2026-07-04 12:13:46', '2026-07-05 23:54:57'),
-(30, 1, 0, NULL, '[]', 0, 0, 1, 4, NULL, '2026-07-04 12:13:47', '2026-07-05 23:53:37'),
-(31, 1, 0, NULL, '[]', 0, 0, 1, 1, NULL, '2026-07-04 12:13:47', '2026-07-05 23:54:47');
+(1, 1, 1, NULL, NULL, 1, 1, 1, 93, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 2, NULL, NULL, 0, 1, 1, 86, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 3, NULL, NULL, 0, 1, 1, 79, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 4, NULL, NULL, 0, 1, 1, 72, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 5, NULL, NULL, 0, 1, 1, 66, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 10:50:53');
 
 -- --------------------------------------------------------
 
@@ -527,11 +527,12 @@ CREATE TABLE `post_category` (
 --
 
 INSERT INTO `post_category` (`post_id`, `category_id`) VALUES
-(27, 9),
-(28, 10),
-(29, 11),
-(30, 12),
-(31, 13);
+(1, 1),
+(1, 2),
+(3, 2),
+(4, 2),
+(5, 2),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -549,11 +550,16 @@ CREATE TABLE `post_tag` (
 --
 
 INSERT INTO `post_tag` (`post_id`, `tag_id`) VALUES
-(27, 6),
-(28, 7),
-(29, 8),
-(30, 9),
-(31, 10);
+(1, 1),
+(4, 1),
+(5, 1),
+(3, 2),
+(5, 2),
+(2, 3),
+(2, 4),
+(3, 4),
+(1, 5),
+(4, 5);
 
 -- --------------------------------------------------------
 
@@ -581,31 +587,31 @@ CREATE TABLE `post_translations` (
 --
 
 INSERT INTO `post_translations` (`id`, `post_id`, `language_slug`, `title`, `slug`, `short_description`, `content`, `seo_title`, `seo_description`, `seo_keywords`, `created_at`, `updated_at`) VALUES
-(27, 27, 'tr', 'Blog Yazisi 1', 'blog-yazisi-1', 'Bu 1 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 1</h2><p>Bu blog yazisinin icerigidir. Numara 1.</p>', NULL, NULL, NULL, '2026-07-04 12:13:45', '2026-07-04 12:13:45'),
-(28, 27, 'en', 'Blog Post 1', 'blog-post-1', NULL, '<p>English content 1.</p>', NULL, NULL, NULL, '2026-07-04 12:13:45', '2026-07-04 12:13:45'),
-(29, 28, 'tr', 'Blog Yazisi 2', 'blog-yazisi-2', 'Bu 2 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 2</h2><p>Bu blog yazisinin icerigidir. Numara 2.</p>', NULL, NULL, NULL, '2026-07-04 12:13:46', '2026-07-04 12:13:46'),
-(30, 28, 'en', 'Blog Post 2', 'blog-post-2', NULL, '<p>English content 2.</p>', NULL, NULL, NULL, '2026-07-04 12:13:46', '2026-07-04 12:13:46'),
-(31, 29, 'tr', 'Blog Yazisi 3', 'blog-yazisi-3', 'Bu 3 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 3</h2><p>Bu blog yazisinin icerigidir. Numara 3.</p>', NULL, NULL, NULL, '2026-07-04 12:13:46', '2026-07-04 12:13:46'),
-(32, 29, 'en', 'Blog Post 3', 'blog-post-3', NULL, '<p>English content 3.</p>', NULL, NULL, NULL, '2026-07-04 12:13:46', '2026-07-04 12:13:46'),
-(33, 30, 'tr', 'Blog Yazisi 4', 'blog-yazisi-4', 'Bu 4 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 4</h2><p>Bu blog yazisinin icerigidir. Numara 4.</p>', NULL, NULL, NULL, '2026-07-04 12:13:47', '2026-07-04 12:13:47'),
-(34, 30, 'en', 'Blog Post 4', 'blog-post-4', NULL, '<p>English content 4.</p>', NULL, NULL, NULL, '2026-07-04 12:13:47', '2026-07-04 12:13:47'),
-(35, 31, 'tr', 'Blog Yazisi 5', 'blog-yazisi-5', 'Bu 5 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 5</h2><p>Bu blog yazisinin icerigidir. Numara 5.</p>', NULL, NULL, NULL, '2026-07-04 12:13:47', '2026-07-04 12:13:47'),
-(36, 31, 'en', 'Blog Post 5', 'blog-post-5', NULL, '<p>English content 5.</p>', NULL, NULL, NULL, '2026-07-04 12:13:47', '2026-07-04 12:13:47'),
-(37, 27, 'de', 'Blog Yazisi 1 (DE)', 'blog-yazisi-1-de', 'Bu 1 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 1</h2><p>Bu blog yazisinin icerigidir. Numara 1.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(38, 28, 'de', 'Blog Yazisi 2 (DE)', 'blog-yazisi-2-de', 'Bu 2 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 2</h2><p>Bu blog yazisinin icerigidir. Numara 2.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(39, 29, 'de', 'Blog Yazisi 3 (DE)', 'blog-yazisi-3-de', 'Bu 3 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 3</h2><p>Bu blog yazisinin icerigidir. Numara 3.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(40, 30, 'de', 'Blog Yazisi 4 (DE)', 'blog-yazisi-4-de', 'Bu 4 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 4</h2><p>Bu blog yazisinin icerigidir. Numara 4.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(41, 31, 'de', 'Blog Yazisi 5 (DE)', 'blog-yazisi-5-de', 'Bu 5 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 5</h2><p>Bu blog yazisinin icerigidir. Numara 5.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(42, 27, 'fr', 'Blog Yazisi 1 (FR)', 'blog-yazisi-1-fr', 'Bu 1 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 1</h2><p>Bu blog yazisinin icerigidir. Numara 1.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(43, 28, 'fr', 'Blog Yazisi 2 (FR)', 'blog-yazisi-2-fr', 'Bu 2 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 2</h2><p>Bu blog yazisinin icerigidir. Numara 2.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(44, 29, 'fr', 'Blog Yazisi 3 (FR)', 'blog-yazisi-3-fr', 'Bu 3 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 3</h2><p>Bu blog yazisinin icerigidir. Numara 3.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(45, 30, 'fr', 'Blog Yazisi 4 (FR)', 'blog-yazisi-4-fr', 'Bu 4 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 4</h2><p>Bu blog yazisinin icerigidir. Numara 4.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(46, 31, 'fr', 'Blog Yazisi 5 (FR)', 'blog-yazisi-5-fr', 'Bu 5 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 5</h2><p>Bu blog yazisinin icerigidir. Numara 5.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(47, 27, 'es', 'Blog Yazisi 1 (ES)', 'blog-yazisi-1-es', 'Bu 1 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 1</h2><p>Bu blog yazisinin icerigidir. Numara 1.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(48, 28, 'es', 'Blog Yazisi 2 (ES)', 'blog-yazisi-2-es', 'Bu 2 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 2</h2><p>Bu blog yazisinin icerigidir. Numara 2.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(49, 29, 'es', 'Blog Yazisi 3 (ES)', 'blog-yazisi-3-es', 'Bu 3 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 3</h2><p>Bu blog yazisinin icerigidir. Numara 3.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(50, 30, 'es', 'Blog Yazisi 4 (ES)', 'blog-yazisi-4-es', 'Bu 4 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 4</h2><p>Bu blog yazisinin icerigidir. Numara 4.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(51, 31, 'es', 'Blog Yazisi 5 (ES)', 'blog-yazisi-5-es', 'Bu 5 numarali blog yazisinin kisa aciklamasi.', '<h2>Baslik 5</h2><p>Bu blog yazisinin icerigidir. Numara 5.</p>', NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59');
+(1, 1, 'tr', 'PHP 8.3 ile Gelen Yenilikler', 'php-8-3-ile-gelen-yenilikler', 'PHP 8.3 sürümüyle gelen yeni özellikleri, performans iyileştirmelerini ve dikkat edilmesi gerekenleri inceliyoruz.', '<p>PHP 8.3; tiplendirilmiş sınıf sabitleri, yeni <code>json_validate()</code> fonksiyonu ve derin klonlama iyileştirmeleri getiriyor. Bu yazıda öne çıkan değişiklikleri örneklerle ele alıyor ve projelerinizi güncellerken nelere dikkat etmeniz gerektiğini anlatıyoruz.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 'en', 'What\'s New in PHP 8.3', 'whats-new-in-php-8-3', 'We look at the new features, performance improvements and gotchas that arrived with PHP 8.3.', '<p>PHP 8.3 introduces typed class constants, the new <code>json_validate()</code> function and improvements to deep cloning. In this article we walk through the highlights with examples and what to watch out for when upgrading your projects.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 'de', 'Was ist neu in PHP 8.3', 'was-ist-neu-in-php-8-3', 'Wir werfen einen Blick auf die neuen Funktionen, Performance-Verbesserungen und Fallstricke von PHP 8.3.', '<p>PHP 8.3 führt typisierte Klassenkonstanten, die neue Funktion <code>json_validate()</code> und Verbesserungen beim tiefen Klonen ein. In diesem Artikel gehen wir die Highlights mit Beispielen durch und zeigen, worauf beim Upgrade zu achten ist.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 'fr', 'Les nouveautés de PHP 8.3', 'les-nouveautes-de-php-8-3', 'Nous passons en revue les nouveautés, les améliorations de performances et les pièges de PHP 8.3.', '<p>PHP 8.3 introduit les constantes de classe typées, la nouvelle fonction <code>json_validate()</code> et des améliorations du clonage profond. Dans cet article, nous parcourons les points forts avec des exemples et ce qu\'il faut surveiller lors de la mise à niveau.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 'es', 'Novedades de PHP 8.3', 'novedades-de-php-8-3', 'Repasamos las nuevas funciones, las mejoras de rendimiento y los detalles a tener en cuenta de PHP 8.3.', '<p>PHP 8.3 introduce constantes de clase tipadas, la nueva función <code>json_validate()</code> y mejoras en la clonación profunda. En este artículo recorremos lo más destacado con ejemplos y qué tener en cuenta al actualizar tus proyectos.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(6, 2, 'tr', 'Modern CSS ile Responsive Tasarım', 'modern-css-ile-responsive-tasarim', 'Grid, Flexbox ve container query gibi modern CSS araçlarıyla her ekrana uyum sağlayan arayüzler kurmayı anlatıyoruz.', '<p>Modern CSS; Grid, Flexbox, <code>clamp()</code> ve container query sayesinde medya sorgularına daha az bağımlı, gerçekten esnek arayüzler kurmayı mümkün kılıyor. Bu yazıda küçük örneklerle responsive bir düzenin nasıl oluşturulacağını adım adım gösteriyoruz.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(7, 2, 'en', 'Responsive Design with Modern CSS', 'responsive-design-with-modern-css', 'We show how to build interfaces that adapt to any screen using modern CSS tools like Grid, Flexbox and container queries.', '<p>Modern CSS makes truly flexible layouts possible with Grid, Flexbox, <code>clamp()</code> and container queries, reducing the need for media queries. In this article we build a responsive layout step by step with small, practical examples.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(8, 2, 'de', 'Responsives Design mit modernem CSS', 'responsives-design-mit-modernem-css', 'Wir zeigen, wie man mit modernen CSS-Werkzeugen wie Grid, Flexbox und Container Queries Oberflächen für jeden Bildschirm baut.', '<p>Modernes CSS ermöglicht mit Grid, Flexbox, <code>clamp()</code> und Container Queries wirklich flexible Layouts und reduziert den Bedarf an Media Queries. In diesem Artikel bauen wir Schritt für Schritt ein responsives Layout mit kleinen, praktischen Beispielen.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(9, 2, 'fr', 'Design responsive avec le CSS moderne', 'design-responsive-avec-le-css-moderne', 'Nous montrons comment créer des interfaces qui s\'adaptent à tous les écrans avec les outils CSS modernes : Grid, Flexbox et container queries.', '<p>Le CSS moderne rend possibles des mises en page vraiment flexibles grâce à Grid, Flexbox, <code>clamp()</code> et aux container queries, en réduisant le recours aux media queries. Dans cet article, nous construisons une mise en page responsive pas à pas avec de petits exemples concrets.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(10, 2, 'es', 'Diseño responsive con CSS moderno', 'diseno-responsive-con-css-moderno', 'Mostramos cómo crear interfaces que se adaptan a cualquier pantalla con herramientas de CSS moderno como Grid, Flexbox y container queries.', '<p>El CSS moderno hace posibles diseños realmente flexibles con Grid, Flexbox, <code>clamp()</code> y las container queries, reduciendo la dependencia de las media queries. En este artículo construimos un diseño responsive paso a paso con ejemplos pequeños y prácticos.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(11, 3, 'tr', 'JavaScript\'te Asenkron Programlama', 'javascriptte-asenkron-programlama', 'Callback, Promise ve async/await ile JavaScript\'te asenkron akışları nasıl temiz biçimde yöneteceğinizi anlatıyoruz.', '<p>JavaScript tek iş parçacıklıdır ama Promise ve <code>async/await</code> sayesinde ağ istekleri gibi işleri arayüzü kilitlemeden yürütür. Bu yazıda callback\'lerden async/await\'e geçişi ve hataları doğru yönetmeyi örneklerle ele alıyoruz.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(12, 3, 'en', 'Asynchronous Programming in JavaScript', 'asynchronous-programming-in-javascript', 'We explain how to cleanly manage asynchronous flows in JavaScript with callbacks, Promises and async/await.', '<p>JavaScript is single-threaded, yet Promises and <code>async/await</code> let it handle work like network requests without blocking the UI. In this article we cover moving from callbacks to async/await and handling errors correctly, with examples.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(13, 3, 'de', 'Asynchrone Programmierung in JavaScript', 'asynchrone-programmierung-in-javascript', 'Wir erklären, wie man asynchrone Abläufe in JavaScript mit Callbacks, Promises und async/await sauber steuert.', '<p>JavaScript ist single-threaded, doch Promises und <code>async/await</code> ermöglichen es, Aufgaben wie Netzwerkanfragen ohne Blockieren der Oberfläche zu erledigen. In diesem Artikel behandeln wir den Umstieg von Callbacks auf async/await und die richtige Fehlerbehandlung mit Beispielen.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(14, 3, 'fr', 'La programmation asynchrone en JavaScript', 'la-programmation-asynchrone-en-javascript', 'Nous expliquons comment gérer proprement les flux asynchrones en JavaScript avec les callbacks, les Promises et async/await.', '<p>JavaScript est monothread, mais les Promises et <code>async/await</code> lui permettent de gérer des tâches comme les requêtes réseau sans bloquer l\'interface. Dans cet article, nous abordons le passage des callbacks à async/await et la bonne gestion des erreurs, avec des exemples.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(15, 3, 'es', 'Programación asíncrona en JavaScript', 'programacion-asincrona-en-javascript', 'Explicamos cómo gestionar de forma limpia los flujos asíncronos en JavaScript con callbacks, Promises y async/await.', '<p>JavaScript es de un solo hilo, pero las Promises y <code>async/await</code> le permiten gestionar tareas como las peticiones de red sin bloquear la interfaz. En este artículo tratamos el paso de los callbacks a async/await y el manejo correcto de errores, con ejemplos.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(16, 4, 'tr', 'Veritabanı Optimizasyonu için SQL İpuçları', 'veritabani-optimizasyonu-icin-sql-ipuclari', 'Doğru indeksler, seçici sorgular ve EXPLAIN ile SQL performansını nasıl artıracağınıza dair pratik ipuçları.', '<p>Yavaş sorguların çoğu eksik indeks ya da gereksiz kolon seçiminden kaynaklanır. Bu yazıda <code>EXPLAIN</code> ile sorguları çözümlemeyi, doğru indeksleri seçmeyi ve N+1 problemini önlemeyi somut örneklerle gösteriyoruz.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(17, 4, 'en', 'SQL Tips for Database Optimization', 'sql-tips-for-database-optimization', 'Practical tips on boosting SQL performance with the right indexes, selective queries and EXPLAIN.', '<p>Most slow queries come from missing indexes or selecting unnecessary columns. In this article we show how to analyse queries with <code>EXPLAIN</code>, choose the right indexes and avoid the N+1 problem, with concrete examples.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(18, 4, 'de', 'SQL-Tipps zur Datenbankoptimierung', 'sql-tipps-zur-datenbankoptimierung', 'Praktische Tipps, um die SQL-Performance mit den richtigen Indizes, selektiven Abfragen und EXPLAIN zu steigern.', '<p>Die meisten langsamen Abfragen entstehen durch fehlende Indizes oder das Auswählen unnötiger Spalten. In diesem Artikel zeigen wir, wie man Abfragen mit <code>EXPLAIN</code> analysiert, die richtigen Indizes wählt und das N+1-Problem vermeidet – mit konkreten Beispielen.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(19, 4, 'fr', 'Astuces SQL pour optimiser votre base de données', 'astuces-sql-pour-optimiser-votre-base-de-donnees', 'Des astuces concrètes pour améliorer les performances SQL avec les bons index, des requêtes sélectives et EXPLAIN.', '<p>La plupart des requêtes lentes proviennent d\'index manquants ou de la sélection de colonnes inutiles. Dans cet article, nous montrons comment analyser les requêtes avec <code>EXPLAIN</code>, choisir les bons index et éviter le problème N+1, avec des exemples concrets.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(20, 4, 'es', 'Consejos SQL para optimizar bases de datos', 'consejos-sql-para-optimizar-bases-de-datos', 'Consejos prácticos para mejorar el rendimiento de SQL con los índices adecuados, consultas selectivas y EXPLAIN.', '<p>La mayoría de las consultas lentas se deben a índices ausentes o a seleccionar columnas innecesarias. En este artículo mostramos cómo analizar consultas con <code>EXPLAIN</code>, elegir los índices adecuados y evitar el problema N+1, con ejemplos concretos.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(21, 5, 'tr', 'Temiz Kod Yazmanın 10 Kuralı', 'temiz-kod-yazmanin-10-kurali', 'Anlamlı isimlendirme, küçük fonksiyonlar ve iyi testlerle sürdürülebilir kod yazmanın 10 temel kuralı.', '<p>Temiz kod; kısa fonksiyonlar, anlamlı isimler, tek sorumluluk ve iyi testlerle başlar. Bu yazıda ekip içinde okunabilirliği ve bakımı kolaylaştıran 10 pratik kuralı örneklerle derledik.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(22, 5, 'en', '10 Rules for Writing Clean Code', '10-rules-for-writing-clean-code', 'Ten core rules for writing maintainable code with meaningful names, small functions and good tests.', '<p>Clean code starts with short functions, meaningful names, single responsibility and good tests. In this article we gather ten practical rules that make code easier to read and maintain across a team, with examples.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(23, 5, 'de', '10 Regeln für sauberen Code', '10-regeln-fur-sauberen-code', 'Zehn Kernregeln für wartbaren Code mit aussagekräftigen Namen, kleinen Funktionen und guten Tests.', '<p>Sauberer Code beginnt mit kurzen Funktionen, aussagekräftigen Namen, einer einzigen Verantwortung und guten Tests. In diesem Artikel sammeln wir zehn praktische Regeln, die Code im Team lesbarer und wartbarer machen – mit Beispielen.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(24, 5, 'fr', '10 règles pour écrire du code propre', '10-regles-pour-ecrire-du-code-propre', 'Dix règles essentielles pour écrire du code maintenable avec des noms parlants, de petites fonctions et de bons tests.', '<p>Un code propre commence par des fonctions courtes, des noms parlants, une responsabilité unique et de bons tests. Dans cet article, nous rassemblons dix règles pratiques qui rendent le code plus lisible et plus facile à maintenir en équipe, avec des exemples.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(25, 5, 'es', '10 reglas para escribir código limpio', '10-reglas-para-escribir-codigo-limpio', 'Diez reglas esenciales para escribir código mantenible con nombres significativos, funciones pequeñas y buenas pruebas.', '<p>El código limpio empieza con funciones cortas, nombres significativos, una sola responsabilidad y buenas pruebas. En este artículo reunimos diez reglas prácticas que hacen el código más legible y fácil de mantener en equipo, con ejemplos.</p>', NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -637,11 +643,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `order`, `cover_image`, `gallery_images`, `is_featured`, `status`, `brand`, `price`, `model`, `type`, `fuel_type`, `heating_type`, `product_url`, `published_at`, `created_at`, `updated_at`) VALUES
-(2, 0, 'uploads/products/2026-07/img1-1783167249-6112f5.webp', '[]', 0, 1, 'Marka 1', 500.00, 'Model-1', 'Soba', 'Pelet', 'Merkezi', 'https://example.com/urun-1', NULL, '2026-07-04 12:14:11', '2026-07-04 12:14:11'),
-(3, 0, 'uploads/products/2026-07/img2-1783167251-243bf9.webp', '[]', 0, 1, 'Marka 2', 1000.00, 'Model-2', 'Soba', 'Pelet', 'Merkezi', 'https://example.com/urun-2', NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(4, 0, 'uploads/products/2026-07/img3-1783167252-589979.webp', '[]', 0, 1, 'Marka 3', 1500.00, 'Model-3', 'Soba', 'Pelet', 'Merkezi', 'https://example.com/urun-3', NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(5, 0, 'uploads/products/2026-07/img4-1783167252-8bd4b5.webp', '[]', 0, 1, 'Marka 4', 2000.00, 'Model-4', 'Soba', 'Pelet', 'Merkezi', 'https://example.com/urun-4', NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(6, 0, 'uploads/products/2026-07/img5-1783167253-93573a.webp', '[]', 0, 1, 'Marka 5', 2500.00, 'Model-5', 'Soba', 'Pelet', 'Merkezi', 'https://example.com/urun-5', NULL, '2026-07-04 12:14:13', '2026-07-04 12:14:13');
+(1, 1, 'uploads/products/2026-07/img1-1783167249-6112f5.webp', NULL, 1, 1, 'Umay', 49.00, 'v1.0', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 2, 'uploads/products/2026-07/img2-1783167251-243bf9.webp', NULL, 0, 1, 'Umay', 39.00, 'v1.0', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 3, 'uploads/products/2026-07/img3-1783167252-589979.webp', NULL, 0, 1, 'Umay', 129.00, 'v1.0', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 4, 'uploads/products/2026-07/img4-1783167252-8bd4b5.webp', NULL, 0, 1, 'Umay', 29.00, 'v1.0', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 5, 'uploads/products/2026-07/img5-1783167253-93573a.webp', NULL, 0, 1, 'Umay', 199.00, 'v1.0', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -659,11 +665,11 @@ CREATE TABLE `product_category` (
 --
 
 INSERT INTO `product_category` (`product_id`, `category_id`) VALUES
-(2, 9),
-(3, 10),
-(4, 11),
-(5, 12),
-(6, 13);
+(3, 2),
+(4, 2),
+(5, 2),
+(1, 4),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -681,11 +687,16 @@ CREATE TABLE `product_tag` (
 --
 
 INSERT INTO `product_tag` (`product_id`, `tag_id`) VALUES
-(2, 6),
-(3, 7),
-(4, 8),
-(5, 9),
-(6, 10);
+(3, 1),
+(4, 1),
+(5, 1),
+(3, 2),
+(5, 2),
+(1, 3),
+(2, 3),
+(1, 4),
+(2, 4),
+(4, 5);
 
 -- --------------------------------------------------------
 
@@ -717,31 +728,31 @@ CREATE TABLE `product_translations` (
 --
 
 INSERT INTO `product_translations` (`id`, `product_id`, `language_slug`, `title`, `slug`, `short_description`, `specifications`, `content`, `features`, `attributes`, `documents`, `seo_title`, `seo_description`, `seo_keywords`, `created_at`, `updated_at`) VALUES
-(2, 2, 'tr', 'Urun 1', 'urun-1', 'Urun 1 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 1 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:11', '2026-07-04 12:14:11'),
-(3, 2, 'en', 'Product 1', 'product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:11', '2026-07-04 12:14:11'),
-(4, 3, 'tr', 'Urun 2', 'urun-2', 'Urun 2 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 2 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(5, 3, 'en', 'Product 2', 'product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(6, 4, 'tr', 'Urun 3', 'urun-3', 'Urun 3 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 3 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(7, 4, 'en', 'Product 3', 'product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(8, 5, 'tr', 'Urun 4', 'urun-4', 'Urun 4 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 4 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(9, 5, 'en', 'Product 4', 'product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:12', '2026-07-04 12:14:12'),
-(10, 6, 'tr', 'Urun 5', 'urun-5', 'Urun 5 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 5 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:13', '2026-07-04 12:14:13'),
-(11, 6, 'en', 'Product 5', 'product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:14:13', '2026-07-04 12:14:13'),
-(12, 2, 'de', 'Urun 1 (DE)', 'urun-1-de', 'Urun 1 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 1 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(13, 3, 'de', 'Urun 2 (DE)', 'urun-2-de', 'Urun 2 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 2 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(14, 4, 'de', 'Urun 3 (DE)', 'urun-3-de', 'Urun 3 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 3 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(15, 5, 'de', 'Urun 4 (DE)', 'urun-4-de', 'Urun 4 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 4 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(16, 6, 'de', 'Urun 5 (DE)', 'urun-5-de', 'Urun 5 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 5 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(17, 2, 'fr', 'Urun 1 (FR)', 'urun-1-fr', 'Urun 1 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 1 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(18, 3, 'fr', 'Urun 2 (FR)', 'urun-2-fr', 'Urun 2 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 2 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(19, 4, 'fr', 'Urun 3 (FR)', 'urun-3-fr', 'Urun 3 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 3 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(20, 5, 'fr', 'Urun 4 (FR)', 'urun-4-fr', 'Urun 4 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 4 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(21, 6, 'fr', 'Urun 5 (FR)', 'urun-5-fr', 'Urun 5 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 5 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(22, 2, 'es', 'Urun 1 (ES)', 'urun-1-es', 'Urun 1 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 1 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(23, 3, 'es', 'Urun 2 (ES)', 'urun-2-es', 'Urun 2 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 2 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(24, 4, 'es', 'Urun 3 (ES)', 'urun-3-es', 'Urun 3 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 3 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(25, 5, 'es', 'Urun 4 (ES)', 'urun-4-es', 'Urun 4 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 4 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(26, 6, 'es', 'Urun 5 (ES)', 'urun-5-es', 'Urun 5 kisa aciklama.', NULL, '<h2>Ozellikler</h2><p>Urun 5 detayli aciklama.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59');
+(1, 1, 'tr', 'Umay Yönetim Teması', 'umay-yonetim-temasi', 'Umay framework için modern, hızlı ve tamamen responsive bir yönetim paneli teması.', NULL, '<p>Umay Yönetim Teması; karanlık/aydınlık mod, hazır bileşenler ve temiz bir arayüzle projelerinize profesyonel bir yönetim paneli kazandırır. Kurulumu kolaydır ve tüm modüllerle uyumludur.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 'en', 'Umay Admin Theme', 'umay-admin-theme', 'A modern, fast and fully responsive admin panel theme for the Umay framework.', NULL, '<p>The Umay Admin Theme gives your projects a professional dashboard with dark/light mode, ready-made components and a clean interface. It is easy to install and compatible with every module.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 'de', 'Umay Admin-Theme', 'umay-admin-theme', 'Ein modernes, schnelles und vollständig responsives Admin-Panel-Theme für das Umay-Framework.', NULL, '<p>Das Umay Admin-Theme verleiht Ihren Projekten ein professionelles Dashboard mit Dunkel-/Hell-Modus, fertigen Komponenten und einer klaren Oberfläche. Es ist einfach zu installieren und mit jedem Modul kompatibel.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 'fr', 'Thème d\'administration Umay', 'theme-d-administration-umay', 'Un thème de panneau d\'administration moderne, rapide et entièrement responsive pour le framework Umay.', NULL, '<p>Le thème d\'administration Umay offre à vos projets un tableau de bord professionnel avec mode sombre/clair, des composants prêts à l\'emploi et une interface épurée. Il est facile à installer et compatible avec tous les modules.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 'es', 'Tema de Administración Umay', 'tema-de-administracion-umay', 'Un tema de panel de administración moderno, rápido y totalmente responsive para el framework Umay.', NULL, '<p>El Tema de Administración Umay ofrece a tus proyectos un panel profesional con modo oscuro/claro, componentes listos para usar y una interfaz limpia. Es fácil de instalar y compatible con todos los módulos.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(6, 2, 'tr', 'Umay Blog Şablonu', 'umay-blog-sablonu', 'Editöryel görünümlü, SEO uyumlu ve çok dilli bir blog için hazır arayüz şablonu.', NULL, '<p>Umay Blog Şablonu; okunabilir tipografi, öne çıkan yazı alanları ve hızlı sayfa yükleme ile modern bir blog deneyimi sunar. Çok dilli yapıyla kutudan çıktığı gibi uyumludur.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(7, 2, 'en', 'Umay Blog Template', 'umay-blog-template', 'A ready-made, editorial-style, SEO-friendly template for a multilingual blog.', NULL, '<p>The Umay Blog Template delivers a modern blogging experience with readable typography, featured-post areas and fast page loads. It works out of the box with the multilingual setup.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(8, 2, 'de', 'Umay Blog-Vorlage', 'umay-blog-vorlage', 'Eine fertige, redaktionell gestaltete und SEO-freundliche Vorlage für einen mehrsprachigen Blog.', NULL, '<p>Die Umay Blog-Vorlage bietet mit lesbarer Typografie, Bereichen für hervorgehobene Beiträge und schnellen Ladezeiten ein modernes Blog-Erlebnis. Sie ist von Haus aus mit dem mehrsprachigen Aufbau kompatibel.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(9, 2, 'fr', 'Modèle de blog Umay', 'modele-de-blog-umay', 'Un modèle prêt à l\'emploi, au style éditorial et optimisé pour le SEO, pour un blog multilingue.', NULL, '<p>Le modèle de blog Umay offre une expérience de blog moderne avec une typographie lisible, des zones d\'articles à la une et un chargement rapide des pages. Il fonctionne d\'emblée avec la configuration multilingue.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(10, 2, 'es', 'Plantilla de Blog Umay', 'plantilla-de-blog-umay', 'Una plantilla lista para usar, de estilo editorial y optimizada para SEO, para un blog multilingüe.', NULL, '<p>La Plantilla de Blog Umay ofrece una experiencia de blog moderna con tipografía legible, áreas de entradas destacadas y carga rápida de páginas. Funciona desde el primer momento con la configuración multilingüe.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(11, 3, 'tr', 'E-Ticaret Başlangıç Kiti', 'e-ticaret-baslangic-kiti', 'Ürün kataloğu, sepet ve ödeme akışıyla hızlı başlangıç için hazır e-ticaret modülü.', NULL, '<p>E-Ticaret Başlangıç Kiti; ürün listeleme, filtreleme, sepet ve ödeme adımlarını içeren hazır bir temel sunar. Umay üzerinde çalışır ve kendi tasarımınıza kolayca uyarlanır.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(12, 3, 'en', 'E-Commerce Starter Kit', 'e-commerce-starter-kit', 'A ready e-commerce module for a fast start with a product catalog, cart and checkout flow.', NULL, '<p>The E-Commerce Starter Kit gives you a ready foundation with product listing, filtering, cart and checkout steps. It runs on Umay and is easy to adapt to your own design.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(13, 3, 'de', 'E-Commerce-Starterkit', 'e-commerce-starterkit', 'Ein fertiges E-Commerce-Modul für den schnellen Start mit Produktkatalog, Warenkorb und Checkout-Flow.', NULL, '<p>Das E-Commerce-Starterkit bietet eine fertige Basis mit Produktliste, Filterung, Warenkorb und Checkout-Schritten. Es läuft auf Umay und lässt sich leicht an Ihr eigenes Design anpassen.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(14, 3, 'fr', 'Kit de démarrage e-commerce', 'kit-de-demarrage-e-commerce', 'Un module e-commerce prêt à l\'emploi pour démarrer vite avec catalogue produits, panier et tunnel de paiement.', NULL, '<p>Le kit de démarrage e-commerce vous offre une base prête avec listing produits, filtres, panier et étapes de paiement. Il fonctionne sur Umay et s\'adapte facilement à votre propre design.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(15, 3, 'es', 'Kit de inicio para e-commerce', 'kit-de-inicio-para-e-commerce', 'Un módulo de e-commerce listo para empezar rápido con catálogo de productos, carrito y flujo de pago.', NULL, '<p>El Kit de inicio para e-commerce te ofrece una base lista con listado de productos, filtros, carrito y pasos de pago. Funciona sobre Umay y se adapta fácilmente a tu propio diseño.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(16, 4, 'tr', 'SEO Optimizasyon Eklentisi', 'seo-optimizasyon-eklentisi', 'Meta etiketleri, site haritası ve zengin snippet\'lerle arama motoru görünürlüğünü artıran eklenti.', NULL, '<p>SEO Optimizasyon Eklentisi; otomatik meta etiketleri, XML site haritası ve yapılandırılmış veri desteğiyle sitenizin arama motorlarındaki görünürlüğünü artırır. Çok dilli içerikle tam uyumludur.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(17, 4, 'en', 'SEO Optimization Plugin', 'seo-optimization-plugin', 'A plugin that improves search engine visibility with meta tags, a sitemap and rich snippets.', NULL, '<p>The SEO Optimization Plugin boosts your site\'s search visibility with automatic meta tags, an XML sitemap and structured-data support. It is fully compatible with multilingual content.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(18, 4, 'de', 'SEO-Optimierungs-Plugin', 'seo-optimierungs-plugin', 'Ein Plugin, das die Sichtbarkeit in Suchmaschinen mit Meta-Tags, Sitemap und Rich Snippets verbessert.', NULL, '<p>Das SEO-Optimierungs-Plugin steigert die Sichtbarkeit Ihrer Website mit automatischen Meta-Tags, einer XML-Sitemap und Unterstützung für strukturierte Daten. Es ist voll mit mehrsprachigen Inhalten kompatibel.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(19, 4, 'fr', 'Extension d\'optimisation SEO', 'extension-d-optimisation-seo', 'Une extension qui améliore la visibilité sur les moteurs de recherche avec balises meta, sitemap et rich snippets.', NULL, '<p>L\'extension d\'optimisation SEO améliore la visibilité de votre site grâce à des balises meta automatiques, un sitemap XML et la prise en charge des données structurées. Elle est entièrement compatible avec le contenu multilingue.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(20, 4, 'es', 'Complemento de optimización SEO', 'complemento-de-optimizacion-seo', 'Un complemento que mejora la visibilidad en buscadores con metaetiquetas, sitemap y rich snippets.', NULL, '<p>El Complemento de optimización SEO mejora la visibilidad de tu sitio con metaetiquetas automáticas, un sitemap XML y soporte de datos estructurados. Es totalmente compatible con el contenido multilingüe.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(21, 5, 'tr', 'Çok Dilli Site Paketi', 'cok-dilli-site-paketi', 'Sınırsız dil, otomatik yönlendirme ve dile çevrili URL\'lerle tam çok dilli site kurulumu.', NULL, '<p>Çok Dilli Site Paketi; sınırsız dil desteği, dile göre çevrili URL\'ler ve kolay çeviri yönetimiyle sitenizi tamamen çok dilli hale getirir. Umay\'ın çeviri altyapısıyla sorunsuz çalışır.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(22, 5, 'en', 'Multilingual Site Bundle', 'multilingual-site-bundle', 'A complete multilingual site setup with unlimited languages, automatic redirects and localized URLs.', NULL, '<p>The Multilingual Site Bundle makes your site fully multilingual with unlimited language support, localized URLs and easy translation management. It works seamlessly with Umay\'s translation layer.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(23, 5, 'de', 'Mehrsprachiges Website-Paket', 'mehrsprachiges-website-paket', 'Ein komplettes mehrsprachiges Setup mit unbegrenzten Sprachen, automatischen Weiterleitungen und lokalisierten URLs.', NULL, '<p>Das mehrsprachige Website-Paket macht Ihre Website mit unbegrenzter Sprachunterstützung, lokalisierten URLs und einfacher Übersetzungsverwaltung vollständig mehrsprachig. Es arbeitet nahtlos mit der Übersetzungsebene von Umay zusammen.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(24, 5, 'fr', 'Pack de site multilingue', 'pack-de-site-multilingue', 'Une configuration multilingue complète avec langues illimitées, redirections automatiques et URLs localisées.', NULL, '<p>Le pack de site multilingue rend votre site entièrement multilingue avec un support de langues illimité, des URLs localisées et une gestion des traductions simple. Il fonctionne parfaitement avec la couche de traduction d\'Umay.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(25, 5, 'es', 'Paquete de sitio multilingüe', 'paquete-de-sitio-multilingue', 'Una configuración multilingüe completa con idiomas ilimitados, redirecciones automáticas y URLs localizadas.', NULL, '<p>El Paquete de sitio multilingüe hace que tu sitio sea totalmente multilingüe con soporte de idiomas ilimitado, URLs localizadas y una gestión de traducciones sencilla. Funciona a la perfección con la capa de traducción de Umay.</p>', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -780,11 +791,11 @@ CREATE TABLE `slides` (
 --
 
 INSERT INTO `slides` (`id`, `type`, `media_file`, `text_position`, `label_size`, `title_size`, `subtitle_size`, `order`, `status`, `created_at`, `updated_at`) VALUES
-(3, 'image', 'uploads/slides/2026-07/img1-1783167268-320c09.webp', 'left', 12, 48, 16, 1, 1, '2026-07-04 12:14:28', '2026-07-04 12:14:28'),
-(4, 'image', 'uploads/slides/2026-07/img2-1783167269-ecba5d.webp', 'right', 12, 48, 16, 2, 1, '2026-07-04 12:14:29', '2026-07-04 12:14:29'),
-(5, 'image', 'uploads/slides/2026-07/img3-1783167269-e0fe8f.webp', 'left', 12, 48, 16, 3, 1, '2026-07-04 12:14:29', '2026-07-04 12:14:29'),
-(6, 'image', 'uploads/slides/2026-07/img4-1783167270-0506f1.webp', 'right', 12, 48, 16, 4, 1, '2026-07-04 12:14:30', '2026-07-04 12:14:30'),
-(7, 'image', 'uploads/slides/2026-07/img5-1783167270-35853a.webp', 'left', 12, 48, 16, 5, 1, '2026-07-04 12:14:30', '2026-07-04 12:14:30');
+(1, 'image', 'uploads/slides/2026-07/img1-1783167268-320c09.webp', 'left', 12, 48, 16, 1, 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 'image', 'uploads/slides/2026-07/img2-1783167269-ecba5d.webp', 'right', 12, 48, 16, 2, 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 'image', 'uploads/slides/2026-07/img3-1783167269-e0fe8f.webp', 'left', 12, 48, 16, 3, 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 'image', 'uploads/slides/2026-07/img4-1783167270-0506f1.webp', 'right', 12, 48, 16, 4, 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 'image', 'uploads/slides/2026-07/img5-1783167270-35853a.webp', 'left', 12, 48, 16, 5, 1, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -810,31 +821,31 @@ CREATE TABLE `slide_translations` (
 --
 
 INSERT INTO `slide_translations` (`id`, `slide_id`, `language_slug`, `label`, `title`, `subtitle`, `button_text`, `button_url`, `created_at`, `updated_at`) VALUES
-(4, 3, 'tr', 'Etiket 1', 'Slayt 1', 'Slayt 1 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:14:29', '2026-07-04 12:14:29'),
-(5, 4, 'tr', 'Etiket 2', 'Slayt 2', 'Slayt 2 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:14:29', '2026-07-04 12:14:29'),
-(6, 5, 'tr', 'Etiket 3', 'Slayt 3', 'Slayt 3 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:14:29', '2026-07-04 12:14:29'),
-(7, 6, 'tr', 'Etiket 4', 'Slayt 4', 'Slayt 4 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:14:30', '2026-07-04 12:14:30'),
-(8, 7, 'tr', 'Etiket 5', 'Slayt 5', 'Slayt 5 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:14:30', '2026-07-04 12:14:30'),
-(9, 7, 'en', 'Etiket 5', 'Slayt 5 (EN)', 'Slayt 5 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(10, 6, 'en', 'Etiket 4', 'Slayt 4 (EN)', 'Slayt 4 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(11, 5, 'en', 'Etiket 3', 'Slayt 3 (EN)', 'Slayt 3 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(12, 4, 'en', 'Etiket 2', 'Slayt 2 (EN)', 'Slayt 2 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(13, 3, 'en', 'Etiket 1', 'Slayt 1 (EN)', 'Slayt 1 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(14, 7, 'de', 'Etiket 5', 'Slayt 5 (DE)', 'Slayt 5 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(15, 6, 'de', 'Etiket 4', 'Slayt 4 (DE)', 'Slayt 4 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(16, 5, 'de', 'Etiket 3', 'Slayt 3 (DE)', 'Slayt 3 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(17, 4, 'de', 'Etiket 2', 'Slayt 2 (DE)', 'Slayt 2 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(18, 3, 'de', 'Etiket 1', 'Slayt 1 (DE)', 'Slayt 1 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(19, 7, 'fr', 'Etiket 5', 'Slayt 5 (FR)', 'Slayt 5 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(20, 6, 'fr', 'Etiket 4', 'Slayt 4 (FR)', 'Slayt 4 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(21, 5, 'fr', 'Etiket 3', 'Slayt 3 (FR)', 'Slayt 3 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(22, 4, 'fr', 'Etiket 2', 'Slayt 2 (FR)', 'Slayt 2 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(23, 3, 'fr', 'Etiket 1', 'Slayt 1 (FR)', 'Slayt 1 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(24, 7, 'es', 'Etiket 5', 'Slayt 5 (ES)', 'Slayt 5 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(25, 6, 'es', 'Etiket 4', 'Slayt 4 (ES)', 'Slayt 4 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(26, 5, 'es', 'Etiket 3', 'Slayt 3 (ES)', 'Slayt 3 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(27, 4, 'es', 'Etiket 2', 'Slayt 2 (ES)', 'Slayt 2 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(28, 3, 'es', 'Etiket 1', 'Slayt 1 (ES)', 'Slayt 1 alt basligi', 'Kesfet', '/tr/products', '2026-07-04 12:39:59', '2026-07-04 12:39:59');
+(1, 1, 'tr', 'PHP', 'PHP 8.3 ile Gelen Yenilikler', 'PHP 8.3 sürümüyle gelen yeni özellikleri, performans iyileştirmelerini ve dikkat edilmesi gerekenleri inceliyoruz.', 'Yazıyı Oku', '/tr/yazi/php-8-3-ile-gelen-yenilikler', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 'en', 'PHP', 'What\'s New in PHP 8.3', 'We look at the new features, performance improvements and gotchas that arrived with PHP 8.3.', 'Read Article', '/en/posts/whats-new-in-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 'de', 'PHP', 'Was ist neu in PHP 8.3', 'Wir werfen einen Blick auf die neuen Funktionen, Performance-Verbesserungen und Fallstricke von PHP 8.3.', 'Beitrag lesen', '/de/beitrag/was-ist-neu-in-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 'fr', 'PHP', 'Les nouveautés de PHP 8.3', 'Nous passons en revue les nouveautés, les améliorations de performances et les pièges de PHP 8.3.', 'Lire l\'article', '/fr/article/les-nouveautes-de-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 'es', 'PHP', 'Novedades de PHP 8.3', 'Repasamos las nuevas funciones, las mejoras de rendimiento y los detalles a tener en cuenta de PHP 8.3.', 'Leer artículo', '/es/entrada/novedades-de-php-8-3', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(6, 2, 'tr', 'CSS', 'Modern CSS ile Responsive Tasarım', 'Grid, Flexbox ve container query gibi modern CSS araçlarıyla her ekrana uyum sağlayan arayüzler kurmayı anlatıyoruz.', 'Yazıyı Oku', '/tr/yazi/modern-css-ile-responsive-tasarim', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(7, 2, 'en', 'CSS', 'Responsive Design with Modern CSS', 'We show how to build interfaces that adapt to any screen using modern CSS tools like Grid, Flexbox and container queries.', 'Read Article', '/en/posts/responsive-design-with-modern-css', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(8, 2, 'de', 'CSS', 'Responsives Design mit modernem CSS', 'Wir zeigen, wie man mit modernen CSS-Werkzeugen wie Grid, Flexbox und Container Queries Oberflächen für jeden Bildschirm baut.', 'Beitrag lesen', '/de/beitrag/responsives-design-mit-modernem-css', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(9, 2, 'fr', 'CSS', 'Design responsive avec le CSS moderne', 'Nous montrons comment créer des interfaces qui s\'adaptent à tous les écrans avec les outils CSS modernes : Grid, Flexbox et container queries.', 'Lire l\'article', '/fr/article/design-responsive-avec-le-css-moderne', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(10, 2, 'es', 'CSS', 'Diseño responsive con CSS moderno', 'Mostramos cómo crear interfaces que se adaptan a cualquier pantalla con herramientas de CSS moderno como Grid, Flexbox y container queries.', 'Leer artículo', '/es/entrada/diseno-responsive-con-css-moderno', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(11, 3, 'tr', 'JavaScript', 'JavaScript\'te Asenkron Programlama', 'Callback, Promise ve async/await ile JavaScript\'te asenkron akışları nasıl temiz biçimde yöneteceğinizi anlatıyoruz.', 'Yazıyı Oku', '/tr/yazi/javascriptte-asenkron-programlama', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(12, 3, 'en', 'JavaScript', 'Asynchronous Programming in JavaScript', 'We explain how to cleanly manage asynchronous flows in JavaScript with callbacks, Promises and async/await.', 'Read Article', '/en/posts/asynchronous-programming-in-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(13, 3, 'de', 'JavaScript', 'Asynchrone Programmierung in JavaScript', 'Wir erklären, wie man asynchrone Abläufe in JavaScript mit Callbacks, Promises und async/await sauber steuert.', 'Beitrag lesen', '/de/beitrag/asynchrone-programmierung-in-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(14, 3, 'fr', 'JavaScript', 'La programmation asynchrone en JavaScript', 'Nous expliquons comment gérer proprement les flux asynchrones en JavaScript avec les callbacks, les Promises et async/await.', 'Lire l\'article', '/fr/article/la-programmation-asynchrone-en-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(15, 3, 'es', 'JavaScript', 'Programación asíncrona en JavaScript', 'Explicamos cómo gestionar de forma limpia los flujos asíncronos en JavaScript con callbacks, Promises y async/await.', 'Leer artículo', '/es/entrada/programacion-asincrona-en-javascript', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(16, 4, 'tr', 'SQL', 'Veritabanı Optimizasyonu için SQL İpuçları', 'Doğru indeksler, seçici sorgular ve EXPLAIN ile SQL performansını nasıl artıracağınıza dair pratik ipuçları.', 'Yazıyı Oku', '/tr/yazi/veritabani-optimizasyonu-icin-sql-ipuclari', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(17, 4, 'en', 'SQL', 'SQL Tips for Database Optimization', 'Practical tips on boosting SQL performance with the right indexes, selective queries and EXPLAIN.', 'Read Article', '/en/posts/sql-tips-for-database-optimization', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(18, 4, 'de', 'SQL', 'SQL-Tipps zur Datenbankoptimierung', 'Praktische Tipps, um die SQL-Performance mit den richtigen Indizes, selektiven Abfragen und EXPLAIN zu steigern.', 'Beitrag lesen', '/de/beitrag/sql-tipps-zur-datenbankoptimierung', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(19, 4, 'fr', 'SQL', 'Astuces SQL pour optimiser votre base de données', 'Des astuces concrètes pour améliorer les performances SQL avec les bons index, des requêtes sélectives et EXPLAIN.', 'Lire l\'article', '/fr/article/astuces-sql-pour-optimiser-votre-base-de-donnees', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(20, 4, 'es', 'SQL', 'Consejos SQL para optimizar bases de datos', 'Consejos prácticos para mejorar el rendimiento de SQL con los índices adecuados, consultas selectivas y EXPLAIN.', 'Leer artículo', '/es/entrada/consejos-sql-para-optimizar-bases-de-datos', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(21, 5, 'tr', 'Temiz Kod', 'Temiz Kod Yazmanın 10 Kuralı', 'Anlamlı isimlendirme, küçük fonksiyonlar ve iyi testlerle sürdürülebilir kod yazmanın 10 temel kuralı.', 'Yazıyı Oku', '/tr/yazi/temiz-kod-yazmanin-10-kurali', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(22, 5, 'en', 'Clean Code', '10 Rules for Writing Clean Code', 'Ten core rules for writing maintainable code with meaningful names, small functions and good tests.', 'Read Article', '/en/posts/10-rules-for-writing-clean-code', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(23, 5, 'de', 'Sauberer Code', '10 Regeln für sauberen Code', 'Zehn Kernregeln für wartbaren Code mit aussagekräftigen Namen, kleinen Funktionen und guten Tests.', 'Beitrag lesen', '/de/beitrag/10-regeln-fur-sauberen-code', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(24, 5, 'fr', 'Code propre', '10 règles pour écrire du code propre', 'Dix règles essentielles pour écrire du code maintenable avec des noms parlants, de petites fonctions et de bons tests.', 'Lire l\'article', '/fr/article/10-regles-pour-ecrire-du-code-propre', '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(25, 5, 'es', 'Código limpio', '10 reglas para escribir código limpio', 'Diez reglas esenciales para escribir código mantenible con nombres significativos, funciones pequeñas y buenas pruebas.', 'Leer artículo', '/es/entrada/10-reglas-para-escribir-codigo-limpio', '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -856,11 +867,11 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `color`, `status`, `usage_count`, `created_at`, `updated_at`) VALUES
-(6, NULL, 1, 0, '2026-07-04 12:13:23', '2026-07-04 12:13:23'),
-(7, NULL, 1, 0, '2026-07-04 12:13:23', '2026-07-04 12:13:23'),
-(8, NULL, 1, 0, '2026-07-04 12:13:24', '2026-07-04 12:13:24'),
-(9, NULL, 1, 0, '2026-07-04 12:13:24', '2026-07-04 12:13:24'),
-(10, NULL, 1, 0, '2026-07-04 12:13:24', '2026-07-04 12:13:24');
+(1, NULL, 1, 0, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, NULL, 1, 0, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, NULL, 1, 0, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, NULL, 1, 0, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, NULL, 1, 0, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -887,31 +898,31 @@ CREATE TABLE `tag_translations` (
 --
 
 INSERT INTO `tag_translations` (`id`, `tag_id`, `language_slug`, `name`, `slug`, `description`, `seo_title`, `seo_description`, `seo_keywords`, `created_at`, `updated_at`) VALUES
-(6, 6, 'tr', 'PHP', 'php', NULL, NULL, NULL, NULL, '2026-07-04 12:13:23', '2026-07-04 12:13:23'),
-(7, 7, 'tr', 'JS', 'js', NULL, NULL, NULL, NULL, '2026-07-04 12:13:23', '2026-07-04 12:13:23'),
-(8, 8, 'tr', 'CSS', 'css', NULL, NULL, NULL, NULL, '2026-07-04 12:13:24', '2026-07-04 12:13:24'),
-(9, 9, 'tr', 'HTML', 'html', NULL, NULL, NULL, NULL, '2026-07-04 12:13:24', '2026-07-04 12:13:24'),
-(10, 10, 'tr', 'SQL', 'sql', NULL, NULL, NULL, NULL, '2026-07-04 12:13:24', '2026-07-04 12:13:24'),
-(11, 10, 'en', 'SQL (EN)', 'sql-en', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(12, 6, 'en', 'PHP (EN)', 'php-en', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(13, 7, 'en', 'JS (EN)', 'js-en', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(14, 9, 'en', 'HTML (EN)', 'html-en', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(15, 8, 'en', 'CSS (EN)', 'css-en', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(16, 10, 'de', 'SQL (DE)', 'sql-de', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(17, 6, 'de', 'PHP (DE)', 'php-de', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(18, 7, 'de', 'JS (DE)', 'js-de', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(19, 9, 'de', 'HTML (DE)', 'html-de', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(20, 8, 'de', 'CSS (DE)', 'css-de', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(21, 10, 'fr', 'SQL (FR)', 'sql-fr', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(22, 6, 'fr', 'PHP (FR)', 'php-fr', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(23, 7, 'fr', 'JS (FR)', 'js-fr', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(24, 9, 'fr', 'HTML (FR)', 'html-fr', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(25, 8, 'fr', 'CSS (FR)', 'css-fr', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(26, 10, 'es', 'SQL (ES)', 'sql-es', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(27, 6, 'es', 'PHP (ES)', 'php-es', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(28, 7, 'es', 'JS (ES)', 'js-es', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(29, 9, 'es', 'HTML (ES)', 'html-es', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59'),
-(30, 8, 'es', 'CSS (ES)', 'css-es', NULL, NULL, NULL, NULL, '2026-07-04 12:39:59', '2026-07-04 12:39:59');
+(1, 1, 'tr', 'PHP', 'php', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(2, 1, 'en', 'PHP', 'php', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(3, 1, 'de', 'PHP', 'php', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(4, 1, 'fr', 'PHP', 'php', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(5, 1, 'es', 'PHP', 'php', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(6, 2, 'tr', 'JavaScript', 'javascript', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(7, 2, 'en', 'JavaScript', 'javascript', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(8, 2, 'de', 'JavaScript', 'javascript', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(9, 2, 'fr', 'JavaScript', 'javascript', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(10, 2, 'es', 'JavaScript', 'javascript', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(11, 3, 'tr', 'CSS', 'css', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(12, 3, 'en', 'CSS', 'css', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(13, 3, 'de', 'CSS', 'css', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(14, 3, 'fr', 'CSS', 'css', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(15, 3, 'es', 'CSS', 'css', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(16, 4, 'tr', 'HTML', 'html', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(17, 4, 'en', 'HTML', 'html', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(18, 4, 'de', 'HTML', 'html', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(19, 4, 'fr', 'HTML', 'html', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(20, 4, 'es', 'HTML', 'html', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(21, 5, 'tr', 'SQL', 'sql', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(22, 5, 'en', 'SQL', 'sql', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(23, 5, 'de', 'SQL', 'sql', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(24, 5, 'fr', 'SQL', 'sql', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35'),
+(25, 5, 'es', 'SQL', 'sql', NULL, NULL, NULL, NULL, '2026-07-06 07:46:35', '2026-07-06 07:46:35');
 
 -- --------------------------------------------------------
 
@@ -1181,13 +1192,13 @@ ALTER TABLE `users`
 -- Tablo için AUTO_INCREMENT değeri `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `category_translations`
 --
 ALTER TABLE `category_translations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `languages`
@@ -1259,25 +1270,25 @@ ALTER TABLE `popup_translations`
 -- Tablo için AUTO_INCREMENT değeri `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `post_translations`
 --
 ALTER TABLE `post_translations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `product_translations`
 --
 ALTER TABLE `product_translations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `role_permissions`
@@ -1289,25 +1300,25 @@ ALTER TABLE `role_permissions`
 -- Tablo için AUTO_INCREMENT değeri `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `slide_translations`
 --
 ALTER TABLE `slide_translations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `tag_translations`
 --
 ALTER TABLE `tag_translations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users`
