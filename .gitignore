@@ -1,0 +1,36 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment
+.env
+.env.testing
+.env.backup
+
+# Storage (runtime) — keep directory structure, ignore contents
+/storage/cache/*
+!/storage/cache/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/profiler/*
+!/storage/profiler/.gitkeep
+/storage/app/public/*
+!/storage/app/public/.gitkeep
+
+# Uploads (runtime)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# storage:link symlink (public/storage -> storage/app/public)
+/public/storage
+
+# Tooling caches
+.phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+
+# IDE / OS
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+/**
+ * Umay Console
+ *
+ * Kullanım:
+ *   php umay <komut> [argümanlar]
+ *
+ * Örnekler:
+ *   php umay make:controller User
+ *   php umay make:model Post
+ *   php umay make:migration create_comments_table
+ *   php umay migrate
+ *   php umay db:seed
+ *   php umay route:list
+ *   php umay cache:clear
+ *   php umay help
+ */
+
+define('BASE_PATH', __DIR__);
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$kernel = new \Core\Console\Kernel(BASE_PATH);
+$exitCode = $kernel->handle($argv);
+exit($exitCode);

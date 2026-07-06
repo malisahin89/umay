@@ -1,0 +1,25 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Database\Factories;
+
+use App\Models\User;
+use Core\Factory;
+
+class UserFactory extends Factory
+{
+    protected string $model = User::class;
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'name' => $this->faker()->name(),
+            'email' => $this->faker()->uniqueEmail(),
+            'password' => 'password', // hashed by the User mutator // User mutator'ı hash'ler
+        ];
+    }
+}
