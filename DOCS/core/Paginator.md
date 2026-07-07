@@ -1,38 +1,38 @@
-# File Report: core/Paginator.php
+# Dosya Raporu: core/Paginator.php
 
-## Purpose
-Pagination utility for rendering navigation links.
+## Amaç
+Navigasyon bağlantılarını oluşturmak için sayfalama (pagination) aracı.
 
-## Overview
-Wraps Eloquent's `LengthAwarePaginator` or raw data to generate Bootstrap 5 compatible pagination HTML. It handles page range calculations (sliding window) and preserves query parameters.
+## Genel Bakış
+Eloquent'in `LengthAwarePaginator`'ını veya ham verileri sarmalayarak Bootstrap 5 uyumlu sayfalama HTML'i oluşturur. Sayfa aralığı hesaplamalarını (kayan pencere) yönetir ve sorgu parametrelerini korur.
 
-## File Location
+## Dosya Konumu
 `core/Paginator.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Illuminate\Contracts\Pagination\LengthAwarePaginator`
 
-## Classes
+## Sınıflar
 - `class Paginator`
 
-## Properties
-- `int $currentPage`: Current active page.
-- `int $lastPage`: Total number of pages.
-- `int $perPage`: Items per page.
-- `int $total`: Total number of items.
-- `mixed $items`: The actual data items.
-- `string $path`: The base URL path.
-- `array $queryParams`: Query parameters excluding 'page'.
+## Özellikler
+- `int $currentPage`: Mevcut aktif sayfa.
+- `int $lastPage`: Toplam sayfa sayısı.
+- `int $perPage`: Sayfa başına öğe sayısı.
+- `int $total`: Toplam öğe sayısı.
+- `mixed $items`: Gerçek veri öğeleri.
+- `string $path`: Temel URL yolu.
+- `array $queryParams`: 'page' hariç sorgu parametreleri.
 
-## Methods
-- `fromEloquent(LengthAwarePaginator $paginator): static`: Creates a `Paginator` from an Eloquent pagination result.
-- `make(mixed $items, int $total, int $perPage = 15, ?int $currentPage = null): static`: Creates a `Paginator` from raw data.
-- `links(string $style = 'bootstrap'): string`: Renders pagination HTML ('bootstrap' or 'simple').
-- `pageUrl(int $page): string`: Generates a URL for a specific page, preserving other query params.
-- `getPageRange(): array`: Calculates which page numbers to show (always first, last, and current ±2).
+## Metotlar
+- `fromEloquent(LengthAwarePaginator $paginator): static`: Eloquent sayfalama sonucundan bir `Paginator` oluşturur.
+- `make(mixed $items, int $total, int $perPage = 15, ?int $currentPage = null): static`: Ham verilerden bir `Paginator` oluşturur.
+- `links(string $style = 'bootstrap'): string`: Sayfalama HTML'ini oluşturur ('bootstrap' veya 'simple').
+- `pageUrl(int $page): string`: Diğer sorgu parametrelerini koruyarak belirli bir sayfa için URL oluşturur.
+- `getPageRange(): array`: Hangi sayfa numaralarının gösterileceğini hesaplar (her zaman ilk, son ve mevcut ±2).
 
-## Source References
+## Kaynak Referansları
 - `core/Paginator.php:1-288`

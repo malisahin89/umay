@@ -1,25 +1,25 @@
-# File Report: core/Model.php
+# Dosya Raporu: core/Model.php
 
-## Purpose
-Base model for all application entities.
+## Amaç
+Tüm uygulama varlıkları için temel model.
 
-## Overview
-Extends the `Illuminate\Database\Eloquent\Model` class, providing full access to Eloquent ORM features such as Eager Loading, Scopes, Accessors/Mutators, and Soft Deletes.
+## Genel Bakış
+`Illuminate\Database\Eloquent\Model` sınıfını genişletir; Eager Loading, Scopes, Accessors/Mutators ve Soft Deletes gibi tam Eloquent ORM özelliklerine erişim sağlar.
 
-## File Location
+## Dosya Konumu
 `core/Model.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Illuminate\Database\Eloquent\Model as EloquentModel`
 
-## Classes
+## Sınıflar
 - `abstract class Model extends EloquentModel`
 
-## Properties
-- `$timestamps`: set to `true` by default.
+## Özellikler
+- `$timestamps`: varsayılan olarak `true` olarak ayarlanmıştır.
 
-## Source References
+## Kaynak Referansları
 - `core/Model.php:1-30`

@@ -1,26 +1,26 @@
-# File Report: stubs/listener.stub
+# Dosya Raporu: stubs/listener.stub
 
-## Purpose
-Code-generation template for an event listener.
+## Amaç
+Bir olay dinleyicisi (event listener) için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new listener under `App\Listeners`, extending `Core\Events\Listener` with a `handle()` method that receives an `Event`.
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Listeners` altında, `Core\Events\Listener` sınıfını genişleten ve bir `Event` alan `handle()` metoduna sahip yeni bir dinleyici iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/listener.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Listeners`
-- **Class:** `{{ClassName}} extends Core\Events\Listener`
-- **Imports:** `Core\Events\Event`, `Core\Events\Listener`
-- **Methods:** `handle(Event $event): void`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Listeners`
+- **Sınıf:** `{{ClassName}} extends Core\Events\Listener`
+- **İçe Aktarmalar (Imports):** `Core\Events\Event`, `Core\Events\Listener`
+- **Metotlar:** `handle(Event $event): void`
 
-## Placeholders
-- `{{ClassName}}` — generated listener class name.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan dinleyici sınıfı adı.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:336`, `core/Console/Kernel.php:699-703`
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:336`, `core/Console/Kernel.php:699-703`
 
-## Source References
+## Kaynak Referansları
 - `stubs/listener.stub:1-16`
 - `core/Console/Kernel.php:336`

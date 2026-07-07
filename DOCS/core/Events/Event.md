@@ -1,23 +1,23 @@
-# File Report: core/Events/Event.php
+# Dosya Raporu: core/Events/Event.php
 
-## Purpose
-Base class for all application events.
+## Amaç
+Tüm uygulama olayları için temel sınıf.
 
-## Overview
-Provides basic functionality for all events, most notably the ability to stop the propagation of the event to subsequent listeners.
+## Genel Bakış
+Tüm olaylar için temel işlevsellik sağlar; en önemlisi, olayın sonraki dinleyicilere yayılmasını durdurma yeteneğidir.
 
-## File Location
+## Dosya Konumu
 `core/Events/Event.php`
 
-## Namespace
+## Ad Alanı
 `Core\Events`
 
-## Classes
+## Sınıflar
 - `abstract class Event`
 
-## Methods
-- `stopPropagation(): void`: Marks the event as stopped, preventing further listeners from being executed.
-- `isPropagationStopped(): bool`: Returns whether propagation has been stopped.
+## Metotlar
+- `stopPropagation(): void`: Olayı durduruldu olarak işaretler ve sonraki dinleyicilerin yürütülmesini engeller.
+- `isPropagationStopped(): bool`: Yayılımın durdurulup durdurulmadığını döndürür.
 
-## Source References
+## Kaynak Referansları
 - `core/Events/Event.php:1-32`

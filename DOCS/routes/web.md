@@ -1,19 +1,19 @@
-# File Report: routes/web.php
+# Dosya Raporu: routes/web.php
 
-## Purpose
-Definition of web-based routes.
+## Amaç
+Web tabanlı rotaların tanımı.
 
-## Overview
-Contains route definitions for the web frontend. These routes support sessions, CSRF protection, and typically render views.
+## Genel Bakış
+Web ön yüzü için rota tanımlarını içerir. Bu rotalar oturumları, CSRF korumasını destekler ve tipik olarak görünümleri render eder.
 
-## File Location
+## Dosya Konumu
 `routes/web.php`
 
-## Examples Found
-- **Static View**: `Route::view('/', 'welcome', ...)` renders the welcome page.
-- **Controller Routes**: Supports mapping URIs to controller methods (e.g., `UserController@show`).
-- **Middleware**: Supports assigning middleware like `throttle` or `auth`.
-- **Grouping**: Supports prefixing and grouping routes.
+## Bulunan Örnekler
+- **Statik Görünüm**: `Route::view('/', 'welcome', ...)` karşılama sayfasını render eder.
+- **Kontrolcü Rotaları**: URI'ların kontrolcü metotlarına eşlenmesini destekler (örneğin, `UserController@show`).
+- **Middleware**: `throttle` veya `auth` gibi middleware'lerin atanmasını destekler.
+- **Gruplama**: Rotaların öneklenmesini ve gruplandırılmasını destekler.
 
-## Source References
+## Kaynak Referansları
 - `routes/web.php:1-21`

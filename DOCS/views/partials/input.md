@@ -1,4 +1,4 @@
-# Input Partial
+# Parça (Partial): Input
 
 `views/partials/input.php` dosyası, form giriş alanlarını standardize eden ve hata yönetimini kolaylaştıran bir bileşendir.
 

@@ -1,9 +1,9 @@
-# Directory Report: config
+# Dizin Raporu: config
 
-## Purpose
-Contains configuration files for various application subsystems, utilizing environment variables for flexibility.
+## Amaç
+Esneklik için ortam değişkenlerini kullanan çeşitli uygulama alt sistemleri için yapılandırma dosyalarını içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `.htaccess`
 - `app.php`
 - `auth.php`
@@ -14,5 +14,5 @@ Contains configuration files for various application subsystems, utilizing envir
 - `profiler.php`
 - `session.php`
 
-## Source References
-- Directory: `config/`
+## Kaynak Referansları
+- Dizin: `config/`

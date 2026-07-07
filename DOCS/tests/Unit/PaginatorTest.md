@@ -1,24 +1,24 @@
-# File Report: tests/Unit/PaginatorTest.php
+# Dosya Raporu: tests/Unit/PaginatorTest.php
 
-## Purpose
-Unit tests for the paginator.
+## Amaç
+Sayfalandırıcı (paginator) için birim (unit) testler.
 
-## Overview
-Verifies `Core\Paginator`: last-page calculation (with and without remainder), accessors (`total`, `perPage`, `currentPage`) with lower-bound clamping, page-state predicates (`hasPages`, `hasMorePages`, `onFirstPage`, `onLastPage`), item-range computation, emptiness checks, URL generation (`pageUrl`, previous/next), and HTML rendering (`links`, `simpleLinks`), plus the `make` factory defaults.
+## Genel Bakış
+`Core\Paginator`'ı doğrular: son sayfa hesaplaması (kalanlı ve kalansız), alt sınır sınırlamalı erişimciler (`total`, `perPage`, `currentPage`), sayfa durumu belirteçleri (`hasPages`, `hasMorePages`, `onFirstPage`, `onLastPage`), öğe aralığı hesaplaması, boşluk kontrolleri, URL oluşturma (`pageUrl`, önceki/sonraki), HTML oluşturma (`links`, `simpleLinks`) ve `make` fabrika varsayılanları.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/PaginatorTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class PaginatorTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Paginator`
 
-## Test Methods
+## Test Metotları
 - `test_calculates_last_page_correctly` — `:26`
 - `test_calculates_last_page_with_remainder` — `:32`
 - `test_total_returns_correct_count` — `:38`
@@ -49,8 +49,8 @@ Verifies `Core\Paginator`: last-page calculation (with and without remainder), a
 - `test_simple_links_renders_prev_next_only` — `:209`
 - `test_make_creates_paginator_with_defaults` — `:219`
 
-## Cross References
-- **Tests:** `Core\Paginator` (see `DOCS/core/Paginator.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Paginator` (bkz. `DOCS/core/Paginator.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/PaginatorTest.php:1-227`

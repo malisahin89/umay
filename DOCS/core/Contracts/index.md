@@ -1,13 +1,13 @@
-# Directory Report: core/Contracts
+# Dizin Raporu: core/Contracts
 
-## Purpose
-Contains interfaces for core components to ensure decoupling.
+## Amaç
+Bağımsızlığı (decoupling) sağlamak için çekirdek bileşenler için arayüzler içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `Authenticatable.php`
 - `MailTransport.php`
 - `MiddlewareInterface.php`
 - `UserProvider.php`
 
-## Source References
-- Directory: `core/Contracts/`
+## Kaynak Referansları
+- Dizin: `core/Contracts/`

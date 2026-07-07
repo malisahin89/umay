@@ -1,30 +1,30 @@
-# File Report: core/Auth/HasApiTokens.php
+# Dosya Raporu: core/Auth/HasApiTokens.php
 
-## Purpose
-Trait to enable API token issuance for a user model.
+## Amaç
+Bir kullanıcı modeline API token oluşturma özelliği kazandıran trait.
 
-## Overview
-Provides functionality for creating and managing personal access tokens (Bearer tokens). This allows the application to authenticate stateless API requests.
+## Genel Bakış
+Kişisel erişim token'larının (Bearer token'lar) oluşturulması ve yönetilmesi için işlevsellik sağlar. Bu, uygulamanın durumsuz (stateless) API isteklerini kimlik doğrulamasına olanak tanır.
 
-## File Location
+## Dosya Konumu
 `core/Auth/HasApiTokens.php`
 
-## Namespace
+## Ad Alanı
 `Core\Auth`
 
-## Traits
+## Trait'ler
 - `trait HasApiTokens`
 
-## Methods
-- `tokens(): MorphMany`: Returns the relationship to the user's personal access tokens.
-- `createToken(string $name, array $abilities = ['*'], ?\DateTimeInterface $expiresAt = null): array`: Generates a new token, hashes it, persists it to the database, and returns the plaintext token.
-- `withAccessToken(PersonalAccessToken $token): static`: Binds a specific token to the model instance for the current request.
-- `currentAccessToken(): ?PersonalAccessToken`: Returns the token used to authenticate the current request.
-- `tokenCan(string $ability): bool`: Checks if the current token has a specific permission.
+## Metotlar
+- `tokens(): MorphMany`: Kullanıcının kişisel erişim token'larına olan ilişkiyi döndürür.
+- `createToken(string $name, array $abilities = ['*'], ?\DateTimeInterface $expiresAt = null): array`: Yeni bir token oluşturur, onu hashler, veritabanına kaydeder ve düz metin token'ı döndürür.
+- `withAccessToken(PersonalAccessToken $token): static`: Mevcut istek için belirli bir token'ı model örneğine bağlar.
+- `currentAccessToken(): ?PersonalAccessToken`: Mevcut isteği kimlik doğrulamak için kullanılan token'ı döndürür.
+- `tokenCan(string $ability): bool`: Mevcut token'ın belirli bir izne sahip olup olmadığını kontrol eder.
 
-## Dependencies
-- `Core\Auth\PersonalAccessToken` (Uses)
-- `Illuminate\Database\Eloquent\Relations\MorphMany` (Uses)
+## Bağımlılıklar
+- `Core\Auth\PersonalAccessToken` (Kullanır)
+- `Illuminate\Database\Eloquent\Relations\MorphMany` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Auth/HasApiTokens.php:1-111`

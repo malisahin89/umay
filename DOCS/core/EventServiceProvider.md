@@ -1,33 +1,33 @@
-# File Report: core/EventServiceProvider.php
+# Dosya Raporu: core/EventServiceProvider.php
 
-## Purpose
-Base class for registering event listeners.
+## Amaç
+Olay dinleyicilerini (event listeners) kaydetmek için temel sınıf.
 
-## Overview
-Provides a structure for defining event-to-listener mappings. Application-level event providers extend this class and override the `$listen` property.
+## Genel Bakış
+Olay-dinleyici eşlemelerini tanımlamak için bir yapı sağlar. Uygulama düzeyindeki olay sağlayıcıları bu sınıfı genişletir ve `$listen` özelliğini geçersiz kılar.
 
-## File Location
+## Dosya Konumu
 `core/EventServiceProvider.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Events\Dispatcher`
 
-## Classes
+## Sınıflar
 - `abstract class EventServiceProvider extends ServiceProvider`
 
-## Properties
-- `array $listen`: Mapping of event classes to arrays of listener classes.
+## Özellikler
+- `array $listen`: Olay sınıflarının dinleyici sınıfları dizileriyle eşleşmesi.
 
-## Methods
-- `register(): void`: Binds the `Dispatcher` singleton to the container.
-- `boot(): void`: Registers the defined `$listen` mapping with the `Dispatcher`.
+## Metotlar
+- `register(): void`: `Dispatcher` singleton'ını konteynere bağlar.
+- `boot(): void`: Tanımlanan `$listen` eşlemesini `Dispatcher`'a kaydeder.
 
-## Dependencies
-- `Core\ServiceProvider` (Extends)
-- `Core\Events\Dispatcher` (Uses)
+## Bağımlılıklar
+- `Core\ServiceProvider` (Genişletir)
+- `Core\Events\Dispatcher` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/EventServiceProvider.php:1-48`

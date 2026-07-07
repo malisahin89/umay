@@ -1,19 +1,19 @@
-# File Report: core/Exceptions/EntryNotFoundException.php
+# Dosya Raporu: core/Exceptions/EntryNotFoundException.php
 
-## Purpose
-Custom exception for missing container entries.
+## Amaç
+Eksik konteyner girdileri için özel istisna.
 
-## Overview
-Thrown by `Container::get()` when a requested abstract is not registered in the container and cannot be auto-wired.
+## Genel Bakış
+İstenen soyutlama konteynere kaydedilmediğinde ve otomatik olarak bağlanamadığında (auto-wired) `Container::get()` tarafından fırlatılır.
 
-## File Location
+## Dosya Konumu
 `core/Exceptions/EntryNotFoundException.php`
 
-## Namespace
+## Ad Alanı
 `Core\Exceptions`
 
-## Classes
+## Sınıflar
 - `class EntryNotFoundException extends \RuntimeException`
 
-## Source References
+## Kaynak Referansları
 - `core/Exceptions/EntryNotFoundException.php:1-10`

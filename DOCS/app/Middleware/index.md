@@ -1,10 +1,10 @@
-# Directory Report: app/Middleware
+# Dizin Raporu: app/Middleware
 
-## Purpose
-Contains application-specific middleware for request filtering and processing.
+## Amaç
+İstek filtreleme ve işleme için uygulamaya özgü ara yazılımları (middleware) içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `ThrottleMiddleware.php`
 
-## Source References
-- Directory: `app/Middleware/`
+## Kaynak Referansları
+- Dizin: `app/Middleware/`

@@ -1,46 +1,46 @@
-# File Report: core/Request.php
+# Dosya Raporu: core/Request.php
 
-## Purpose
-HTTP Request abstraction.
+## Amaç
+HTTP İstek (Request) soyutlaması.
 
-## Overview
-Captures and provides a unified API to access superglobals (`$_GET`, `$_POST`, `$_FILES`, `$_SERVER`, `$_COOKIE`). It includes automatic JSON body parsing for API requests and security filters for sensitive input.
+## Genel Bakış
+Süper küresel değişkenlere (`$_GET`, `$_POST`, `$_FILES`, `$_SERVER`, `$_COOKIE`) erişmek için birleşik bir API yakalar ve sağlar. API istekleri için otomatik JSON gövde ayrıştırmayı ve hassas girdiler için güvenlik filtrelerini içerir.
 
-## File Location
+## Dosya Konumu
 `core/Request.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Request`
 
-## Properties
-- `array $get`, `$post`, `$files`, `$server`, `$cookies`: Snapshots of the superglobals.
-- `array $routeParams`: Parameters captured from the route pattern (e.g., `{id}`).
+## Özellikler
+- `array $get`, `$post`, `$files`, `$server`, `$cookies`: Süper küresel değişkenlerin anlık görüntüleri.
+- `array $routeParams`: Rota deseninden yakalanan parametreler (örn. `{id}`).
 
-## Methods
-- `capture(): static`: Factory method to create a `Request` from current superglobals.
-- `input(string $key, mixed $default = null): mixed`: Retrieves a value from POST (priority) or GET.
-- `all(): array`: Merges GET and POST data.
-- `only(array $keys): array` / `except(array $keys): array`: Filters input data.
-- `has(string $key): bool`: Checks if a key exists in input.
-- `filled(string $key): bool`: Checks if a key exists and is not an empty string.
-- `file(string $key): ?array`: Retrieves an uploaded file.
-- `method(): string`: Returns the HTTP method (GET, POST, etc.).
-- `isAjax(): bool`: Checks if the request is an AJAX request.
-- `header(string $key, ?string $default = null): ?string`: Retrieves an HTTP header, with fallbacks for specific SAPI behaviors (e.g., `Authorization` header).
-- `ip(): string`: Returns the client's real IP address via `getRealIP()`.
-- `path(): string`: Returns the requested URI path.
-- `fullUrl(): string`: Returns the complete URL of the request.
-- `route(string $key, mixed $default = null): mixed`: Returns a route parameter.
-- `bearerToken(): ?string`: Extracts the Bearer token from the `Authorization` header.
-- `expectsJson(): bool`: Determines if the request expects a JSON response.
-- `validate(array $rules): ?array`: Validates the request data using `Core\Validator`.
+## Metotlar
+- `capture(): static`: Mevcut süper küresel değişkenlerden bir `Request` örneği oluşturmak için fabrika metodu.
+- `input(string $key, mixed $default = null): mixed`: POST (öncelikli) veya GET üzerinden bir değer alır.
+- `all(): array`: GET ve POST verilerini birleştirir.
+- `only(array $keys): array` / `except(array $keys): array`: Girdi verilerini filtreler.
+- `has(string $key): bool`: Girdide bir anahtarın mevcut olup olmadığını kontrol eder.
+- `filled(string $key): bool`: Bir anahtarın mevcut olup olmadığını ve boş bir dize olmadığını kontrol eder.
+- `file(string $key): ?array`: Yüklenen bir dosyayı alır.
+- `method(): string`: HTTP metodunu döndürür (GET, POST, vb.).
+- `isAjax(): bool`: İsteğin bir AJAX isteği olup olmadığını kontrol eder.
+- `header(string $key, ?string $default = null): ?string`: Belirli SAPI davranışları (örn. `Authorization` başlığı) için yedeklerle birlikte bir HTTP başlığı alır.
+- `ip(): string`: `getRealIP()` aracılığıyla istemcinin gerçek IP adresini döndürür.
+- `path(): string`: İstenen URI yolunu döndürür.
+- `fullUrl(): string`: İsteğin tam URL'sini döndürür.
+- `route(string $key, mixed $default = null): mixed`: Bir rota parametresini döndürür.
+- `bearerToken(): ?string`: `Authorization` başlığından Bearer token'ı çıkarır.
+- `expectsJson(): bool`: İsteğin bir JSON yanıtı bekleyip beklemediğini belirler.
+- `validate(array $rules): ?array`: İstek verilerini `Core\Validator` kullanarak doğrular.
 
-## Internal Workflow
-- **JSON Parsing**: In the constructor, if the `Content-Type` is `application/json`, it reads `php://input` (up to 8MB) and merges the decoded JSON into the `$post` array.
-- **Sensitive Filtering**: `exceptSensitive()` removes keys like `password`, `token`, `secret` from the input before it is flashed to the session, preventing plaintext credentials from being stored.
+## Dahili İş Akışı
+- **JSON Ayrıştırma**: Kurucu metotta (constructor), eğer `Content-Type` `application/json` ise, `php://input`'u okur (8MB'a kadar) ve çözülen JSON'ı `$post` dizisine ekler.
+- **Hassas Filtreleme**: `exceptSensitive()` metodu, şifre, token, secret gibi anahtarları, düz metin kimlik bilgilerinin saklanmasını önlemek için session'a aktarılmadan önce girdiden kaldırır.
 
-## Source References
+## Kaynak Referansları
 - `core/Request.php:1-317`

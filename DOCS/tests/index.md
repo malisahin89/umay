@@ -1,29 +1,29 @@
-# Directory Report: tests
+# Dizin Raporu: tests
 
-## Purpose
-Automated test suite for the framework, run under PHPUnit.
+## Amaç
+PHPUnit altında çalışan, çerçeve için otomatik test paketi.
 
-## Child Directories
-- `Feature/` — feature-level tests (see `Feature/index.md`)
-- `Unit/` — component unit tests (see `Unit/index.md`)
+## Alt Dizinler
+- `Feature/` — özellik düzeyinde testler (bkz. `Feature/index.md`)
+- `Unit/` — bileşen birim testleri (bkz. `Unit/index.md`)
 
-## Source Files
-- `bootstrap.php` — PHPUnit bootstrap: env, database, helpers (see `bootstrap.md`)
-- `TestCase.php` — base test case with framework-aware setup and helpers (see `TestCase.md`)
+## Kaynak Dosyalar
+- `bootstrap.php` — PHPUnit bootstrap: env, veritabanı, yardımcılar (bkz. `bootstrap.md`)
+- `TestCase.php` — çerçeve farkındalığına sahip kurulum ve yardımcılar içeren temel test durumu (bkz. `TestCase.md`)
 
-## Public Entry Points
-- `tests/bootstrap.php` (referenced by `phpunit.xml`).
+## Genel Giriş Noktaları
+- `tests/bootstrap.php` (`phpunit.xml` tarafından referans verilir).
 
-## Internal Dependencies
+## Dahili Bağımlılıklar
 - `Core\Database`, `core/helpers.php`, `Core\Auth`, `Core\Container`, `Core\Events\Dispatcher`, `Core\Request`, `App\Models\User`.
 
-## External Dependencies
+## Harici Bağımlılıklar
 - PHPUnit, `vlucas/phpdotenv`.
 
-## Cross References
-- **Configured By:** `phpunit.xml` (see `DOCS/phpunit.xml.md`)
-- **Bootstraps:** `Core\Database`, `core/helpers.php`
+## Çapraz Referanslar
+- **Yapılandırılan:** `phpunit.xml` (bkz. `DOCS/phpunit.xml.md`)
+- **Başlatılan:** `Core\Database`, `core/helpers.php`
 
-## Source References
+## Kaynak Referansları
 - `tests/`
 - `tests/bootstrap.php:1-32`, `tests/TestCase.php:1-166`

@@ -1,22 +1,22 @@
-# File Report: core/Exceptions/HttpException.php
+# Dosya Raporu: core/Exceptions/HttpException.php
 
-## Purpose
-Custom exception for HTTP-specific errors.
+## Amaç
+HTTP'ye özgü hatalar için özel istisna.
 
-## Overview
-Used to trigger specific HTTP responses (e.g., 403, 404, 500) from anywhere in the application. It is caught by the `ExceptionHandler` to render the appropriate error view.
+## Genel Bakış
+Uygulamanın herhangi bir yerinden belirli HTTP yanıtlarını (örneğin, 403, 404, 500) tetiklemek için kullanılır. `ExceptionHandler` tarafından yakalanarak uygun hata görünümü oluşturulur.
 
-## File Location
+## Dosya Konumu
 `core/Exceptions/HttpException.php`
 
-## Namespace
+## Ad Alanı
 `Core\Exceptions`
 
-## Classes
+## Sınıflar
 - `class HttpException extends \RuntimeException`
 
-## Methods
-- `getStatusCode(): int`: Returns the HTTP status code associated with the exception.
+## Metotlar
+- `getStatusCode(): int`: İstisna ile ilişkili HTTP durum kodunu döndürür.
 
-## Source References
+## Kaynak Referansları
 - `core/Exceptions/HttpException.php:1-25`

@@ -1,24 +1,24 @@
-# File Report: tests/Unit/ResponseBuilderTest.php
+# Dosya Raporu: tests/Unit/ResponseBuilderTest.php
 
-## Purpose
-Unit tests for the response builder.
+## Amaç
+Yanıt oluşturucu (response builder) için birim (unit) testler.
 
-## Overview
-Verifies `Core\ResponseBuilder`: constructor body/status, `json` (content type, body, status), `html` body, fluent `header`/`withHeaders`/`status` methods, a chained fluent API, and that `download` throws when the file is missing.
+## Genel Bakış
+`Core\ResponseBuilder`'ı doğrular: kurucu gövde/durum, `json` (içerik türü, gövde, durum), `html` gövdesi, akıcı `header`/`withHeaders`/`status` metotları, zincirlenmiş akıcı API ve dosya eksik olduğunda `download`'ın hata fırlatması.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/ResponseBuilderTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class ResponseBuilderTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\ResponseBuilder`
 
-## Test Methods
+## Test Metotları
 - `test_constructor_accepts_body_and_status` — `:20`
 - `test_json_sets_content_type_and_body` — `:30`
 - `test_json_with_status_code` — `:39`
@@ -29,8 +29,8 @@ Verifies `Core\ResponseBuilder`: constructor body/status, `json` (content type, 
 - `test_chained_fluent_api` — `:90`
 - `test_download_throws_when_file_not_found` — `:103`
 
-## Cross References
-- **Tests:** `Core\ResponseBuilder` (see `DOCS/core/ResponseBuilder.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\ResponseBuilder` (bkz. `DOCS/core/ResponseBuilder.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/ResponseBuilderTest.php:1-110`

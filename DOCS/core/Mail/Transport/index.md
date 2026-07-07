@@ -1,10 +1,10 @@
-# Directory Report: core/Mail/Transport
+# Dizin Raporu: core/Mail/Transport
 
-## Purpose
-Contains different mail delivery transport implementations.
+## Amaç
+Farklı e-posta iletim yöntemleri uygulamalarını içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `LogTransport.php`
 
-## Source References
-- Directory: `core/Mail/Transport/`
+## Kaynak Referansları
+- Dizin: `core/Mail/Transport/`

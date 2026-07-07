@@ -1,18 +1,18 @@
-# File Report: views/layouts/base.php
+# Dosya Raporu: views/layouts/base.php
 
-## Purpose
-Base HTML layout template.
+## Amaç
+Temel HTML düzen şablonu.
 
-## Overview
-Provides the standard HTML structure, including metadata, CSS imports (Tailwind CSS, Google Fonts, Font Awesome), and a placeholder for the body content.
+## Genel Bakış
+Metadata, CSS içe aktarmaları (Tailwind CSS, Google Fonts, Font Awesome) ve gövde içeriği için bir yer tutucu dahil olmak üzere standart HTML yapısını sağlar.
 
-## File Location
+## Dosya Konumu
 `views/layouts/base.php`
 
-## Key Features
-- **Dynamic Title**: Uses the `$title` variable passed from the controller or view.
-- **CSP Integration**: Uses `$this->nonce()` to provide nonces for inline styles, ensuring compatibility with strict Content Security Policies.
-- **Content Sections**: Uses `<?= $this->section('body') ?>` to inject content from child views.
+## Temel Özellikler
+- **Dinamik Başlık**: Kontrolcü veya görünümden iletilen `$title` değişkenini kullanır.
+- **CSP Entegrasyonu**: Satır içi stiller için nonce'lar sağlamak amacıyla `$this->nonce()` kullanır ve katı İçerik Güvenliği Politikalarıyla uyumluluğu sağlar.
+- **İçerik Bölümleri**: Alt görünümlerden içeriği enjekte etmek için `<?= $this->section('body') ?>` kullanır.
 
-## Source References
+## Kaynak Referansları
 - `views/layouts/base.php:1-38`

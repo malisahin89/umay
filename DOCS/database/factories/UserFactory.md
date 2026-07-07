@@ -1,26 +1,26 @@
-# File Report: database/factories/UserFactory.php
+# Dosya Raporu: database/factories/UserFactory.php
 
-## Purpose
-Factory for generating dummy User models.
+## Amaç
+Sahte Kullanıcı modelleri üretmek için fabrika.
 
-## Overview
-Defines a set of default attributes for the `User` model, using a faker proxy to generate random names and unique emails.
+## Genel Bakış
+Rastgele isimler ve benzersiz e-postalar üretmek için bir faker proxy kullanarak `User` modeli için bir dizi varsayılan öznitelik tanımlar.
 
-## File Location
+## Dosya Konumu
 `database/factories/UserFactory.php`
 
-## Namespace
+## Ad Alanı
 `Database\Factories`
 
-## Classes
+## Sınıflar
 - `class UserFactory extends Factory`
 
-## Methods
-- `definition(): array`: Returns default attributes: `name` (random), `email` (unique random), and `password` (static 'password').
+## Metotlar
+- `definition(): array`: Varsayılan öznitelikleri döndürür: `name` (rastgele), `email` (benzersiz rastgele) ve `password` (statik 'password').
 
-## Dependencies
-- `App\Models\User` (Target Model)
-- `Core\Factory` (Extends)
+## Bağımlılıklar
+- `App\Models\User` (Hedef Model)
+- `Core\Factory` (Genişletir)
 
-## Source References
+## Kaynak Referansları
 - `database/factories/UserFactory.php:1-25`

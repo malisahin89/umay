@@ -1,34 +1,34 @@
-# File Report: core/Mail/Mailable.php
+# Dosya Raporu: core/Mail/Mailable.php
 
-## Purpose
-Base class for all mailable messages.
+## Amaç
+Tüm e-posta iletileri için temel sınıf.
 
-## Overview
-Provides a structure for defining the content, recipients, and attachments of an email. Mailables are processed by a `Mailer` and sent via a `MailTransport`.
+## Genel Bakış
+Bir e-postanın içeriğini, alıcılarını ve eklerini tanımlamak için bir yapı sağlar. Mailable'lar bir `Mailer` tarafından işlenir ve bir `MailTransport` aracılığıyla gönderilir.
 
-## File Location
+## Dosya Konumu
 `core/Mail/Mailable.php`
 
-## Namespace
+## Ad Alanı
 `Core\Mail`
 
-## Classes
+## Sınıflar
 - `class Mailable`
 
-## Properties
-- `array $attachments`: List of file attachments.
-- `array $headers`: Custom HTTP headers for the email.
+## Özellikler
+- `array $attachments`: Dosya ekleri listesi.
+- `array $headers`: E-posta için özel HTTP başlıkları.
 
-## Methods
-- `getAttachments(): array`: Returns the registered attachments.
-- `getExtraHeaders(): array`: Returns the custom headers.
-- `getFrom(): string`: Returns the sender's email address.
-- `getFromName(): string`: Returns the sender's name.
-- `view(string $view, array $data = []): static`: Sets the email body to the rendered output of a view template.
-- `renderView(string $view, array $data = []): string`: Renders the specified view.
+## Metotlar
+- `getAttachments(): array`: Kaydedilen ekleri döndürür.
+- `getExtraHeaders(): array`: Özel başlıkları döndürür.
+- `getFrom(): string`: Göndericinin e-posta adresini döndürür.
+- `getFromName(): string`: Göndericinin adını döndürür.
+- `view(string $view, array $data = []): static`: E-posta gövdesini bir görünüm şablonunun işlenmiş çıktısına ayarlar.
+- `renderView(string $view, array $data = []): string`: Belirtilen görünümü işler.
 
-## Dependencies
-- `Core\View` (Uses via `ResponseBuilder` or direct resolution)
+## Bağımlılıklar
+- `Core\View` (`ResponseBuilder` veya doğrudan çözümleme yoluyla kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Mail/Mailable.php:1-117`

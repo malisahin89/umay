@@ -1,28 +1,28 @@
-# File Report: core/Profiler/ProfilerStorage.php
+# Dosya Raporu: core/Profiler/ProfilerStorage.php
 
-## Purpose
-Persistence layer for profiler data.
+## Amaç
+Profiler verileri için kalıcılık katmanı.
 
-## Overview
-Handles the saving, loading, and automatic cleanup of profiler JSON files in the `storage/profiler/` directory.
+## Genel Bakış
+`storage/profiler/` dizinindeki profiler JSON dosyalarının kaydedilmesini, yüklenmesini ve otomatik olarak temizlenmesini yönetir.
 
-## File Location
+## Dosya Konumu
 `core/Profiler/ProfilerStorage.php`
 
-## Namespace
+## Ad Alanı
 `Core\Profiler`
 
-## Classes
+## Sınıflar
 - `class ProfilerStorage`
 
-## Methods
-- `save(string $token, array $data): void`: Writes the profile data to a JSON file.
-- `load(string $token): ?array`: Reads and decodes a profile JSON file.
-- `cleanup(): void`: Deletes profiles that have exceeded their TTL or when the `max_entries` limit is reached.
-- `listRecent(): array`: Returns a list of the most recent profiles.
+## Metotlar
+- `save(string $token, array $data): void`: Profil verilerini bir JSON dosyasına yazar.
+- `load(string $token): ?array`: Bir profil JSON dosyasını okur ve çözer.
+- `cleanup(): void`: TTL'yi aşan veya `max_entries` sınırına ulaşılan profilleri siler.
+- `listRecent(): array`: En son profillerin bir listesini döndürür.
 
-## Dependencies
-- `Core\Profiler\Profiler` (Uses)
+## Bağımlılıklar
+- `Core\Profiler\Profiler` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Profiler/ProfilerStorage.php:1-110`

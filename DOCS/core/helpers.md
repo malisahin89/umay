@@ -1,54 +1,54 @@
-# File Report: core/helpers.php
+# Dosya Raporu: core/helpers.php
 
-## Purpose
-Global helper functions for common framework tasks.
+## Amaç
+Yaygın framework görevleri için küresel yardımcı fonksiyonlar.
 
-## Overview
-Provides a set of shorthand functions for routing, configuration, authentication, and other utility tasks, mirroring the ergonomics of larger frameworks.
+## Genel Bakış
+Yönlendirme, yapılandırma, kimlik doğrulama ve diğer yardımcı görevler için, büyük framework'lerin ergonomisini yansıtan bir dizi kısa yol fonksiyonu sağlar.
 
-## File Location
+## Dosya Konumu
 `core/helpers.php`
 
-## Functions
-### Routing & HTTP
-- `route(string $name, array $params = [])`: Generates a URL for a named route.
-- `redirect(string $urlOrName)`: Redirects the user to a URL or named route.
-- `back()`: Redirects the user to the previous page (HTTP_REFERER).
-- `asset(string $path)`: Generates a URL for a static asset.
-- `abort(int $code, string $message = '')`: Throws an `HttpException` to trigger an error page.
-- `response(string $body = '', int $status = 200)`: Returns a `ResponseBuilder` instance.
+## Fonksiyonlar
+### Yönlendirme & HTTP
+- `route(string $name, array $params = [])`: İsimlendirilmiş bir rota için URL oluşturur.
+- `redirect(string $urlOrName)`: Kullanıcıyı bir URL'ye veya isimlendirilmiş rotaya yönlendirir.
+- `back()`: Kullanıcıyı önceki sayfaya (HTTP_REFERER) yönlendirir.
+- `asset(string $path)`: Statik bir varlık için URL oluşturur.
+- `abort(int $code, string $message = '')`: Bir hata sayfasını tetiklemek için `HttpException` fırlatır.
+- `response(string $body = '', int $status = 200)`: Bir `ResponseBuilder` örneği döndürür.
 
-### Environment & Config
-- `env(string $key, mixed $default = null)`: Retrieves an environment variable from `.env` with type casting.
-- `config(string $key, mixed $default = null)`: Retrieves a configuration value from files in `config/` using dot notation.
+### Ortam & Yapılandırma
+- `env(string $key, mixed $default = null)`: `.env` dosyasından tip dönüşümüyle birlikte bir ortam değişkeni alır.
+- `config(string $key, mixed $default = null)`: `config/` dizinindeki dosyalardan nokta notasyonu kullanarak bir yapılandırma değeri alır.
 
-### Session & Flash
-- `flash(string $key, ?string $message = null)`: Sets or retrieves a temporary flash message.
-- `old(string $key, string $default = '', bool $escape = true)`: Retrieves old input from the session.
+### Oturum & Flash
+- `flash(string $key, ?string $message = null)`: Geçici bir flash mesajı ayarlar veya alır.
+- `old(string $key, string $default = '', bool $escape = true)`: Oturumdan eski girdiyi alır.
 
-### Auth & Security
-- `auth()`: Returns the currently authenticated user via `Core\Auth`.
-- `csrf()` / `csrf_token()`: Generates a CSRF token.
+### Kimlik Doğrulama & Güvenlik
+- `auth()`: `Core\Auth` aracılığıyla mevcut kimliği doğrulanmış kullanıcıyı döndürür.
+- `csrf()` / `csrf_token()`: Bir CSRF token'ı oluşturur.
 
-### Validation & Data
-- `validate(array $data, array $rules, array $messages = [])`: Validates data and returns errors or null.
-- `collect(mixed $items = [])`: Creates an `Illuminate\Support\Collection`.
-- `factory(string $modelClass, int $count = 1)`: Returns a model factory instance.
+### Doğrulama & Veri
+- `validate(array $data, array $rules, array $messages = [])`: Verileri doğrular ve hataları veya null döndürür.
+- `collect(mixed $items = [])`: Bir `Illuminate\Support\Collection` oluşturur.
+- `factory(string $modelClass, int $count = 1)`: Bir model fabrikası örneği döndürür.
 
-### Other Utilities
-- `event(Event $event)`: Dispatches an event.
-- `paginator(mixed $items, int $total = 0, int $perPage = 15)`: Returns a `Core\Paginator` instance.
-- `method_field(string $method)`: Generates a hidden input for HTTP method spoofing.
-- `cache(?string $key = null, mixed $value = null, ?int $ttl = null)`: Accesses the `Core\Cache` system.
-- `str_slug(string $text, string $separator = '-')`: Generates a URL-safe slug.
-- `str_limit(string $text, int $limit = 100, string $end = '...')`: Limits string length.
-- `now(string $format = 'Y-m-d H:i:s')`: Returns current date/time.
-- `today(string $format = 'Y-m-d')`: Returns current date.
-- `isCloudflareIP(string $ip)`: Checks if an IP belongs to Cloudflare.
-- `getRealIP()`: Securely retrieves the client's real IP address.
+### Diğer Araçlar
+- `event(Event $event)`: Bir olayı dağıtır.
+- `paginator(mixed $items, int $total = 0, int $perPage = 15)`: Bir `Core\Paginator` örneği döndürür.
+- `method_field(string $method)`: HTTP metot taklidi için gizli bir girdi oluşturur.
+- `cache(?string $key = null, mixed $value = null, ?int $ttl = null)`: `Core\Cache` sistemine erişir.
+- `str_slug(string $text, string $separator = '-')`: URL uyumlu bir slug oluşturur.
+- `str_limit(string $text, int $limit = 100, string $end = '...')`: Dize uzunluğunu sınırlar.
+- `now(string $format = 'Y-m-d H:i:s')`: Mevcut tarih/saati döndürür.
+- `today(string $format = 'Y-m-d')`: Mevcut tarihi döndürür.
+- `isCloudflareIP(string $ip)`: Bir IP'nin Cloudflare'e ait olup olmadığını kontrol eder.
+- `getRealIP()`: İstemcinin gerçek IP adresini güvenli bir şekilde alır.
 
-## Dependencies
-- Uses almost every core component (`Route`, `Redirect`, `Auth`, `Cache`, `Container`, `Request`, `ResponseBuilder`, `Validator`, `Paginator`, `Factory`, `Dispatcher`).
+## Bağımlılıklar
+- Neredeyse tüm çekirdek bileşenleri kullanır (`Route`, `Redirect`, `Auth`, `Cache`, `Container`, `Request`, `ResponseBuilder`, `Validator`, `Paginator`, `Factory`, `Dispatcher`).
 
-## Source References
+## Kaynak Referansları
 - `core/helpers.php:1-647`

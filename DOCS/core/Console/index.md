@@ -1,10 +1,10 @@
-# Directory Report: core/Console
+# Dizin Raporu: core/Console
 
-## Purpose
-Contains the CLI command runner.
+## Amaç
+CLI komut çalıştırıcısını içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `Kernel.php`
 
-## Source References
-- Directory: `core/Console/`
+## Kaynak Referansları
+- Dizin: `core/Console/`

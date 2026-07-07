@@ -1,45 +1,45 @@
-# File Report: core/FileUpload.php
+# Dosya Raporu: core/FileUpload.php
 
-## Purpose
-Secure file upload and processing utility.
+## Amaç
+Güvenli dosya yükleme ve işleme aracı.
 
-## Overview
-Handles file uploads with strict security checks (MIME type, size, path traversal protection). It can automatically convert images to WebP format for optimization.
+## Genel Bakış
+Sıkı güvenlik kontrolleriyle (MIME türü, boyut, yol aşımı koruması) dosya yüklemelerini yönetir. Optimizasyon için resimleri otomatik olarak WebP formatına dönüştürebilir.
 
-## File Location
+## Dosya Konumu
 `core/FileUpload.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Facades\Log`
 
-## Classes
+## Sınıflar
 - `class FileUpload`
 
-## Properties
-- `$allowedTypes`: List of permitted MIME types (JPEG, PNG, GIF, WebP).
-- `$mimeToExt`: Mapping from MIME types to file extensions.
-- `$maxSize`: Maximum allowed file size (2MB).
-- `$quality`: WebP compression quality (70).
+## Özellikler
+- `$allowedTypes`: İzin verilen MIME türlerinin listesi (JPEG, PNG, GIF, WebP).
+- `$mimeToExt`: MIME türlerinden dosya uzantılarına eşleme.
+- `$maxSize`: İzin verilen maksimum dosya boyutu (2MB).
+- `$quality`: WebP sıkıştırma kalitesi (70).
 
-## Methods
-- `upload(array $file, string $directory = 'uploads', bool $convertToWebP = true, ?string $customFilename = null): string`: The main upload process. Includes rate limiting, security checks, and optional WebP conversion.
-- `rename(string $oldPath, string $newFilename): string|false`: Safely renames an uploaded file, ensuring the new path remains within the `public/` directory.
-- `delete(string $filePath): bool`: Deletes a file after verifying it is inside the `public/` directory.
+## Metotlar
+- `upload(array $file, string $directory = 'uploads', bool $convertToWebP = true, ?string $customFilename = null): string`: Ana yükleme işlemi. Hız sınırlama, güvenlik kontrolleri ve isteğe bağlı WebP dönüşümünü içerir.
+- `rename(string $oldPath, string $newFilename): string|false`: Yüklenen bir dosyayı güvenli bir şekilde yeniden adlandırır, yeni yolun `public/` dizini içinde kaldığından emin olur.
+- `delete(string $filePath): bool`: Dosyanın `public/` dizini içinde olduğunu doğruladıktan sonra dosyayı siler.
 
-## Internal Workflow
-1. **Rate Limiting**: Limits uploads to 10 per minute per IP using `Cache::atomic`.
-2. **Security Checks**: Verifies `is_uploaded_file`, checks file size, and validates MIME type via `finfo`.
-3. **Path Traversal Protection**: Rejects directories containing `..` or absolute paths.
-4. **Secure Naming**: Generates a cryptographically random filename unless a custom one is provided (which is then sanitized).
-5. **WebP Conversion**: Uses GD's `imagewebp` if enabled and supported.
-6. **Path Verification**: `assertPathInsidePublic()` ensures all file operations are restricted to the `public/` folder.
+## Dahili İş Akışı
+1. **Hız Sınırlama**: `Cache::atomic` kullanarak yüklemeleri IP başına dakikada 10 ile sınırlar.
+2. **Güvenlik Kontrolleri**: `is_uploaded_file`'ı doğrular, dosya boyutunu kontrol eder ve `finfo` aracılığıyla MIME türünü doğrular.
+3. **Yol Aşımı Koruması**: `..` içeren veya mutlak yollar içeren dizinleri reddeder.
+4. **Güvenli Adlandırma**: Özel bir ad sağlanmadıkça kriptografik olarak rastgele bir dosya adı oluşturur (sağlanan ad ise temizlenir).
+5. **WebP Dönüşümü**: Etkinse ve destekleniyorsa GD'nin `imagewebp` fonksiyonunu kullanır.
+6. **Yol Doğrulaması**: `assertPathInsidePublic()` tüm dosya işlemlerinin `public/` klasörü ile sınırlandırılmasını sağlar.
 
-## Dependencies
-- `Core\Cache` (Uses for rate limiting)
-- `Core\Facades\Log` (Uses for logging traversal attempts)
+## Bağımlılıklar
+- `Core\Cache` (Hız sınırlama için kullanır)
+- `Core\Facades\Log` (Yol aşımı girişimlerini kaydetmek için kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/FileUpload.php:1-298`

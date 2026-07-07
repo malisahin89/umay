@@ -1,26 +1,26 @@
-# File Report: tests/Unit/EventDispatcherTest.php
+# Dosya Raporu: tests/Unit/EventDispatcherTest.php
 
-## Purpose
-Unit tests for the event dispatcher.
+## Amaç
+Olay dağıtıcısı (event dispatcher) için birim (unit) testler.
 
-## Overview
-Verifies `Core\Events\Dispatcher`: closure listeners are invoked and receive event data, multiple listeners all fire, propagation can be stopped, wildcard listeners receive all events, `hasListeners` reflects registration, `flush` clears listeners, and `once` listeners fire only once. Defines `OrderPlaced` and `PaymentReceived` event fixtures.
+## Genel Bakış
+`Core\Events\Dispatcher`'ı doğrular: closure dinleyicileri çağrılır ve olay verilerini alır, birden fazla dinleyici tetiklenir, yayılım durdurulabilir, wildcard dinleyiciler tüm olayları alır, `hasListeners` kaydı yansıtır, `flush` dinleyicileri temizler ve `once` dinleyicileri yalnızca bir kez çalışır. `OrderPlaced` ve `PaymentReceived` olay fixture'larını tanımlar.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/EventDispatcherTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class OrderPlaced extends Core\Events\Event` (`:13`)
 - `class PaymentReceived extends Core\Events\Event` (`:18`)
 - `class EventDispatcherTest extends Tests\TestCase` (`:23`)
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Events\Dispatcher`, `Core\Events\Event`
 
-## Test Methods
+## Test Metotları
 - `test_closure_listener_is_called` — `:31`
 - `test_listener_receives_event_data` — `:42`
 - `test_multiple_listeners_all_called` — `:53`
@@ -31,8 +31,8 @@ Verifies `Core\Events\Dispatcher`: closure listeners are invoked and receive eve
 - `test_flush_clears_all_listeners` — `:107`
 - `test_once_listener_called_only_once` — `:114`
 
-## Cross References
-- **Tests:** `Core\Events\Dispatcher` (see `DOCS/core/Events/Dispatcher.md`), `Core\Events\Event` (see `DOCS/core/Events/Event.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Events\Dispatcher` (bkz. `DOCS/core/Events/Dispatcher.md`), `Core\Events\Event` (bkz. `DOCS/core/Events/Event.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/EventDispatcherTest.php:1-126`

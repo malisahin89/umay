@@ -1,11 +1,11 @@
-# Directory Report: app/Providers
+# Dizin Raporu: app/Providers
 
-## Purpose
-Contains service providers that bind components into the container and perform boot-time configuration.
+## Amaç
+Bileşenleri konteynere bağlayan ve önyükleme zamanı yapılandırmasını gerçekleştiren servis sağlayıcılarını içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `EventServiceProvider.php`
 - `RouteServiceProvider.php`
 
-## Source References
-- Directory: `app/Providers/`
+## Kaynak Referansları
+- Dizin: `app/Providers/`

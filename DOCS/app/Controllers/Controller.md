@@ -1,16 +1,16 @@
-# File Report: app/Controllers/Controller.php
+# Dosya Raporu: app/Controllers/Controller.php
 
-## Purpose
-Base controller for the application.
+## Amaç
+Uygulama için temel denetleyici (base controller).
 
-## Overview
-An abstract base class that all application controllers should extend. It serves as a convention for controller structure.
+## Genel Bakış
+Tüm uygulama denetleyicilerinin genişletmesi gereken soyut bir temel sınıftır. Denetleyici yapısı için bir standart görevi görür.
 
-## File Location
+## Dosya Konumu
 `app/Controllers/Controller.php`
 
-## Classes
+## Sınıflar
 - `abstract class Controller`
 
-## Source References
+## Kaynak Referansları
 - `app/Controllers/Controller.php:1-19`

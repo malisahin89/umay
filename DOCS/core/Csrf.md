@@ -1,23 +1,23 @@
-# File Report: core/Csrf.php
+# Dosya Raporu: core/Csrf.php
 
-## Purpose
-Cross-Site Request Forgery (CSRF) protection.
+## Amaç
+Siteler Arası İstek Sahteciliği (CSRF) koruması.
 
-## Overview
-Generates and verifies a secret CSRF token stored in the session to ensure that state-changing requests (POST, PUT, etc.) originate from the authenticated user.
+## Genel Bakış
+Durum değiştiren isteklerin (POST, PUT vb.) kimliği doğrulanmış kullanıcıdan geldiğinden emin olmak için oturumda saklanan gizli bir CSRF token'ı oluşturur ve doğrular.
 
-## File Location
+## Dosya Konumu
 `core/Csrf.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Csrf`
 
-## Methods
-- `generate(): string`: Generates a random 32-byte token, stores it in `$_SESSION['csrf_token']`, and returns it.
-- `check(mixed $token): bool`: Compares the provided token with the one in the session using `hash_equals` to prevent timing attacks.
+## Metotlar
+- `generate(): string`: Rastgele bir 32-baytlık token oluşturur, bunu `$_SESSION['csrf_token']` içinde saklar ve döndürür.
+- `check(mixed $token): bool`: Zamanlama saldırılarını önlemek için `hash_equals` kullanarak sağlanan token'ı oturumdakine kıyaslar.
 
-## Source References
+## Kaynak Referansları
 - `core/Csrf.php:1-41`

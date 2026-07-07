@@ -1,44 +1,44 @@
-# File Report: core/ResponseBuilder.php
+# Dosya Raporu: core/ResponseBuilder.php
 
-## Purpose
-Fluent HTTP response builder.
+## Amaç
+Akıcı (Fluent) HTTP yanıt oluşturucu.
 
-## Overview
-Allows the construction of complex HTTP responses (headers, status codes, body types) using a fluent interface. It supports JSON, HTML, View rendering, and file downloads.
+## Genel Bakış
+Akıcı bir arayüz kullanarak karmaşık HTTP yanıtlarının (başlıklar, durum kodları, gövde türleri) oluşturulmasına olanak tanır. JSON, HTML, Görünüm işleme ve dosya indirmelerini destekler.
 
-## File Location
+## Dosya Konumu
 `core/ResponseBuilder.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class ResponseBuilder`
 
-## Properties
-- `string $body`: The response body content.
-- `int $status`: The HTTP status code.
-- `array $headers`: Map of HTTP headers.
-- `?string $downloadPath`: Path to a file for streaming downloads.
+## Özellikler
+- `string $body`: Yanıt gövdesi içeriği.
+- `int $status`: HTTP durum kodu.
+- `array $headers`: HTTP başlıkları eşlemesi.
+- `?string $downloadPath`: Akışla indirme için dosya yolu.
 
-## Methods
-- `status(int $code): static`: Sets the HTTP status code.
-- `header(string $key, string $value): static`: Adds a single HTTP header.
-- `withHeaders(array $headers): static`: Adds multiple HTTP headers.
-- `json(mixed $data, int $status = 0): static`: Sets the body to a JSON-encoded string and sets the `Content-Type` to `application/json`.
-- `html(string $content, int $status = 0): static`: Sets the body to an HTML string.
-- `view(string $view, array $data = [], int $status = 0): static`: Renders a view template using `Core\View` and sets it as the body.
-- `download(string $filePath, ?string $filename = null, int $status = 0): static`: Prepares a file for download, setting `Content-Disposition` and `Content-Length`.
-- `send(): void`: Sends the headers and body to the client. If a `downloadPath` is set, it uses `readfile()` to stream the file.
+## Metotlar
+- `status(int $code): static`: HTTP durum kodunu ayarlar.
+- `header(string $key, string $value): static`: Tek bir HTTP başlığı ekler.
+- `withHeaders(array $headers): static`: Birden fazla HTTP başlığı ekler.
+- `json(mixed $data, int $status = 0): static`: Gövdeyi JSON kodlu bir dizeye ayarlar ve `Content-Type`'ı `application/json` yapar.
+- `html(string $content, int $status = 0): static`: Gövdeyi bir HTML dizesine ayarlar.
+- `view(string $view, array $data = [], int $status = 0): static`: `Core\View` kullanarak bir görünüm şablonunu işler ve bunu gövde olarak ayarlar.
+- `download(string $filePath, ?string $filename = null, int $status = 0): static`: `Content-Disposition` ve `Content-Length` ayarlarını yaparak bir dosyayı indirme için hazırlar.
+- `send(): void`: Başlıkları ve gövdeyi istemciye gönderir. Eğer bir `downloadPath` ayarlanmışsa, dosyayı akışla göndermek için `readfile()` kullanır.
 
-## Internal Workflow
-- **Header Sanitization**: `sanitizeHeader()` removes CR/LF characters to prevent header injection and response splitting.
-- **Secure Downloads**: `download()` handles filename sanitization and uses RFC 5987 for non-ASCII filenames.
-- **Execution Termination**: `send()` throws a `RedirectException` at the end to stop the request lifecycle.
+## Dahili İş Akışı
+- **Başlık Temizleme**: `sanitizeHeader()`, başlık enjeksiyonunu ve yanıt bölünmesini önlemek için CR/LF karakterlerini kaldırır.
+- **Güvenli İndirmeler**: `download()`, dosya adı temizlemeyi yönetir ve ASCII olmayan dosya adları için RFC 5987'yi kullanır.
+- **Yürütme Sonlandırma**: `send()`, istek yaşam döngüsünü durdurmak için sonunda bir `RedirectException` fırlatır.
 
-## Dependencies
-- `Core\Container` (Uses)
-- `Core\View` (Uses)
+## Bağımlılıklar
+- `Core\Container` (Kullanır)
+- `Core\View` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/ResponseBuilder.php:1-160`

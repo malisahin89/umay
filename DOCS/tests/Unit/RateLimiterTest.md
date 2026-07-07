@@ -1,24 +1,24 @@
-# File Report: tests/Unit/RateLimiterTest.php
+# Dosya Raporu: tests/Unit/RateLimiterTest.php
 
-## Purpose
-Unit tests for the rate limiter.
+## Amaç
+Hız sınırlayıcı (rate limiter) için birim (unit) testler.
 
-## Overview
-Verifies `Core\RateLimiter`: initial state allows attempts, `hit` increments the counter, the limit triggers `tooManyAttempts`, `clear` resets, `remaining` decreases with hits, and named limiters can be registered.
+## Genel Bakış
+`Core\RateLimiter`'ı doğrular: başlangıç durumu denemelere izin verir, `hit` sayacı artırır, sınır `tooManyAttempts`'i tetikler, `clear` sıfırlar, `remaining` vuruşlarla azalır ve adlandırılmış sınırlayıcılar kaydedilebilir.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/RateLimiterTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class RateLimiterTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\RateLimiter`
 
-## Test Methods
+## Test Metotları
 - `test_not_too_many_attempts_initially` — `:26`
 - `test_hit_increments_counter` — `:31`
 - `test_too_many_attempts_after_limit` — `:38`
@@ -26,8 +26,8 @@ Verifies `Core\RateLimiter`: initial state allows attempts, `hit` increments the
 - `test_remaining_decreases_with_hits` — `:55`
 - `test_named_limiter_registration` — `:62`
 
-## Cross References
-- **Tests:** `Core\RateLimiter` (see `DOCS/core/RateLimiter.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\RateLimiter` (bkz. `DOCS/core/RateLimiter.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/RateLimiterTest.php:1-69`

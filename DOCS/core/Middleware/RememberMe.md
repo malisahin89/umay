@@ -1,31 +1,31 @@
-# File Report: core/Middleware/RememberMe.php
+# Dosya Raporu: core/Middleware/RememberMe.php
 
-## Purpose
-Session restoration middleware using "remember me" cookies.
+## Amaç
+"Beni hatırla" çerezlerini kullanarak oturum geri yükleme middleware'i.
 
-## Overview
-Checks for a `remember_me` cookie on incoming requests. If found and valid, it automatically logs the user back in, providing a seamless experience across browser sessions.
+## Genel Bakış
+Gelen isteklerde `remember_me` çerezini kontrol eder. Bulunursa ve geçerliyse, kullanıcıyı otomatik olarak tekrar giriş yaptırarak tarayıcı oturumları arasında kesintisiz bir deneyim sağlar.
 
-## File Location
+## Dosya Konumu
 `core/Middleware/RememberMe.php`
 
-## Namespace
+## Ad Alanı
 `Core\Middleware`
 
-## Classes
+## Sınıflar
 - `class RememberMe implements MiddlewareInterface`
 
-## Methods
+## Metotlar
 - `handle(Request $request, \Closure $next): mixed`:
-    1. If the user is already logged in, it proceeds to the next handler.
-    2. If not, it looks for the `remember_me` cookie.
-    3. If found, it uses the `UserProvider::retrieveByToken()` method to authenticate the user.
-    4. If successful, it calls `Auth::login($user, true)` to restore the session.
+    1. Kullanıcı zaten giriş yapmışsa, bir sonraki işleyiciye geçer.
+    2. Giriş yapılmamışsa, `remember_me` çerezini arar.
+    3. Çerez bulunursa, kullanıcıyı doğrulamak için `UserProvider::retrieveByToken()` metodunu kullanır.
+    4. Başarılı olursa, oturumu geri yüklemek için `Auth::login($user, true)` çağrılır.
 
-## Dependencies
-- `Core\Contracts\MiddlewareInterface` (Implements)
-- `Core\Request` (Uses)
-- `Core\Auth` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MiddlewareInterface` (Uygular)
+- `Core\Request` (Kullanır)
+- `Core\Auth` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Middleware/RememberMe.php:1-125`

@@ -1,42 +1,42 @@
-# File Report: core/Application.php
+# Dosya Raporu: core/Application.php
 
-## Purpose
-Framework bootstrap orchestrator.
+## Amaç
+Framework önyükleme (bootstrap) orkestratörü.
 
-## Overview
-The central class that manages the application lifecycle, including ServiceProvider registration, booting, and exception handling. It sits on top of the `Container`.
+## Genel Bakış
+ServiceProvider kaydı, başlatma ve istisna yönetimi dahil olmak üzere uygulama yaşam döngüsünü yöneten merkezi sınıftır. `Container` üzerinde konumlanır.
 
-## File Location
+## Dosya Konumu
 `core/Application.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Application`
 
-## Properties
-- `static ?self $instance`: Singleton instance of the application.
-- `ServiceProvider[] $providers`: List of registered service providers.
-- `bool $booted`: Flag indicating if the application has been booted.
-- `Container $container`: The dependency injection container.
+## Özellikler
+- `static ?self $instance`: Uygulamanın singleton örneği.
+- `ServiceProvider[] $providers`: Kaydedilmiş servis sağlayıcıların listesi.
+- `bool $booted`: Uygulamanın başlatılıp başlatılmadığını belirten bayrak.
+- `Container $container`: Bağımlılık enjeksiyonu konteyneri.
 
-## Methods
-- `getInstance(): self`: Returns the singleton instance.
-- `container(): Container`: Returns the container instance.
-- `make(string $abstract): mixed`: Shortcut to resolve a class from the container.
-- `instance(string $abstract, mixed $concrete): void`: Binds a specific instance to the container.
-- `singleton(string $abstract, callable|string $concrete): void`: Binds a singleton to the container.
-- `register(string $providerClass): static`: Registers a `ServiceProvider` and calls its `register()` method.
-- `boot(): static`: Calls the `boot()` method of all registered service providers.
-- `handleException(\Throwable $e): void`: Delegates exception handling to the `ExceptionHandler`.
-- `captureRequest(): static`: Captures the current HTTP request and binds it to the container.
+## Metotlar
+- `getInstance(): self`: Singleton örneğini döndürür.
+- `container(): Container`: Konteyner örneğini döndürür.
+- `make(string $abstract): mixed`: Bir sınıfı konteynerdan çözmek için kısa yol.
+- `instance(string $abstract, mixed $concrete): void`: Belirli bir örneği konteynere bağlar.
+- `singleton(string $abstract, callable|string $concrete): void`: Bir singleton'ı konteynere bağlar.
+- `register(string $providerClass): static`: Bir `ServiceProvider` kaydeder ve onun `register()` metodunu çağırır.
+- `boot(): static`: Kaydedilen tüm servis sağlayıcıların `boot()` metodunu çağırır.
+- `handleException(\Throwable $e): void`: İstisna yönetimini `ExceptionHandler`'a devreder.
+- `captureRequest(): static`: Mevcut HTTP isteğini yakalar ve konteynere bağlar.
 
-## Dependencies
-- `Core\Container` (Uses)
-- `Core\ServiceProvider` (Uses)
-- `Core\ExceptionHandler` (Uses)
-- `Core\Request` (Uses)
+## Bağımlılıklar
+- `Core\Container` (Kullanır)
+- `Core\ServiceProvider` (Kullanır)
+- `Core\ExceptionHandler` (Kullanır)
+- `Core\Request` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Application.php:1-166`

@@ -1,10 +1,10 @@
-# Directory Report: views/layouts
+# Dizin Raporu: views/layouts
 
-## Purpose
-Contains master layout templates.
+## Amaç
+Ana düzen (master layout) şablonlarını içerir.
 
-## Source Files
-- `base.php`: The main application layout.
+## Kaynak Dosyaları
+- `base.php`: Ana uygulama düzeni.
 
-## Source References
-- Directory: `views/layouts/`
+## Kaynak Referansları
+- Dizin: `views/layouts/`

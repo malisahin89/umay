@@ -1,13 +1,13 @@
-# Directory Report: views/partials
+# Dizin Raporu: views/partials
 
-## Purpose
-Contains small, reusable view components.
+## Amaç
+Küçük, yeniden kullanılabilir görünüm bileşenlerini içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `alert.php`
 - `button.php`
 - `card.php`
 - `input.php`
 
-## Source References
-- Directory: `views/partials/`
+## Kaynak Referansları
+- Dizin: `views/partials/`

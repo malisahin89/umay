@@ -1,26 +1,26 @@
-# File Report: core/Facades/Route.php
+# Dosya Raporu: core/Facades/Route.php
 
-## Purpose
-Static proxy for the `Core\Route` class.
+## Amaç
+`Core\Route` sınıfı için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Route` class. Note that since `Route` uses static architecture for registration, the facade primarily acts as a consistency layer.
+## Genel Bakış
+`Core\Route` sınıfına statik bir arayüz sağlamak için Facade desenini uygular. `Route` kayıt için statik mimari kullandığından, facade öncelikle bir tutarlılık katmanı görevi görür.
 
-## File Location
+## Dosya Konumu
 `core/Facades/Route.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class Route extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Route::class`.
+## Metotlar
+- `getFacadeRoot()`: `Route::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Route` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Route` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/Route.php:1-20`

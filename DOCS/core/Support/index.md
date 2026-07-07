@@ -1,10 +1,10 @@
-# Directory Report: core/Support
+# Dizin Raporu: core/Support
 
-## Purpose
-Contains support classes and base implementations.
+## Amaç
+Destek sınıflarını ve temel uygulamaları içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `Facade.php`
 
-## Source References
-- Directory: `core/Support/`
+## Kaynak Referansları
+- Dizin: `core/Support/`

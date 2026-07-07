@@ -1,50 +1,50 @@
-# Directory Report: tests/Unit
+# Dizin Raporu: tests/Unit
 
-## Purpose
-Unit tests covering individual framework components in isolation.
+## Amaç
+Çerçeve bileşenlerini tek başına kapsayan birim (unit) testler.
 
-## Child Directories
-- None.
+## Alt Dizinler
+- Yok.
 
-## Source Files
-- `ApplicationTest.php` — `Core\Application` (see `ApplicationTest.md`)
-- `ApiAuthTest.php` — API token auth (see `ApiAuthTest.md`)
-- `CacheTest.php` — `Core\Cache` (see `CacheTest.md`)
-- `ContainerFixTest.php` — `Core\Container` edge cases (see `ContainerFixTest.md`)
-- `CsrfTest.php` — `Core\Csrf` (see `CsrfTest.md`)
-- `DatabaseFixTest.php` — `Core\Database` (see `DatabaseFixTest.md`)
-- `EventDispatcherTest.php` — `Core\Events\Dispatcher` (see `EventDispatcherTest.md`)
-- `ExceptionClassesTest.php` — exception classes (see `ExceptionClassesTest.md`)
-- `ExceptionFixTest.php` — exception relationships (see `ExceptionFixTest.md`)
-- `FacadeServiceProviderTest.php` — `Core\Providers\FacadeServiceProvider` (see `FacadeServiceProviderTest.md`)
-- `FacadeTest.php` — `Core\Support\Facade` (see `FacadeTest.md`)
-- `FileUploadTest.php` — `Core\FileUpload` (see `FileUploadTest.md`)
-- `HelpersTest.php` — `core/helpers.php` (see `HelpersTest.md`)
-- `LoggerTest.php` — `Core\Logger` (see `LoggerTest.md`)
-- `MailerTest.php` — `Core\Mail\Mailer` (see `MailerTest.md`)
-- `MiddlewareInterfaceTest.php` — middleware contract (see `MiddlewareInterfaceTest.md`)
-- `PaginatorTest.php` — `Core\Paginator` (see `PaginatorTest.md`)
-- `RateLimiterTest.php` — `Core\RateLimiter` (see `RateLimiterTest.md`)
-- `RequestFixTest.php` — `Core\FormRequest` / JSON body (see `RequestFixTest.md`)
-- `RequestTest.php` — `Core\Request` (see `RequestTest.md`)
-- `ResponseBuilderTest.php` — `Core\ResponseBuilder` (see `ResponseBuilderTest.md`)
-- `RouteExtendedTest.php` — `Core\Route` (see `RouteExtendedTest.md`)
-- `RouteFixTest.php` — resource routing / dispatch (see `RouteFixTest.md`)
-- `ValidatorExtendedTest.php` — `Core\Validator` extended rules (see `ValidatorExtendedTest.md`)
-- `ValidatorTest.php` — `Core\Validator` core rules (see `ValidatorTest.md`)
-- `ViewTest.php` — `Core\View` (see `ViewTest.md`)
+## Kaynak Dosyalar
+- `ApplicationTest.php` — `Core\Application` (bkz. `ApplicationTest.md`)
+- `ApiAuthTest.php` — API token kimlik doğrulama (bkz. `ApiAuthTest.md`)
+- `CacheTest.php` — `Core\Cache` (bkz. `CacheTest.md`)
+- `ContainerFixTest.php` — `Core\Container` uç durumları (bkz. `ContainerFixTest.md`)
+- `CsrfTest.php` — `Core\Csrf` (bkz. `CsrfTest.md`)
+- `DatabaseFixTest.php` — `Core\Database` (bkz. `DatabaseFixTest.md`)
+- `EventDispatcherTest.php` — `Core\Events\Dispatcher` (bkz. `EventDispatcherTest.md`)
+- `ExceptionClassesTest.php` — istisna sınıfları (bkz. `ExceptionClassesTest.md`)
+- `ExceptionFixTest.php` — istisna ilişkileri (bkz. `ExceptionFixTest.md`)
+- `FacadeServiceProviderTest.php` — `Core\Providers\FacadeServiceProvider` (bkz. `FacadeServiceProviderTest.md`)
+- `FacadeTest.php` — `Core\Support\Facade` (bkz. `FacadeTest.md`)
+- `FileUploadTest.php` — `Core\FileUpload` (bkz. `FileUploadTest.md`)
+- `HelpersTest.php` — `core/helpers.php` (bkz. `HelpersTest.md`)
+- `LoggerTest.php` — `Core\Logger` (bkz. `LoggerTest.md`)
+- `MailerTest.php` — `Core\Mail\Mailer` (bkz. `MailerTest.md`)
+- `MiddlewareInterfaceTest.php` — ara yazılım sözleşmesi (bkz. `MiddlewareInterfaceTest.md`)
+- `PaginatorTest.php` — `Core\Paginator` (bkz. `PaginatorTest.md`)
+- `RateLimiterTest.php` — `Core\RateLimiter` (bkz. `RateLimiterTest.md`)
+- `RequestFixTest.php` — `Core\FormRequest` / JSON gövdesi (bkz. `RequestFixTest.md`)
+- `RequestTest.php` — `Core\Request` (bkz. `RequestTest.md`)
+- `ResponseBuilderTest.php` — `Core\ResponseBuilder` (bkz. `ResponseBuilderTest.md`)
+- `RouteExtendedTest.php` — `Core\Route` (bkz. `RouteExtendedTest.md`)
+- `RouteFixTest.php` — kaynak rotalama / dağıtım (bkz. `RouteFixTest.md`)
+- `ValidatorExtendedTest.php` — `Core\Validator` genişletilmiş kurallar (bkz. `ValidatorExtendedTest.md`)
+- `ValidatorTest.php` — `Core\Validator` temel kurallar (bkz. `ValidatorTest.md`)
+- `ViewTest.php` — `Core\View` (bkz. `ViewTest.md`)
 
-## Public Entry Points
-- Executed by PHPUnit (see `DOCS/phpunit.xml.md`).
+## Genel Giriş Noktaları
+- PHPUnit tarafından yürütülür (bkz. `DOCS/phpunit.xml.md`).
 
-## Internal Dependencies
-- All classes extend `Tests\TestCase` and exercise `Core\*` components and `core/helpers.php`.
+## Dahili Bağımlılıklar
+- Tüm sınıflar `Tests\TestCase`'i genişletir ve `Core\*` bileşenlerini ile `core/helpers.php`'yi test eder.
 
-## External Dependencies
+## Harici Bağımlılıklar
 - PHPUnit.
 
-## Cross References
-- **Base Class:** `Tests\TestCase` (see `DOCS/tests/TestCase.md`)
+## Çapraz Referanslar
+- **Taban Sınıf:** `Tests\TestCase` (bkz. `DOCS/tests/TestCase.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/`

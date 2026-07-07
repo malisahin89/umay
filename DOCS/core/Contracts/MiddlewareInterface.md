@@ -1,25 +1,25 @@
-# File Report: core/Contracts/MiddlewareInterface.php
+# Dosya Raporu: core/Contracts/MiddlewareInterface.php
 
-## Purpose
-Interface for middleware classes.
+## Amaç
+Middleware sınıfları için arayüz.
 
-## Overview
-Ensures that all middleware implement the `handle` method, which allows them to be chained together in a pipeline to process requests before they reach the controller.
+## Genel Bakış
+Tüm middleware'lerin `handle` metodunu uygulamasını sağlar; bu sayede istekler kontrolcüye ulaşmadan önce bir hat (pipeline) üzerinde zincirlenebilir.
 
-## File Location
+## Dosya Konumu
 `core/Contracts/MiddlewareInterface.php`
 
-## Namespace
+## Ad Alanı
 `Core\Contracts`
 
-## Interfaces
+## Arayüzler
 - `interface MiddlewareInterface`
 
-## Methods
-- `handle(Request $request, \Closure $next): mixed`: Processes the request and returns the result of the next handler in the chain.
+## Metotlar
+- `handle(Request $request, \Closure $next): mixed`: İsteği işler ve zincirdeki bir sonraki işleyicinin sonucunu döndürür.
 
-## Dependencies
-- `Core\Request` (Uses)
+## Bağımlılıklar
+- `Core\Request` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Contracts/MiddlewareInterface.php:1-35`

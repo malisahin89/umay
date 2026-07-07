@@ -1,10 +1,10 @@
-# Directory Report: core/Providers
+# Dizin Raporu: core/Providers
 
-## Purpose
-Contains core service providers.
+## Amaç
+Çekirdek servis sağlayıcıları içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `FacadeServiceProvider.php`
 
-## Source References
-- Directory: `core/Providers/`
+## Kaynak Referansları
+- Dizin: `core/Providers/`

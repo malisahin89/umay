@@ -1,26 +1,26 @@
-# File Report: core/Facades/Cache.php
+# Dosya Raporu: core/Facades/Cache.php
 
-## Purpose
-Static proxy for the `Core\Cache` instance.
+## Amaç
+`Core\Cache` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Cache` class.
+## Genel Bakış
+`Core\Cache` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/Cache.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class Cache extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Cache::class`.
+## Metotlar
+- `getFacadeRoot()`: `Cache::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Cache` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Cache` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/Cache.php:1-20`

@@ -1,25 +1,25 @@
-# File Report: core/Events/Listener.php
+# Dosya Raporu: core/Events/Listener.php
 
-## Purpose
-Base class for all event listeners.
+## Amaç
+Tüm olay dinleyicileri için temel sınıf.
 
-## Overview
-Defines the contract for listener classes. Subclasses must implement the `handle` method to define the logic that should execute when the associated event is triggered.
+## Genel Bakış
+Dinleyici sınıfları için kontratı tanımlar. Alt sınıflar, ilişkili olay tetiklendiğinde yürütülecek mantığı tanımlamak için `handle` metodunu uygulamalıdır.
 
-## File Location
+## Dosya Konumu
 `core/Events/Listener.php`
 
-## Namespace
+## Ad Alanı
 `Core\Events`
 
-## Classes
+## Sınıflar
 - `abstract class Listener`
 
-## Methods
-- `handle(Event $event): void`: Abstract method to process the event.
+## Metotlar
+- `handle(Event $event): void`: Olayı işleyen soyut metot.
 
-## Dependencies
-- `Core\Events\Event` (Uses)
+## Bağımlılıklar
+- `Core\Events\Event` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Events/Listener.php:1-29`

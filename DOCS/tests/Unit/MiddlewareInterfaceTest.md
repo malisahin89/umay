@@ -1,28 +1,28 @@
-# File Report: tests/Unit/MiddlewareInterfaceTest.php
+# Dosya Raporu: tests/Unit/MiddlewareInterfaceTest.php
 
-## Purpose
-Consistency test ensuring all middlewares honor the middleware contract.
+## Amaç
+Tüm ara yazılımların ara yazılım sözleşmesine uyduğunu sağlayan tutarlılık testi.
 
-## Overview
-Verifies that every middleware class implements `Core\Contracts\MiddlewareInterface`.
+## Genel Bakış
+Her ara yazılım sınıfının `Core\Contracts\MiddlewareInterface` arayüzünü uyguladığını doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/MiddlewareInterfaceTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class MiddlewareInterfaceTest extends Tests\TestCase`
 
-## Subject Under Test
-- `Core\Contracts\MiddlewareInterface` and all implementing middleware classes.
+## Test Edilen Konu
+- `Core\Contracts\MiddlewareInterface` ve uygulayan tüm ara yazılım sınıfları.
 
-## Test Methods
+## Test Metotları
 - `test_all_middlewares_implement_interface` — `:17`
 
-## Cross References
-- **Tests:** `Core\Contracts\MiddlewareInterface` (see `DOCS/core/Contracts/MiddlewareInterface.md`) and `Core\Middleware\*` (see `DOCS/core/Middleware/index.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Contracts\MiddlewareInterface` (bkz. `DOCS/core/Contracts/MiddlewareInterface.md`) ve `Core\Middleware\*` (bkz. `DOCS/core/Middleware/index.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/MiddlewareInterfaceTest.php:1-43`

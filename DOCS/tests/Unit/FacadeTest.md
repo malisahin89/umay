@@ -1,24 +1,24 @@
-# File Report: tests/Unit/FacadeTest.php
+# Dosya Raporu: tests/Unit/FacadeTest.php
 
-## Purpose
-Unit tests for the facade base class.
+## Amaç
+Facade taban sınıfı için birim (unit) testler.
 
-## Overview
-Verifies `Core\Support\Facade`: static calls forward to the resolved instance, `swap` replaces the instance, clearing resolved instances forces re-resolution, an unresolvable accessor throws, `getFacadeRoot` returns the correct instance, and a single resolved instance can be cleared.
+## Genel Bakış
+`Core\Support\Facade`'i doğrular: statik çağrılar çözümlenmiş örneğe yönlendirilir, `swap` örneği değiştirir, çözümlenmiş örneklerin temizlenmesi yeniden çözünürlüğü zorlar, çözümlenemeyen bir erişici (accessor) hata fırlatır, `getFacadeRoot` doğru örneği döndürür ve tek bir çözümlenmiş örnek temizlenebilir.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/FacadeTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class FacadeTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Support\Facade`
 
-## Test Methods
+## Test Metotları
 - `test_facade_forwards_static_calls_to_resolved_instance` — `:36`
 - `test_swap_replaces_resolved_instance` — `:64`
 - `test_clear_resolved_instances_forces_re_resolution` — `:99`
@@ -26,8 +26,8 @@ Verifies `Core\Support\Facade`: static calls forward to the resolved instance, `
 - `test_get_facade_root_returns_correct_instance` — `:148`
 - `test_clear_single_resolved_instance` — `:170`
 
-## Cross References
-- **Tests:** `Core\Support\Facade` (see `DOCS/core/Support/Facade.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Support\Facade` (bkz. `DOCS/core/Support/Facade.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/FacadeTest.php:1-193`

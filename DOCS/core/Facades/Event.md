@@ -1,26 +1,26 @@
-# File Report: core/Facades/Event.php
+# Dosya Raporu: core/Facades/Event.php
 
-## Purpose
-Static proxy for the `Core\Events\Dispatcher` instance.
+## Amaç
+`Core\Events\Dispatcher` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Events\Dispatcher` class.
+## Genel Bakış
+`Core\Events\Dispatcher` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/Event.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class Event extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Dispatcher::class`.
+## Metotlar
+- `getFacadeRoot()`: `Dispatcher::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Events\Dispatcher` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Events\Dispatcher` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/Event.php:1-20`

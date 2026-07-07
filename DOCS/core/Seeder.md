@@ -1,29 +1,29 @@
-# File Report: core/Seeder.php
+# Dosya Raporu: core/Seeder.php
 
-## Purpose
-Base class for database seeders.
+## Amaç
+Veritabanı seed'leri için temel sınıf.
 
-## Overview
-Provides a structure for populating the database with initial or dummy data. Seeders can call other seeders to organize data population.
+## Genel Bakış
+Veritabanını başlangıç veya sahte verilerle doldurmak için bir yapı sağlar. Seeder'lar, veri doldurma işlemini organize etmek için diğer seeder'ları çağırabilir.
 
-## File Location
+## Dosya Konumu
 `core/Seeder.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Illuminate\Database\Capsule\Manager as DB`
 
-## Classes
+## Sınıflar
 - `abstract class Seeder`
 
-## Methods
-- `run(): void`: Abstract method where the seeding logic is implemented.
-- `call(string|array $seederClass): void`: Runs other seeder classes.
-- `insert(string $table, array $data): void`: Inserts raw data into a table.
-- `truncateAndInsert(string $table, array $rows): void`: Clears a table (ignoring foreign keys) and inserts new rows.
-- `count(string $table): int`: Returns the number of records in a table.
+## Metotlar
+- `run(): void`: Seed mantığının uygulandığı soyut metot.
+- `call(string|array $seederClass): void`: Diğer seeder sınıflarını çalıştırır.
+- `insert(string $table, array $data): void`: Bir tabloya ham veri ekler.
+- `truncateAndInsert(string $table, array $rows): void`: Bir tabloyu temizler (yabancı anahtarları yoksayarak) ve yeni satırlar ekler.
+- `count(string $table): int`: Bir tablodaki kayıt sayısını döndürür.
 
-## Source References
+## Kaynak Referansları
 - `core/Seeder.php:1-69`

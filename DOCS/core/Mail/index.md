@@ -1,14 +1,14 @@
-# Directory Report: core/Mail
+# Dizin Raporu: core/Mail
 
-## Purpose
-Contains the mailing system, including Mailable and Mailer classes.
+## Amaç
+Mailable ve Mailer sınıflarını içeren e-posta sistemini içerir.
 
-## Child Directories
+## Alt Dizinler
 - `Transport/`
 
-## Source Files
+## Kaynak Dosyaları
 - `Mailable.php`
 - `Mailer.php`
 
-## Source References
-- Directory: `core/Mail/`
+## Kaynak Referansları
+- Dizin: `core/Mail/`

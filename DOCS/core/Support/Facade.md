@@ -1,26 +1,26 @@
-# File Report: core/Support/Facade.php
+# Dosya Raporu: core/Support/Facade.php
 
-## Purpose
-Base class for all framework Facades.
+## Amaç
+Tüm framework Facade'ları için temel sınıf.
 
-## Overview
-Implements the Facade pattern by providing a static `__callStatic` method that resolves the underlying service from the `Container` and calls the requested method on it.
+## Genel Bakış
+Alt katmandaki servisi `Container`'dan çözen ve istenen metodu üzerinde çağıran statik bir `__callStatic` metodu sağlayarak Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Support/Facade.php`
 
-## Namespace
+## Ad Alanı
 `Core\Support`
 
-## Classes
+## Sınıflar
 - `class Facade`
 
-## Methods
-- `getFacadeRoot(): mixed`: Abstract method that returns the class name of the service being proxied.
-- `__callStatic(string $method, array $args): mixed`: Intercepts static calls, resolves the root service from the container, and executes the method.
+## Metotlar
+- `getFacadeRoot(): mixed`: Proxy'lenen servisin sınıf adını döndüren soyut metot.
+- `__callStatic(string $method, array $args): mixed`: Statik çağrıları yakalar, kök servisi konteynerdan çözer ve metodu yürütür.
 
-## Dependencies
-- `Core\Container` (Uses)
+## Bağımlılıklar
+- `Core\Container` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Support/Facade.php:1-50`

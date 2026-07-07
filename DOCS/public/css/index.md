@@ -1,25 +1,25 @@
-# Directory Report: public/css
+# Dizin Raporu: public/css
 
-## Purpose
-Static CSS assets served directly from the web root.
+## Amaç
+Web kök dizininden doğrudan sunulan statik CSS varlıkları.
 
-## Child Directories
-- None.
+## Alt Dizinler
+- Yok.
 
-## Source Files
-- `style.css` — base layout and component styles (see `style.css.md`)
+## Kaynak Dosyaları
+- `style.css` — temel düzen ve bileşen stilleri (bkz. `style.css.md`)
 
-## Public Entry Points
-- Served statically over HTTP from the web root (`public/`).
+## Genel Erişim Noktaları
+- Web kök dizininden (`public/`) HTTP üzerinden statik olarak sunulur.
 
-## Internal Dependencies
-- None (plain CSS).
+## Dahili Bağımlılıklar
+- Yok (düz CSS).
 
-## External Dependencies
-- None.
+## Harici Bağımlılıklar
+- Yok.
 
-## Cross References
-- Referenced through the `asset()` helper (see `DOCS/core/helpers.md`, `DOCS/core/View.md`).
+## Çapraz Referanslar
+- `asset()` yardımcısı aracılığıyla referans verilir (bkz. `DOCS/core/helpers.md`, `DOCS/core/View.md`).
 
-## Source References
+## Kaynak Referansları
 - `public/css/`

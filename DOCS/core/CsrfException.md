@@ -1,19 +1,19 @@
-# File Report: core/CsrfException.php
+# Dosya Raporu: core/CsrfException.php
 
-## Purpose
-Custom exception for CSRF failures.
+## Amaç
+CSRF hataları için özel istisna.
 
-## Overview
-Thrown when a CSRF token is missing or invalid. Caught by `ExceptionHandler` to return a 419 response.
+## Genel Bakış
+Bir CSRF token'ı eksik veya geçersiz olduğunda fırlatılır. `ExceptionHandler` tarafından yakalanarak 419 yanıtı döndürülür.
 
-## File Location
+## Dosya Konumu
 `core/CsrfException.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class CsrfException extends \Exception`
 
-## Source References
+## Kaynak Referansları
 - `core/CsrfException.php:1-10`

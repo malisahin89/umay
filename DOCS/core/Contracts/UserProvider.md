@@ -1,29 +1,29 @@
-# File Report: core/Contracts/UserProvider.php
+# Dosya Raporu: core/Contracts/UserProvider.php
 
-## Purpose
-Interface for user retrieval and authentication logic.
+## Amaç
+Kullanıcı getirimi ve kimlik doğrulama mantığı için arayüz.
 
-## Overview
-Defines the contract for "User Providers". It separates the authentication guard from the data source, allowing users to be fetched from a database, an external API, or LDAP without changing the core auth logic.
+## Genel Bakış
+"Kullanıcı Sağlayıcıları" için kontratı tanımlar. Kimlik doğrulama guard'ını veri kaynağından ayırarak, çekirdek kimlik doğrulama mantığını değiştirmeden kullanıcıların bir veritabanından, harici bir API'den veya LDAP'dan getirilmesine olanak tanır.
 
-## File Location
+## Dosya Konumu
 `core/Contracts/UserProvider.php`
 
-## Namespace
+## Ad Alanı
 `Core\Contracts`
 
-## Interfaces
+## Arayüzler
 - `interface UserProvider`
 
-## Methods
-- `retrieveById(int|string $id): ?Authenticatable`: Fetches a user by their ID.
-- `retrieveByCredentials(array $credentials): ?Authenticatable`: Fetches a user based on credentials (e.g., email).
-- `validateCredentials(Authenticatable $user, array $credentials): bool`: Verifies the user's password.
-- `retrieveByToken(int|string $id, string $token): ?Authenticatable`: Fetches a user via a remember token.
-- `updateRememberToken(Authenticatable $user, ?string $token): void`: Persists the remember token.
+## Metotlar
+- `retrieveById(int|string $id): ?Authenticatable`: Kullanıcıyı ID'si ile getirir.
+- `retrieveByCredentials(array $credentials): ?Authenticatable`: Kimlik bilgilerine (örneğin e-posta) göre kullanıcıyı getirir.
+- `validateCredentials(Authenticatable $user, array $credentials): bool`: Kullanıcının şifresini doğrular.
+- `retrieveByToken(int|string $id, string $token): ?Authenticatable`: Hatırlama token'ı aracılığıyla kullanıcıyı getirir.
+- `updateRememberToken(Authenticatable $user, ?string $token): void`: Hatırlama token'ını kaydeder.
 
-## Dependencies
-- `Core\Contracts\Authenticatable` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\Authenticatable` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Contracts/UserProvider.php:1-54`

@@ -1,22 +1,22 @@
-# File Report: core/Profiler/Contracts/DataCollectorInterface.php
+# Dosya Raporu: core/Profiler/Contracts/DataCollectorInterface.php
 
-## Purpose
-Interface for profiler data collectors.
+## Amaç
+Profiler veri toplayıcıları için arayüz.
 
-## Overview
-Defines the contract for classes that collect specific types of diagnostic data. The `Profiler` can use multiple collectors to gather a comprehensive view of the request.
+## Genel Bakış
+Belirli türde tanısal veriler toplayan sınıflar için kontratı tanımlar. `Profiler`, isteğin kapsamlı bir görünümünü elde etmek için birden fazla toplayıcıyı kullanabilir.
 
-## File Location
+## Dosya Konumu
 `core/Profiler/Contracts/DataCollectorInterface.php`
 
-## Namespace
+## Ad Alanı
 `Core\Profiler\Contracts`
 
-## Interfaces
+## Arayüzler
 - `interface DataCollectorInterface`
 
-## Methods
-- `collect(): array`: Gathers the diagnostic data and returns it as an array.
+## Metotlar
+- `collect(): array`: Tanısal verileri toplar ve bir dizi olarak döndürür.
 
-## Source References
+## Kaynak Referansları
 - `core/Profiler/Contracts/DataCollectorInterface.php:1-15`

@@ -1,27 +1,27 @@
-# File Report: config/app.php
+# Dosya Raporu: config/app.php
 
-## Purpose
-General application configuration.
+## Amaç
+Genel uygulama yapılandırması.
 
-## Overview
-Defines core application settings such as name, version, URL, controller namespace, environment, timezone, and Facade aliases.
+## Genel Bakış
+İsim, sürüm, URL, kontrolcü ad alanı, ortam, zaman dilimi ve Facade takma adları gibi temel uygulama ayarlarını tanımlar.
 
-## File Location
+## Dosya Konumu
 `config/app.php`
 
-## Configuration
-- `name`: Defined via `APP_NAME` in `.env` (default: 'Umay').
+## Yapılandırma
+- `name`: `.env`'deki `APP_NAME` aracılığıyla tanımlanır (varsayılan: 'Umay').
 - `version`: '1.0.0'
-- `url`: Defined via `APP_URL` in `.env` (default: 'http://localhost').
-- `controller_namespace`: Defined via `CONTROLLER_NAMESPACE` (default: 'App\\Controllers\\').
-- `env`: Defined via `APP_ENV` (default: 'local').
-- `trusted_proxies`: Array of IPs from `TRUSTED_PROXIES` (default: '127.0.0.1,::1').
-- `debug`: Boolean from `APP_DEBUG`.
-- `timezone`: Defined via `APP_TIMEZONE` (default: 'Europe/Istanbul').
-- `key`: Defined via `APP_KEY`.
+- `url`: `.env`'deki `APP_URL` aracılığıyla tanımlanır (varsayılan: 'http://localhost').
+- `controller_namespace`: `CONTROLLER_NAMESPACE` aracılığıyla tanımlanır (varsayılan: 'App\\Controllers\\').
+- `env`: `APP_ENV` aracılığıyla tanımlanır (varsayılan: 'local').
+- `trusted_proxies`: `TRUSTED_PROXIES`'den gelen IP dizisi (varsayılan: '127.0.0.1,::1').
+- `debug`: `APP_DEBUG`'dan gelen boolean değer.
+- `timezone`: `APP_TIMEZONE` aracılığıyla tanımlanır (varsayılan: 'Europe/Istanbul').
+- `key`: `APP_KEY` aracılığıyla tanımlanır.
 
-## Facade Aliases
-Short global names registered by `FacadeServiceProvider`:
+## Facade Takma Adları
+`FacadeServiceProvider` tarafından kaydedilen kısa global isimler:
 - `Cache` -> `Core\Facades\Cache`
 - `Auth` -> `Core\Facades\Auth`
 - `Log` -> `Core\Facades\Log`
@@ -30,5 +30,5 @@ Short global names registered by `FacadeServiceProvider`:
 - `Validator` -> `Core\Facades\Validator`
 - `RateLimiter` -> `Core\Facades\RateLimiter`
 
-## Source References
+## Kaynak Referansları
 - `config/app.php:1-117`

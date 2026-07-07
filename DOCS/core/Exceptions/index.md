@@ -1,12 +1,12 @@
-# Directory Report: core/Exceptions
+# Dizin Raporu: core/Exceptions
 
-## Purpose
-Contains custom exception classes for different failure scenarios.
+## Amaç
+Farklı hata senaryoları için özel istisna sınıflarını içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `ContainerException.php`
 - `EntryNotFoundException.php`
 - `HttpException.php`
 
-## Source References
-- Directory: `core/Exceptions/`
+## Kaynak Referansları
+- Dizin: `core/Exceptions/`

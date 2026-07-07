@@ -1,30 +1,30 @@
-# File Report: core/Migration.php
+# Dosya Raporu: core/Migration.php
 
-## Purpose
-Base class for database migrations.
+## Amaç
+Veritabanı migrasyonları için temel sınıf.
 
-## Overview
-Provides a structured way to define database schema changes. Every migration file extends this class and implements `up()` (to apply changes) and `down()` (to reverse them).
+## Genel Bakış
+Veritabanı şema değişikliklerini tanımlamak için yapılandırılmış bir yol sağlar. Her migrasyon dosyası bu sınıfı genişletir ve `up()` (değişiklikleri uygulamak için) ve `down()` (bunları geri almak için) metotlarını uygular.
 
-## File Location
+## Dosya Konumu
 `core/Migration.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Illuminate\Database\Capsule\Manager as DB`
 
-## Classes
+## Sınıflar
 - `abstract class Migration`
 
-## Methods
-- `up(): void`: Abstract method to implement the migration logic.
-- `down(): void`: Abstract method to implement the rollback logic.
-- `execute(string $sql): void`: Executes a raw SQL statement via Eloquent.
-- `query(string $sql, array $params = []): array`: Executes a prepared select query.
-- `tableExists(string $table): bool`: Checks if a table exists in the database (driver-aware).
-- `columnExists(string $table, string $column): bool`: Checks if a column exists in a table (driver-aware).
+## Metotlar
+- `up(): void`: Migrasyon mantığını uygulamak için soyut metot.
+- `down(): void`: Geri alma mantığını uygulamak için soyut metot.
+- `execute(string $sql): void`: Eloquent aracılığıyla ham bir SQL ifadesini yürütür.
+- `query(string $sql, array $params = []): array`: Hazırlanmış bir select sorgusu yürütür.
+- `tableExists(string $table): bool`: Veritabanında bir tablonun var olup olmadığını kontrol eder (sürücüye duyarlı).
+- `columnExists(string $table, string $column): bool`: Bir tabloda bir sütunun var olup olmadığını kontrol eder (sürücüye duyarlı).
 
-## Source References
+## Kaynak Referansları
 - `core/Migration.php:1-65`

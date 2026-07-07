@@ -1,28 +1,28 @@
-# File Report: core/Middleware/Cors.php
+# Dosya Raporu: core/Middleware/Cors.php
 
-## Purpose
-Cross-Origin Resource Sharing (CORS) middleware.
+## Amaç
+Kökenler Arası Kaynak Paylaşımı (CORS) middleware'i.
 
-## Overview
-Sets the appropriate HTTP headers to allow or restrict cross-origin requests based on the configuration in `config/middleware.php`.
+## Genel Bakış
+`config/middleware.php` içindeki yapılandırmaya dayanarak kökenler arası istekleri izin vermek veya kısıtlamak için uygun HTTP başlıklarını ayarlar.
 
-## File Location
+## Dosya Konumu
 `core/Middleware/Cors.php`
 
-## Namespace
+## Ad Alanı
 `Core\Middleware`
 
-## Classes
+## Sınıflar
 - `class Cors implements MiddlewareInterface`
 
-## Methods
+## Metotlar
 - `handle(Request $request, \Closure $next): mixed`:
-    1. If the request is an `OPTIONS` (preflight) request, it immediately returns a 204 response with the configured CORS headers.
-    2. Otherwise, it adds the CORS headers to the response of the next handler.
+    1. İstek bir `OPTIONS` (ön kontrol/preflight) isteği ise, yapılandırılmış CORS başlıkları ile hemen 204 yanıtı döndürür.
+    2. Aksi takdirde, bir sonraki işleyicinin yanıtına CORS başlıklarını ekler.
 
-## Dependencies
-- `Core\Contracts\MiddlewareInterface` (Implements)
-- `Core\Request` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MiddlewareInterface` (Uygular)
+- `Core\Request` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Middleware/Cors.php:1-80`

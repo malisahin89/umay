@@ -1,24 +1,24 @@
-# File Report: tests/Unit/ValidatorTest.php
+# Dosya Raporu: tests/Unit/ValidatorTest.php
 
-## Purpose
-Unit tests for core validation rules.
+## Amaç
+Temel doğrulama kuralları için birim (unit) testler.
 
-## Overview
-Verifies `Core\Validator` fundamentals: `required`, `email`, `min`, `confirmed`, custom error messages, multi-rule error collection, `in`, and `numeric`.
+## Genel Bakış
+`Core\Validator` temellerini doğrular: `required`, `email`, `min`, `confirmed`, özel hata mesajları, çoklu kural hata koleksiyonu, `in` ve `numeric`.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/ValidatorTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class ValidatorTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Validator`
 
-## Test Methods
+## Test Metotları
 - `test_required_rule_fails_on_empty` — `:12`
 - `test_required_rule_passes_with_value` — `:19`
 - `test_email_rule_fails_on_invalid` — `:26`
@@ -32,8 +32,8 @@ Verifies `Core\Validator` fundamentals: `required`, `email`, `min`, `confirmed`,
 - `test_in_rule` — `:90`
 - `test_numeric_rule` — `:99`
 
-## Cross References
-- **Tests:** `Core\Validator` (see `DOCS/core/Validator.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Validator` (bkz. `DOCS/core/Validator.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/ValidatorTest.php:1-107`

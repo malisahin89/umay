@@ -1,37 +1,37 @@
-# File Report: core/Logger.php
+# Dosya Raporu: core/Logger.php
 
-## Purpose
-File-based application logging.
+## Amaç
+Dosya tabanlı uygulama günlüklemesi.
 
-## Overview
-Records application events and errors to daily log files in `storage/logs/`. It includes protections against log injection and integrates with the `DebugBar` for real-time viewing.
+## Genel Bakış
+Uygulama olaylarını ve hatalarını `storage/logs/` altındaki günlük dosyalarına kaydeder. Günlük enjeksiyonuna karşı korumalar içerir ve gerçek zamanlı görüntüleme için `DebugBar` ile entegre çalışır.
 
-## File Location
+## Dosya Konumu
 `core/Logger.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Logger`
 
-## Properties
-- `string $logPath`: Path to the logs directory (`storage/logs`).
+## Özellikler
+- `string $logPath`: Günlük dizininin yolu (`storage/logs`).
 
-## Methods
-- `error(string $message, array $context = []): void`: Logs an error message.
-- `warning(string $message, array $context = []): void`: Logs a warning message.
-- `info(string $message, array $context = []): void`: Logs an informational message.
-- `log(string $level, string $message, array $context = []): void`: The internal method that formats the log entry (including timestamp, IP, and User-Agent) and appends it to the daily file using `FILE_APPEND | LOCK_EX`.
+## Metotlar
+- `error(string $message, array $context = []): void`: Bir hata mesajı kaydeder.
+- `warning(string $message, array $context = []): void`: Bir uyarı mesajı kaydeder.
+- `info(string $message, array $context = []): void`: Bilgi amaçlı bir mesaj kaydeder.
+- `log(string $level, string $message, array $context = []): void`: Günlük girdisini (zaman damgası, IP ve Kullanıcı Aracısı dahil) formatlayan ve `FILE_APPEND | LOCK_EX` kullanarak günlük dosyasına ekleyen dahili metot.
 
-## Internal Workflow
-1. Sanitize message and headers (CR/LF removal) to prevent log injection.
-2. Format the entry: `[timestamp] LEVEL: message | IP: ... | Context: ... | User-Agent: ...`.
-3. Write to `storage/logs/YYYY-MM-DD.log`.
-4. If `DebugBar` is enabled, add the log to the profiler.
+## Dahili İş Akışı
+1. Günlük enjeksiyonunu önlemek için mesajı ve başlıkları temizler (CR/LF kaldırma).
+2. Girdiyi formatlar: `[timestamp] LEVEL: message | IP: ... | Context: ... | User-Agent: ...`.
+3. `storage/logs/YYYY-MM-DD.log` dosyasına yazar.
+4. `DebugBar` etkinse, günlüğü profiler'a ekler.
 
-## Dependencies
-- `Core\DebugBar` (Optional profiling)
+## Bağımlılıklar
+- `Core\DebugBar` (İsteğe bağlı profilleme)
 
-## Source References
+## Kaynak Referansları
 - `core/Logger.php:1-73`

@@ -1,10 +1,10 @@
-# Directory Report: app/Services
+# Dizin Raporu: app/Services
 
-## Purpose
-Contains business logic services.
+## Amaç
+İş mantığı servislerini içerir.
 
-## Source Files
-- None (Empty)
+## Kaynak Dosyalar
+- Yok (Boş)
 
-## Source References
-- Directory: `app/Services/`
+## Kaynak Referansları
+- Dizin: `app/Services/`

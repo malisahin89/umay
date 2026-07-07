@@ -1,24 +1,24 @@
-# File Report: tests/Unit/ViewTest.php
+# Dosya Raporu: tests/Unit/ViewTest.php
 
-## Purpose
-Unit tests for the view engine integration.
+## Amaç
+Görünüm motoru (view engine) entegrasyonu için birim (unit) testler.
 
-## Overview
-Verifies `Core\View`: the engine returns a Plates instance that is a singleton per view instance, and registers the template helper functions (`csrf`, `csrf_token`, escape, `old`, `route`, `flash`, `dd`).
+## Genel Bakış
+`Core\View`'u doğrular: motor, görünüm örneği başına bir singleton olan bir Plates örneği döndürür ve şablon yardımcı fonksiyonlarını (`csrf`, `csrf_token`, escape, `old`, `route`, `flash`, `dd`) kaydeder.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/ViewTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class ViewTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\View`
 
-## Test Methods
+## Test Metotları
 - `test_engine_returns_plates_instance` — `:35`
 - `test_engine_is_singleton_per_instance` — `:44`
 - `test_engine_has_csrf_function` — `:57`
@@ -29,8 +29,8 @@ Verifies `Core\View`: the engine returns a Plates instance that is a singleton p
 - `test_engine_has_flash_function` — `:103`
 - `test_engine_has_dd_function` — `:112`
 
-## Cross References
-- **Tests:** `Core\View` (see `DOCS/core/View.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\View` (bkz. `DOCS/core/View.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/ViewTest.php:1-120`

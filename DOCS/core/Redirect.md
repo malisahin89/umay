@@ -1,34 +1,34 @@
-# File Report: core/Redirect.php
+# Dosya Raporu: core/Redirect.php
 
-## Purpose
-Secure HTTP redirection utility.
+## Amaç
+Güvenli HTTP yönlendirme aracı.
 
-## Overview
-Handles redirection to internal or external URLs. It includes security checks to prevent "Open Redirect" attacks by ensuring that absolute URLs match the `APP_URL` host and that protocol-relative URLs are rejected.
+## Genel Bakış
+Dahili veya harici URL'lere yönlendirmeleri yönetir. Mutlak URL'lerin `APP_URL` ana bilgisayarıyla eşleşmesini sağlayarak ve protokol bağımlı URL'leri (protocol-relative URLs) reddederek "Açık Yönlendirme" (Open Redirect) saldırılarını önlemek için güvenlik kontrolleri içerir.
 
-## File Location
+## Dosya Konumu
 `core/Redirect.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Redirect`
 
-## Methods
-- `to(string $url): void`: Redirects to the specified URL. Validates the URL for security before sending the `Location` header.
-- `route(string $name): void`: Redirects to a named route by resolving its URL first.
+## Metotlar
+- `to(string $url): void`: Belirtilen URL'ye yönlendirir. `Location` başlığını göndermeden önce URL'yi güvenlik açısından doğrular.
+- `route(string $name): void`: Önce URL'sini çözerek isimlendirilmiş bir rotaya yönlendirir.
 
-## Internal Workflow
-1. Strips CR/LF from the URL to prevent header injection.
-2. Rejects protocol-relative URLs (e.g., `//evil.com`).
-3. If the URL is relative (starts with `/`), it is allowed.
-4. If the URL is absolute, it is allowed only if the host matches the `APP_URL` host.
-5. If any check fails, it redirects to the homepage (`/`) as a safe fallback.
-6. Throws a `RedirectException` to stop further execution of the request.
+## Dahili İş Akışı
+1. Başlık enjeksiyonunu (header injection) önlemek için URL'den CR/LF karakterlerini temizler.
+2. Protokol bağımlı URL'leri (örn. `//evil.com`) reddeder.
+3. URL göreceli ise ( `/` ile başlıyorsa), izin verilir.
+4. URL mutlak ise, yalnızca ana bilgisayar `APP_URL` ana bilgisayarıyla eşleşiyorsa izin verilir.
+5. Herhangi bir kontrol başarısız olursa, güvenli bir yedek olarak ana sayfaya (`/`) yönlendirir.
+6. İsteğin daha fazla yürütülmesini durdurmak için bir `RedirectException` fırlatır.
 
-## Dependencies
-- `Core\Route` (Uses)
+## Bağımlılıklar
+- `Core\Route` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Redirect.php:1-51`

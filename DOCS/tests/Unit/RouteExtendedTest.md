@@ -1,28 +1,28 @@
-# File Report: tests/Unit/RouteExtendedTest.php
+# Dosya Raporu: tests/Unit/RouteExtendedTest.php
 
-## Purpose
-Extended unit tests for the router.
+## Amaç
+Yönlendirici (router) için genişletilmiş birim (unit) testler.
 
-## Overview
-Verifies `Core\Route` across HTTP verb registration (`get`/`post`/`put`/`patch`/`delete`), `match`/`any` (methods, middleware, name propagation), named-route URL generation (params, query params, unknown-name fallback), prefix groups (including nesting), middleware assignment and group inheritance, compiled parameter regex (static dot escaping, optional params), group get/set, route removal, closure and root routes, and optional-parameter URL building.
+## Genel Bakış
+`Core\Route`'u HTTP fiil kaydı (`get`/`post`/`put`/`patch`/`delete`), `match`/`any` (metotlar, ara yazılım, isim yayılımı), adlandırılmış rota URL oluşturma (parametreler, sorgu parametreleri, bilinmeyen isim geri dönüşü), ön ek grupları (iç içe geçme dahil), ara yazılım ataması ve grup kalıtımı, derlenmiş parametre regex'i (statik nokta kaçırma, isteğe bağlı parametreler), grup get/set, rota kaldırma, closure ve kök rotalar ve isteğe bağlı parametreli URL oluşturma üzerinden doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/RouteExtendedTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class RouteExtendedTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Route`
 
-## Test Methods
-Verb registration `:45-80`; `match`/`any` `:90-146`; named routes `:148-172`; prefix groups `:180-190`; middleware `:204-222`; compiled regex `:234`, `:329-341`; group get/set `:249`; remove `:260`; closure/root routes `:272-285`; optional-param URLs `:297-319`.
+## Test Metotları
+Fiil kaydı `:45-80`; `match`/`any` `:90-146`; adlandırılmış rotalar `:148-172`; ön ek grupları `:180-190`; ara yazılım `:204-222`; derlenmiş regex `:234`, `:329-341`; grup get/set `:249`; kaldırma `:260`; closure/kök rotalar `:272-285`; isteğe bağlı parametreli URL'ler `:297-319`.
 
-## Cross References
-- **Tests:** `Core\Route` (see `DOCS/core/Route.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Route` (bkz. `DOCS/core/Route.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/RouteExtendedTest.php:1-351`

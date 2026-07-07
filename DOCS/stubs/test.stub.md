@@ -1,28 +1,28 @@
-# File Report: stubs/test.stub
+# Dosya Raporu: stubs/test.stub
 
-## Purpose
-Code-generation template for a test case.
+## Amaç
+Bir test durumu için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new test class under the `Tests` namespace, extending `Tests\TestCase` with a single passing example test.
+## Genel Bakış
+Konsol oluşturucusu tarafından, `Tests` ad alanı altında, `Tests\TestCase` sınıfını genişleten ve tek bir başarılı örnek test içeren yeni bir test sınıfı iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/test.stub`
 
-## Generated Artifact
-- **Namespace:** `Tests\{{namespace}}`
-- **Class:** `{{ClassName}} extends Tests\TestCase`
-- **Imports:** `Tests\TestCase`
-- **Methods:** `test_example(): void`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `Tests\{{namespace}}`
+- **Sınıf:** `{{ClassName}} extends Tests\TestCase`
+- **İçe Aktarmalar (Imports):** `Tests\TestCase`
+- **Metotlar:** `test_example(): void`
 
-## Placeholders
-- `{{namespace}}` — sub-namespace under `Tests` (e.g. `Unit`, `Feature`).
-- `{{ClassName}}` — generated test class name.
+## Yer Tutucular
+- `{{namespace}}` — `Tests` altındaki alt ad alanı (örneğin `Unit`, `Feature`).
+- `{{ClassName}}` — oluşturulan test sınıfı adı.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:395`, `core/Console/Kernel.php:699-703`
-- **Base Class:** `Tests\TestCase` (see `DOCS/tests/TestCase.md`)
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:395`, `core/Console/Kernel.php:699-703`
+- **Taban Sınıf:** `Tests\TestCase` (bakınız `DOCS/tests/TestCase.md`)
 
-## Source References
+## Kaynak Referansları
 - `stubs/test.stub:1-15`
 - `core/Console/Kernel.php:395`

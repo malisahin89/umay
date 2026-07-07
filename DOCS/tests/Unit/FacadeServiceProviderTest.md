@@ -1,24 +1,24 @@
-# File Report: tests/Unit/FacadeServiceProviderTest.php
+# Dosya Raporu: tests/Unit/FacadeServiceProviderTest.php
 
-## Purpose
-Unit tests for the facade service provider bindings.
+## Amaç
+Facade servis sağlayıcı bağlamaları için birim (unit) testler.
 
-## Overview
-Verifies `Core\Providers\FacadeServiceProvider` registers singletons for cache, auth, logger, route, database, dispatcher, view, and rate limiter, binds the validator proxy, and that the validator proxy creates a `Validator` instance.
+## Genel Bakış
+`Core\Providers\FacadeServiceProvider`'ın önbellek, kimlik doğrulama, günlükleyici, rota, veritabanı, dağıtıcı, görünüm ve hız sınırlayıcı için singleton'lar kaydettiğini, validator proxy'sini bağladığını ve validator proxy'sinin bir `Validator` örneği oluşturduğunu doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/FacadeServiceProviderTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class FacadeServiceProviderTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Providers\FacadeServiceProvider`
 
-## Test Methods
+## Test Metotları
 - `test_register_binds_cache_singleton` — `:38`
 - `test_register_binds_auth_singleton` — `:50`
 - `test_register_binds_logger_singleton` — `:62`
@@ -30,8 +30,8 @@ Verifies `Core\Providers\FacadeServiceProvider` registers singletons for cache, 
 - `test_register_binds_validator_proxy` — `:112`
 - `test_validator_proxy_creates_validator_instance` — `:124`
 
-## Cross References
-- **Tests:** `Core\Providers\FacadeServiceProvider` (see `DOCS/core/Providers/FacadeServiceProvider.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Providers\FacadeServiceProvider` (bkz. `DOCS/core/Providers/FacadeServiceProvider.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/FacadeServiceProviderTest.php:1-135`

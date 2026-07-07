@@ -1,25 +1,25 @@
-# File Report: core/Contracts/MailTransport.php
+# Dosya Raporu: core/Contracts/MailTransport.php
 
-## Purpose
-Interface for mail transport implementations.
+## Amaç
+E-posta iletim uygulamaları için arayüz.
 
-## Overview
-Defines how a `Mailable` object should be delivered to recipients. This allows the framework to support multiple delivery methods (e.g., Log, SMTP, API) by simply switching the transport class in the config.
+## Genel Bakış
+Bir `Mailable` nesnesinin alıcılara nasıl iletileceğini tanımlar. Bu, yapılandırmadaki iletim sınıfını değiştirerek framework'ün birden fazla iletim yöntemini (örneğin Log, SMTP, API) desteklemesini sağlar.
 
-## File Location
+## Dosya Konumu
 `core/Contracts/MailTransport.php`
 
-## Namespace
+## Ad Alanı
 `Core\Contracts`
 
-## Interfaces
+## Arayüzler
 - `interface MailTransport`
 
-## Methods
-- `send(Mailable $mailable, array $to, array $cc = [], array $bcc = []): bool`: Delivers the mail to the specified addresses.
+## Metotlar
+- `send(Mailable $mailable, array $to, array $cc = [], array $bcc = []): bool`: E-postayı belirtilen adreslere iletir.
 
-## Dependencies
-- `Core\Mail\Mailable` (Uses)
+## Bağımlılıklar
+- `Core\Mail\Mailable` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Contracts/MailTransport.php:1-33`

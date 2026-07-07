@@ -1,9 +1,9 @@
-# File Report: core/Profiler/Views/toolbar.php
+# Dosya Raporu: core/Profiler/Views/toolbar.php
 
-## Purpose: View for the Debug Toolbar.
+## Amaç: Hata Ayıklama Araç Çubuğu (Debug Toolbar) Görünümü.
 
-## Overview: A PHP template that renders the compact toolbar at the bottom of the page, providing quick links to the full profiler report and high-level metrics.
+## Genel Bakış: Sayfanın altında kompakt bir araç çubuğu render eden PHP şablonudur; tam profiler raporuna hızlı bağlantılar ve üst düzey metrikler sağlar.
 
-## File Location: `core/Profiler/Views/toolbar.php`
+## Dosya Konumu: `core/Profiler/Views/toolbar.php`
 
-## Source References: `core/Profiler/Views/toolbar.php:1-150`
+## Kaynak Referansları: `core/Profiler/Views/toolbar.php:1-150`

@@ -1,34 +1,34 @@
-# File Report: core/Middleware/ApiAuth.php
+# Dosya Raporu: core/Middleware/ApiAuth.php
 
-## Purpose
-Stateless API authentication middleware.
+## Amaç
+Durumsuz (stateless) API kimlik doğrulama ara yazılımı.
 
-## Overview
-Protects API routes by verifying a Bearer token in the `Authorization` header. If a valid token is found, the associated user is bound to the `Auth` guard for the current request.
+## Genel Bakış
+`Authorization` başlığındaki Bearer token'ını doğrulayarak API rotalarını korur. Geçerli bir token bulunduğunda, ilgili kullanıcı mevcut istek için `Auth` korumasına (guard) bağlanır.
 
-## File Location
+## Dosya Konumu
 `core/Middleware/ApiAuth.php`
 
-## Namespace
+## İsim Uzayı
 `Core\Middleware`
 
-## Classes
+## Sınıflar
 - `class ApiAuth implements MiddlewareInterface`
 
-## Methods
+## Metotlar
 - `handle(Request $request, \Closure $next): mixed`:
-    1. Extracts the Bearer token from the request.
-    2. Uses `PersonalAccessToken::findToken()` to resolve the token.
-    3. If valid and not expired, binds the user to `Auth::setUser()`.
-    4. If invalid, returns a 401 Unauthorized JSON response.
-    5. Supports ability checks (e.g., `api-auth:posts.write`).
+    1. İstekten Bearer token'ını ayıklar.
+    2. Token'ı çözmek için `PersonalAccessToken::findToken()` kullanır.
+    3. Geçerli ve süresi dolmamışsa, kullanıcıyı `Auth::setUser()` ile bağlar.
+    4. Geçersizse, 401 Unauthorized JSON yanıtı döndürür.
+    5. Yetenek kontrollerini destekler (örneğin, `api-auth:posts.write`).
 
-## Dependencies
-- `Core\Contracts\MiddlewareInterface` (Implements)
-- `Core\Request` (Uses)
-- `Core\Auth\PersonalAccessToken` (Uses)
-- `Core\Auth` (Uses)
-- `Core\Response` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MiddlewareInterface` (Uygular)
+- `Core\Request` (Kullanır)
+- `Core\Auth\PersonalAccessToken` (Kullanır)
+- `Core\Auth` (Kullanır)
+- `Core\Response` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Middleware/ApiAuth.php:1-100`

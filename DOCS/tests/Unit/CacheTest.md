@@ -1,24 +1,24 @@
-# File Report: tests/Unit/CacheTest.php
+# Dosya Raporu: tests/Unit/CacheTest.php
 
-## Purpose
-Unit tests for the file-based cache.
+## Amaç
+Dosya tabanlı önbellek için birim (unit) testler.
 
-## Overview
-Verifies `Core\Cache`: set/get for scalar, array, integer, boolean values; `has`, `forget`, `flush`, `pull`, `remember`; default handling for missing keys; and resilience against tampered, malformed, or expired cache files. Also verifies config-driven default TTL and prefix-based filenames.
+## Genel Bakış
+`Core\Cache`'i doğrular: skaler, dizi, tamsayı, boolean değerler için set/get; `has`, `forget`, `flush`, `pull`, `remember`; eksik anahtarlar için varsayılan işlem; ve kurcalanmış, hatalı veya süresi dolmuş önbellek dosyalarına karşı dayanıklılık. Ayrıca yapılandırma odaklı varsayılan TTL ve ön ek tabanlı dosya adlarını doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/CacheTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class CacheTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Cache`
 
-## Test Methods
+## Test Metotları
 - `test_set_and_get_returns_stored_value` — `:49`
 - `test_get_returns_default_when_key_not_exists` — `:57`
 - `test_get_returns_null_default_when_key_not_exists` — `:63`
@@ -38,8 +38,8 @@ Verifies `Core\Cache`: set/get for scalar, array, integer, boolean values; `has`
 - `test_set_uses_config_default_ttl_when_omitted` — `:226`
 - `test_prefix_applied_to_cache_filename` — `:239`
 
-## Cross References
-- **Tests:** `Core\Cache` (see `DOCS/core/Cache.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Cache` (bkz. `DOCS/core/Cache.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/CacheTest.php:1-251`

@@ -1,17 +1,17 @@
-# File Report: database/migrations/2026_02_28_000001_create_users_table.php
+# Dosya Raporu: database/migrations/2026_02_28_000001_create_users_table.php
 
-## Purpose
-Migration to create the `users` table.
+## Amaç
+`users` tablosunu oluşturma migrasyonu.
 
-## Overview
-Creates the `users` table with columns for `id`, `name`, `email` (unique), `password`, `remember_token`, and timestamps. Uses the Eloquent Schema builder for cross-database compatibility.
+## Genel Bakış
+`id`, `name`, `email` (benzersiz), `password`, `remember_token` ve zaman damgaları sütunları ile `users` tablosunu oluşturur. Veritabanları arası uyumluluk için Eloquent Şema oluşturucuyu kullanır.
 
-## File Location
+## Dosya Konumu
 `database/migrations/2026_02_28_000001_create_users_table.php`
 
-## Implementation
-- `up()`: Creates the `users` table if it doesn't exist.
-- `down()`: Drops the `users` table.
+## Uygulama
+- `up()`: Eğer yoksa `users` tablosunu oluşturur.
+- `down()`: `users` tablosunu siler.
 
-## Source References
+## Kaynak Referansları
 - `database/migrations/2026_02_28_000001_create_users_table.php:1-36`

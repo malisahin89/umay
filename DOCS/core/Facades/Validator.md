@@ -1,26 +1,26 @@
-# File Report: core/Facades/Validator.php
+# Dosya Raporu: core/Facades/Validator.php
 
-## Purpose
-Static proxy for the `Core\Validator` class.
+## Amaç
+`Core\Validator` sınıfı için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Validator` class.
+## Genel Bakış
+`Core\Validator` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/Validator.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class Validator extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Validator::class`.
+## Metotlar
+- `getFacadeRoot()`: `Validator::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Validator` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Validator` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/Validator.php:1-20`

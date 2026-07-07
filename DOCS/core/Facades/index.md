@@ -1,9 +1,9 @@
-# Directory Report: core/Facades
+# Dizin Raporu: core/Facades
 
-## Purpose
-Contains static proxies (Facades) for core services.
+## Amaç
+Çekirdek servisler için statik proxyler (Facade'ler) içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `Auth.php`
 - `Cache.php`
 - `DB.php`
@@ -14,5 +14,5 @@ Contains static proxies (Facades) for core services.
 - `Validator.php`
 - `View.php`
 
-## Source References
-- Directory: `core/Facades/`
+## Kaynak Referansları
+- Dizin: `core/Facades/`

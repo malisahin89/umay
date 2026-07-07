@@ -1,42 +1,42 @@
-# File Report: core/Console/Kernel.php
+# Dosya Raporu: core/Console/Kernel.php
 
-## Purpose
-Console command runner for the framework.
+## Amaç
+Çerçeve için konsol komut çalıştırıcısı.
 
-## Overview
-Processes CLI commands entered via `php umay <command>`. It handles everything from generating application stubs (controllers, models, etc.) to managing database migrations and running tests.
+## Genel Bakış
+`php umay <komut>` aracılığıyla girilen CLI komutlarını işler. Uygulama şablonları (controllers, models, vb.) oluşturmaktan veritabanı migrasyonlarını yönetmeye ve testleri çalıştırmaya kadar her şeyi yönetir.
 
-## File Location
+## Dosya Konumu
 `core/Console/Kernel.php`
 
-## Namespace
+## İsim Uzayı
 `Core\Console`
 
-## Classes
+## Sınıflar
 - `class Kernel`
 
-## Methods
-- `handle(array $argv): int`: The main entry point. Dispatches the command based on the first argument.
-- `keyGenerate(array $args): int`: Generates a random `APP_KEY` and updates the `.env` file.
-- `makeController()`, `makeModel()`, `makeMigration()`, `makeMiddleware()`, `makeRequest()`, `makeMail()`, `makeEvent()`, `makeListener()`, `makeFactory()`, `makeTest()`: Generate new files based on stubs.
-- `migrate()`: Runs pending migrations via `Migrator`.
-- `migrateRollback()`: Rolls back the most recent migration.
-- `migrateFresh()`: Wipes the database and re-runs all migrations and seeders.
-- `storageLink(): int`: Creates a symlink from `public/storage` to `storage/app/public` for web access to uploaded files.
-- `dbSeed(array $args): int`: Runs the database seeders.
-- `routeList(): int`: Outputs a table of all registered routes and their handlers.
-- `cacheClear(): int`: Deletes all cache files from the storage directory.
-- `runTests(array $args): int`: Executes PHPUnit tests.
+## Metotlar
+- `handle(array $argv): int`: Ana giriş noktası. İlk argümana göre komutu dağıtır.
+- `keyGenerate(array $args): int`: Rastgele bir `APP_KEY` oluşturur ve `.env` dosyasını günceller.
+- `makeController()`, `makeModel()`, `makeMigration()`, `makeMiddleware()`, `makeRequest()`, `makeMail()`, `makeEvent()`, `makeListener()`, `makeFactory()`, `makeTest()`: Şablonlara göre yeni dosyalar oluşturur.
+- `migrate()`: `Migrator` aracılığıyla bekleyen migrasyonları çalıştırır.
+- `migrateRollback()`: En son migrasyonu geri alır.
+- `migrateFresh()`: Veritabanını sıfırlar ve tüm migrasyonlar ile seeder'ları yeniden çalıştırır.
+- `storageLink(): int`: Yüklenen dosyalara web üzerinden erişim sağlamak için `public/storage`'dan `storage/app/public`'e bir sembolik bağlantı oluşturur.
+- `dbSeed(array $args): int`: Veritabanı seeder'larını çalıştırır.
+- `routeList(): int`: Tüm kayıtlı rotaları ve bunların işleyicilerini içeren bir tablo çıktısı verir.
+- `cacheClear(): int`: Depolama dizinindeki tüm önbellek dosyalarını siler.
+- `runTests(array $args): int`: PHPUnit testlerini yürütür.
 
-## Internal Workflow
-- **Stub Rendering**: Uses `renderStub()` to replace placeholders in `.stub` files with actual class names and variables.
-- **Case Conversion**: Includes `studlyCase()`, `snakeCase()`, and `pluralSnake()` for proper naming conventions.
+## Dahili İş Akışı
+- **Şablon Oluşturma**: `.stub` dosyalarındaki yer tutucuları gerçek sınıf isimleri ve değişkenlerle değiştirmek için `renderStub()` kullanır.
+- **Durum Dönüştürme**: Doğru isimlendirme standartları için `studlyCase()`, `snakeCase()` ve `pluralSnake()` fonksiyonlarını içerir.
 
-## Dependencies
-- `Core\Migration` (Uses)
-- `Core\Migrator` (Uses)
-- `Core\Route` (Uses)
-- `Core\Seeder` (Uses)
+## Bağımlılıklar
+- `Core\Migration` (Kullanır)
+- `Core\Migrator` (Kullanır)
+- `Core\Route` (Kullanır)
+- `Core\Seeder` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Console/Kernel.php:1-781`

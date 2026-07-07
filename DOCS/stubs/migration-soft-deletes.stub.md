@@ -1,28 +1,28 @@
-# File Report: stubs/migration-soft-deletes.stub
+# Dosya Raporu: stubs/migration-soft-deletes.stub
 
-## Purpose
-Code-generation template for a migration that adds a soft-delete column.
+## Amaç
+Soft-delete sütunu ekleyen bir migrasyon için kod oluşturma şablonu.
 
-## Overview
-Template returning an anonymous class extending `Core\Migration`. The `up()` method issues an `ALTER TABLE ... ADD COLUMN deleted_at TIMESTAMP NULL` statement; `down()` drops the column. It complements the soft-delete behavior in `Core\Concerns\SoftDeletes`.
+## Genel Bakış
+`Core\Migration` sınıfını genişleten anonim bir sınıf döndüren şablon. `up()` metodu `ALTER TABLE ... ADD COLUMN deleted_at TIMESTAMP NULL` ifadesini yürütür; `down()` metodu ise sütunu siler. `Core\Concerns\SoftDeletes` içindeki soft-delete davranışını tamamlar.
 
-## File Location
+## Dosya Konumu
 `stubs/migration-soft-deletes.stub`
 
-## Generated Artifact
-- **Class:** anonymous `class extends Core\Migration`
-- **Imports:** `Core\Migration`
-- **Methods:** `up(): void`, `down(): void`
-- **Schema change:** adds / drops `deleted_at TIMESTAMP NULL DEFAULT NULL`.
+## Oluşturulan Artifakt
+- **Sınıf:** anonim `class extends Core\Migration`
+- **İçe Aktarmalar (Imports):** `Core\Migration`
+- **Metotlar:** `up(): void`, `down(): void`
+- **Şema değişikliği:** `deleted_at TIMESTAMP NULL DEFAULT NULL` ekler / siler.
 
-## Placeholders
-- `{{tableName}}` — target table to alter.
+## Yer Tutucular
+- `{{tableName}}` — değiştirilecek hedef tablo.
 
-## Cross References
-- **Base Class:** `Core\Migration` (see `DOCS/core/Migration.md`)
-- **Related:** `Core\Concerns\SoftDeletes` (see `DOCS/core/Concerns/SoftDeletes.md`)
+## Çapraz Referanslar
+- **Taban Sınıf:** `Core\Migration` (bakınız `DOCS/core/Migration.md`)
+- **İlgili:** `Core\Concerns\SoftDeletes` (bakınız `DOCS/core/Concerns/SoftDeletes.md`)
 
-> No verified `renderStub('migration-soft-deletes')` call was found in the analyzed source code (`core/Console/Kernel.php`). The template exists but its generator invocation could not be confirmed.
+> Analiz edilen kaynak kodunda (`core/Console/Kernel.php`) doğrulanmış bir `renderStub('migration-soft-deletes')` çağrısı bulunamadı. Şablon mevcut ancak oluşturucu çağrısı onaylanamadı.
 
-## Source References
+## Kaynak Referansları
 - `stubs/migration-soft-deletes.stub:1-24`

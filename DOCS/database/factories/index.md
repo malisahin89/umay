@@ -1,10 +1,10 @@
-# Directory Report: database/factories
+# Dizin Raporu: database/factories
 
-## Purpose
-Contains factories for generating mock data for models.
+## Amaç
+Modeller için sahte veri üretmek amacıyla fabrikaları içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `UserFactory.php`
 
-## Source References
-- Directory: `database/factories/`
+## Kaynak Referansları
+- Dizin: `database/factories/`

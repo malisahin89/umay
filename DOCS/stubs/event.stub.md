@@ -1,26 +1,26 @@
-# File Report: stubs/event.stub
+# Dosya Raporu: stubs/event.stub
 
-## Purpose
-Code-generation template for an event class.
+## Amaç
+Bir olay (event) sınıfı için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new event under `App\Events`, extending `Core\Events\Event` with an empty constructor.
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Events` altında, boş bir yapılandırıcıya (constructor) sahip `Core\Events\Event` sınıfını genişleten yeni bir olay iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/event.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Events`
-- **Class:** `{{ClassName}} extends Core\Events\Event`
-- **Imports:** `Core\Events\Event`
-- **Methods:** `__construct()`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Events`
+- **Sınıf:** `{{ClassName}} extends Core\Events\Event`
+- **İçe Aktarmalar (Imports):** `Core\Events\Event`
+- **Metotlar:** `__construct()`
 
-## Placeholders
-- `{{ClassName}}` — generated event class name.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan olay sınıfı adı.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:312`, `core/Console/Kernel.php:699-703`
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:312`, `core/Console/Kernel.php:699-703`
 
-## Source References
+## Kaynak Referansları
 - `stubs/event.stub:1-15`
 - `core/Console/Kernel.php:312`

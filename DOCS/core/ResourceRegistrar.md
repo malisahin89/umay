@@ -1,38 +1,38 @@
-﻿# File Report: core/ResourceRegistrar.php
+﻿# Dosya Raporu: core/ResourceRegistrar.php
 
-## Purpose
-Helper for registering RESTful resource routes.
+## Amaç
+RESTful kaynak rotalarını kaydetmek için yardımcı araç.
 
-## Overview
-Automates the creation of standard REST routes (index, create, store, show, edit, update, destroy) for a given controller. Supports `apiResource` to exclude view-related routes (create, edit).
+## Genel Bakış
+Verilen bir kontrolcü için standart REST rotalarının (index, create, store, show, edit, update, destroy) oluşturulmasını otomatikleştirir. Görünümle ilgili rotaları (create, edit) hariç tutmak için `apiResource` desteği sunar.
 
-## File Location
+## Dosya Konumu
 `core/ResourceRegistrar.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class ResourceRegistrar`
 
-## Properties
-- `string $name`: The resource URI prefix.
-- `string $controller`: The controller class.
-- `bool $api`: Whether it's an API resource.
-- `array $only`, `$except`: Filters for which actions to register.
-- `array $middlewares`: Middlewares to apply to all resource routes.
+## Özellikler
+- `string $name`: Kaynak URI öneki.
+- `string $controller`: Kontrolcü sınıfı.
+- `bool $api`: Bunun bir API kaynağı olup olmadığı.
+- `array $only`, `$except`: Hangi eylemlerin kaydedileceğine dair filtreler.
+- `array $middlewares`: Tüm kaynak rotalarına uygulanacak middleware'ler.
 
-## Methods
-- `only(array $actions): static`: Restricts registration to specific actions.
-- `except(array $actions): static`: Excludes specific actions.
-- `middleware(string|array $middleware): static`: Adds middleware to all resource routes.
-- `register(): void`: The final step that actually calls `Route::get`, `Route::post`, etc.
+## Metotlar
+- `only(array $actions): static`: Kaydı belirli eylemlerle sınırlandırır.
+- `except(array $actions): static`: Belirli eylemleri hariç tutar.
+- `middleware(string|array $middleware): static`: Tüm kaynak rotalarına middleware ekler.
+- `register(): void`: `Route::get`, `Route::post` vb. metotlarını gerçekten çağıran final adımıdır.
 
-## Internal Workflow
-- **Deferred Registration**: The `register()` method is called in the `__destruct()` method. This ensures that all fluent calls (`only`, `except`, `middleware`) are completed before the routes are actually added to the `Route` registry, preventing issues with prefix stacks.
+## Dahili İş Akışı
+- **Ertelenmiş Kayıt**: `register()` metodu `__destruct()` metodu içinde çağrılır. Bu, tüm akıcı çağrıların (`only`, `except`, `middleware`) rotalar gerçekten `Route` kayıt defterine eklenmeden önce tamamlandığından emin olur ve önek yığınlarıyla ilgili sorunları önler.
 
-## Dependencies
-- `Core\Route` (Uses)
+## Bağımlılıklar
+- `Core\Route` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/ResourceRegistrar.php:1-129`

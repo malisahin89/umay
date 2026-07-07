@@ -1,27 +1,27 @@
-# File Report: stubs/middleware.stub
+# Dosya Raporu: stubs/middleware.stub
 
-## Purpose
-Code-generation template for an HTTP middleware.
+## Amaç
+Bir HTTP ara yazılımı (middleware) için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new middleware under `App\Middleware`, implementing `Core\Contracts\MiddlewareInterface` with a `handle()` method that forwards the request to the `$next` closure.
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Middleware` altında, `Core\Contracts\MiddlewareInterface` arayüzünü uygulayan ve isteği `$next` kapatmasına (closure) yönlendiren bir `handle()` metoduna sahip yeni bir ara yazılım iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/middleware.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Middleware`
-- **Class:** `{{ClassName}} implements Core\Contracts\MiddlewareInterface`
-- **Imports:** `Core\Contracts\MiddlewareInterface`, `Core\Request`
-- **Methods:** `handle(Request $request, \Closure $next): mixed`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Middleware`
+- **Sınıf:** `{{ClassName}} implements Core\Contracts\MiddlewareInterface`
+- **İçe Aktarmalar (Imports):** `Core\Contracts\MiddlewareInterface`, `Core\Request`
+- **Metotlar:** `handle(Request $request, \Closure $next): mixed`
 
-## Placeholders
-- `{{ClassName}}` — generated middleware class name (the `Middleware` suffix is enforced by the generator).
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan ara yazılım sınıfı adı (`Middleware` son eki oluşturucu tarafından zorunlu kılınır).
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:232`, `core/Console/Kernel.php:699-703`
-- **Implements Contract:** `Core\Contracts\MiddlewareInterface` (see `DOCS/core/Contracts/MiddlewareInterface.md`)
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:232`, `core/Console/Kernel.php:699-703`
+- **Sözleşmeyi Uygular:** `Core\Contracts\MiddlewareInterface` (bakınız `DOCS/core/Contracts/MiddlewareInterface.md`)
 
-## Source References
+## Kaynak Referansları
 - `stubs/middleware.stub:1-18`
 - `core/Console/Kernel.php:213-233`

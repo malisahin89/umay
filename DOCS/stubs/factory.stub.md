@@ -1,28 +1,28 @@
-# File Report: stubs/factory.stub
+# Dosya Raporu: stubs/factory.stub
 
-## Purpose
-Code-generation template for a model factory.
+## Amaç
+Bir model fabrikası (factory) için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new factory under `Database\Factories`, extending `Core\Factory` and bound to a target model via the `$model` property.
+## Genel Bakış
+Konsol oluşturucusu tarafından `Database\Factories` altında, `Core\Factory` sınıfını genişleten ve `$model` özelliği aracılığıyla bir hedef modele bağlı olan yeni bir fabrika iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/factory.stub`
 
-## Generated Artifact
-- **Namespace:** `Database\Factories`
-- **Class:** `{{ClassName}} extends Core\Factory`
-- **Imports:** `App\Models\{{ModelClass}}`, `Core\Factory`
-- **Properties:** `protected string $model = {{ModelClass}}::class`
-- **Methods:** `definition(): array`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `Database\Factories`
+- **Sınıf:** `{{ClassName}} extends Core\Factory`
+- **İçe Aktarmalar (Imports):** `App\Models\{{ModelClass}}`, `Core\Factory`
+- **Özellikler:** `protected string $model = {{ModelClass}}::class`
+- **Metotlar:** `definition(): array`
 
-## Placeholders
-- `{{ClassName}}` — generated factory class name.
-- `{{ModelClass}}` — target model class the factory produces.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan fabrika sınıfı adı.
+- `{{ModelClass}}` — fabrikanın ürettiği hedef model sınıfı.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:361`, `core/Console/Kernel.php:699-703`
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:361`, `core/Console/Kernel.php:699-703`
 
-## Source References
+## Kaynak Referansları
 - `stubs/factory.stub:1-20`
 - `core/Console/Kernel.php:361`

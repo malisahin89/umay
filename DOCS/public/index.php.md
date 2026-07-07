@@ -1,26 +1,26 @@
-# File Report: public/index.php
+# Dosya Raporu: public/index.php
 
-## Purpose
-The main entry point (Front Controller) of the application.
+## Amaç
+Uygulamanın ana giriş noktası (Front Controller).
 
-## Overview
-Initializes the environment, bootstraps the `Application`, handles session management, manages the `Profiler`, and dispatches the request to the `Route` system.
+## Genel Bakış
+Ortamı başlatır, `Application`'ı önyükler, oturum yönetimini gerçekleştirir, `Profiler`'ı yönetir ve isteği `Route` sistemine yönlendirir.
 
-## File Location
+## Dosya Konumu
 `public/index.php`
 
-## Key Responsibilities
-- **Environment Setup**: Defines `BASE_PATH` and loads Composer autoload and configuration.
-- **Profiler**: Initializes the debug profiler and registers a shutdown function to save profile data.
-- **API vs Web Detection**: Detects if a request is an API call based on the prefix (default `/api`).
-- **Session Management**: For web requests, configures secure cookie settings (`httponly`, `secure`, `samesite`) and implements an idle timeout mechanism.
-- **Bootstrapping**: 
-    - Initializes the `Application` singleton.
-    - Captures the current request.
-    - Registers core service providers: `FacadeServiceProvider`, `EventServiceProvider`, `RouteServiceProvider`.
-    - Boots the application.
-- **Routing**: Calls `Route::dispatch()` to execute the handler for the current URI.
-- **Exception Handling**: Wraps the dispatch process in a try-catch block, delegating errors to `$app->handleException($e)`.
+## Temel Sorumluluklar
+- **Ortam Kurulumu**: `BASE_PATH`'i tanımlar, Composer autoload ve yapılandırmasını yükler.
+- **Profiler**: Hata ayıklama profiler'ını başlatır ve profil verilerini kaydetmek için bir shutdown fonksiyonu kaydeder.
+- **API vs Web Tespiti**: Öneke (varsayılan `/api`) dayanarak bir isteğin API çağrısı olup olmadığını tespit eder.
+- **Oturum Yönetimi**: Web istekleri için güvenli çerez ayarlarını (`httponly`, `secure`, `samesite`) yapılandırır ve bir boşta kalma zaman aşımı (idle timeout) mekanizması uygular.
+- **Önyükleme (Bootstrapping)**: 
+    - `Application` singleton'ını başlatır.
+    - Mevcut isteği yakalar.
+    - Çekirdek servis sağlayıcıları kaydeder: `FacadeServiceProvider`, `EventServiceProvider`, `RouteServiceProvider`.
+    - Uygulamayı başlatır (boot).
+- **Yönlendirme (Routing)**: Mevcut URI için işleyiciyi yürütmek üzere `Route::dispatch()` çağrılır.
+- **İstisna Yönetimi**: Yönlendirme sürecini bir try-catch bloğuna sarar ve hataları `$app->handleException($e)`'ye devreder.
 
-## Source References
+## Kaynak Referansları
 - `public/index.php:1-124`

@@ -1,20 +1,20 @@
-# File Report: config/profiler.php
+# Dosya Raporu: config/profiler.php
 
-## Purpose
-Profiler configuration.
+## Amaç
+Profiler yapılandırması.
 
-## Overview
-Controls the behavior of the application profiler, including whether it's enabled, where data is stored, and who can access it.
+## Genel Bakış
+Uygulama profiler'ının davranışını kontrol eder; etkin olup olmadığını, verilerin nereye saklandığını ve kimlerin erişebileceğini belirler.
 
-## File Location
+## Dosya Konumu
 `config/profiler.php`
 
-## Configuration
-- `enabled`: Boolean from `PROFILER_ENABLED` or `APP_DEBUG`.
-- `storage_path`: Path to `storage/profiler` (relative to `BASE_PATH`).
-- `ttl`: Lifetime of profiles in seconds from `PROFILER_TTL` (default: 7200).
-- `max_entries`: Max number of profiles to keep from `PROFILER_MAX_ENTRIES` (default: 200).
-- `ip_whitelist`: IPs allowed to access the profiler from `PROFILER_IP_WHITELIST` (default: '127.0.0.1,::1').
+## Yapılandırma
+- `enabled`: `PROFILER_ENABLED` veya `APP_DEBUG`'dan gelen boolean değer.
+- `storage_path`: `storage/profiler` yolu (`BASE_PATH`'e göre göreceli).
+- `ttl`: `PROFILER_TTL`'den gelen saniye cinsinden profil ömrü (varsayılan: 7200).
+- `max_entries`: `PROFILER_MAX_ENTRIES`'den gelen saklanacak maksimum profil sayısı (varsayılan: 200).
+- `ip_whitelist`: `PROFILER_IP_WHITELIST`'den gelen, profiler'a erişebilen IP'ler (varsayılan: '127.0.0.1,::1').
 
-## Source References
+## Kaynak Referansları
 - `config/profiler.php:1-49`
