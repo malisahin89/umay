@@ -1,7 +1,7 @@
-# Directory Report: views/errors
+# Dizin Raporu: views/errors
 
-## Purpose
-Contains custom error pages (e.g., 404, 500).
+## Amaç
+Özel hata sayfalarını (örneğin, 404, 500) içerir.
 
-## Source References
-- Directory: `views/errors/`
+## Kaynak Referansları
+- Dizin: `views/errors/`

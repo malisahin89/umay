@@ -1,26 +1,26 @@
-# File Report: core/Facades/Log.php
+# Dosya Raporu: core/Facades/Log.php
 
-## Purpose
-Static proxy for the `Core\Logger` instance.
+## Amaç
+`Core\Logger` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Logger` class.
+## Genel Bakış
+`Core\Logger` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/Log.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class Log extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Logger::class`.
+## Metotlar
+- `getFacadeRoot()`: `Logger::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Logger` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Logger` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/Log.php:1-20`

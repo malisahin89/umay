@@ -1,24 +1,24 @@
-# File Report: tests/Unit/ApiAuthTest.php
+# Dosya Raporu: tests/Unit/ApiAuthTest.php
 
-## Purpose
-Unit tests for Bearer-token API authentication.
+## Amaç
+Bearer-token API kimlik doğrulama için birim (unit) testler.
 
-## Overview
-Verifies the `ApiAuth` middleware and personal access token flow: valid tokens authenticate their owner, tokens are stored hashed, missing/invalid/expired tokens are rejected with 401, ability (scope) checks are enforced (including wildcard), and `last_used_at` is recorded.
+## Genel Bakış
+`ApiAuth` ara yazılımını ve kişisel erişim token'ı akışını doğrular: geçerli token'lar sahibini kimliklendirir, token'lar özetlenmiş (hashed) olarak saklanır, eksik/geçersiz/süresi dolmuş token'lar 401 ile reddedilir, yetenek (scope) kontrolleri uygulanır (wildcard dahil) ve `last_used_at` kaydedilir.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/ApiAuthTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class ApiAuthTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Middleware\ApiAuth`, `Core\Auth\HasApiTokens`, `Core\Auth\PersonalAccessToken`
 
-## Test Methods
+## Test Metotları
 - `test_valid_token_authenticates_the_owning_user` — `:81`
 - `test_token_is_stored_hashed_not_in_plaintext` — `:94`
 - `test_missing_token_is_rejected_with_401` — `:104`
@@ -30,8 +30,8 @@ Verifies the `ApiAuth` middleware and personal access token flow: valid tokens a
 - `test_unexpired_token_is_accepted` — `:162`
 - `test_expired_token_is_rejected_with_401` — `:172`
 
-## Cross References
-- **Tests:** `Core\Middleware\ApiAuth` (see `DOCS/core/Middleware/ApiAuth.md`), `Core\Auth\HasApiTokens` (see `DOCS/core/Auth/HasApiTokens.md`), `Core\Auth\PersonalAccessToken` (see `DOCS/core/Auth/PersonalAccessToken.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Middleware\ApiAuth` (bkz. `DOCS/core/Middleware/ApiAuth.md`), `Core\Auth\HasApiTokens` (bkz. `DOCS/core/Auth/HasApiTokens.md`), `Core\Auth\PersonalAccessToken` (bkz. `DOCS/core/Auth/PersonalAccessToken.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/ApiAuthTest.php:1-181`

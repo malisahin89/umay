@@ -1,18 +1,18 @@
-# File Report: config/cache.php
+# Dosya Raporu: config/cache.php
 
-## Purpose
-Cache configuration.
+## Amaç
+Önbellek (cache) yapılandırması.
 
-## Overview
-Configures the file-based cache system used by `Core\Cache`, specifying the storage path, key prefix, and default TTL.
+## Genel Bakış
+`Core\Cache` tarafından kullanılan dosya tabanlı önbellek sistemini yapılandırır; depolama yolunu, anahtar önekini ve varsayılan TTL'yi belirtir.
 
-## File Location
+## Dosya Konumu
 `config/cache.php`
 
-## Configuration
-- `path`: Path to `storage/cache` (relative to `BASE_PATH`).
-- `prefix`: Cache key prefix from `CACHE_PREFIX` (default: 'umay_').
-- `default_ttl`: Default time-to-live in seconds from `CACHE_TTL` (default: 3600).
+## Yapılandırma
+- `path`: `storage/cache` yolu (`BASE_PATH`'e göre göreceli).
+- `prefix`: `CACHE_PREFIX`'ten gelen önbellek anahtar öneki (varsayılan: 'umay_').
+- `default_ttl`: `CACHE_TTL`'den gelen varsayılan saniye cinsinden ömür (varsayılan: 3600).
 
-## Source References
+## Kaynak Referansları
 - `config/cache.php:1-30`

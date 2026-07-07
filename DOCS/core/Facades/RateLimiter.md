@@ -1,26 +1,26 @@
-# File Report: core/Facades/RateLimiter.php
+# Dosya Raporu: core/Facades/RateLimiter.php
 
-## Purpose
-Static proxy for the `Core\RateLimiter` instance.
+## Amaç
+`Core\RateLimiter` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\RateLimiter` class.
+## Genel Bakış
+`Core\RateLimiter` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/RateLimiter.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class RateLimiter extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `RateLimiter::class`.
+## Metotlar
+- `getFacadeRoot()`: `RateLimiter::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\RateLimiter` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\RateLimiter` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/RateLimiter.php:1-20`

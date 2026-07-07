@@ -1,4 +1,4 @@
-# Button Partial
+# Parça (Partial): Button
 
 `views/partials/button.php` dosyası, tutarlı bir buton yapısı sağlamak için oluşturulmuş yeniden kullanılabilir bir bileşendir.
 

@@ -1,28 +1,28 @@
-# File Report: core/Profiler/ProfilerController.php
+# Dosya Raporu: core/Profiler/ProfilerController.php
 
-## Purpose
-Controller for viewing the profiler data.
+## Amaç
+Profiler verilerini görüntülemek için kontrolcü.
 
-## Overview
-Provides an endpoint (`/_profiler/{token}`) that reads a specific profile JSON file from storage and renders it as a detailed HTML report.
+## Genel Bakış
+Depolamadan belirli bir profil JSON dosyasını okuyan ve bunu ayrıntılı bir HTML raporu olarak render eden bir uç nokta (`/_profiler/{token}`) sağlar.
 
-## File Location
+## Dosya Konumu
 `core/Profiler/ProfilerController.php`
 
-## Namespace
+## Ad Alanı
 `Core\Profiler`
 
-## Classes
+## Sınıflar
 - `class ProfilerController`
 
-## Methods
-- `index(Request $request): void`: Renders the profiler index page listing recent profiles.
-- `show(Request $request, string $token): void`: Renders the detailed report for a specific token.
+## Metotlar
+- `index(Request $request): void`: Son profilleri listeleyen profiler dizin sayfasını render eder.
+- `show(Request $request, string $token): void`: Belirli bir token için ayrıntılı raporu render eder.
 
-## Dependencies
-- `Core\Request` (Uses)
-- `Core\Profiler\ProfilerStorage` (Uses)
-- `Core\View` (Uses)
+## Bağımlılıklar
+- `Core\Request` (Kullanır)
+- `Core\Profiler\ProfilerStorage` (Kullanır)
+- `Core\View` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Profiler/ProfilerController.php:1-120`

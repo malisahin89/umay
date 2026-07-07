@@ -1,43 +1,43 @@
-# File Report: core/Factory.php
+# Dosya Raporu: core/Factory.php
 
-## Purpose
-Base class for Model Factories.
+## Amaç
+Model Fabrikaları için temel sınıf.
 
-## Overview
-Provides a fluent API for creating dummy model instances and persisting them to the database for testing or seeding. It supports "states" to modify the default definition.
+## Genel Bakış
+Testler veya seeding için sahte model örnekleri oluşturmak ve bunları veritabanına kaydetmek için akıcı bir API sağlar. Varsayılan tanımı değiştirmek için "durumları" (states) destekler.
 
-## File Location
+## Dosya Konumu
 `core/Factory.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `abstract class Factory`
-- `class FakerProxy` (Internal helper for generating dummy data)
+- `class FakerProxy` (Sahte veri oluşturmak için dahili yardımcı)
 
-## Properties
-- `string $model`: The FQCN of the model this factory creates.
-- `int $count`: Number of instances to create.
-- `array $states`: Queue of attribute overrides (states).
+## Özellikler
+- `string $model`: Bu fabrikanın oluşturduğu modelin FQCN'i.
+- `int $count`: Oluşturulacak örnek sayısı.
+- `array $states`: Öznitelik geçersiz kılma kuyruğu (durumlar).
 
-## Methods
-- `definition(): array`: Abstract method returning the default attribute set.
-- `count(int $count): static`: Sets the number of items to create.
-- `state(array $attributes): static`: Adds an attribute override to the state queue.
-- `make(array $override = []): mixed`: Creates model instances without saving them to the DB.
-- `create(array $override = []): mixed`: Creates model instances and saves them to the DB.
-- `raw(array $override = []): array`: Returns the resolved attribute array without creating a model.
-- `register(string $modelClass, string $factoryClass): void`: Explicitly maps a model to a factory class.
-- `forModel(string $modelClass, int $count = 1): static`: Resolves a factory for a given model using registry or naming conventions.
-- `faker(): FakerProxy`: Returns a proxy for generating random data.
+## Metotlar
+- `definition(): array`: Varsayılan öznitelik setini döndüren soyut metot.
+- `count(int $count): static`: Oluşturulacak öğe sayısını ayarlar.
+- `state(array $attributes): static`: Durum kuyruğuna bir öznitelik geçersiz kılma ekler.
+- `make(array $override = []): mixed`: Model örneklerini veritabanına kaydetmeden oluşturur.
+- `create(array $override = []): mixed`: Model örneklerini oluşturur ve veritabanına kaydeder.
+- `raw(array $override = []): array`: Model oluşturmadan çözümlenmiş öznitelik dizisini döndürür.
+- `register(string $modelClass, string $factoryClass): void`: Bir modeli açıkça bir fabrika sınıfına eşler.
+- `forModel(string $modelClass, int $count = 1): static`: Kayıt defterini veya adlandırma kurallarını kullanarak verilen model için bir fabrika çözer.
+- `faker(): FakerProxy`: Rastgele veri oluşturmak için bir proxy döndürür.
 
-## Internal Workflow
-1. `resolveAttributes()`: Merges the default `definition()`, any applied `states`, and the provided `$override` array.
-2. `newModel()`: Instantiates the model and uses `forceFill()` to populate it, ensuring guarded fields are also set.
+## Dahili İş Akışı
+1. `resolveAttributes()`: Varsayılan `definition()`, uygulanan tüm `states` ve sağlanan `$override` dizisini birleştirir.
+2. `newModel()`: Modeli örneklendirir ve korumalı (guarded) alanların da ayarlanmasını sağlayarak `forceFill()` kullanır.
 
-## Dependencies
-- `Core\FakerProxy` (Uses)
+## Bağımlılıklar
+- `Core\FakerProxy` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Factory.php:1-281`

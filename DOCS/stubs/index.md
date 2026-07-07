@@ -1,36 +1,36 @@
-# Directory Report: stubs
+# Dizin Raporu: stubs
 
-## Purpose
-Holds the code-generation templates (`*.stub`) used by the console's `make:*` commands to scaffold new application classes.
+## Amaç
+Konsolun `make:*` komutları tarafından yeni uygulama sınıfları iskeleti oluşturmak için kullanılan kod oluşturma şablonlarını (`*.stub`) tutar.
 
-## Child Directories
-- None.
+## Alt Dizinler
+- Yok.
 
-## Source Files
-- `controller.stub` — RESTful controller (see `controller.stub.md`)
-- `event.stub` — event class (see `event.stub.md`)
-- `factory.stub` — model factory (see `factory.stub.md`)
-- `listener.stub` — event listener (see `listener.stub.md`)
-- `mail.stub` — mailable (see `mail.stub.md`)
-- `middleware.stub` — HTTP middleware (see `middleware.stub.md`)
-- `migration.stub` — table-creating migration (see `migration.stub.md`)
-- `migration-soft-deletes.stub` — soft-delete column migration (see `migration-soft-deletes.stub.md`)
-- `model.stub` — model (see `model.stub.md`)
-- `request.stub` — form request (see `request.stub.md`)
-- `test.stub` — test case (see `test.stub.md`)
+## Kaynak Dosyaları
+- `controller.stub` — RESTful kontrolcü (bakınız `controller.stub.md`)
+- `event.stub` — olay (event) sınıfı (bakınız `event.stub.md`)
+- `factory.stub` — model fabrikası (bakınız `factory.stub.md`)
+- `listener.stub` — olay dinleyicisi (bakınız `listener.stub.md`)
+- `mail.stub` — mailable (bakınız `mail.stub.md`)
+- `middleware.stub` — HTTP ara yazılımı (middleware) (bakınız `middleware.stub.md`)
+- `migration.stub` — tablo oluşturma migrasyonu (bakınız `migration.stub.md`)
+- `migration-soft-deletes.stub` — soft-delete sütun migrasyonu (bakınız `migration-soft-deletes.stub.md`)
+- `model.stub` — model (bakınız `model.stub.md`)
+- `request.stub` — form isteği (bakınız `request.stub.md`)
+- `test.stub` — test durumu (bakınız `test.stub.md`)
 
-## Public Entry Points
-- None. Templates are read internally by the console kernel.
+## Genel Giriş Noktaları
+- Yok. Şablonlar konsol çekirdeği tarafından dahili olarak okunur.
 
-## Internal Dependencies
-- All stubs are read and interpolated by `Core\Console\Kernel::renderStub()`.
+## Dahili Bağımlılıklar
+- Tüm şablonlar `Core\Console\Kernel::renderStub()` tarafından okunur ve enterpole edilir.
 
-## External Dependencies
-- None.
+## Harici Bağımlılıklar
+- Yok.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel` (`core/Console/Kernel.php:699-703`; per-command references at lines 155, 180, 203, 232, 260, 288, 312, 336, 361, 395).
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel` (`core/Console/Kernel.php:699-703`; komuta özel referanslar satır 155, 180, 203, 232, 260, 288, 312, 336, 361, 395).
 
-## Source References
-- `stubs/` directory
+## Kaynak Referansları
+- `stubs/` dizini
 - `core/Console/Kernel.php:44-49`, `core/Console/Kernel.php:699-703`

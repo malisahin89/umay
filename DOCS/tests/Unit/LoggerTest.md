@@ -1,24 +1,24 @@
-# File Report: tests/Unit/LoggerTest.php
+# Dosya Raporu: tests/Unit/LoggerTest.php
 
-## Purpose
-Unit tests for the logger.
+## Amaç
+Günlükleyici (logger) için birim (unit) testler.
 
-## Overview
-Verifies `Core\Logger`: log files are created, entries carry the correct level (error/warning/info), each entry includes IP and user agent, files use daily rotation, and multiple logs append to the same file.
+## Genel Bakış
+`Core\Logger`'ı doğrular: günlük dosyaları oluşturulur, girişler doğru düzeyi (error/warning/info) taşır, her giriş IP ve kullanıcı aracısını içerir, dosyalar günlük rotasyon kullanır ve birden fazla günlük aynı dosyaya eklenir.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/LoggerTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class LoggerTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Logger`
 
-## Test Methods
+## Test Metotları
 - `test_info_creates_log_file` — `:44`
 - `test_error_log_contains_error_level` — `:54`
 - `test_warning_log_contains_warning_level` — `:64`
@@ -27,8 +27,8 @@ Verifies `Core\Logger`: log files are created, entries carry the correct level (
 - `test_log_file_uses_daily_rotation` — `:95`
 - `test_multiple_logs_appended_to_same_file` — `:108`
 
-## Cross References
-- **Tests:** `Core\Logger` (see `DOCS/core/Logger.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Logger` (bkz. `DOCS/core/Logger.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/LoggerTest.php:1-124`

@@ -1,10 +1,10 @@
-# Directory Report: core/Concerns
+# Dizin Raporu: core/Concerns
 
-## Purpose
-Contains traits for shared model behavior.
+## Amaç
+Paylaşılan model davranışları için trait'leri içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `SoftDeletes.php`
 
-## Source References
-- Directory: `core/Concerns/`
+## Kaynak Referansları
+- Dizin: `core/Concerns/`

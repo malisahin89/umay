@@ -1,47 +1,47 @@
-# File Report: app/Models/User.php
+# Dosya Raporu: app/Models/User.php
 
-## Purpose
-User entity model for authentication and user data management.
+## Amaç
+Kimlik doğrulama ve kullanıcı veri yönetimi için kullanıcı varlık modeli.
 
-## Overview
-Represents the `users` table in the database and implements `Authenticatable` to allow the framework's auth system to handle user authentication.
+## Genel Bakış
+Veritabanındaki `users` tablosunu temsil eder ve çerçeve kimlik doğrulama sisteminin kullanıcı kimlik doğrulamasını yönetebilmesi için `Authenticatable` arayüzünü uygular.
 
-## File Location
+## Dosya Konumu
 `app/Models/User.php`
 
-## Namespace
+## İsim Uzayı
 `App\Models`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Auth\HasApiTokens`
 - `Core\Contracts\Authenticatable`
 - `Core\Model`
 - `Illuminate\Support\Carbon`
 
-## Classes
+## Sınıflar
 - `class User extends Model implements Authenticatable`
 
-## Traits
-- `HasApiTokens` (Used for Bearer-token issuance)
+## Trait'ler
+- `HasApiTokens` (Bearer-token düzenlemesi için kullanılır)
 
-## Properties
+## Özellikler
 - `$table`: `users`
 - `$fillable`: `['name', 'email', 'password']`
 - `$hidden`: `['password', 'remember_token']`
 
-## Methods
-- `setPasswordAttribute(mixed $value): void`: Mutator that automatically hashes the password using `password_hash` when set.
-- `getAuthIdentifier(): int|string`: Returns the user's ID as the authentication identifier.
-- `getAuthPassword(): string`: Returns the hashed password for authentication.
-- `getRememberToken(): ?string`: Returns the remember token.
-- `setRememberToken(?string $token): void`: Sets the remember token.
+## Metotlar
+- `setPasswordAttribute(mixed $value): void`: Şifre ayarlandığında otomatik olarak `password_hash` kullanarak şifreyi özetleyen mutator.
+- `getAuthIdentifier(): int|string`: Kimlik doğrulama tanımlayıcısı olarak kullanıcının ID'sini döndürür.
+- `getAuthPassword(): string`: Kimlik doğrulama için özetlenmiş şifreyi döndürür.
+- `getRememberToken(): ?string`: Beni hatırla token'ını döndürür.
+- `setRememberToken(?string $token): void`: Beni hatırla token'ını ayarlar.
 
-## Dependencies
-- `Core\Model` (Extends)
-- `Core\Contracts\Authenticatable` (Implements)
+## Bağımlılıklar
+- `Core\Model` (Genişletir)
+- `Core\Contracts\Authenticatable` (Uygular)
 
-## Cross References
-- `Core\Auth\HasApiTokens` (Uses)
+## Çapraz Referanslar
+- `Core\Auth\HasApiTokens` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `app/Models/User.php:1-74`

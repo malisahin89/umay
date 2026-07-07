@@ -1,40 +1,40 @@
-# File Report: core/Cache.php
+# Dosya Raporu: core/Cache.php
 
-## Purpose
-File-based cache system with HMAC integrity and TTL.
+## Amaç
+HMAC bütünlüğü ve TTL içeren dosya tabanlı önbellek sistemi.
 
-## Overview
-Provides a simple key-value store using the filesystem. It ensures data integrity using HMAC signatures and supports expiration times (TTL). It includes an `atomic()` method for race-condition-free updates.
+## Genel Bakış
+Dosya sistemini kullanarak basit bir anahtar-değer deposu sağlar. HMAC imzalarını kullanarak veri bütünlüğünü sağlar ve sona erme sürelerini (TTL) destekler. Yarış durumu (race condition) olmadan güncellemeler için `atomic()` metodunu içerir.
 
-## File Location
+## Dosya Konumu
 `core/Cache.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Properties
-- `string $cachePath`: Directory where cache files are stored.
-- `string $prefix`: Prefix added to keys before hashing.
-- `int $defaultTtl`: Default expiration time in seconds.
-- `?string $appKey`: Secret key used for HMAC signing.
+## Özellikler
+- `string $cachePath`: Önbellek dosyalarının saklandığı dizin.
+- `string $prefix`: Karma işleminden önce anahtarlara eklenen ön ek.
+- `int $defaultTtl`: Saniye cinsinden varsayılan sona erme süresi.
+- `?string $appKey`: HMAC imzalama için kullanılan gizli anahtar.
 
-## Methods
-- `get(string $key, mixed $default = null): mixed`: Retrieves a value from cache, verifying HMAC and TTL.
-- `set(string $key, mixed $value, ?int $ttl = null): void`: Stores a value in cache using atomic rename.
-- `atomic(string $key, callable $mutator, ?int $ttl = null): mixed`: Performs an atomic read-modify-write operation using cross-process file locks.
-- `remember(string $key, int $ttl, callable $callback): mixed`: Retrieves a value or executes a callback and caches the result.
-- `forget(string $key): void`: Deletes a specific cache entry.
-- `flush(): void`: Clears all cache files and lock/temp files.
-- `pull(string $key, mixed $default = null): mixed`: Retrieves and then deletes a cache entry.
-- `has(string $key): bool`: Checks if a cache entry exists and is not expired.
+## Metotlar
+- `get(string $key, mixed $default = null): mixed`: HMAC ve TTL'yi doğrulayarak önbellekten bir değer alır.
+- `set(string $key, mixed $value, ?int $ttl = null): void`: Atomik yeniden adlandırma kullanarak önbelleğe bir değer saklar.
+- `atomic(string $key, callable $mutator, ?int $ttl = null): mixed`: Süreçler arası dosya kilitlerini kullanarak atomik bir oku-değiştir-yaz işlemi gerçekleştirir.
+- `remember(string $key, int $ttl, callable $callback): mixed`: Bir değeri alır veya bir geri çağırma fonksiyonunu çalıştırıp sonucu önbelleğe alır.
+- `forget(string $key): void`: Belirli bir önbellek girişini siler.
+- `flush(): void`: Tüm önbellek dosyalarını ve kilit/geçici dosyaları temizler.
+- `pull(string $key, mixed $default = null): mixed`: Bir önbellek girişini alır ve ardından siler.
+- `has(string $key): bool`: Bir önbellek girişinin var olduğunu ve süresinin dolmadığını kontrol eder.
 
-## Internal Workflow
-- `filename()`: Computes a SHA256 hash of the prefixed key for the filename.
-- `encode()`: JSON-encodes value and expiry, then appends an HMAC signature.
-- `decode()`: Verifies HMAC signature and checks if the current time is before the expiry.
+## Dahili İş Akışı
+- `filename()`: Dosya adı için ön ekli anahtarın SHA256 karmasını hesaplar.
+- `encode()`: Değeri ve sona erme tarihini JSON ile kodlar, ardından bir HMAC imzası ekler.
+- `decode()`: HMAC imzasını doğrular ve mevcut zamanın sona erme tarihinden önce olup olmadığını kontrol eder.
 
-## Dependencies
-- `Core\DebugBar` (Optional profiling)
+## Bağımlılıklar
+- `Core\DebugBar` (İsteğe bağlı profilleme)
 
-## Source References
+## Kaynak Referansları
 - `core/Cache.php:1-319`

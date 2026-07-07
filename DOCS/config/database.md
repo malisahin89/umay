@@ -1,35 +1,35 @@
-# File Report: config/database.php
+# Dosya Raporu: config/database.php
 
-## Purpose
-Database and Eloquent configuration.
+## Amaç
+Veritabanı ve Eloquent yapılandırması.
 
-## Overview
-Loads `.env` variables using `phpdotenv`, defines database connection settings (MySQL by default), and initializes the Eloquent ORM via `Core\Database::init()`.
+## Genel Bakış
+`phpdotenv` kullanarak `.env` değişkenlerini yükler, veritabanı bağlantı ayarlarını (varsayılan olarak MySQL) tanımlar ve `Core\Database::init()` aracılığıyla Eloquent ORM'yi başlatır.
 
-## File Location
+## Dosya Konumu
 `config/database.php`
 
-## Configuration
+## Yapılandırma
 - `driver`: 'mysql'
-- `host`: From `DB_HOST` (default: '127.0.0.1')
-- `port`: From `DB_PORT` (default: '3306')
-- `database`: From `DB_DATABASE` (default: 'umay')
-- `username`: From `DB_USERNAME` (default: 'root')
-- `password`: From `DB_PASSWORD` (default: '')
-- `charset`: From `DB_CHARSET` (default: 'utf8mb4')
-- `collation`: From `DB_COLLATION` (default: 'utf8mb4_unicode_ci')
+- `host`: `DB_HOST`'tan gelir (varsayılan: '127.0.0.1')
+- `port`: `DB_PORT`'tan gelir (varsayılan: '3306')
+- `database`: `DB_DATABASE`'den gelir (varsayılan: 'umay')
+- `username`: `DB_USERNAME`'den gelir (varsayılan: 'root')
+- `password`: `DB_PASSWORD`'den gelir (varsayılan: '')
+- `charset`: `DB_CHARSET`'den gelir (varsayılan: 'utf8mb4')
+- `collation`: `DB_COLLATION`'dan gelir (varsayılan: 'utf8mb4_unicode_ci')
 - `prefix`: ''
 - `strict`: true
 
-## Internal Workflow
-1. Initializes `Dotenv` to load `.env` file safely.
-2. Builds the `$config` array.
-3. Calls `Core\Database::init($config)` to set up the database connection.
-4. Returns the `$config` array for use via the `config()` helper.
+## Dahili İş Akışı
+1. `.env` dosyasını güvenli bir şekilde yüklemek için `Dotenv`'i başlatır.
+2. `$config` dizisini oluşturur.
+3. Veritabanı bağlantısını kurmak için `Core\Database::init($config)` çağrılır.
+4. `config()` yardımcısı üzerinden kullanım için `$config` dizisini döndürür.
 
-## Dependencies
-- `Core\Database` (Uses)
-- `Dotenv\Dotenv` (Uses)
+## Bağımlılıklar
+- `Core\Database` (Kullanır)
+- `Dotenv\Dotenv` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `config/database.php:1-42`

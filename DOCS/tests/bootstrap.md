@@ -1,32 +1,32 @@
-# File Report: tests/bootstrap.php
+# Dosya Raporu: tests/bootstrap.php
 
-## Purpose
-PHPUnit bootstrap file that prepares the test environment.
+## Amaç
+Test ortamını hazırlayan PHPUnit bootstrap dosyası.
 
-## Overview
-Loaded before the test suite runs. It defines `BASE_PATH`, includes the Composer autoloader, loads environment variables (`.env.testing` if present, otherwise `.env`), initializes the database, and loads the global helper functions.
+## Genel Bakış
+Test paketi çalışmadan önce yüklenir. `BASE_PATH`'i tanımlar, Composer autoloader'ı dahil eder, ortam değişkenlerini yükler (`.env.testing` varsa, yoksa `.env`), veritabanını başlatır ve global yardımcı fonksiyonları yükler.
 
-## File Location
+## Dosya Konumu
 `tests/bootstrap.php`
 
-## Namespace
-Global (no namespace).
+## İsim Uzayı
+Global (isim uzayı yok).
 
-## Imports
+## İçe Aktarmalar
 - `Core\Database`
 - `Dotenv\Dotenv` (vendor)
 
-## Internal Workflow
-1. Defines `BASE_PATH` as the project root.
-2. Requires `vendor/autoload.php`.
-3. Loads env via `Dotenv::createImmutable()` using `.env.testing` when it exists, else `.env` (`safeLoad()`).
-4. If `DB_DRIVER=sqlite`, calls `Database::init()` with an in-memory SQLite database; otherwise includes `config/database.php`.
-5. Requires `core/helpers.php`.
+## Dahili İş Akışı
+1. `BASE_PATH`'i proje kökü olarak tanımlar.
+2. `vendor/autoload.php` dosyasını gerektirir.
+3. Mevcutsa `.env.testing`, değilse `.env` kullanarak `Dotenv::createImmutable()` aracılığıyla env yükler (`safeLoad()`).
+4. `DB_DRIVER=sqlite` ise, bellek içi bir SQLite veritabanı ile `Database::init()` çağrılır; aksi takdirde `config/database.php` dahil edilir.
+5. `core/helpers.php` dosyasını gerektirir.
 
-## Cross References
-- **Calls:** `Core\Database::init()` (see `DOCS/core/Database.md`)
-- **Loads:** `core/helpers.php` (see `DOCS/core/helpers.md`)
-- **Referenced By:** `phpunit.xml` bootstrap setting (see `DOCS/phpunit.xml.md`)
+## Çapraz Referanslar
+- **Çağırır:** `Core\Database::init()` (bkz. `DOCS/core/Database.md`)
+- **Yükler:** `core/helpers.php` (bkz. `DOCS/core/helpers.md`)
+- **Referans Veren:** `phpunit.xml` bootstrap ayarı (bkz. `DOCS/phpunit.xml.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/bootstrap.php:1-32`

@@ -1,33 +1,33 @@
-# File Report: app/Providers/RouteServiceProvider.php
+# Dosya Raporu: app/Providers/RouteServiceProvider.php
 
-## Purpose
-Service provider responsible for loading application routes.
+## Amaç
+Uygulama rotalarını yüklemekten sorumlu servis sağlayıcısı.
 
-## Overview
-Loads route definitions from `routes/web.php` and `routes/api.php`. It applies the 'web' middleware group to web routes and the 'api' middleware group with a configurable prefix to API routes.
+## Genel Bakış
+Rota tanımlarını `routes/web.php` ve `routes/api.php` dosyalarından yükler. Web rotalarına 'web' ara yazılım grubunu, API rotalarına ise yapılandırılabilir bir ön ek ile 'api' ara yazılım grubunu uygular.
 
-## File Location
+## Dosya Konumu
 `app/Providers/RouteServiceProvider.php`
 
-## Namespace
+## İsim Uzayı
 `App\Providers`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Route`
 - `Core\ServiceProvider`
 
-## Classes
+## Sınıflar
 - `class RouteServiceProvider extends ServiceProvider`
 
-## Methods
-- `register(): void`: No logic implemented (bindings are handled in `boot`).
-- `boot(): void`: Triggers the loading of web and API routes.
-- `loadWebRoutes(): void`: Checks for `routes/web.php` and loads it under the 'web' group.
-- `loadApiRoutes(): void`: Checks for `routes/api.php` and loads it under the 'api' group with the prefix defined in `middleware.api_prefix` (default: `/api`).
+## Metotlar
+- `register(): void`: Uygulanmış bir mantık yoktur (bağlamalar `boot` içerisinde yönetilir).
+- `boot(): void`: Web ve API rotalarının yüklenmesini tetikler.
+- `loadWebRoutes(): void`: `routes/web.php` dosyasının olup olmadığını kontrol eder ve onu 'web' grubu altında yükler.
+- `loadApiRoutes(): void`: `routes/api.php` dosyasının olup olmadığını kontrol eder ve onu `middleware.api_prefix` (varsayılan: `/api`) altında tanımlanan ön ek ile 'api' grubu altında yükler.
 
-## Dependencies
-- `Core\ServiceProvider` (Extends)
-- `Core\Route` (Uses)
+## Bağımlılıklar
+- `Core\ServiceProvider` (Genişletir)
+- `Core\Route` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `app/Providers/RouteServiceProvider.php:1-80`

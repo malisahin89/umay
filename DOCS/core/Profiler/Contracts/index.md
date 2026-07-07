@@ -1,10 +1,10 @@
-# Directory Report: core/Profiler/Contracts
+# Dizin Raporu: core/Profiler/Contracts
 
-## Purpose
-Contains interfaces for profiler data collectors.
+## Amaç
+Profiler veri toplayıcıları için arayüzler içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `DataCollectorInterface.php`
 
-## Source References
-- Directory: `core/Profiler/Contracts/`
+## Kaynak Referansları
+- Dizin: `core/Profiler/Contracts/`

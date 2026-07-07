@@ -1,43 +1,43 @@
-# File Report: core/FormRequest.php
+# Dosya Raporu: core/FormRequest.php
 
-## Purpose
-Specialized Request class for automated validation and authorization.
+## Amaç
+Otomatik doğrulama ve yetkilendirme için özelleştirilmiş İstek (Request) sınıfı.
 
-## Overview
-Extends the base `Request` class to provide a structured way to define validation rules and authorization logic. It is designed to be injected into controller methods.
+## Genel Bakış
+Doğrulama kurallarını ve yetkilendirme mantığını tanımlamak için yapılandırılmış bir yol sağlamak amacıyla temel `Request` sınıfını genişletir. Kontrolcü metotlarına enjekte edilmek üzere tasarlanmıştır.
 
-## File Location
+## Dosya Konumu
 `core/FormRequest.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `abstract class FormRequest extends Request`
 
-## Properties
-- `array $validatedData`: Stores data that has passed validation.
+## Özellikler
+- `array $validatedData`: Doğrulamadan geçmiş verileri saklar.
 
-## Methods
-- `rules(): array`: Abstract method to define validation rules.
-- `messages(): array`: Returns custom error messages for the rules.
-- `authorize(): bool`: Performs authorization check; returns `false` to trigger a 403 Forbidden.
-- `createFrom(Request $parent): static`: Factory method to create a `FormRequest` from a standard `Request`, preserving its state.
-- `validated(): array`: Returns the data that was successfully validated.
+## Metotlar
+- `rules(): array`: Doğrulama kurallarını tanımlayan soyut metot.
+- `messages(): array`: Kurallar için özel hata mesajlarını döndürür.
+- `authorize(): bool`: Yetkilendirme kontrolü yapar; 403 Forbidden'ı tetiklemek için `false` döndürür.
+- `createFrom(Request $parent): static`: Standart bir `Request`'ten, durumunu koruyarak bir `FormRequest` oluşturan fabrika metodudur.
+- `validated(): array`: Başarıyla doğrulanmış verileri döndürür.
 
-## Internal Workflow
-1. `resolve()`: Triggered upon creation.
-2. **Authorization**: Calls `authorize()`. If `false`, returns 403.
-3. **Validation**: Uses `Validator::make()` with `rules()` and `messages()`.
-4. **Failure Handling**: If validation fails:
-    - For JSON requests: Returns a 422 response.
-    - For Web requests: Flashes errors and old input to the session and redirects back.
-5. **Data Filtering**: Stores only the keys defined in `rules()` into `$validatedData`.
+## Dahili İş Akışı
+1. `resolve()`: Oluşturulduğunda tetiklenir.
+2. **Yetkilendirme**: `authorize()` çağrılır. `false` ise 403 döndürür.
+3. **Doğrulama**: `rules()` ve `messages()` ile `Validator::make()` kullanır.
+4. **Hata İşleme**: Doğrulama başarısız olursa:
+    - JSON istekleri için: 422 yanıtı döndürür.
+    - Web istekleri için: Hataları ve eski girdileri oturuma flash'lar ve geri yönlendirir.
+5. **Veri Filtreleme**: Yalnızca `rules()` içinde tanımlanan anahtarları `$validatedData` içine saklar.
 
-## Dependencies
-- `Core\Request` (Extends)
-- `Core\Validator` (Uses)
-- `Core\Response` (Uses)
+## Bağımlılıklar
+- `Core\Request` (Genişletir)
+- `Core\Validator` (Kullanır)
+- `Core\Response` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/FormRequest.php:1-108`

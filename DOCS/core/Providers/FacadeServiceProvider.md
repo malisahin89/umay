@@ -1,27 +1,27 @@
-# File Report: core/Providers/FacadeServiceProvider.php
+# Dosya Raporu: core/Providers/FacadeServiceProvider.php
 
-## Purpose
-Service provider for registering Facade aliases.
+## Amaç
+Facade takma adlarını kaydetmek için servis sağlayıcı.
 
-## Overview
-Registers the short global names (aliases) for all framework facades (e.g., `Cache`, `Auth`, `DB`) into the `config/app.php` aliases list.
+## Genel Bakış
+Tüm framework facade'ları (örneğin, `Cache`, `Auth`, `DB`) için kısa global isimleri (takma adlar), `config/app.php` takma adlar listesine kaydeder.
 
-## File Location
+## Dosya Konumu
 `core/Providers/FacadeServiceProvider.php`
 
-## Namespace
+## Ad Alanı
 `Core\Providers`
 
-## Classes
+## Sınıflar
 - `class FacadeServiceProvider extends ServiceProvider`
 
-## Methods
-- `register(): void`: Binds the `Facade` logic into the container.
-- `boot(): void`: Iterates through the configured aliases and registers them globally.
+## Metotlar
+- `register(): void`: `Facade` mantığını konteynere bağlar.
+- `boot(): void`: Yapılandırılmış takma adlar üzerinde döner ve onları küresel olarak kaydeder.
 
-## Dependencies
-- `Core\ServiceProvider` (Extends)
-- `Core\Support\Facade` (Uses)
+## Bağımlılıklar
+- `Core\ServiceProvider` (Genişletir)
+- `Core\Support\Facade` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Providers/FacadeServiceProvider.php:1-60`

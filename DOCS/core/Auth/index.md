@@ -1,12 +1,12 @@
-# Directory Report: core/Auth
+# Dizin Raporu: core/Auth
 
-## Purpose
-Contains authentication guards and user provider implementations.
+## Amaç
+Kimlik doğrulama guard'larını ve kullanıcı sağlayıcı (user provider) uygulamalarını içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `EloquentUserProvider.php`
 - `HasApiTokens.php`
 - `PersonalAccessToken.php`
 
-## Source References
-- Directory: `core/Auth/`
+## Kaynak Referansları
+- Dizin: `core/Auth/`

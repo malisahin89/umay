@@ -1,26 +1,26 @@
-# File Report: public/css/style.css
+# Dosya Raporu: public/css/style.css
 
-## Purpose
-Base stylesheet served from the web root.
+## Amaç
+Web kök dizininden sunulan temel stil dosyası.
 
-## Overview
-A small, standalone CSS file defining the layout and component styles for a basic admin-style UI: page body, header bar, a fixed sidebar with navigation links, the main content area, and alert boxes.
+## Genel Bakış
+Temel bir yönetici tarzı kullanıcı arayüzü için düzen ve bileşen stillerini tanımlayan küçük, bağımsız bir CSS dosyasıdır: sayfa gövdesi, üst bilgi çubuğu, navigasyon bağlantıları içeren sabit bir yan menü, ana içerik alanı ve uyarı kutuları.
 
-## File Location
+## Dosya Konumu
 `public/css/style.css`
 
-## Selectors / Rules
-- `body` — base font (`'Segoe UI', sans-serif`), light background (`#f4f6f9`), no margin.
-- `header` — dark bar (`#343a40`), white text, flex layout (space-between, centered).
-- `.sidebar` — fixed left sidebar, 220px wide, full height, dark background (`#222d32`).
-- `.sidebar a` / `.sidebar a:hover` — block navigation links, hover background `#1a2226`.
-- `.main-content` — offset by the sidebar width (`margin-left: 220px`), padded.
-- `.alert`, `.alert-success`, `.alert-error` — notification boxes with success (`#d4edda`/`#155724`) and error (`#f8d7da`/`#721c24`) color pairs.
+## Seçiciler / Kurallar
+- `body` — temel yazı tipi (`'Segoe UI', sans-serif`), açık renkli arka plan (`#f4f6f9`), kenar boşluğu yok.
+- `header` — koyu çubuk (`#343a40`), beyaz metin, flex düzeni (space-between, ortalanmış).
+- `.sidebar` — sabit sol yan menü, 220px genişlik, tam yükseklik, koyu arka plan (`#222d32`).
+- `.sidebar a` / `.sidebar a:hover` — blok navigasyon bağlantıları, hover arka planı `#1a2226`.
+- `.main-content` — yan menü genişliği kadar kaydırılmış (`margin-left: 220px`), iç boşluk verilmiş.
+- `.alert`, `.alert-success`, `.alert-error` — başarı (`#d4edda`/`#155724`) ve hata (`#f8d7da`/`#721c24`) renk çiftlerine sahip bildirim kutuları.
 
-## External Usage
-- Served statically from the web root; referenced by templates via the `asset()` helper (see `DOCS/core/View.md`, `asset()` in `DOCS/core/helpers.md`).
+## Harici Kullanım
+- Web kök dizininden statik olarak sunulur; şablonlar tarafından `asset()` yardımcısı aracılığıyla referans verilir (bkz. `DOCS/core/View.md`, `DOCS/core/helpers.md` içindeki `asset()`).
 
-> No verified `<link>` reference to `css/style.css` was found in the analyzed `views/` templates; it is served as a static asset.
+> Analiz edilen `views/` şablonlarında `css/style.css`'e yönelik doğrulanmış bir `<link>` referansı bulunmamıştır; statik bir varlık olarak sunulur.
 
-## Source References
+## Kaynak Referansları
 - `public/css/style.css:1-57`

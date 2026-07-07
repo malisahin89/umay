@@ -1,9 +1,9 @@
-# Card Partial
+# Parça (Partial): Card
 
 `views/partials/card.php` dosyası, içerikleri gruplandırmak ve görsel olarak ayırmak için kullanılan standart bir kart bileşenidir.
 
 ## Özellikler
-- **Yapı**: Opsiyonel bir başlık (icon destekli), ana içerik alanı ve opsiyonel bir alt bilgi (footer) alanından oluşur.
+- **Yapı**: Opsiyonel bir başlık (ikon destekli), ana içerik alanı ve opsiyonel bir alt bilgi (footer) alanından oluşur.
 - **Görünüm**: Tailwind CSS ile gölge (`shadow-sm`), yuvarlatılmış köşeler ve hover efekti uygulanmıştır.
 - **Parametreler**:
     - `$title`: Kart başlığı.

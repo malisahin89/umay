@@ -1,20 +1,20 @@
-# File Report: config/session.php
+# Dosya Raporu: config/session.php
 
-## Purpose
-Session configuration.
+## Amaç
+Oturum (session) yapılandırması.
 
-## Overview
-Defines session lifetime, cookie name, and security settings (Secure, HttpOnly, SameSite).
+## Genel Bakış
+Oturum ömrünü, çerez adını ve güvenlik ayarlarını (Secure, HttpOnly, SameSite) tanımlar.
 
-## File Location
+## Dosya Konumu
 `config/session.php`
 
-## Configuration
-- `lifetime`: Lifetime in minutes from `SESSION_LIFETIME` (default: 30).
-- `cookie`: Session cookie name from `SESSION_COOKIE` (default: 'umay_session').
-- `secure`: Boolean from `SESSION_SECURE` or detected via `$_SERVER['HTTPS']`.
+## Yapılandırma
+- `lifetime`: `SESSION_LIFETIME`'dan gelen dakika cinsinden ömür (varsayılan: 30).
+- `cookie`: `SESSION_COOKIE`'den gelen oturum çerezi adı (varsayılan: 'umay_session').
+- `secure`: `SESSION_SECURE`'dan gelen boolean değer veya `$_SERVER['HTTPS']` üzerinden tespit edilen değer.
 - `http_only`: `true`
-- `same_site`: From `SESSION_SAME_SITE` (default: 'Strict').
+- `same_site`: `SESSION_SAME_SITE`'dan gelir (varsayılan: 'Strict').
 
-## Source References
+## Kaynak Referansları
 - `config/session.php:1-28`

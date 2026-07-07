@@ -1,29 +1,29 @@
-# File Report: core/Middleware/SecurityHeaders.php
+# Dosya Raporu: core/Middleware/SecurityHeaders.php
 
-## Purpose
-Security-focused HTTP header middleware.
+## Amaç
+Güvenlik odaklı HTTP başlık middleware'i.
 
-## Overview
-Injects essential security headers (e.g., `X-Content-Type-Options`, `X-Frame-Options`, `Content-Security-Policy`) into every response to protect the application from common web vulnerabilities.
+## Genel Bakış
+Uygulamayı yaygın web güvenlik açıklarından korumak için her yanıta temel güvenlik başlıklarını (örneğin, `X-Content-Type-Options`, `X-Frame-Options`, `Content-Security-Policy`) enjekte eder.
 
-## File Location
+## Dosya Konumu
 `core/Middleware/SecurityHeaders.php`
 
-## Namespace
+## Ad Alanı
 `Core\Middleware`
 
-## Classes
+## Sınıflar
 - `class SecurityHeaders implements MiddlewareInterface`
 
-## Methods
+## Metotlar
 - `handle(Request $request, \Closure $next): mixed`:
-    1. Generates a fresh CSP nonce using `Csp::reset()`.
-    2. Sets several security headers.
-    3. Ensures the response is sent over HTTPS if configured.
+    1. `Csp::reset()` kullanarak taze bir CSP nonce oluşturur.
+    2. Çeşitli güvenlik başlıklarını ayarlar.
+    3. Yapılandırılmışsa yanıtın HTTPS üzerinden gönderildiğinden emin olur.
 
-## Dependencies
-- `Core\Contracts\MiddlewareInterface` (Implements)
-- `Core\Csp` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MiddlewareInterface` (Uygular)
+- `Core\Csp` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Middleware/SecurityHeaders.php:1-110`

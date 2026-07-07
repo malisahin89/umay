@@ -1,27 +1,27 @@
-# File Report: stubs/controller.stub
+# Dosya Raporu: stubs/controller.stub
 
-## Purpose
-Code-generation template for a RESTful controller.
+## Amaç
+Bir RESTful kontrolcü için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new controller under `App\Controllers`. It produces a class extending `Controller` with the seven RESTful action methods (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`).
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Controllers` altında yeni bir kontrolcü iskeleti oluşturmak için kullanılan şablon. `Controller` sınıfını genişleten ve yedi RESTful eylem metoduna (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`) sahip bir sınıf üretir.
 
-## File Location
+## Dosya Konumu
 `stubs/controller.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Controllers`
-- **Class:** `{{ClassName}} extends Controller`
-- **Imports:** `Core\Facades\View`, `Core\Request`
-- **Methods:** `index()`, `create()`, `store(Request)`, `show(Request, string $id)`, `edit(Request, string $id)`, `update(Request, string $id)`, `destroy(Request, string $id)`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Controllers`
+- **Sınıf:** `{{ClassName}} extends Controller`
+- **İçe Aktarmalar (Imports):** `Core\Facades\View`, `Core\Request`
+- **Metotlar:** `index()`, `create()`, `store(Request)`, `show(Request, string $id)`, `edit(Request, string $id)`, `update(Request, string $id)`, `destroy(Request, string $id)`
 
-## Placeholders
-- `{{ClassName}}` — generated controller class name.
-- `{{viewPrefix}}` — view path prefix used in `View::render()` calls.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan kontrolcü sınıfı adı.
+- `{{viewPrefix}}` — `View::render()` çağrılarında kullanılan görünüm yolu ön eki.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:155`, `core/Console/Kernel.php:699-703`
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:155`, `core/Console/Kernel.php:699-703`
 
-## Source References
+## Kaynak Referansları
 - `stubs/controller.stub:1-46`
 - `core/Console/Kernel.php:155-176`

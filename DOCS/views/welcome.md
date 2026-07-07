@@ -1,22 +1,22 @@
-# File Report: views/welcome.php
+# Dosya Raporu: views/welcome.php
 
-## Purpose
-Landing page for the framework.
+## Amaç
+Framework için karşılama (landing) sayfası.
 
-## Overview
-A highly styled showcase page demonstrating the framework's features using Tailwind CSS and custom animations.
+## Genel Bakış
+Tailwind CSS ve özel animasyonlar kullanarak framework'ün özelliklerini sergileyen, yüksek düzeyde stilize edilmiş bir tanıtım sayfasıdır.
 
-## File Location
+## Dosya Konumu
 `views/welcome.php`
 
-## Implementation
-- **Layout**: Extends `layouts/base`.
-- **Content**:
-    - Navigation bar.
-    - Hero section with a logo and value proposition.
-    - Interactive code preview tabs (Web, API, Controller, Model, Middleware).
-    - Feature grid highlighting Routing, Eloquent, Middleware, Container, CLI, and Profiler.
-- **Dynamic Data**: Displays the framework version using `config('app.version')` and the PHP version.
+## Uygulama
+- **Düzen (Layout)**: `layouts/base` düzenini genişletir.
+- **İçerik**:
+    - Navigasyon çubuğu.
+    - Logo ve değer önermesi içeren Hero bölümü.
+    - Etkileşimli kod önizleme sekmeleri (Web, API, Controller, Model, Middleware).
+    - Yönlendirme, Eloquent, Middleware, Konteyner, CLI ve Profiler'ı vurgulayan özellik ızgarası.
+- **Dinamik Veriler**: `config('app.version')` kullanarak framework sürümünü ve PHP sürümünü görüntüler.
 
-## Source References
+## Kaynak Referansları
 - `views/welcome.php:1-539`

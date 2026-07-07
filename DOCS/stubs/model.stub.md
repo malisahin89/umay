@@ -1,28 +1,28 @@
-# File Report: stubs/model.stub
+# Dosya Raporu: stubs/model.stub
 
-## Purpose
-Code-generation template for an Eloquent-style model.
+## Amaç
+Eloquent tarzı bir model için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new model under `App\Models`, extending `Core\Model` with a `$table` name and an empty `$fillable` array.
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Models` altında, bir `$table` adı ve boş bir `$fillable` dizisi ile `Core\Model` sınıfını genişleten yeni bir model iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/model.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Models`
-- **Class:** `{{ClassName}} extends Core\Model`
-- **Imports:** `Core\Model`
-- **Properties:** `protected $table = '{{tableName}}'`, `protected $fillable = []`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Models`
+- **Sınıf:** `{{ClassName}} extends Core\Model`
+- **İçe Aktarmalar (Imports):** `Core\Model`
+- **Özellikler:** `protected $table = '{{tableName}}'`, `protected $fillable = []`
 
-## Placeholders
-- `{{ClassName}}` — generated model class name.
-- `{{tableName}}` — backing database table.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan model sınıfı adı.
+- `{{tableName}}` — arka plandaki veritabanı tablosu.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:180`, `core/Console/Kernel.php:699-703`
-- **Base Class:** `Core\Model` (see `DOCS/core/Model.md`)
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:180`, `core/Console/Kernel.php:699-703`
+- **Taban Sınıf:** `Core\Model` (bakınız `DOCS/core/Model.md`)
 
-## Source References
+## Kaynak Referansları
 - `stubs/model.stub:1-16`
 - `core/Console/Kernel.php:180`

@@ -1,24 +1,24 @@
-# File Report: tests/Unit/FileUploadTest.php
+# Dosya Raporu: tests/Unit/FileUploadTest.php
 
-## Purpose
-Unit tests for file upload handling and safety.
+## Amaç
+Dosya yükleme işlemleri ve güvenliği için birim (unit) testler.
 
-## Overview
-Verifies `Core\FileUpload`: filename sanitization (Turkish/special-character stripping, uniqid fallback, path-traversal defense), path containment within `public/`, allowed MIME types (JPEG allowed, PHP rejected), the 2 MB size limit, and safe `rename`/`delete` behavior for default/empty/nonexistent paths.
+## Genel Bakış
+`Core\FileUpload`'ı doğrular: dosya adı temizleme (Türkçe/özel karakterlerin kaldırılması, uniqid geri dönüşü, yol aşımı (path-traversal) savunması), yolun `public/` dizini içinde olması, izin verilen MIME türleri (JPEG izinli, PHP reddedilmiş), 2 MB boyut sınırı ve varsayılan/boş/olmayan yollar için güvenli `rename`/`delete` davranışı.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/FileUploadTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class FileUploadTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\FileUpload`
 
-## Test Methods
+## Test Metotları
 - `test_sanitize_removes_turkish_characters` — `:28`
 - `test_sanitize_removes_special_characters` — `:34`
 - `test_sanitize_allows_alphanumeric_dash_underscore` — `:40`
@@ -35,8 +35,8 @@ Verifies `Core\FileUpload`: filename sanitization (Turkish/special-character str
 - `test_delete_returns_false_for_empty_path` — `:153`
 - `test_delete_returns_false_for_nonexistent_file` — `:159`
 
-## Cross References
-- **Tests:** `Core\FileUpload` (see `DOCS/core/FileUpload.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\FileUpload` (bkz. `DOCS/core/FileUpload.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/FileUploadTest.php:1-164`

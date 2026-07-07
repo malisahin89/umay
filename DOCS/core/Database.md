@@ -1,51 +1,51 @@
-# File Report: core/Database.php
+# Dosya Raporu: core/Database.php
 
-## Purpose
-Database connection and Eloquent ORM wrapper.
+## Amaç
+Veritabanı bağlantısı ve Eloquent ORM sarmalayıcısı.
 
-## Overview
-Initializes and manages the Eloquent Capsule Manager. It provides a static API for executing raw SQL queries and managing transactions, while enabling the use of Eloquent models across the application.
+## Genel Bakış
+Eloquent Capsule Manager'ı başlatır ve yönetir. Ham SQL sorguları yürütmek ve işlemleri (transactions) yönetmek için statik bir API sağlarken, Eloquent modellerinin uygulama genelinde kullanılmasına olanak tanır.
 
-## File Location
+## Dosya Konumu
 `core/Database.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Illuminate\Container\Container`
 - `Illuminate\Database\Capsule\Manager as Capsule`
 - `Illuminate\Database\Connection`
 - `Illuminate\Events\Dispatcher`
 - `PDO`
 
-## Classes
+## Sınıflar
 - `class Database`
 
-## Properties
-- `static ?Capsule $instance`: The Eloquent Capsule instance.
+## Özellikler
+- `static ?Capsule $instance`: Eloquent Capsule örneği.
 
-## Methods
-- `init(array $config): Capsule`: Initializes the Eloquent Capsule with the provided configuration (MySQL or SQLite). Sets up the event dispatcher and boots Eloquent.
-- `getConnection(string $name = 'default'): Connection`: Returns the Eloquent connection object.
-- `statement(string $sql, array $bindings = []): bool`: Executes a raw SQL statement.
-- `select(string $sql, array $bindings = []): array`: Executes a select query and returns results.
-- `selectOne(string $sql, array $bindings = []): ?object`: Executes a select query and returns the first result.
-- `insert(string $sql, array $bindings = []): bool`: Executes an insert query.
-- `update(string $sql, array $bindings = []): int`: Executes an update query and returns affected rows.
-- `delete(string $sql, array $bindings = []): int`: Executes a delete query and returns affected rows.
-- `transaction(callable $callback): mixed`: Runs a callback within a database transaction.
-- `beginTransaction(): void`: Starts a transaction.
-- `commit(): void`: Commits the current transaction.
-- `rollBack(): void`: Rolls back the current transaction.
+## Metotlar
+- `init(array $config): Capsule`: Eloquent Capsule'ü sağlanan yapılandırma ile başlatır (MySQL veya SQLite). Olay dağıtıcısını kurar ve Eloquent'i başlatır.
+- `getConnection(string $name = 'default'): Connection`: Eloquent bağlantı nesnesini döndürür.
+- `statement(string $sql, array $bindings = []): bool`: Ham bir SQL ifadesi yürütür.
+- `select(string $sql, array $bindings = []): array`: Bir select sorgusu yürütür ve sonuçları döndürür.
+- `selectOne(string $sql, array $bindings = []): ?object`: Bir select sorgusu yürütür ve ilk sonucu döndürür.
+- `insert(string $sql, array $bindings = []): bool`: Bir insert sorgusu yürütür.
+- `update(string $sql, array $bindings = []): int`: Bir update sorgusu yürütür ve etkilenen satır sayısını döndürür.
+- `delete(string $sql, array $bindings = []): int`: Bir delete sorgusu yürütür ve etkilenen satır sayısını döndürür.
+- `transaction(callable $callback): mixed`: Bir geri çağırma fonksiyonunu (callback) veritabanı işlemi içinde çalıştırır.
+- `beginTransaction(): void`: Bir işlem başlatır.
+- `commit(): void`: Mevcut işlemi onaylar.
+- `rollBack(): void`: Mevcut işlemi geri alır.
 
-## Internal Workflow
-- `init()`: Configures the PDO connection, sets up `PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION`, and attaches a query listener for the `DebugBar` if debug mode is enabled.
+## Dahili İş Akışı
+- `init()`: PDO bağlantısını yapılandırır, `PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION` ayarlarını yapar ve hata ayıklama modu etkinse `DebugBar` için bir sorgu dinleyicisi ekler.
 
-## Dependencies
-- `Illuminate\Database\Capsule\Manager` (Uses)
-- `Illuminate\Events\Dispatcher` (Uses)
-- `Core\DebugBar` (Optional profiling)
+## Bağımlılıklar
+- `Illuminate\Database\Capsule\Manager` (Kullanır)
+- `Illuminate\Events\Dispatcher` (Kullanır)
+- `Core\DebugBar` (İsteğe bağlı profilleme)
 
-## Source References
+## Kaynak Referansları
 - `core/Database.php:1-225`

@@ -1,25 +1,25 @@
-# File Report: database/seeders/DatabaseSeeder.php
+# Dosya Raporu: database/seeders/DatabaseSeeder.php
 
-## Purpose
-Main entry point for database seeding.
+## Amaç
+Veritabanı seeding işlemi için ana giriş noktası.
 
-## Overview
-Provides a `run` method where other seeders can be called to populate the database with initial or dummy data.
+## Genel Bakış
+Veritabanını başlangıç veya sahte verilerle doldurmak için diğer seeder'ların çağrılabileceği bir `run` metodu sağlar.
 
-## File Location
+## Dosya Konumu
 `database/seeders/DatabaseSeeder.php`
 
-## Namespace
+## Ad Alanı
 `Database\Seeders`
 
-## Classes
+## Sınıflar
 - `class DatabaseSeeder extends Seeder`
 
-## Methods
-- `run(): void`: Orchestrates the seeding process. Currently empty/commented out.
+## Metotlar
+- `run(): void`: Seeding sürecini koordine eder. Şu an boştur/yorum satırına alınmıştır.
 
-## Dependencies
-- `Core\Seeder` (Extends)
+## Bağımlılıklar
+- `Core\Seeder` (Genişletir)
 
-## Source References
+## Kaynak Referansları
 - `database/seeders/DatabaseSeeder.php:1-21`

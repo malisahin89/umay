@@ -1,12 +1,12 @@
-# Directory Report: core/Events
+# Dizin Raporu: core/Events
 
-## Purpose
-Contains the event dispatcher and base event/listener classes.
+## Amaç
+Olay dağıtıcısını ve temel olay/dinleyici sınıflarını içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `Dispatcher.php`
 - `Event.php`
 - `Listener.php`
 
-## Source References
-- Directory: `core/Events/`
+## Kaynak Referansları
+- Dizin: `core/Events/`

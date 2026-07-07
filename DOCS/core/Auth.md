@@ -1,49 +1,49 @@
-# File Report: core/Auth.php
+# Dosya Raporu: core/Auth.php
 
-## Purpose
-Request-based cached authentication guard.
+## Amaç
+İstek tabanlı önbelleğe alınmış kimlik doğrulama koruması (guard).
 
-## Overview
-Manages user authentication, session-based login/logout, and "remember me" functionality. It is decoupled from specific user models via the `UserProvider` and `Authenticatable` contracts.
+## Genel Bakış
+Kullanıcı kimlik doğrulamasını, oturum tabanlı giriş/çıkış işlemlerini ve "beni hatırla" işlevselliğini yönetir. `UserProvider` ve `Authenticatable` sözleşmeleri aracılığıyla belirli kullanıcı modellerinden bağımsızdır.
 
-## File Location
+## Dosya Konumu
 `core/Auth.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Auth\EloquentUserProvider`
 - `Core\Contracts\Authenticatable`
 - `Core\Contracts\UserProvider`
 
-## Classes
+## Sınıflar
 - `class Auth`
 
-## Properties
-- `?Authenticatable $cachedUser`: Caches the authenticated user for the current request.
-- `?UserProvider $provider`: The active user provider resolved from config.
+## Özellikler
+- `?Authenticatable $cachedUser`: Mevcut istek için kimlik doğrulanmış kullanıcıyı önbelleğe alır.
+- `?UserProvider $provider`: Yapılandırmadan çözümlenen aktif kullanıcı sağlayıcısı.
 
-## Methods
-- `provider(): UserProvider`: Resolves the active `UserProvider` from `config/auth.php`.
-- `setProvider(UserProvider $provider): void`: Manually overrides the active provider.
-- `user(): ?Authenticatable`: Returns the currently logged-in user.
-- `id(): int|string|null`: Returns the authenticated user's identifier.
-- `check(): bool`: Checks if a user is logged in.
-- `guest(): bool`: Checks if the current visitor is a guest.
-- `setUser(Authenticatable $user): void`: Manually sets the authenticated user for the current request (stateless).
-- `login(Authenticatable $user, bool $remember = false): void`: Logs a user into the session and optionally sets a "remember me" cookie.
-- `logout(): void`: Logs out the user, clearing session and cookies.
-- `attempt(array $credentials): bool`: Attempts to authenticate a user using provided credentials.
-- `clearCache(): void`: Clears the request-local user cache.
+## Metotlar
+- `provider(): UserProvider`: `config/auth.php` dosyasından aktif `UserProvider`'ı çözer.
+- `setProvider(UserProvider $provider): void`: Aktif sağlayıcıyı manuel olarak geçersiz kılar.
+- `user(): ?Authenticatable`: Şu an giriş yapmış olan kullanıcıyı döndürür.
+- `id(): int|string|null`: Kimlik doğrulanmış kullanıcının tanımlayıcısını döndürür.
+- `check(): bool`: Bir kullanıcının giriş yapıp yapmadığını kontrol eder.
+- `guest(): bool`: Mevcut ziyaretçinin misafir olup olmadığını kontrol eder.
+- `setUser(Authenticatable $user): void`: Mevcut istek için kimlik doğrulanmış kullanıcıyı manuel olarak ayarlar (stateless).
+- `login(Authenticatable $user, bool $remember = false): void`: Bir kullanıcıyı oturuma dahil eder ve isteğe bağlı olarak "beni hatırla" çerezi ayarlar.
+- `logout(): void`: Oturumu kapatır, oturum ve çerezleri temizler.
+- `attempt(array $credentials): bool`: Sağlanan kimlik bilgileriyle bir kullanıcıyı kimlik doğrulamayı dener.
+- `clearCache(): void`: İstek yerel kullanıcı önbelleğini temizler.
 
-## Dependencies
-- `Core\Contracts\UserProvider` (Uses)
-- `Core\Contracts\Authenticatable` (Uses)
-- `Core\Auth\EloquentUserProvider` (Default)
+## Bağımlılıklar
+- `Core\Contracts\UserProvider` (Kullanır)
+- `Core\Contracts\Authenticatable` (Kullanır)
+- `Core\Auth\EloquentUserProvider` (Varsayılan)
 
-## Cross References
-- `config/auth.php` (Configuration)
+## Çapraz Referanslar
+- `config/auth.php` (Yapılandırma)
 
-## Source References
+## Kaynak Referansları
 - `core/Auth.php:1-277`

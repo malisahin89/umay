@@ -1,24 +1,24 @@
-# File Report: tests/Unit/CsrfTest.php
+# Dosya Raporu: tests/Unit/CsrfTest.php
 
-## Purpose
-Unit tests for CSRF token generation and validation.
+## Amaç
+CSRF token oluşturma ve doğrulama için birim (unit) testler.
 
-## Overview
-Verifies `Core\Csrf`: token generation is stable within a session, tokens are 64-char hex, correct tokens validate, and wrong/empty/null/integer/array tokens are rejected. Also checks session storage of the token.
+## Genel Bakış
+`Core\Csrf`'i doğrular: token oluşturma bir oturum içinde stabildir, token'lar 64 karakterli hex formatındadır, doğru token'lar doğrulanır ve yanlış/boş/null/tamsayı/dizi token'lar reddedilir. Ayrıca token'ın oturumda saklandığını kontrol eder.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/CsrfTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class CsrfTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Csrf`
 
-## Test Methods
+## Test Metotları
 - `test_generate_creates_token` — `:20`
 - `test_generate_returns_same_token_in_same_session` — `:28`
 - `test_token_is_64_characters_hex` — `:36`
@@ -31,8 +31,8 @@ Verifies `Core\Csrf`: token generation is stable within a session, tokens are 64
 - `test_token_stored_in_session` — `:84`
 - `test_check_fails_when_no_session_token` — `:92`
 
-## Cross References
-- **Tests:** `Core\Csrf` (see `DOCS/core/Csrf.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Csrf` (bkz. `DOCS/core/Csrf.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/CsrfTest.php:1-99`

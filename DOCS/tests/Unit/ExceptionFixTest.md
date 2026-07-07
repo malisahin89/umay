@@ -1,29 +1,29 @@
-# File Report: tests/Unit/ExceptionFixTest.php
+# Dosya Raporu: tests/Unit/ExceptionFixTest.php
 
-## Purpose
-Regression tests for exception class relationships and resolution.
+## Amaç
+İstisna (exception) sınıf ilişkileri ve çözünürlüğü için regresyon testleri.
 
-## Overview
-Verifies that `RedirectException` extends `TerminateException` and that `ExceptionHandler` can be resolved from the container.
+## Genel Bakış
+`RedirectException`'ın `TerminateException`'ı genişlettiğini ve `ExceptionHandler`'ın konteynerden çözülebileceğini doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/ExceptionFixTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class ExceptionFixTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\RedirectException`, `Core\TerminateException`, `Core\ExceptionHandler`
 
-## Test Methods
+## Test Metotları
 - `test_redirect_exception_extends_terminate_exception` — `:25`
 - `test_exception_handler_resolves_from_container` — `:33`
 
-## Cross References
-- **Tests:** `Core\RedirectException` (see `DOCS/core/RedirectException.md`), `Core\TerminateException` (see `DOCS/core/TerminateException.md`), `Core\ExceptionHandler` (see `DOCS/core/ExceptionHandler.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\RedirectException` (bkz. `DOCS/core/RedirectException.md`), `Core\TerminateException` (bkz. `DOCS/core/TerminateException.md`), `Core\ExceptionHandler` (bkz. `DOCS/core/ExceptionHandler.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/ExceptionFixTest.php:1-61`

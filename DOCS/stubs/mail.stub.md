@@ -1,26 +1,26 @@
-# File Report: stubs/mail.stub
+# Dosya Raporu: stubs/mail.stub
 
-## Purpose
-Code-generation template for a mailable class.
+## Amaç
+Bir mailable sınıfı için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new mailable under `App\Mail`, extending `Core\Mail\Mailable`. The generated `build()` method returns a fluent chain setting a subject and text body.
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Mail` altında, `Core\Mail\Mailable` sınıfını genişleten yeni bir mailable iskeleti oluşturmak için kullanılan şablon. Oluşturulan `build()` metodu, konu ve metin gövdesini ayarlayan akıcı bir zincir döndürür.
 
-## File Location
+## Dosya Konumu
 `stubs/mail.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Mail`
-- **Class:** `{{ClassName}} extends Core\Mail\Mailable`
-- **Imports:** `Core\Mail\Mailable`
-- **Methods:** `__construct()`, `build(): static`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Mail`
+- **Sınıf:** `{{ClassName}} extends Core\Mail\Mailable`
+- **İçe Aktarmalar (Imports):** `Core\Mail\Mailable`
+- **Metotlar:** `__construct()`, `build(): static`
 
-## Placeholders
-- `{{ClassName}}` — generated mailable class name.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan mailable sınıfı adı.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:288`, `core/Console/Kernel.php:699-703`
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:288`, `core/Console/Kernel.php:699-703`
 
-## Source References
+## Kaynak Referansları
 - `stubs/mail.stub:1-22`
 - `core/Console/Kernel.php:288`

@@ -1,26 +1,26 @@
-# File Report: core/Csp.php
+# Dosya Raporu: core/Csp.php
 
-## Purpose
-Content-Security-Policy (CSP) nonce holder.
+## Amaç
+İçerik Güvenliği Politikası (CSP) nonce tutucusu.
 
-## Overview
-Manages a cryptographically secure random nonce for the current request. This nonce is used in CSP headers and rendered into `<script>` and `<style>` tags to prevent XSS.
+## Genel Bakış
+Mevcut istek için kriptografik olarak güvenli rastgele bir nonce yönetir. Bu nonce, CSP başlıklarında kullanılır ve XSS'yi önlemek için `<script>` ve `<style>` etiketlerine render edilir.
 
-## File Location
+## Dosya Konumu
 `core/Csp.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `final class Csp`
 
-## Properties
-- `static ?string $nonce`: The nonce for the current request.
+## Özellikler
+- `static ?string $nonce`: Mevcut istek için nonce.
 
-## Methods
-- `nonce(): string`: Returns the current nonce, generating it lazily if it doesn't exist.
-- `reset(): void`: Clears the current nonce, forcing a new one to be generated on the next access.
+## Metotlar
+- `nonce(): string`: Mevcut nonce'u döndürür; mevcut değilse tembelce (lazily) oluşturur.
+- `reset(): void`: Mevcut nonce'u temizler, bir sonraki erişimde yenisinin oluşturulmasını zorunlu kılar.
 
-## Source References
+## Kaynak Referansları
 - `core/Csp.php:1-45`

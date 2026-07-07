@@ -1,10 +1,10 @@
-# Directory Report: app/Controllers
+# Dizin Raporu: app/Controllers
 
-## Purpose
-Contains the controllers that handle incoming HTTP requests and return responses.
+## Amaç
+Gelen HTTP isteklerini işleyen ve yanıtlar döndüren denetleyicileri (controllers) içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `Controller.php`
 
-## Source References
-- Directory: `app/Controllers/`
+## Kaynak Referansları
+- Dizin: `app/Controllers/`

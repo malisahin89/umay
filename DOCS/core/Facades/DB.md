@@ -1,26 +1,26 @@
-# File Report: core/Facades/DB.php
+# Dosya Raporu: core/Facades/DB.php
 
-## Purpose
-Static proxy for the `Core\Database` instance.
+## Amaç
+`Core\Database` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Database` class.
+## Genel Bakış
+`Core\Database` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/DB.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class DB extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Database::class`.
+## Metotlar
+- `getFacadeRoot()`: `Database::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Database` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Database` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/DB.php:1-20`

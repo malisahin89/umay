@@ -1,49 +1,49 @@
-# File Report: core/Profiler/Profiler.php
+# Dosya Raporu: core/Profiler/Profiler.php
 
-## Purpose
-Application performance and diagnostic profiler.
+## Amaç
+Uygulama performansı ve tanı profiler'ı.
 
-## Overview
-Collects a wide range of metrics during a request, including database queries, rendered views, events, logs, and execution timing. This data is stored as JSON files in `storage/profiler/` and can be viewed via the Debug Toolbar.
+## Genel Bakış
+Bir istek sırasında veritabanı sorguları, işlenen görünümler, olaylar, günlükler ve yürütme zamanlaması dahil olmak üzere geniş bir metrik yelpazesini toplar. Bu veriler `storage/profiler/` altında JSON dosyaları olarak saklanır ve Debug Araç Çubuğu aracılığıyla görüntülenebilir.
 
-## File Location
+## Dosya Konumu
 `core/Profiler/Profiler.php`
 
-## Namespace
+## Ad Alanı
 `Core\Profiler`
 
-## Classes
+## Sınıflar
 - `class Profiler`
 
-## Properties
-- `array $data`: The collected metrics for the current request.
-- `ProfilerStorage $storage`: The storage handler for persisting profiles.
+## Özellikler
+- `array $data`: Mevcut istek için toplanan metrikler.
+- `ProfilerStorage $storage`: Profilleri kalıcı hale getirmek için depolama işleyicisi.
 
-## Methods
-- `init(): void`: Initializes the profiler.
-- `isEnabled(): bool`: Checks if profiling is active.
-- `startMeasure(string $name): void`: Starts a timer for a specific block of code.
-- `stopMeasure(string $name): void`: Stops a timer and records the elapsed time.
-- `addQuery(array $q): void`: Records a database query.
-- `addLog(string $level, string $message, array $context = []): void`: Records a log entry.
-- `addView(string $template, array $data = []): void`: Records a rendered view.
-- `addEvent(string $eventClass, mixed $payload = null): void`: Records a dispatched event.
-- `addCacheOp(string $type, string $key, bool $hit = false): void`: Records a cache operation.
-- `addMail(array $mail): void`: Records a sent email.
-- `setRoute(array $info): void`: Records the matched route.
-- `addException(\Throwable $e): void`: Records a caught exception.
-- `addMiddlewareTiming(string $name, float $ms): void`: Records middleware execution time.
-- `finish(): void`: Persists the collected data to disk.
-- `renderToolbar(): string`: Generates the HTML for the debug toolbar.
+## Metotlar
+- `init(): void`: Profiler'ı başlatır.
+- `isEnabled(): bool`: Profillemenin aktif olup olmadığını kontrol eder.
+- `startMeasure(string $name): void`: Belirli bir kod bloğu için zamanlayıcıyı başlatır.
+- `stopMeasure(string $name): void`: Zamanlayıcıyı durdurur ve geçen süreyi kaydeder.
+- `addQuery(array $q): void`: Bir veritabanı sorgusu kaydeder.
+- `addLog(string $level, string $message, array $context = []): void`: Bir günlük girdisi kaydeder.
+- `addView(string $template, array $data = []): void`: İşlenen bir görünümü kaydeder.
+- `addEvent(string $eventClass, mixed $payload = null): void`: Dağıtılan bir olayı kaydeder.
+- `addCacheOp(string $type, string $key, bool $hit = false): void`: Bir önbellek işlemi kaydeder.
+- `addMail(array $mail): void`: Gönderilen bir e-postayı kaydeder.
+- `setRoute(array $info): void`: Eşleşen rotayı kaydeder.
+- `addException(\Throwable $e): void`: Yakalanan bir istisnayı kaydeder.
+- `addMiddlewareTiming(string $name, float $ms): void`: Middleware yürütme süresini kaydeder.
+- `finish(): void`: Toplanan verileri diske kaydeder.
+- `renderToolbar(): string`: Hata ayıklama araç çubuğunun HTML'ini oluşturur.
 
-## Internal Workflow
-- **Data Collection**: Various core components call `Profiler` methods throughout the request lifecycle.
-- **Persistence**: `finish()` generates a unique token and saves the data to `storage/profiler/{token}.json`.
-- **Analysis**: `detectNPlusOne()` analyzes database queries to find common N+1 patterns.
+## Dahili İş Akışı
+- **Veri Toplama**: Çeşitli çekirdek bileşenler, istek yaşam döngüsü boyunca `Profiler` metotlarını çağırır.
+- **Kalıcılık**: `finish()` benzersiz bir token oluşturur ve verileri `storage/profiler/{token}.json` dosyasına kaydeder.
+- **Analiz**: `detectNPlusOne()` veritabanı sorgularını analiz ederek yaygın N+1 desenlerini bulur.
 
-## Dependencies
-- `Core\Profiler\ProfilerStorage` (Uses)
-- `Core\Profiler\Contracts\DataCollectorInterface` (Uses)
+## Bağımlılıklar
+- `Core\Profiler\ProfilerStorage` (Kullanır)
+- `Core\Profiler\Contracts\DataCollectorInterface` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Profiler/Profiler.php:1-1581`

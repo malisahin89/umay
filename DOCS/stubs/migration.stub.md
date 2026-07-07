@@ -1,28 +1,28 @@
-# File Report: stubs/migration.stub
+# Dosya Raporu: stubs/migration.stub
 
-## Purpose
-Code-generation template for a table-creating migration.
+## Amaç
+Tablo oluşturma migrasyonu için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new migration file under `database/migrations/`. It returns an anonymous class extending `Core\Migration`. The `up()` method creates a table (guarded by `tableExists()`) with `id`, `created_at`, and `updated_at` columns; `down()` drops it.
+## Genel Bakış
+Konsol oluşturucusu tarafından `database/migrations/` altında yeni bir migrasyon dosyası iskeleti oluşturmak için kullanılan şablon. `Core\Migration` sınıfını genişleten anonim bir sınıf döndürür. `up()` metodu, `id`, `created_at` ve `updated_at` sütunlarına sahip bir tablo oluşturur (`tableExists()` ile korumalı); `down()` metodu ise tabloyu siler.
 
-## File Location
+## Dosya Konumu
 `stubs/migration.stub`
 
-## Generated Artifact
-- **Class:** anonymous `class extends Core\Migration` (returned via `return new class ...`)
-- **Imports:** `Core\Migration`
-- **Methods:** `up(): void`, `down(): void`
-- **Schema:** `id` (INT AUTO_INCREMENT PK), `created_at`, `updated_at`; engine InnoDB, charset `utf8mb4`.
+## Oluşturulan Artifakt
+- **Sınıf:** anonim `class extends Core\Migration` (`return new class ...` aracılığıyla döndürülür)
+- **İçe Aktarmalar (Imports):** `Core\Migration`
+- **Metotlar:** `up(): void`, `down(): void`
+- **Şema:** `id` (INT AUTO_INCREMENT PK), `created_at`, `updated_at`; motor InnoDB, karakter seti `utf8mb4`.
 
-## Placeholders
-- `{{tableName}}` — target table name.
-- `{{ClassName}}` — supplied by the generator (see `core/Console/Kernel.php:203-206`), though the emitted class is anonymous.
+## Yer Tutucular
+- `{{tableName}}` — hedef tablo adı.
+- `{{ClassName}}` — oluşturucu tarafından sağlanır (bakınız `core/Console/Kernel.php:203-206`), ancak üretilen sınıf anonimdir.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:203`, `core/Console/Kernel.php:699-703`
-- **Base Class:** `Core\Migration` (see `DOCS/core/Migration.md`)
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:203`, `core/Console/Kernel.php:699-703`
+- **Taban Sınıf:** `Core\Migration` (bakınız `DOCS/core/Migration.md`)
 
-## Source References
+## Kaynak Referansları
 - `stubs/migration.stub:1-27`
 - `core/Console/Kernel.php:203-208`

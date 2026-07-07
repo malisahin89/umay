@@ -1,19 +1,19 @@
-# File Report: core/RedirectException.php
+# Dosya Raporu: core/RedirectException.php
 
-## Purpose
-Exception used to terminate the request flow after a redirect.
+## Amaç
+Bir yönlendirmeden sonra istek akışını sonlandırmak için kullanılan Exception.
 
-## Overview
-A specialized exception that is caught by the `ExceptionHandler` (or ignored) to stop the current execution path once a `Location` header has been sent.
+## Genel Bakış
+`Location` başlığı gönderildikten sonra mevcut yürütme yolunu durdurmak için `ExceptionHandler` tarafından yakalanan (veya görmezden gelinen) özel bir exception'dır.
 
-## File Location
+## Dosya Konumu
 `core/RedirectException.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class RedirectException extends TerminateException`
 
-## Source References
+## Kaynak Referansları
 - `core/RedirectException.php:1-11`

@@ -1,24 +1,24 @@
-# File Report: tests/Unit/RequestTest.php
+# Dosya Raporu: tests/Unit/RequestTest.php
 
-## Purpose
-Unit tests for the HTTP request object.
+## Amaç
+HTTP istek nesnesi için birim (unit) testler.
 
-## Overview
-Verifies `Core\Request`: Bearer token extraction from the Authorization header, `expectsJson` detection (bearer token / Accept header), access to POST and GET data, `only` field filtering, `filled` semantics, and HTTP method detection.
+## Genel Bakış
+`Core\Request`'i doğrular: Authorization başlığından Bearer token ayıklama, `expectsJson` algılama (bearer token / Accept başlığı), POST ve GET verilerine erişim, `only` alan filtreleme, `filled` semantiği ve HTTP metodu algılama.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/RequestTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class RequestTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Request`
 
-## Test Methods
+## Test Metotları
 - `test_bearer_token_extracted_from_authorization_header` — `:11`
 - `test_bearer_token_returns_null_when_no_header` — `:17`
 - `test_bearer_token_returns_null_when_not_bearer_scheme` — `:24`
@@ -31,8 +31,8 @@ Verifies `Core\Request`: Bearer token extraction from the Authorization header, 
 - `test_filled_returns_true_for_non_empty` — `:71`
 - `test_method_detection` — `:77`
 
-## Cross References
-- **Tests:** `Core\Request` (see `DOCS/core/Request.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Request` (bkz. `DOCS/core/Request.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/RequestTest.php:1-84`

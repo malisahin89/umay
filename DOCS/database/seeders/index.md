@@ -1,10 +1,10 @@
-# Directory Report: database/seeders
+# Dizin Raporu: database/seeders
 
-## Purpose
-Contains seeder classes to populate the database.
+## Amaç
+Veritabanını doldurmak için seeder sınıflarını içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `DatabaseSeeder.php`
 
-## Source References
-- Directory: `database/seeders/`
+## Kaynak Referansları
+- Dizin: `database/seeders/`

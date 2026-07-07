@@ -1,51 +1,51 @@
-# File Report: core/Container.php
+# Dosya Raporu: core/Container.php
 
-## Purpose
-Dependency Injection (DI) Container.
+## Amaç
+Bağımlılık Enjeksiyonu (DI) Konteyneri.
 
-## Overview
-A PSR-11 compliant container that manages class dependencies. It supports singleton bindings, factory bindings, and automatic "auto-wiring" via PHP Reflection.
+## Genel Bakış
+Sınıf bağımlılıklarını yöneten PSR-11 uyumlu bir konteynerdır. Singleton bağlamalarını, fabrika bağlamalarını ve PHP Reflection aracılığıyla otomatik "auto-wiring" özelliğini destekler.
 
-## File Location
+## Dosya Konumu
 `core/Container.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Exceptions\ContainerException`
 - `Core\Exceptions\EntryNotFoundException`
 - `Psr\Container\ContainerInterface`
 
-## Classes
+## Sınıflar
 - `class Container implements ContainerInterface`
 
-## Properties
-- `static ?self $instance`: Singleton instance of the container.
-- `array $bindings`: Registry of abstract-to-concrete mappings.
-- `array $instances`: Cache for singleton instances.
-- `array $resolving`: Tracker for circular dependency detection.
-- `array $reflectionCache`: Cache for `ReflectionClass` objects.
+## Özellikler
+- `static ?self $instance`: Konteynerin singleton örneği.
+- `array $bindings`: Soyut-somut eşleme kayıt defteri.
+- `array $instances`: Singleton örnekleri için önbellek.
+- `array $resolving`: Döngüsel bağımlılık tespiti için izleyici.
+- `array $reflectionCache`: `ReflectionClass` nesneleri için önbellek.
 
-## Methods
-- `getInstance(): static`: Returns the singleton instance.
-- `singleton(string $abstract, callable|string $concrete): void`: Binds a class as a singleton.
-- `bind(string $abstract, callable|string $concrete): void`: Binds a class as a factory.
-- `instance(string $abstract, mixed $instance): void`: Binds a specific object instance.
-- `make(string $abstract): mixed`: Resolves and returns an instance of the requested class.
-- `get(string $id): mixed`: PSR-11 method to retrieve a registered entry.
-- `has(string $abstract): bool`: Checks if an entry is registered.
-- `build(string $concrete): mixed`: Internal method that uses Reflection to auto-wire dependencies.
+## Metotlar
+- `getInstance(): static`: Singleton örneğini döndürür.
+- `singleton(string $abstract, callable|string $concrete): void`: Bir sınıfı singleton olarak bağlar.
+- `bind(string $abstract, callable|string $concrete): void`: Bir sınıfı fabrika olarak bağlar.
+- `instance(string $abstract, mixed $instance): void`: Belirli bir nesne örneğini bağlar.
+- `make(string $abstract): mixed`: İstenen sınıfın örneğini çözer ve döndürür.
+- `get(string $id): mixed`: Kaydedilmiş bir girdiyi almak için PSR-11 metodu.
+- `has(string $abstract): bool`: Bir girdinin kaydedilip kaydedilmediğini kontrol eder.
+- `build(string $concrete): mixed`: Bağımlılıkları otomatik olarak bağlamak için Reflection kullanan dahili metot.
 
-## Internal Workflow (Auto-wiring)
-1. Checks for a constructor.
-2. For each parameter, it determines the type.
-3. If the type is a class/interface, it recursively calls `make()` to resolve it.
-4. Supports Union Types (PHP 8.0+), picking the first resolvable type.
-5. Falls back to default values if available.
+## Dahili İş Akışı (Auto-wiring)
+1. Bir kurucu (constructor) olup olmadığını kontrol eder.
+2. Her parametre için türü belirler.
+3. Tür bir sınıf/arayüz ise, onu çözmek için özyinelemeli olarak `make()` çağrılır.
+4. Birleşim Türlerini (Union Types - PHP 8.0+) destekler ve çözülebilen ilk türü seçer.
+5. Mevcutsa varsayılan değerlere geri döner.
 
-## Dependencies
-- `Psr\Container\ContainerInterface` (Implements)
+## Bağımlılıklar
+- `Psr\Container\ContainerInterface` (Uygular)
 
-## Source References
+## Kaynak Referansları
 - `core/Container.php:1-197`

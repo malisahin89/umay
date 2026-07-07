@@ -1,19 +1,19 @@
-# File Report: routes/api.php
+# Dosya Raporu: routes/api.php
 
-## Purpose
-Definition of API endpoints.
+## Amaç
+API uç noktalarının tanımı.
 
-## Overview
-Contains route definitions for the API. All routes in this file are automatically prefixed with the `api_prefix` (default `/api`) and assigned the `api` middleware group. These routes are stateless (no session or CSRF).
+## Genel Bakış
+API için rota tanımlarını içerir. Bu dosyadaki tüm rotalar otomatik olarak `api_prefix` (varsayılan `/api`) ile öneklenir ve `api` middleware grubuna atanır. Bu rotalar durumsuzdur (oturum veya CSRF yoktur).
 
-## File Location
+## Dosya Konumu
 `routes/api.php`
 
-## Key Concepts
-- **Statelessness**: Sessions and CSRF are disabled.
-- **Authentication**: Recommended use of `api-auth` middleware for Bearer token validation.
-- **Abilities**: Supports granular permission checks via `api-auth:ability_name`.
-- **Resources**: Supports `Route::apiResource()` for quick CRUD endpoint generation.
+## Temel Kavramlar
+- **Durumsuzluk (Statelessness)**: Oturumlar ve CSRF devre dışıdır.
+- **Kimlik Doğrulama**: Bearer token doğrulaması için `api-auth` middleware kullanımı önerilir.
+- **Yetenekler**: `api-auth:ability_name` aracılığıyla ayrıntılı izin kontrollerini destekler.
+- **Kaynaklar**: Hızlı CRUD uç noktası üretimi için `Route::apiResource()` desteği sunar.
 
-## Source References
+## Kaynak Referansları
 - `routes/api.php:1-77`

@@ -1,52 +1,52 @@
-# File Report: app/Middleware/ThrottleMiddleware.php
+# Dosya Raporu: app/Middleware/ThrottleMiddleware.php
 
-## Purpose
-Rate limiting middleware for controlling request frequency.
+## Amaç
+İstek sıklığını kontrol etmek için hız sınırlama (rate limiting) ara yazılımı.
 
-## Overview
-Limits the number of requests a client can make within a specified time window. Supports both inline configuration (e.g., `throttle:5,300`) and named limiters defined via `RateLimiter::for`.
+## Genel Bakış
+Bir istemcinin belirli bir zaman penceresi içinde yapabileceği istek sayısını sınırlar. Hem satır içi yapılandırmayı (örneğin, `throttle:5,300`) hem de `RateLimiter::for` aracılığıyla tanımlanan adlandırılmış sınırlayıcıları destekler.
 
-## File Location
+## Dosya Konumu
 `app/Middleware/ThrottleMiddleware.php`
 
-## Namespace
+## İsim Uzayı
 `App\Middleware`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Contracts\MiddlewareInterface`
 - `Core\Facades\RateLimiter`
 - `Core\Request`
 - `Core\TerminateException`
 
-## Classes
+## Sınıflar
 - `class ThrottleMiddleware implements MiddlewareInterface`
 
-## Properties
-- `int $maxAttempts`: Maximum allowed attempts.
-- `int $decaySeconds`: Time window for the limit.
-- `string $limiterName`: Name of the limiter if using a named limiter.
+## Özellikler
+- `int $maxAttempts`: İzin verilen maksimum deneme sayısı.
+- `int $decaySeconds`: Sınır için zaman penceresi.
+- `string $limiterName`: Adlandırılmış bir sınırlayıcı kullanılıyorsa sınırlayıcının adı.
 
-## Methods
-- `__construct(string $param = '60,60')`: Initializes the middleware with either a comma-separated "max,decay" string or a named limiter.
-- `handle(Request $request, \Closure $next): mixed`: Processes the request, checks the rate limit, and either allows the request to proceed or returns a 429 Too Many Requests response.
+## Metotlar
+- `__construct(string $param = '60,60')`: Ara yazılımı, virgülle ayrılmış bir "maksimum,bozulma" dizgisi veya adlandırılmış bir sınırlayıcı ile başlatır.
+- `handle(Request $request, \Closure $next): mixed`: İsteği işler, hız sınırını kontrol eder ve isteğin devam etmesine izin verir veya 429 Too Many Requests yanıtı döndürür.
 
-## Internal Workflow
-1. Resolves the `RateLimiter` facade root.
-2. Determines the cache key based on the limiter name or a route-specific key (`throttle:method:path`) combined with the client's IP.
-3. Increments the hit counter using `RateLimiter::hit`.
-4. If `attempts > maxAttempts`:
-    - If the request expects JSON, returns a 429 response with `Retry-After` header and JSON error.
-    - Otherwise, flashes an error message and redirects back.
-5. If within limits, calls the next middleware/controller.
+## Dahili İş Akışı
+1. `RateLimiter` facade kökünü çözer.
+2. Sınırlayıcı adına veya istemcinin IP'si ile birleştirilmiş rota özel anahtarına (`throttle:method:path`) göre önbellek anahtarını belirler.
+3. `RateLimiter::hit` kullanarak vuruş sayacını artırır.
+4. Eğer `attempts > maxAttempts` ise:
+    - İstek JSON bekliyorsa, `Retry-After` başlığı ve JSON hatası ile 429 yanıtı döndürür.
+    - Aksi takdirde, bir hata mesajı ekler ve geri yönlendirir.
+5. Sınırlar dahilindeyse, bir sonraki ara yazılımı/denetleyiciyi çağırır.
 
-## Dependencies
+## Bağımlılıklar
 - `Core\RateLimiter`
 
-## Cross References
-- `Core\Contracts\MiddlewareInterface` (Implements)
-- `Core\Facades\RateLimiter` (Uses)
-- `Core\Request` (Uses)
-- `Core\TerminateException` (Throws)
+## Çapraz Referanslar
+- `Core\Contracts\MiddlewareInterface` (Uygular)
+- `Core\Facades\RateLimiter` (Kullanır)
+- `Core\Request` (Kullanır)
+- `Core\TerminateException` (Fırlatır)
 
-## Source References
+## Kaynak Referansları
 - `app/Middleware/ThrottleMiddleware.php:1-108`

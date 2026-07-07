@@ -1,27 +1,27 @@
-# File Report: core/Mail/Transport/LogTransport.php
+# Dosya Raporu: core/Mail/Transport/LogTransport.php
 
-## Purpose
-Mail transport implementation for logging.
+## Amaç
+Günlükleme için e-posta iletim uygulaması.
 
-## Overview
-Instead of sending real emails, this transport writes the contents of a `Mailable` to the application log files. It is the default transport for development environments.
+## Genel Bakış
+Gerçek e-postalar göndermek yerine, bir `Mailable` içeriğini uygulama günlük dosyalarına yazar. Geliştirme ortamları için varsayılan iletim yöntemidir.
 
-## File Location
+## Dosya Konumu
 `core/Mail/Transport/LogTransport.php`
 
-## Namespace
+## Ad Alanı
 `Core\Mail\Transport`
 
-## Classes
+## Sınıflar
 - `class LogTransport implements MailTransport`
 
-## Methods
-- `send(Mailable $mailable, array $to, array $cc = [], array $bcc = []): bool`: Formats the email as a log entry and writes it using `Core\Logger`.
+## Metotlar
+- `send(Mailable $mailable, array $to, array $cc = [], array $bcc = []): bool`: E-postayı bir günlük girdisi olarak formatlar ve `Core\Logger` kullanarak yazar.
 
-## Dependencies
-- `Core\Contracts\MailTransport` (Implements)
-- `Core\Mail\Mailable` (Uses)
-- `Core\Logger` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MailTransport` (Uygular)
+- `Core\Mail\Mailable` (Kullanır)
+- `Core\Logger` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Mail/Transport/LogTransport.php:1-50`

@@ -1,44 +1,44 @@
-# File Report: core/ExceptionHandler.php
+# Dosya Raporu: core/ExceptionHandler.php
 
-## Purpose
-Centralized exception handler for the application.
+## Amaç
+Uygulama için merkezi istisna işleyicisi.
 
-## Overview
-Manages all uncaught exceptions. It determines whether to return an HTML error page (for web requests) or a JSON error response (for API requests), and logs the errors accordingly.
+## Genel Bakış
+Yakalanamayan tüm istisnaları yönetir. Web istekleri için HTML hata sayfası mı yoksa API istekleri için JSON hata yanıtı mı döndürüleceğine karar verir ve hataları uygun şekilde günlüğe kaydeder.
 
-## File Location
+## Dosya Konumu
 `core/ExceptionHandler.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Exceptions\HttpException`
 - `Core\Facades\Log as Logger`
 - `Core\Facades\View`
 - `Illuminate\Database\Eloquent\ModelNotFoundException`
 
-## Classes
+## Sınıflar
 - `class ExceptionHandler`
 
-## Methods
-- `handle(\Throwable $e): void`: The main entry point. Routes exceptions to specific handlers based on their type.
-- `handleHttp(HttpException $e): void`: Handles HTTP-specific exceptions, rendering the corresponding error view (403, 404, 500) or returning JSON.
-- `handleGeneric(\Throwable $e): void`: Handles unexpected exceptions, logging the full trace and returning a 500 error.
-- `shouldReturnJson(): bool`: Detects if the request expects a JSON response based on URI prefix, `Accept` header, or AJAX headers.
-- `jsonResponse(int $status, string $message, string $error = 'error', ?array $debug = null): void`: Sends a standardized JSON error response.
+## Metotlar
+- `handle(\Throwable $e): void`: Ana giriş noktası. İstisnaları türlerine göre belirli işleyicilere yönlendirir.
+- `handleHttp(HttpException $e): void`: HTTP'ye özgü istisnaları işler, ilgili hata görünümünü (403, 404, 500) oluşturur veya JSON döndürür.
+- `handleGeneric(\Throwable $e): void`: Beklenmedik istisnaları işler, tam iz dökümünü (trace) günlüğe kaydeder ve 500 hatası döndürür.
+- `shouldReturnJson(): bool`: URI öneki, `Accept` başlığı veya AJAX başlıklarına dayanarak isteğin bir JSON yanıtı bekleyip beklemediğini tespit eder.
+- `jsonResponse(int $status, string $message, string $error = 'error', ?array $debug = null): void`: Standartlaştırılmış bir JSON hata yanıtı gönderir.
 
-## Internal Workflow
-1. If `TerminateException` is thrown, exits silently.
-2. If `CsrfException` is thrown, returns a 419 error.
-3. If `HttpException` or `ModelNotFoundException` (404) is thrown, calls `handleHttp()`.
-4. Otherwise, calls `handleGeneric()`.
+## Dahili İş Akışı
+1. `TerminateException` fırlatılırsa, sessizce çıkış yapar.
+2. `CsrfException` fırlatılırsa, 419 hatası döndürür.
+3. `HttpException` veya `ModelNotFoundException` (404) fırlatılırsa, `handleHttp()` çağrılır.
+4. Aksi takdirde, `handleGeneric()` çağrılır.
 
-## Dependencies
-- `Core\Exceptions\HttpException` (Uses)
-- `Core\Facades\Log` (Uses)
-- `Core\Facades\View` (Uses)
-- `Core\DebugBar` (Optional)
+## Bağımlılıklar
+- `Core\Exceptions\HttpException` (Kullanır)
+- `Core\Facades\Log` (Kullanır)
+- `Core\Facades\View` (Kullanır)
+- `Core\DebugBar` (İsteğe bağlı)
 
-## Source References
+## Kaynak Referansları
 - `core/ExceptionHandler.php:1-196`

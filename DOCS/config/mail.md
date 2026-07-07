@@ -1,21 +1,21 @@
-﻿# File Report: config/mail.php
+﻿# Dosya Raporu: config/mail.php
 
-## Purpose
-Mail system configuration.
+## Amaç
+E-posta sistemi yapılandırması.
 
-## Overview
-Defines a driver-based mail system. The framework provides a `LogTransport` by default, which writes emails to `storage/logs`. Other transports can be added by implementing `Core\Contracts\MailTransport`.
+## Genel Bakış
+Sürücü tabanlı bir e-posta sistemi tanımlar. Framework varsayılan olarak e-postaları `storage/logs` dizinine yazan bir `LogTransport` sağlar. Diğer taşıyıcılar `Core\Contracts\MailTransport` uygulanarak eklenebilir.
 
-## File Location
+## Dosya Konumu
 `config/mail.php`
 
-## Configuration
-- `default`: Active mailer from `MAIL_MAILER` (default: 'log').
+## Yapılandırma
+- `default`: `MAIL_MAILER`'dan gelen aktif mailer (varsayılan: 'log').
 - `mailers`:
-    - `log`: Uses `Core\Mail\Transport\LogTransport`.
+    - `log`: `Core\Mail\Transport\LogTransport` kullanır.
 - `from`:
-    - `address`: From `MAIL_FROM_ADDRESS` (default: 'noreply@localhost').
-    - `name`: From `MAIL_FROM_NAME` (default: 'Umay').
+    - `address`: `MAIL_FROM_ADDRESS`'ten gelir (varsayılan: 'noreply@localhost').
+    - `name`: `MAIL_FROM_NAME`'den gelir (varsayılan: 'Umay').
 
-## Source References
+## Kaynak Referansları
 - `config/mail.php:1-58`

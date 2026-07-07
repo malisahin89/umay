@@ -1,25 +1,25 @@
-# Directory Report: tests/Feature
+# Dizin Raporu: tests/Feature
 
-## Purpose
-Feature-level tests that exercise framework subsystems through higher-level behavior.
+## Amaç
+Çerçeve alt sistemlerini daha üst düzey davranışlar aracılığıyla test eden özellik (feature) düzeyinde testler.
 
-## Child Directories
-- None.
+## Alt Dizinler
+- Yok.
 
-## Source Files
-- `AuthTest.php` — session-based auth and login validation (see `AuthTest.md`)
+## Kaynak Dosyalar
+- `AuthTest.php` — oturum tabanlı kimlik doğrulama ve giriş doğrulaması (bkz. `AuthTest.md`)
 
-## Public Entry Points
-- Executed by PHPUnit (see `DOCS/phpunit.xml.md`).
+## Genel Giriş Noktaları
+- PHPUnit tarafından yürütülür (bkz. `DOCS/phpunit.xml.md`).
 
-## Internal Dependencies
-- Extends `Tests\TestCase`; exercises `Core\Auth` and the `validate()` helper.
+## Dahili Bağımlılıklar
+- `Tests\TestCase`'i genişletir; `Core\Auth` ve `validate()` yardımcısını test eder.
 
-## External Dependencies
+## Harici Bağımlılıklar
 - PHPUnit.
 
-## Cross References
-- **Base Class:** `Tests\TestCase` (see `DOCS/tests/TestCase.md`)
+## Çapraz Referanslar
+- **Taban Sınıf:** `Tests\TestCase` (bkz. `DOCS/tests/TestCase.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Feature/`

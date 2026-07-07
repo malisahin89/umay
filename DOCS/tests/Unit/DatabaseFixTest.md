@@ -1,28 +1,28 @@
-# File Report: tests/Unit/DatabaseFixTest.php
+# Dosya Raporu: tests/Unit/DatabaseFixTest.php
 
-## Purpose
-Regression test for database insert behavior.
+## Amaç
+Veritabanı ekleme davranışı için regresyon testi.
 
-## Overview
-Verifies that `Core\Database::insert()` returns the correct last insert id.
+## Genel Bakış
+`Core\Database::insert()` metodunun doğru son ekleme ID'sini (last insert id) döndürdüğünü doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/DatabaseFixTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class DatabaseFixTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Database`
 
-## Test Methods
+## Test Metotları
 - `test_insert_returns_last_insert_id_correctly` — `:18`
 
-## Cross References
-- **Tests:** `Core\Database` (see `DOCS/core/Database.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Database` (bkz. `DOCS/core/Database.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/DatabaseFixTest.php:1-31`

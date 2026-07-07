@@ -1,26 +1,26 @@
-# File Report: core/Response.php
+# Dosya Raporu: core/Response.php
 
-## Purpose
-Deprecated response utility.
+## Amaç
+Kullanımdan kaldırılmış (Deprecated) yanıt aracı.
 
-## Overview
-Provides static methods for sending common responses (JSON, redirects, 404, 403, 500). These methods are now deprecated in favor of the `ResponseBuilder` and `abort()` helper.
+## Genel Bakış
+Yaygın yanıtları (JSON, yönlendirmeler, 404, 403, 500) göndermek için statik metotlar sağlar. Bu metotlar artık `ResponseBuilder` ve `abort()` yardımcısı lehine kullanımdan kaldırılmıştır.
 
-## File Location
+## Dosya Konumu
 `core/Response.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Response`
 
-## Methods
-- `json(mixed $data, int $status = 200): void`: Deprecated. Use `response()->json()`.
-- `redirect(string $url, int $status = 302): void`: Deprecated. Use `\Core\Redirect::to()`.
-- `notFound(string $message = '404 - Sayfa Bulunamadı'): void`: Deprecated. Use `abort(404)`.
-- `forbidden(string $message = '403 - Erişim Yasak'): void`: Deprecated. Use `abort(403)`.
-- `serverError(string $message = '500 - Sunucu Hatası'): void`: Deprecated. Use `abort(500)`.
+## Metotlar
+- `json(mixed $data, int $status = 200): void`: Kullanımdan kaldırıldı. `response()->json()` kullanın.
+- `redirect(string $url, int $status = 302): void`: Kullanımdan kaldırıldı. `\Core\Redirect::to()` kullanın.
+- `notFound(string $message = '404 - Sayfa Bulunamadı'): void`: Kullanımdan kaldırıldı. `abort(404)` kullanın.
+- `forbidden(string $message = '403 - Erişim Yasak'): void`: Kullanımdan kaldırıldı. `abort(403)` kullanın.
+- `serverError(string $message = '500 - Sunucu Hatası'): void`: Kullanımdan kaldırıldı. `abort(500)` kullanın.
 
-## Source References
+## Kaynak Referansları
 - `core/Response.php:1-66`

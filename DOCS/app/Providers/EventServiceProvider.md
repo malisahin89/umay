@@ -1,28 +1,28 @@
-# File Report: app/Providers/EventServiceProvider.php
+# Dosya Raporu: app/Providers/EventServiceProvider.php
 
-## Purpose
-Service provider for registering event listeners.
+## Amaç
+Olay dinleyicilerini (event listeners) kaydetmek için servis sağlayıcısı.
 
-## Overview
-Extends the base `EventServiceProvider` to define the mapping between events and their corresponding listeners.
+## Genel Bakış
+Olaylar ve onlara karşılık gelen dinleyiciler arasındaki eşleşmeyi tanımlamak için temel `EventServiceProvider` sınıfını genişletir.
 
-## File Location
+## Dosya Konumu
 `app/Providers/EventServiceProvider.php`
 
-## Namespace
+## İsim Uzayı
 `App\Providers`
 
-## Imports
+## İçe Aktarmalar
 - `Core\EventServiceProvider as BaseEventServiceProvider`
 
-## Classes
+## Sınıflar
 - `class EventServiceProvider extends BaseEventServiceProvider`
 
-## Properties
-- `array $listen`: Mapping of events to arrays of listeners. Currently empty.
+## Özellikler
+- `array $listen`: Olayların dinleyici dizileriyle eşleşmesi. Şu an boş.
 
-## Dependencies
-- `Core\EventServiceProvider` (Extends)
+## Bağımlılıklar
+- `Core\EventServiceProvider` (Genişletir)
 
-## Source References
+## Kaynak Referansları
 - `app/Providers/EventServiceProvider.php:1-25`

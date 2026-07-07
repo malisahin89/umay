@@ -1,42 +1,42 @@
-# File Report: core/DebugBar.php
+# Dosya Raporu: core/DebugBar.php
 
-## Purpose
-Facade for the Application Profiler.
+## Amaç
+Uygulama Profileri için Facade.
 
-## Overview
-Provides a static API to collect diagnostic information (queries, logs, views, etc.) during a request. All calls are delegated to the `Core\Profiler\Profiler` class.
+## Genel Bakış
+Bir istek sırasında tanısal bilgileri (sorgular, günlükler, görünümler vb.) toplamak için statik bir API sağlar. Tüm çağrılar `Core\Profiler\Profiler` sınıfına yönlendirilir.
 
-## File Location
+## Dosya Konumu
 `core/DebugBar.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Profiler\Profiler`
 
-## Classes
+## Sınıflar
 - `class DebugBar`
 
-## Methods
-- `init(): void`: Initializes the profiler.
-- `isEnabled(): bool`: Checks if the profiler is active.
-- `startMeasure(string $name, ?float $start = null): void`: Starts a timer for a specific operation.
-- `stopMeasure(string $name): void`: Stops a timer.
-- `addQuery(array $q): void`: Records a database query.
-- `addLog(string $level, string $message, array $context = []): void`: Records a log entry.
-- `addView(string $template, array $data = []): void`: Records a rendered view.
-- `addEvent(string $eventClass, mixed $payload = null): void`: Records a dispatched event.
-- `addCacheOp(string $type, string $key, bool $hit = false): void`: Records a cache operation.
-- `addMail(array $mail): void`: Records a sent email.
-- `setRoute(array $info): void`: Records the current route.
-- `addException(\Throwable $e): void`: Records a caught exception.
-- `addMiddlewareTiming(string $name, float $ms): void`: Records middleware execution time.
-- `render(): string`: Returns the HTML for the debug toolbar.
-- `findCaller(): array`: Analyzes the backtrace to find the application code that triggered an operation.
+## Metotlar
+- `init(): void`: Profiler'ı başlatır.
+- `isEnabled(): bool`: Profiler'ın aktif olup olmadığını kontrol eder.
+- `startMeasure(string $name, ?float $start = null): void`: Belirli bir işlem için zamanlayıcıyı başlatır.
+- `stopMeasure(string $name): void`: Zamanlayıcıyı durdurur.
+- `addQuery(array $q): void`: Bir veritabanı sorgusu kaydeder.
+- `addLog(string $level, string $message, array $context = []): void`: Bir günlük girdisi kaydeder.
+- `addView(string $template, array $data = []): void`: İşlenen bir görünümü kaydeder.
+- `addEvent(string $eventClass, mixed $payload = null): void`: Dağıtılan bir olayı kaydeder.
+- `addCacheOp(string $type, string $key, bool $hit = false): void`: Bir önbellek işlemi kaydeder.
+- `addMail(array $mail): void`: Gönderilen bir e-postayı kaydeder.
+- `setRoute(array $info): void`: Mevcut rotayı kaydeder.
+- `addException(\Throwable $e): void`: Yakalanan bir istisnayı kaydeder.
+- `addMiddlewareTiming(string $name, float $ms): void`: Middleware yürütme süresini kaydeder.
+- `render(): string`: Hata ayıklama araç çubuğunun HTML'ini döndürür.
+- `findCaller(): array`: Bir işlemi tetikleyen uygulama kodunu bulmak için backtrace analizini yapar.
 
-## Dependencies
-- `Core\Profiler\Profiler` (Delegates to)
+## Bağımlılıklar
+- `Core\Profiler\Profiler` (Yönlendirir)
 
-## Source References
+## Kaynak Referansları
 - `core/DebugBar.php:1-104`

@@ -1,27 +1,27 @@
-# File Report: stubs/request.stub
+# Dosya Raporu: stubs/request.stub
 
-## Purpose
-Code-generation template for a form request.
+## Amaç
+Bir form isteği (form request) için kod oluşturma şablonu.
 
-## Overview
-Template rendered by the console generator to scaffold a new form request under `App\Requests`, extending `Core\FormRequest` with `authorize()`, `rules()`, and `messages()` methods.
+## Genel Bakış
+Konsol oluşturucusu tarafından `App\Requests` altında, `authorize()`, `rules()` ve `messages()` metotları ile `Core\FormRequest` sınıfını genişleten yeni bir form isteği iskeleti oluşturmak için kullanılan şablon.
 
-## File Location
+## Dosya Konumu
 `stubs/request.stub`
 
-## Generated Artifact
-- **Namespace:** `App\Requests`
-- **Class:** `{{ClassName}} extends Core\FormRequest`
-- **Imports:** `Core\FormRequest`
-- **Methods:** `authorize(): bool` (returns `true`), `rules(): array`, `messages(): array`
+## Oluşturulan Artifakt
+- **Ad Alanı (Namespace):** `App\Requests`
+- **Sınıf:** `{{ClassName}} extends Core\FormRequest`
+- **İçe Aktarmalar (Imports):** `Core\FormRequest`
+- **Metotlar:** `authorize(): bool` (`true` döndürür), `rules(): array`, `messages(): array`
 
-## Placeholders
-- `{{ClassName}}` — generated form request class name.
+## Yer Tutucular
+- `{{ClassName}}` — oluşturulan form isteği sınıfı adı.
 
-## Cross References
-- **Consumed By:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:260`, `core/Console/Kernel.php:699-703`
-- **Base Class:** `Core\FormRequest` (see `DOCS/core/FormRequest.md`)
+## Çapraz Referanslar
+- **Kullanan:** `Core\Console\Kernel::renderStub()` — `core/Console/Kernel.php:260`, `core/Console/Kernel.php:699-703`
+- **Taban Sınıf:** `Core\FormRequest` (bakınız `DOCS/core/FormRequest.md`)
 
-## Source References
+## Kaynak Referansları
 - `stubs/request.stub:1-29`
 - `core/Console/Kernel.php:260`

@@ -1,25 +1,25 @@
-# File Report: core/Contracts/Authenticatable.php
+# Dosya Raporu: core/Contracts/Authenticatable.php
 
-## Purpose
-Interface for authenticatable entities.
+## Amaç
+Kimlik doğrulanabilir varlıklar için arayüz.
 
-## Overview
-Defines the minimum requirements for a model to be handled by the authentication system. It ensures the auth guard can retrieve the ID, password, and remember token without knowing the model's concrete implementation.
+## Genel Bakış
+Bir modelin kimlik doğrulama sistemi tarafından işlenebilmesi için gereken minimum gereksinimleri tanımlar. Kimlik doğrulama guard'ının, modelin somut uygulamasını bilmeden ID'yi, şifreyi ve hatırlama token'ını alabilmesini sağlar.
 
-## File Location
+## Dosya Konumu
 `core/Contracts/Authenticatable.php`
 
-## Namespace
+## Ad Alanı
 `Core\Contracts`
 
-## Interfaces
+## Arayüzler
 - `interface Authenticatable`
 
-## Methods
-- `getAuthIdentifier(): int|string`: Returns the unique identifier for the user.
-- `getAuthPassword(): string`: Returns the hashed password.
-- `getRememberToken(): ?string`: Returns the current remember token.
-- `setRememberToken(?string $token): void`: Updates the remember token.
+## Metotlar
+- `getAuthIdentifier(): int|string`: Kullanıcı için benzersiz tanımlayıcıyı döndürür.
+- `getAuthPassword(): string`: Hashlenmiş şifreyi döndürür.
+- `getRememberToken(): ?string`: Mevcut hatırlama token'ını döndürür.
+- `setRememberToken(?string $token): void`: Hatırlama token'ını günceller.
 
-## Source References
+## Kaynak Referansları
 - `core/Contracts/Authenticatable.php:1-42`

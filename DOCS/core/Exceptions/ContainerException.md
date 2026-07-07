@@ -1,19 +1,19 @@
-# File Report: core/Exceptions/ContainerException.php
+# Dosya Raporu: core/Exceptions/ContainerException.php
 
-## Purpose
-Custom exception for container-related errors.
+## Amaç
+Konteyner ile ilgili hatalar için özel istisna.
 
-## Overview
-Thrown when the `Container` fails to resolve a dependency or detects a circular dependency.
+## Genel Bakış
+`Container` bir bağımlılığı çözemediğinde veya döngüsel bir bağımlılık tespit ettiğinde fırlatılır.
 
-## File Location
+## Dosya Konumu
 `core/Exceptions/ContainerException.php`
 
-## Namespace
+## Ad Alanı
 `Core\Exceptions`
 
-## Classes
+## Sınıflar
 - `class ContainerException extends \RuntimeException`
 
-## Source References
+## Kaynak Referansları
 - `core/Exceptions/ContainerException.php:1-10`

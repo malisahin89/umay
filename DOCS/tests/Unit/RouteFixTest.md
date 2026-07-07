@@ -1,30 +1,30 @@
-# File Report: tests/Unit/RouteFixTest.php
+# Dosya Raporu: tests/Unit/RouteFixTest.php
 
-## Purpose
-Regression tests for resource routing and dispatch.
+## Amaç
+Kaynak rotalama ve dağıtımı (dispatch) için regresyon testleri.
 
-## Overview
-Verifies `Core\Route` resource registration filters (`only`, `except`) and that route dispatch reuses the same `Request` instance.
+## Genel Bakış
+`Core\Route` kaynak kayıt filtrelerini (`only`, `except`) ve rota dağıtımının aynı `Request` örneğini yeniden kullandığını doğrular.
 
-## File Location
+## Dosya Konumu
 `tests/Unit/RouteFixTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class RouteFixTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Route`, `Core\ResourceRegistrar`, `Core\Request`
 
-## Test Methods
+## Test Metotları
 - `test_resource_only` — `:29`
 - `test_resource_except` — `:41`
 - `test_route_dispatch_uses_same_request_instance` — `:56`
 
-## Cross References
-- **Tests:** `Core\Route` (see `DOCS/core/Route.md`), `Core\ResourceRegistrar` (see `DOCS/core/ResourceRegistrar.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Route` (bkz. `DOCS/core/Route.md`), `Core\ResourceRegistrar` (bkz. `DOCS/core/ResourceRegistrar.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/RouteFixTest.php:1-80`

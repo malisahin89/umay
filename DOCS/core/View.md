@@ -1,41 +1,41 @@
 # View.php
 
-## Purpose
-The `View` class is a wrapper for the Plates template engine, providing a simplified API for rendering HTML templates and a rich set of helper functions.
+## Amaç
+`View` sınıfı, HTML şablonlarını işlemek için basitleştirilmiş bir API ve zengin bir yardımcı fonksiyon seti sunan Plates şablon motoru için bir sarmalayıcıdır.
 
-## Metadata
-- **Namespace**: `Core`
-- **File Location**: `core\View.php`
+## Metadatalar
+- **Ad Alanı**: `Core`
+- **Dosya Konumu**: `core\View.php`
 
-## Dependencies
+## Bağımlılıklar
 - `League\Plates\Engine`
 - `Core\Csrf`
 - `Core\Csp`
 
-## Key Methods
-- `render(string $template, array $data)`: Renders a template file, injects global data (errors, flash messages), and echoes the output.
-- `share(string|array $key, mixed $value = null)`: Shares data globally across all views and layouts. Precedence: shared < page $data < framework globals.
-- `engine()`: Returns the shared Plates Engine instance.
+## Temel Metotlar
+- `render(string $template, array $data)`: Bir şablon dosyasını işler, küresel verileri (hatalar, flash mesajları) enjekte eder ve çıktıyı ekrana yazdırır.
+- `share(string|array $key, mixed $value = null)`: Verileri tüm görünümler ve düzenler arasında küresel olarak paylaşır. Öncelik sırası: paylaşılan < sayfa $data < framework küreselleri.
+- `engine()`: Paylaşılan Plates Engine örneğini döndürür.
 
-## Template Helper Functions
-The class registers several helper functions within the Plates engine for use in templates:
-- **Security**: `csrf()` (hidden input), `csrf_token()` (raw value), `e()` (XSS escape), `nonce()` (CSP nonce).
-- **HTTP**: `method(string $method)` (for PUT/PATCH/DELETE spoofing).
-- **Routing/Assets**: `route($name, $params)`, `url($name)`, `asset($path)`.
-- **Input**: `old($key, $default)` (retrieves flashed input).
-- **Auth**: `auth()` (current user), `guest()` (boolean check).
-- **Config**: `config($key, $default)`, `app_name()`.
-- **Utilities**: `now($format)`, `class_if($classes)` (conditional CSS classes).
-- **Validation**: `has_error($field)`, `error($field)`.
-- **Flash**: `flash($key)` (reads and clears flash messages).
-- **Debug**: `dd($value)` (dump and die).
+## Şablon Yardımcı Fonksiyonları
+Sınıf, şablonlarda kullanılmak üzere Plates motoru içinde çeşitli yardımcı fonksiyonlar kaydeder:
+- **Güvenlik**: `csrf()` (gizli girdi), `csrf_token()` (ham değer), `e()` (XSS kaçış), `nonce()` (CSP nonce).
+- **HTTP**: `method(string $method)` (PUT/PATCH/DELETE taklidi için).
+- **Yönlendirme/Varlıklar**: `route($name, $params)`, `url($name)`, `asset($path)`.
+- **Girdiler**: `old($key, $default)` (flash'lanmış girdiyi alır).
+- **Kimlik Doğrulama**: `auth()` (mevcut kullanıcı), `guest()` (boolean kontrol).
+- **Yapılandırma**: `config($key, $default)`, `app_name()`.
+- **Araçlar**: `now($format)`, `class_if($classes)` (koşullu CSS sınıfları).
+- **Doğrulama**: `has_error($field)`, `error($field)`.
+- **Flash**: `flash($key)` (flash mesajlarını okur ve temizler).
+- **Hata Ayıklama**: `dd($value)` (dök ve dur).
 
-## Internal Workflow (Render)
-1. **Session Start**: Ensures the session is active.
-2. **Flash Consumption**: Reads `success` and `error` flash messages from the session and stores them in `$consumedFlash` to ensure consistency between globals and helpers.
-3. **Global Data Injection**: Merges shared data (from `share()`), page-specific data, and framework globals (`title`, `errors`, `success`, `error`, `user_id`).
-4. **Profiler Integration**: If profiling is enabled:
-    - Measures the render time.
-    - Records the view in the profiler.
-    - Injects the `DebugBar` HTML toolbar before the `</body>` tag.
-5. **Post-Render Cleanup**: Clears `_old` and `_flash_errors` from the session.
+## Dahili İş Akışı (Render)
+1. **Oturum Başlatma**: Oturumun aktif olduğundan emin olur.
+2. **Flash Tüketimi**: Oturumdan `success` ve `error` flash mesajlarını okur ve bunları `$consumedFlash` içinde saklar; böylece küreseller ve yardımcılar arasında tutarlılık sağlanır.
+3. **Küresel Veri Enjeksiyonu**: Paylaşılan verileri (`share()`'den), sayfaya özgü verileri ve framework küresellerini (`title`, `errors`, `success`, `error`, `user_id`) birleştirir.
+4. **Profiler Entegrasyonu**: Profilleme etkinse:
+    - İşleme süresini ölçer.
+    - Görünümü profiler'a kaydeder.
+    - `</body>` etiketinden önce `DebugBar` HTML araç çubuğunu enjekte eder.
+5. **İşleme Sonrası Temizlik**: Oturumdaki `_old` ve `_flash_errors` değerlerini temizler.

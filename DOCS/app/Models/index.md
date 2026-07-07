@@ -1,10 +1,10 @@
-# Directory Report: app/Models
+# Dizin Raporu: app/Models
 
-## Purpose
-Contains the application's Eloquent models for database interaction.
+## Amaç
+Veritabanı etkileşimi için uygulamanın Eloquent modellerini içerir.
 
-## Source Files
+## Kaynak Dosyalar
 - `User.php`
 
-## Source References
-- Directory: `app/Models/`
+## Kaynak Referansları
+- Dizin: `app/Models/`

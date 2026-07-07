@@ -1,15 +1,15 @@
-# Directory Report: core/Middleware
+# Dizin Raporu: core/Middleware
 
-## Purpose
-Contains core middleware for request processing.
+## Amaç
+İstek işleme için çekirdek middleware'leri içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `ApiAuth.php`
 - `Cors.php`
 - `RememberMe.php`
 - `SecurityHeaders.php`
 - `VerifyCsrfToken.php`
-- `Middleware.php` (Deprecated)
+- `Middleware.php` (Kullanımdan kaldırıldı)
 
-## Source References
-- Directory: `core/Middleware/`
+## Kaynak Referansları
+- Dizin: `core/Middleware/`

@@ -1,26 +1,26 @@
-# File Report: core/Facades/Auth.php
+# Dosya Raporu: core/Facades/Auth.php
 
-## Purpose
-Static proxy for the `Core\Auth` instance.
+## Amaç
+`Core\Auth` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\Auth` class, which is resolved from the container.
+## Genel Bakış
+Kapsayıcıdan (container) çözümlenen `Core\Auth` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/Auth.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class Auth extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `Auth::class`.
+## Metotlar
+- `getFacadeRoot()`: `Auth::class` döndürür.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\Auth` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\Auth` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/Auth.php:1-30`

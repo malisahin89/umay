@@ -1,10 +1,10 @@
-# Directory Report: core/Profiler/Views
+# Dizin Raporu: core/Profiler/Views
 
-## Purpose
-Contains views for the debug toolbar.
+## Amaç
+Hata ayıklama araç çubuğu için görünümleri içerir.
 
-## Source Files
+## Kaynak Dosyaları
 - `toolbar.php`
 
-## Source References
-- Directory: `core/Profiler/Views/`
+## Kaynak Referansları
+- Dizin: `core/Profiler/Views/`

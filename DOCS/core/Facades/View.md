@@ -1,27 +1,27 @@
-# File Report: core/Facades/View.php
+# Dosya Raporu: core/Facades/View.php
 
-## Purpose
-Static proxy for the `Core\View` instance.
+## Amaç
+`Core\View` örneği için statik proxy.
 
-## Overview
-Implements the Facade pattern to provide a static interface to the `Core\View` class.
+## Genel Bakış
+`Core\View` sınıfına statik bir arayüz sağlamak için Facade desenini uygular.
 
-## File Location
+## Dosya Konumu
 `core/Facades/View.php`
 
-## Namespace
+## Ad Alanı
 `Core\Facades`
 
-## Classes
+## Sınıflar
 - `class View extends Facade`
 
-## Methods
-- `getFacadeRoot()`: Returns `View::class`.
-- `@method static void share(string|array $key, mixed $value = null)`: Static proxy for global data sharing.
+## Metotlar
+- `getFacadeRoot()`: `View::class` döndürür.
+- `@method static void share(string|array $key, mixed $value = null)`: Küresel veri paylaşımı için statik proxy.
 
-## Dependencies
-- `Core\Support\Facade` (Extends)
-- `Core\View` (Resolved root)
+## Bağımlılıklar
+- `Core\Support\Facade` (Genişletir)
+- `Core\View` (Çözümlenen kök)
 
-## Source References
+## Kaynak Referansları
 - `core/Facades/View.php:1-20`

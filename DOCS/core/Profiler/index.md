@@ -1,16 +1,16 @@
-# Directory Report: core/Profiler
+# Dizin Raporu: core/Profiler
 
-## Purpose
-Contains the application profiling system.
+## Amaç
+Uygulama profilleme sistemini içerir.
 
-## Child Directories
+## Alt Dizinler
 - `Contracts/`
 - `Views/`
 
-## Source Files
+## Kaynak Dosyaları
 - `Profiler.php`
 - `ProfilerController.php`
 - `ProfilerStorage.php`
 
-## Source References
-- Directory: `core/Profiler/`
+## Kaynak Referansları
+- Dizin: `core/Profiler/`

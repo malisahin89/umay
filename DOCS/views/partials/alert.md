@@ -1,4 +1,4 @@
-# Alert Partial
+# Parça (Partial): Alert
 
 `views/partials/alert.php` dosyası, uygulamada bildirimler ve uyarılar için kullanılan yeniden kullanılabilir bir bileşendir.
 

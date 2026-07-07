@@ -1,24 +1,24 @@
-# File Report: tests/Unit/MailerTest.php
+# Dosya Raporu: tests/Unit/MailerTest.php
 
-## Purpose
-Unit tests for the mailer and its log transport.
+## Amaç
+Mailer ve onun günlük (log) taşıma katmanı için birim (unit) testler.
 
-## Overview
-Verifies `Core\Mail\Mailer`: fluent recipient methods (`to`, `cc`, `bcc`) including array and name-pair forms, that `LogTransport` implements the transport contract, that sending via the log transport writes a log entry, and that CRLF in recipient values is stripped (header-injection defense).
+## Genel Bakış
+`Core\Mail\Mailer`'ı doğrular: dizi ve isim-çift formları dahil akıcı alıcı metotları (`to`, `cc`, `bcc`), `LogTransport`'ın taşıma sözleşmesini uyguladığı, günlük taşıma yoluyla gönderimin bir günlük kaydı yazdığı ve alıcı değerlerindeki CRLF'lerin kaldırıldığı (başlık enjeksiyonu savunması).
 
-## File Location
+## Dosya Konumu
 `tests/Unit/MailerTest.php`
 
-## Namespace
+## İsim Uzayı
 `Tests\Unit`
 
-## Classes
+## Sınıflar
 - `class MailerTest extends Tests\TestCase`
 
-## Subject Under Test
+## Test Edilen Konu
 - `Core\Mail\Mailer`, `Core\Mail\Transport\LogTransport`
 
-## Test Methods
+## Test Metotları
 - `test_to_returns_mailer_instance` — `:47`
 - `test_to_accepts_array_of_recipients` — `:52`
 - `test_to_with_name_stores_array_pair` — `:58`
@@ -28,8 +28,8 @@ Verifies `Core\Mail\Mailer`: fluent recipient methods (`to`, `cc`, `bcc`) includ
 - `test_send_uses_log_transport_and_writes_log` — `:83`
 - `test_recipient_crlf_is_stripped` — `:101`
 
-## Cross References
-- **Tests:** `Core\Mail\Mailer` (see `DOCS/core/Mail/Mailer.md`), `Core\Mail\Transport\LogTransport` (see `DOCS/core/Mail/Transport/LogTransport.md`)
+## Çapraz Referanslar
+- **Test Eder:** `Core\Mail\Mailer` (bkz. `DOCS/core/Mail/Mailer.md`), `Core\Mail\Transport\LogTransport` (bkz. `DOCS/core/Mail/Transport/LogTransport.md`)
 
-## Source References
+## Kaynak Referansları
 - `tests/Unit/MailerTest.php:1-114`

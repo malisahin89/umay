@@ -1,41 +1,41 @@
-# File Report: core/Events/Dispatcher.php
+# Dosya Raporu: core/Events/Dispatcher.php
 
-## Purpose
-Global event bus for the application.
+## Amaç
+Uygulama için küresel olay veri yolu (event bus).
 
-## Overview
-Manages the registration and dispatching of events. It allows decoupled components to communicate by triggering events that one or more listeners can respond to.
+## Genel Bakış
+Olayların kaydını ve dağıtımını yönetir. Bir veya daha fazla dinleyicinin yanıt verebileceği olayları tetikleyerek, bağımsız bileşenlerin birbirleriyle iletişim kurmasını sağlar.
 
-## File Location
+## Dosya Konumu
 `core/Events/Dispatcher.php`
 
-## Namespace
+## Ad Alanı
 `Core\Events`
 
-## Classes
+## Sınıflar
 - `class Dispatcher`
 
-## Properties
-- `static ?self $instance`: Singleton instance of the dispatcher.
-- `array $listeners`: Mapping of event classes to their registered listeners.
+## Özellikler
+- `static ?self $instance`: Dağıtıcının singleton örneği.
+- `array $listeners`: Olay sınıflarının kayıtlı dinleyicileriyle eşleşmesi.
 
-## Methods
-- `getInstance(): self`: Returns the singleton instance.
-- `listen(string $eventClass, string|\Closure $listener): void`: Registers a listener for a specific event or a wildcard `*` (all events).
-- `subscribe(array $map): void`: Bulk registers multiple event-listener mappings.
-- `once(string $eventClass, string|\Closure $listener): void`: Registers a listener that is removed after its first execution.
-- `forget(string $eventClass, ?\Closure $specific = null): void`: Removes listeners for a specific event.
-- `dispatch(Event $event): Event`: Triggers an event, executing all registered listeners in order.
-- `hasListeners(string $eventClass): bool`: Checks if an event has any registered listeners.
-- `flush(): void`: Clears all registered listeners.
+## Metotlar
+- `getInstance(): self`: Singleton örneğini döndürür.
+- `listen(string $eventClass, string|\Closure $listener): void`: Belirli bir olay veya joker karakter `*` (tüm olaylar) için bir dinleyici kaydeder.
+- `subscribe(array $map): void`: Birden fazla olay-dinleyici eşlemesini toplu olarak kaydeder.
+- `once(string $eventClass, string|\Closure $listener): void`: İlk yürütmeden sonra kaldırılacak bir dinleyici kaydeder.
+- `forget(string $eventClass, ?\Closure $specific = null): void`: Belirli bir olay için dinleyicileri kaldırır.
+- `dispatch(Event $event): Event`: Bir olayı tetikler ve kayıtlı tüm dinleyicileri sırayla yürütür.
+- `hasListeners(string $eventClass): bool`: Bir olayın herhangi bir kayıtlı dinleyicisi olup olmadığını kontrol eder.
+- `flush(): void`: Tüm kayıtlı dinleyicileri temizler.
 
-## Internal Workflow
-- **Execution**: When `dispatch()` is called, the dispatcher first executes listeners specific to that event class, followed by wildcard listeners. It respects `stopPropagation()` called on the event object.
-- **Listener Resolution**: If a listener is provided as a class name, it is resolved via the `Container` to support dependency injection.
+## Dahili İş Akışı
+- **Yürütme**: `dispatch()` çağrıldığında, dağıtıcı önce o olay sınıfına özgü dinleyicileri, ardından joker karakterli dinleyicileri yürütür. Olay nesnesi üzerinde çağrılan `stopPropagation()` metoduna saygı duyar.
+- **Dinleyici Çözümleme**: Eğer bir dinleyici sınıf adı olarak sağlanmışsa, bağımlılık enjeksiyonunu desteklemek için `Container` üzerinden çözümlenir.
 
-## Dependencies
-- `Core\Container` (Uses)
-- `Core\DebugBar` (Optional profiling)
+## Bağımlılıklar
+- `Core\Container` (Kullanır)
+- `Core\DebugBar` (İsteğe bağlı profilleme)
 
-## Source References
+## Kaynak Referansları
 - `core/Events/Dispatcher.php:1-192`

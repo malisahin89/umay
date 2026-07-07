@@ -1,31 +1,31 @@
-# File Report: core/Middleware/VerifyCsrfToken.php
+# Dosya Raporu: core/Middleware/VerifyCsrfToken.php
 
-## Purpose
-CSRF protection middleware.
+## Amaç
+CSRF koruma middleware'i.
 
-## Overview
-Verifies that state-changing requests (POST, PUT, PATCH, DELETE) contain a valid CSRF token that matches the one stored in the session.
+## Genel Bakış
+Durum değiştiren isteklerin (POST, PUT, PATCH, DELETE), oturumda saklananla eşleşen geçerli bir CSRF token'ı içerdiğini doğrular.
 
-## File Location
+## Dosya Konumu
 `core/Middleware/VerifyCsrfToken.php`
 
-## Namespace
+## Ad Alanı
 `Core\Middleware`
 
-## Classes
+## Sınıflar
 - `class VerifyCsrfToken implements MiddlewareInterface`
 
-## Methods
+## Metotlar
 - `handle(Request $request, \Closure $next): mixed`:
-    1. Skips verification for GET, HEAD, and OPTIONS requests.
-    2. Extracts the token from the `csrf_token` input or the `X-CSRF-TOKEN` header.
-    3. Uses `Csrf::check()` to verify the token.
-    4. If invalid, throws a `CsrfException`, which results in a 419 status code.
+    1. GET, HEAD ve OPTIONS istekleri için doğrulamayı atlar.
+    2. Token'ı `csrf_token` girdisinden veya `X-CSRF-TOKEN` başlığından çıkarır.
+    3. Token'ı doğrulamak için `Csrf::check()` kullanır.
+    4. Geçersizse, 419 durum koduyla sonuçlanan bir `CsrfException` fırlatır.
 
-## Dependencies
-- `Core\Contracts\MiddlewareInterface` (Implements)
-- `Core\Request` (Uses)
-- `Core\Csrf` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MiddlewareInterface` (Uygular)
+- `Core\Request` (Kullanır)
+- `Core\Csrf` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Middleware/VerifyCsrfToken.php:1-90`

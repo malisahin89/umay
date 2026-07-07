@@ -1,19 +1,19 @@
-# File Report: core/Middleware.php
+# Dosya Raporu: core/Middleware.php
 
-## Purpose
-Deprecated middleware base/utility.
+## Amaç
+Kullanımdan kaldırılmış middleware tabanı/aracı.
 
-## Overview
-This class is now deprecated. CSRF checks and other middleware logic have been moved to the middleware pipeline and specific classes like `Core\Middleware\VerifyCsrfToken`.
+## Genel Bakış
+Bu sınıf artık kullanımdan kaldırılmıştır. CSRF kontrolleri ve diğer middleware mantığı, middleware hattına (pipeline) ve `Core\Middleware\VerifyCsrfToken` gibi belirli sınıflara taşınmıştır.
 
-## File Location
+## Dosya Konumu
 `core/Middleware.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Classes
+## Sınıflar
 - `class Middleware`
 
-## Source References
+## Kaynak Referansları
 - `core/Middleware.php:1-14`

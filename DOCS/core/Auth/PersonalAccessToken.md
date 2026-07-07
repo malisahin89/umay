@@ -1,33 +1,33 @@
-# File Report: core/Auth/PersonalAccessToken.php
+# Dosya Raporu: core/Auth/PersonalAccessToken.php
 
-## Purpose
-Model for hashed API access tokens.
+## Amaç
+Hashlenmiş API erişim token'ları için model.
 
-## Overview
-Represents a personal access token issued to a user. Tokens are stored as SHA256 hashes of the plaintext tokens provided to the client to ensure security.
+## Genel Bakış
+Bir kullanıcıya verilen kişisel erişim token'ını temsil eder. Güvenliği sağlamak için token'lar, istemciye sağlanan düz metin token'ların SHA256 özetleri olarak saklanır.
 
-## File Location
+## Dosya Konumu
 `core/Auth/PersonalAccessToken.php`
 
-## Namespace
+## Ad Alanı
 `Core\Auth`
 
-## Classes
+## Sınıflar
 - `class PersonalAccessToken extends Model`
 
-## Properties
+## Özellikler
 - `$table`: `personal_access_tokens`
 - `$fillable`: `['name', 'token', 'abilities', 'last_used_at', 'expires_at']`
-- `$casts`: Casts `abilities` to array, and `last_used_at`/`expires_at` to datetime.
+- `$casts`: `abilities`'i diziye, `last_used_at`/`expires_at`'i tarih zaman (datetime) türüne dönüştürür.
 
-## Methods
-- `tokenable(): MorphTo`: Returns the polymorphic relationship to the owner of the token.
-- `findToken(string $tokenString): ?self`: Resolves a "{id}|{plaintext}" token string by fetching the record by ID and verifying the hash.
-- `can(string $ability): bool`: Checks if the token has the required ability or a wildcard `*`.
+## Metotlar
+- `tokenable(): MorphTo`: Token sahibine olan polimorfik ilişkiyi döndürür.
+- `findToken(string $tokenString): ?self`: ID ile kaydı getirip hash'i doğrulayarak "{id}|{plaintext}" formatındaki token dizesini çözer.
+- `can(string $ability): bool`: Token'ın gerekli yeteneğe veya joker karakterli `*` yetkisine sahip olup olmadığını kontrol eder.
 
-## Dependencies
-- `Core\Model` (Extends)
-- `Illuminate\Database\Eloquent\Relations\MorphTo` (Uses)
+## Bağımlılıklar
+- `Core\Model` (Genişletir)
+- `Illuminate\Database\Eloquent\Relations\MorphTo` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Auth/PersonalAccessToken.php:1-105`

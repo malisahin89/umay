@@ -1,38 +1,38 @@
-# File Report: tests/TestCase.php
+# Dosya Raporu: tests/TestCase.php
 
-## Purpose
-Project base test case extending PHPUnit's `TestCase` with framework-aware setup and helpers.
+## Amaç
+Framework farkındalığına sahip kurulum ve yardımcılar ile PHPUnit'in `TestCase` sınıfını genişleten proje taban test durumu.
 
-## Overview
-Abstract base class for all tests. Before each test it resets session, superglobals, the container-bound `Auth` cache, and the event dispatcher. It provides request-building and assertion helpers.
+## Genel Bakış
+Tüm testler için soyut taban sınıfı. Her testten önce oturumu, süper globalleri, konteynere bağlı `Auth` önbelleğini ve olay dağıtıcısını (event dispatcher) sıfırlar. İstek oluşturma ve doğrulama yardımcıları sağlar.
 
-## File Location
+## Dosya Konumu
 `tests/TestCase.php`
 
-## Namespace
+## İsim Uzayı
 `Tests`
 
-## Imports
+## İçe Aktarmalar
 - `App\Models\User`
 - `Core\Auth`, `Core\Container`, `Core\Events\Dispatcher`, `Core\Request`
 - `PHPUnit\Framework\TestCase as BaseTestCase`
 
-## Classes
+## Sınıflar
 - `abstract class TestCase extends BaseTestCase`
 
-## Methods
-- `setUp(): void` — starts an array-based session, resets `$_SESSION/$_POST/$_GET/$_FILES/$_COOKIE`, clears `Auth` cache, flushes `Dispatcher`.
-- `tearDown(): void` — flushes `Dispatcher`, clears `Auth` cache.
-- `makeRequest(string $method, string $uri, array $data, array $headers): Request` — builds a `Request` from simulated superglobals via `Request::capture()`.
-- `actingAs(User $user): static` — sets `$_SESSION['user_id']` and clears the `Auth` cache.
-- `withSession(array $data): static` — merges data into `$_SESSION`.
+## Metotlar
+- `setUp(): void` — dizi tabanlı bir oturum başlatır, `$_SESSION/$_POST/$_GET/$_FILES/$_COOKIE` değerlerini sıfırlar, `Auth` önbelleğini temizler, `Dispatcher`'ı boşaltır.
+- `tearDown(): void` — `Dispatcher`'ı boşaltır, `Auth` önbelleğini temizler.
+- `makeRequest(string $method, string $uri, array $data, array $headers): Request` — `Request::capture()` aracılığıyla simüle edilmiş süper globallerden bir `Request` oluşturur.
+- `actingAs(User $user): static` — `$_SESSION['user_id']` değerini ayarlar ve `Auth` önbelleğini temizler.
+- `withSession(array $data): static` — verileri `$_SESSION` ile birleştirir.
 - `assertSessionHas(string $key, mixed $value = null): void`
 - `assertSessionMissing(string $key): void`
 - `assertFlash(string $type, ?string $message = null): void`
 
-## Cross References
-- **Extended By:** every test class in `tests/Unit/` and `tests/Feature/`.
-- **Uses:** `Core\Auth`, `Core\Container`, `Core\Events\Dispatcher`, `Core\Request`, `App\Models\User`.
+## Çapraz Referanslar
+- **Genişletenler:** `tests/Unit/` ve `tests/Feature/` altındaki her test sınıfı.
+- **Kullananlar:** `Core\Auth`, `Core\Container`, `Core\Events\Dispatcher`, `Core\Request`, `App\Models\User`.
 
-## Source References
+## Kaynak Referansları
 - `tests/TestCase.php:1-166`

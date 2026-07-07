@@ -1,46 +1,46 @@
-# File Report: core/Migrator.php
+# Dosya Raporu: core/Migrator.php
 
-## Purpose
-Database migration and seeding manager.
+## Amaç
+Veritabanı migrasyon ve seeding yöneticisi.
 
-## Overview
-Orchestrates the execution of migration files and seeders. It tracks which migrations have already run using a `migrations` table in the database. It is primarily designed for use via the console or a specialized route.
+## Genel Bakış
+Migrasyon dosyalarının ve seeder'ların yürütülmesini koordine eder. Veritabanındaki bir `migrations` tablosunu kullanarak hangi migrasyonların zaten çalıştırıldığını takip eder. Öncelikli olarak konsol veya özel bir rota üzerinden kullanım için tasarlanmıştır.
 
-## File Location
+## Dosya Konumu
 `core/Migrator.php`
 
-## Namespace
+## Ad Alanı
 `Core`
 
-## Imports
+## İçe Aktarmalar
 - `Core\Facades\Log`
 - `Database\Seeders\DatabaseSeeder`
 - `Illuminate\Database\Capsule\Manager as DB`
 - `Illuminate\Database\Schema\Blueprint`
 
-## Classes
+## Sınıflar
 - `class Migrator`
 
-## Methods
-- `runMigrationsOnly(): array`: Executes only pending migrations.
-- `runSeedersOnly(): void`: Executes all seeders starting from `DatabaseSeeder`.
-- `runFresh(): array`: Drops all tables, runs all migrations, and executes seeders.
-- `runSingleMigration(string $filename, bool $force = false): void`: Executes a specific migration file.
-- `runSingleSeeder(string $className): void`: Executes a specific seeder class.
-- `run(): void`: Legacy method for backward compatibility.
+## Metotlar
+- `runMigrationsOnly(): array`: Yalnızca bekleyen migrasyonları yürütür.
+- `runSeedersOnly(): void`: `DatabaseSeeder`'dan başlayarak tüm seeder'ları yürütür.
+- `runFresh(): array`: Tüm tabloları siler, tüm migrasyonları çalıştırır ve seeder'ları yürütür.
+- `runSingleMigration(string $filename, bool $force = false): void`: Belirli bir migrasyon dosyasını yürütür.
+- `runSingleSeeder(string $className): void`: Belirli bir seeder sınıfını yürütür.
+- `run(): void`: Geriye dönük uyumluluk için eski metot.
 
-## Internal Workflow
-- `ensureMigrationsTable()`: Creates the `migrations` table if it doesn't exist.
-- `runPendingMigrations()`: Scans `database/migrations/*.php`, sorts them, and runs those not present in the `migrations` table, assigning them a batch number.
-- `dropAllTables()`: Uses the Eloquent Schema builder to remove all tables from the database.
-- `disableForeignKeys()` / `enableForeignKeys()`: Toggles foreign key checks based on the driver (MySQL vs SQLite).
-- `executeSeeders()`: Loads all seeder files and runs `DatabaseSeeder::run()`.
+## Dahili İş Akışı
+- `ensureMigrationsTable()`: Eğer yoksa `migrations` tablosunu oluşturur.
+- `runPendingMigrations()`: `database/migrations/*.php` dosyalarını tarar, sıralar ve `migrations` tablosunda bulunmayanları bir toplu işlem (batch) numarası atayarak çalıştırır.
+- `dropAllTables()`: Veritabanındaki tüm tabloları kaldırmak için Eloquent Şema oluşturucuyu kullanır.
+- `disableForeignKeys()` / `enableForeignKeys()`: Sürücüye bağlı olarak (MySQL vs SQLite) yabancı anahtar kontrollerini açıp kapatır.
+- `executeSeeders()`: Tüm seeder dosyalarını yükler ve `DatabaseSeeder::run()` metodunu çalıştırır.
 
-## Dependencies
-- `Core\Migration` (Uses)
-- `Core\Facades\Log` (Uses)
-- `Database\Seeders\DatabaseSeeder` (Uses)
-- `Illuminate\Database\Capsule\Manager` (Uses)
+## Bağımlılıklar
+- `Core\Migration` (Kullanır)
+- `Core\Facades\Log` (Kullanır)
+- `Database\Seeders\DatabaseSeeder` (Kullanır)
+- `Illuminate\Database\Capsule\Manager` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Migrator.php:1-327`

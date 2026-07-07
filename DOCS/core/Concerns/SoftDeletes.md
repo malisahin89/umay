@@ -1,22 +1,22 @@
-# File Report: core/Concerns/SoftDeletes.php
+# Dosya Raporu: core/Concerns/SoftDeletes.php
 
-## Purpose
-Trait for implementing soft deletes in models.
+## Amaç
+Modellerde yumuşak silme (soft delete) işlemini uygulamak için trait.
 
-## Overview
-Allows models to be "deleted" without actually removing the record from the database by setting a `deleted_at` timestamp.
+## Genel Bakış
+Modellerin, veritabanından gerçekten kaldırılmadan, bir `deleted_at` zaman damgası ayarlanarak "silinmesine" olanak tanır.
 
-## File Location
+## Dosya Konumu
 `core/Concerns/SoftDeletes.php`
 
-## Namespace
+## İsim Uzayı
 `Core\Concerns`
 
-## Traits
+## Trait'ler
 - `trait SoftDeletes`
 
-## Dependencies
-- `Illuminate\Database\Eloquent\SoftDeletes` (Uses)
+## Bağımlılıklar
+- `Illuminate\Database\Eloquent\SoftDeletes` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Concerns/SoftDeletes.php:1-35`

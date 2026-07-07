@@ -1,32 +1,32 @@
-# File Report: core/Mail/Mailer.php
+# Dosya Raporu: core/Mail/Mailer.php
 
-## Purpose
-Email delivery coordinator.
+## Amaç
+E-posta iletim koordinatörü.
 
-## Overview
-Handles the logic of sending `Mailable` objects. It uses a configured `MailTransport` (e.g., `LogTransport`) to perform the actual delivery.
+## Genel Bakış
+`Mailable` nesnelerini gönderme mantığını yönetir. Gerçek iletimi gerçekleştirmek için yapılandırılmış bir `MailTransport` (örneğin, `LogTransport`) kullanır.
 
-## File Location
+## Dosya Konumu
 `core/Mail/Mailer.php`
 
-## Namespace
+## Ad Alanı
 `Core\Mail`
 
-## Classes
+## Sınıflar
 - `class Mailer`
 
-## Properties
-- `array $to`, `$cc`, `$bcc`: Recipient lists.
+## Özellikler
+- `array $to`, `$cc`, `$bcc`: Alıcı listeleri.
 
-## Methods
-- `to(array|string $address): static`: Adds recipients to the "To" list.
-- `cc(array|string $address): static`: Adds recipients to the "CC" list.
-- `bcc(array|string $address): static`: Adds recipients to the "BCC" list.
-- `send(Mailable $mailable): bool`: The final delivery method. It resolves the active transport from `config/mail.php` and calls its `send()` method.
+## Metotlar
+- `to(array|string $address): static`: "Kime" listesine alıcılar ekler.
+- `cc(array|string $address): static`: "Bilgi" (CC) listesine alıcılar ekler.
+- `bcc(array|string $address): static`: "Gizli Bilgi" (BCC) listesine alıcılar ekler.
+- `send(Mailable $mailable): bool`: Final iletim metodudur. `config/mail.php`'den aktif taşıyıcıyı çözer ve onun `send()` metodunu çağırır.
 
-## Dependencies
-- `Core\Contracts\MailTransport` (Uses)
-- `Core\Mail\Mailable` (Uses)
+## Bağımlılıklar
+- `Core\Contracts\MailTransport` (Kullanır)
+- `Core\Mail\Mailable` (Kullanır)
 
-## Source References
+## Kaynak Referansları
 - `core/Mail/Mailer.php:1-154`
