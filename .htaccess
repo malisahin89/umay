@@ -1,0 +1,11 @@
+# Defense in depth: never serve dotfiles (.env, .env.*, .gitignore, etc.) directly,
+# even if the rewrite to public/ is bypassed (e.g. misconfigured server / no mod_rewrite).
+# Derinlemesine savunma: dotfile'ları (.env, .env.*, .gitignore, vb.) asla doğrudan sunma —
+# public/ yönlendirmesi atlansa bile (örn. yanlış yapılandırılmış sunucu / mod_rewrite yok).
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]

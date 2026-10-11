@@ -1,0 +1,33 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Requests;
+
+use Core\FormRequest;
+
+class {{ClassName}} extends FormRequest
+{
+    public function authorize(): bool
+    {
+        // Varsayılan güvenli taraftır: erişimi açıkça onaylayın (örn. auth()->check()
+        // veya sahiplik kontrolü). Onaylamadan true döndürmeyin.
+        // Default is safe-side: allow explicitly (e.g. auth()->check() or an
+        // ownership check). Do not return true without a real check.
+        return false;
+    }
+
+    public function rules(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            //
+        ];
+    }
+}
