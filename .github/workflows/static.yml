@@ -32,7 +32,7 @@ jobs:
       - name: Upload Wiki
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'wiki'
+          path: 'wiki-en'
 
       - name: Deploy to GitHub Pages
         id: deployment
